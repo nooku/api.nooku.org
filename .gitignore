@@ -1,0 +1,3 @@
+/apigen/*
+!/apigen/templates/nooku
+/output/*
