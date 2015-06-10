@@ -1,0 +1,1484 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<title>Interface KHttpTokenInterface | Nooku Framework</title>
+
+	<script type="text/javascript" src="resources/combined.js?2640657843"></script>
+	<script type="text/javascript" src="elementlist.js?527661356"></script>
+	<script type="text/javascript" src="http://www.nooku.org/js/scripts.js"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/bootstrap.min.css?390653004" />
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?150590327" />
+    <link rel="stylesheet" type="text/css" media="all" href="http://www.nooku.org/css/header.css" />
+
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,300italic,700,400italic' rel='stylesheet' type='text/css' />
+
+    <link rel="shortcut icon" href="http://www.nooku.org/images/favicon.ico" type="image/x-icon" />
+
+	<script>
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] ||
+            function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-214238-5', 'auto');
+        ga('send', 'pageview');
+    </script>
+</head>
+
+<body class="no-js">
+    <script type="text/javascript">
+    function hasClass(e, t) {
+        return e.className.match(new RegExp("(\\s|^)" + t + "(\\s|$)"))
+    }
+    var el = document.body;
+    var cl = "no-js";
+    if (hasClass(el, cl)) {
+        var reg = new RegExp("(\\s|^)" + cl + "(\\s|$)");
+        el.className = el.className.replace(reg, " js-enabled")
+    }
+    </script>
+	<div class="header">
+            <div class="container">
+                <div class="group">
+                    <div class="header__brand brand"><a href="http://www.nooku.org"><img src="http://www.nooku.org/images/layout/logo.png" alt="Nooku Logo" /></a></div>
+                    <div class="header__navigation">
+                        <div class="navigation_container" role="navigation">
+                            <ul class="navbar initiated">
+                                <li class="navbar__item" role="menuitem"><a href="http://www.nooku.org/features/">Features</a></li>
+                                <li class="navbar__item" role="menuitem"><a href="http://www.nooku.org/get-started/">Get Started</a></li>
+                                <li class="navbar__item" role="menuitem"><a href="http://www.nooku.org/services/">Services</a></li>
+                                <li class="navbar__item" role="menuitem"><a href="http://www.nooku.org/community/">Community</a></li>
+                                <li class="navbar__item active" role="menuitem"><a href="http://www.nooku.org/docs/">Docs</a></li>
+                                <li class="navbar__item" role="menuitem"><a href="http://www.nooku.org/blog">Blog</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+	<div id="left">
+	<div id="menu">
+		<form id="search" class="form-search">
+			<input type="hidden" name="cx" value="" />
+			<input type="hidden" name="ie" value="UTF-8" />
+			<input type="text" name="q" class="search-query" placeholder="Search" />
+		</form>
+
+
+		<div id="groups">
+			<h3>Packages</h3>
+			<ul>
+				<li class="active"><a href="package-Koowa.html">Koowa<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.html">Component<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.html">Koowa<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Class.html">Class<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Class.Locator.html">Locator</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Controller.html">Controller<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Controller.Behavior.html">Behavior</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Controller.Permission.html">Permission</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Controller.Toolbar.html">Toolbar</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Database.html">Database<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Database.Adapter.html">Adapter</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Database.Behavior.html">Behavior</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Database.Table.html">Table</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Date.html">Date</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Decorator.html">Decorator</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Dispatcher.html">Dispatcher<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Dispatcher.Authenticator.html">Authenticator</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Dispatcher.Permission.html">Permission</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Dispatcher.Request.html">Request</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Dispatcher.Response.html">Response<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Dispatcher.Response.Transport.html">Transport</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Dispatcher.Router.html">Router</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Event.html">Event<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Event.Publisher.html">Publisher</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Event.Subscriber.html">Subscriber</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Exception.html">Exception</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Filesystem.html">Filesystem<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Filesystem.Stream.html">Stream</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Filter.html">Filter</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Model.html">Model</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Object.html">Object<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Object.Locator.html">Locator</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Template.html">Template<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Template.Filter.html">Filter</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Template.Helper.html">Helper</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Template.Locator.html">Locator</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Translator.html">Translator<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Translator.Catalogue.html">Catalogue</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Translator.Locator.html">Locator</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.User.html">User</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.View.html">View<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.View.Error.html">Error</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.View.Page.html">Page</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.View.Users.html">Users</a>
+						</li>
+							</ul></li></ul></li></ul></li>
+				<li class="active"><a href="package-Koowa.Library.html">Library<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Behavior.html">Behavior<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Behavior.Exception.html">Exception</a>
+						</li>
+				<li><a href="package-Koowa.Library.Behavior.Mixin.html">Mixin</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Class.html">Class<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Class.Loader.html">Loader</a>
+						</li>
+				<li><a href="package-Koowa.Library.Class.Locator.html">Locator</a>
+						</li>
+				<li><a href="package-Koowa.Library.Class.Registry.html">Registry</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Command.html">Command<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Command.Callback.html">Callback</a>
+						</li>
+				<li><a href="package-Koowa.Library.Command.Chain.html">Chain</a>
+						</li>
+				<li><a href="package-Koowa.Library.Command.Exception.html">Exception</a>
+						</li>
+				<li><a href="package-Koowa.Library.Command.Handler.html">Handler</a>
+						</li>
+				<li><a href="package-Koowa.Library.Command.Mixin.html">Mixin</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Controller.html">Controller<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Controller.Behavior.html">Behavior</a>
+						</li>
+				<li><a href="package-Koowa.Library.Controller.Context.html">Context</a>
+						</li>
+				<li><a href="package-Koowa.Library.Controller.Exception.html">Exception</a>
+						</li>
+				<li><a href="package-Koowa.Library.Controller.Permission.html">Permission</a>
+						</li>
+				<li><a href="package-Koowa.Library.Controller.Request.html">Request</a>
+						</li>
+				<li><a href="package-Koowa.Library.Controller.Response.html">Response</a>
+						</li>
+				<li><a href="package-Koowa.Library.Controller.Toolbar.html">Toolbar<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Controller.Toolbar.Command.html">Command</a>
+						</li>
+				<li><a href="package-Koowa.Library.Controller.Toolbar.Mixin.html">Mixin</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-Koowa.Library.Database.html">Database<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Database.Adapter.html">Adapter</a>
+						</li>
+				<li><a href="package-Koowa.Library.Database.Behavior.html">Behavior</a>
+						</li>
+				<li><a href="package-Koowa.Library.Database.Context.html">Context</a>
+						</li>
+				<li><a href="package-Koowa.Library.Database.Query.html">Query</a>
+						</li>
+				<li><a href="package-Koowa.Library.Database.Row.html">Row</a>
+						</li>
+				<li><a href="package-Koowa.Library.Database.Rowset.html">Rowset</a>
+						</li>
+				<li><a href="package-Koowa.Library.Database.Schema.html">Schema</a>
+						</li>
+				<li><a href="package-Koowa.Library.Database.Table.html">Table</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Date.html">Date</a>
+						</li>
+				<li><a href="package-Koowa.Library.Dispatcher.html">Dispatcher<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Dispatcher.Authenticator.html">Authenticator</a>
+						</li>
+				<li><a href="package-Koowa.Library.Dispatcher.Behavior.html">Behavior</a>
+						</li>
+				<li><a href="package-Koowa.Library.Dispatcher.Context.html">Context</a>
+						</li>
+				<li><a href="package-Koowa.Library.Dispatcher.Exception.html">Exception</a>
+						</li>
+				<li><a href="package-Koowa.Library.Dispatcher.Permission.html">Permission</a>
+						</li>
+				<li><a href="package-Koowa.Library.Dispatcher.Request.html">Request</a>
+						</li>
+				<li><a href="package-Koowa.Library.Dispatcher.Response.html">Response<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Dispatcher.Response.Transport.html">Transport</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Dispatcher.Router.html">Router</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Event.html">Event<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Event.Mixin.html">Mixin</a>
+						</li>
+				<li><a href="package-Koowa.Library.Event.Publisher.html">Publisher</a>
+						</li>
+				<li><a href="package-Koowa.Library.Event.Subscriber.html">Subscriber</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Exception.html">Exception<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Exception.Handler.html">Handler</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Filesystem.html">Filesystem<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Filesystem.Stream.html">Stream<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Filesystem.Stream.Filter.html">Filter</a>
+						</li>
+				<li><a href="package-Koowa.Library.Filesystem.Stream.Iterator.html">Iterator</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-Koowa.Library.Filter.html">Filter</a>
+						</li>
+				<li class="active"><a href="package-Koowa.Library.Http.html">Http<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Http.Cookie.html">Cookie</a>
+						</li>
+				<li><a href="package-Koowa.Library.Http.Exception.html">Exception<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Http.Exception.Unsupported.html">Unsupported</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Http.Message.html">Message</a>
+						</li>
+				<li><a href="package-Koowa.Library.Http.Request.html">Request</a>
+						</li>
+				<li><a href="package-Koowa.Library.Http.Response.html">Response</a>
+						</li>
+				<li class="active"><a href="package-Koowa.Library.Http.Token.html">Token</a>
+						</li>
+				<li><a href="package-Koowa.Library.Http.Url.html">Url</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Model.html">Model<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Model.Behavior.html">Behavior</a>
+						</li>
+				<li><a href="package-Koowa.Library.Model.Context.html">Context</a>
+						</li>
+				<li><a href="package-Koowa.Library.Model.Entity.html">Entity</a>
+						</li>
+				<li><a href="package-Koowa.Library.Model.Paginator.html">Paginator</a>
+						</li>
+				<li><a href="package-Koowa.Library.Model.State.html">State</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Object.html">Object<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Object.Bootstrapper.html">Bootstrapper</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Config.html">Config</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Decorator.html">Decorator</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Exception.html">Exception</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Identifier.html">Identifier</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Locator.html">Locator</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Manager.html">Manager</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Mixin.html">Mixin</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Registry.html">Registry</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.String.html">String<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.String.Inflector.html">Inflector</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Template.html">Template<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Template.Engine.html">Engine</a>
+						</li>
+				<li><a href="package-Koowa.Library.Template.Exception.html">Exception</a>
+						</li>
+				<li><a href="package-Koowa.Library.Template.Filter.html">Filter</a>
+						</li>
+				<li><a href="package-Koowa.Library.Template.Helper.html">Helper</a>
+						</li>
+				<li><a href="package-Koowa.Library.Template.Locator.html">Locator</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Translator.html">Translator<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Translator.Catalogue.html">Catalogue</a>
+						</li>
+				<li><a href="package-Koowa.Library.Translator.Inflector.html">Inflector</a>
+						</li>
+				<li><a href="package-Koowa.Library.Translator.Locator.html">Locator</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.User.html">User<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.User.Provider.html">Provider</a>
+						</li>
+				<li><a href="package-Koowa.Library.User.Session.html">Session<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.User.Session.Container.html">Container</a>
+						</li>
+				<li><a href="package-Koowa.Library.User.Session.Handler.html">Handler</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-Koowa.Library.View.html">View<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.View.Behavior.html">Behavior</a>
+						</li>
+				<li><a href="package-Koowa.Library.View.Context.html">Context</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-Koowa.Module.html">Module<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Module.Koowa.html">Koowa<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Module.Koowa.Template.html">Template<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Module.Koowa.Template.Filter.html">Filter</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Module.Koowa.View.html">View</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-Koowa.Plugin.html">Plugin<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Plugin.Koowa.html">Koowa</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Wordpress.html">Wordpress<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Wordpress.Library.html">Library<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Wordpress.Library.Controller.html">Controller</a>
+						</li>
+							</ul></li></ul></li></ul></li>
+				<li><a href="package-Nooku.html">Nooku<span></span></a>
+						<ul>
+				<li><a href="package-Nooku.Library.html">Library<span></span></a>
+						<ul>
+				<li><a href="package-Nooku.Library.Template.html">Template<span></span></a>
+						<ul>
+				<li><a href="package-Nooku.Library.Template.Abstract.html">Abstract</a>
+						</li>
+							</ul></li></ul></li></ul></li>
+			</ul>
+		</div>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-KHttpToken.html">KHttpToken</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li class="active"><a href="class-KHttpTokenInterface.html">KHttpTokenInterface</a></li>
+			</ul>
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+	<div id="rightInner">
+<div id="content" class="class">
+	<h1>Interface KHttpTokenInterface</h1>
+
+
+	<div class="description">
+	
+<p>Http Token Interface</p>
+
+<p>Using the JSON Web Token standard</p>
+
+	</div>
+
+
+
+
+
+	<div>
+		<h3>Direct known implementers</h3>
+		<p class="elementList">
+			<code><a href="class-KHttpToken.html">KHttpToken</a></code>
+		</p>
+	</div>
+
+
+
+
+	<div class="alert alert-info">
+		
+		
+		
+		<b>Package:</b> <a href="package-Koowa.html">Koowa</a>\<a href="package-Koowa.Library.html">Library</a>\<a href="package-Koowa.Library.Http.html">Http</a>\<a href="package-Koowa.Library.Http.Token.html">Token</a><br />
+
+				<b>Copyright:</b>
+				Copyright (C) 2007 - 2014 Johan Janssens and Timble CVBA. (<a
+href="http://www.timble.net">http://www.timble.net</a>)<br />
+				<b>License:</b>
+				<a href="GNU">GPLv3 &lt;http://www.gnu.org/licenses/gpl.html&gt;</a><br />
+				<b>Author:</b>
+				Johan Janssens &lt;<a
+href="https://github.com/johanjanssens">https://github.com/johanjanssens</a>&gt;<br />
+				<b>See:</b>
+				<a
+href="http://tools.ietf.org/html/draft-ietf-oauth-json-web-token-06">http://tools.ietf.org/html/draft-ietf-oauth-json-web-token-06</a><br />
+		<b>Located at</b> <a href="source-class-KHttpTokenInterface.html#10-233" title="Go to source code">libraries/koowa/libraries/http/token/interface.php</a><br />
+	</div>
+
+
+
+		<h2>Methods summary</h2>
+		<table class="summary table table-bordered table-striped" id="methods">
+		<tr data-order="getType" id="_getType">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getType">#</a>
+			<code><a href="source-class-KHttpTokenInterface.html#21-28" title="Go to source code">getType</a>( )</code>
+
+			<div class="description short">
+				
+<p>Get the token type</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Get the token type</p>
+
+<p>The value of the header parameter "typ" in the JWT header segment</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>string</code><br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="setType" id="_setType">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-KHttpToken.html">KHttpToken</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_setType">#</a>
+			<code><a href="source-class-KHttpTokenInterface.html#30-39" title="Go to source code">setType</a>( <span>string <var>$type</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Set the token type</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Set the token type</p>
+
+<p>The value of the header parameter typ is case sensitive and optional, and if
+present the recommended values are either "JWT" or
+"http://openid.net/specs/jwt/1.0".</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$type</var></dt>
+						<dd><code>string</code><br>$type</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><code><a href="class-KHttpToken.html">KHttpToken</a></code></code><br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getAlgorithm" id="_getAlgorithm">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getAlgorithm">#</a>
+			<code><a href="source-class-KHttpTokenInterface.html#41-48" title="Go to source code">getAlgorithm</a>( )</code>
+
+			<div class="description short">
+				
+<p>Get the cryptographic algorithm used to secure the JWS.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Get the cryptographic algorithm used to secure the JWS.</p>
+
+<p>The value of the header parameter "alg" in the JWT header segment</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>string</code><br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="setAlgorithm" id="_setAlgorithm">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-KHttpToken.html">KHttpToken</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_setAlgorithm">#</a>
+			<code><a href="source-class-KHttpTokenInterface.html#50-57" title="Go to source code">setAlgorithm</a>( <span>string <var>$algorithm</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Sets cryptographic algorithm used to secure the token.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Sets cryptographic algorithm used to secure the token.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$algorithm</var></dt>
+						<dd><code>string</code><br>$algorithm The signing algorithm. Supported algorithms are 'HS256', 'HS384' and
+'HS512' or none</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><code><a href="class-KHttpToken.html">KHttpToken</a></code></code><br />
+					</div>
+
+					<h4>Throws</h4>
+					<div class="list">
+						<code>DomainException</code><br>If an unsupported algorithm was specified<br />
+					</div>
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getIssuer" id="_getIssuer">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getIssuer">#</a>
+			<code><a href="source-class-KHttpTokenInterface.html#59-66" title="Go to source code">getIssuer</a>( )</code>
+
+			<div class="description short">
+				
+<p>Get the token issuer</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Get the token issuer</p>
+
+<p>The value of the claim parameter "iss" in the JWT claim segment</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>string</code><br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="setIssuer" id="_setIssuer">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-KHttpToken.html">KHttpToken</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_setIssuer">#</a>
+			<code><a href="source-class-KHttpTokenInterface.html#68-78" title="Go to source code">setIssuer</a>( <span>string <var>$issuer</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Set the token issuer</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Set the token issuer</p>
+
+<p>This method sets the 'iss' (issuer) claim in the JWT claim segment. This
+claim identifies the principal that issued the JWT. The processing of this claim
+is generally application specific. The "iss" value is a case sensitive string
+containing a String Or URI value. Use of this claim is OPTIONAL.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$issuer</var></dt>
+						<dd><code>string</code><br>$issuer</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><code><a href="class-KHttpToken.html">KHttpToken</a></code></code><br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getSubject" id="_getSubject">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getSubject">#</a>
+			<code><a href="source-class-KHttpTokenInterface.html#80-87" title="Go to source code">getSubject</a>( )</code>
+
+			<div class="description short">
+				
+<p>Get the token subject</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Get the token subject</p>
+
+<p>The value of the claim parameter "sub" in the JWT claim segment</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>string</code><br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="setSubject" id="_setSubject">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-KHttpToken.html">KHttpToken</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_setSubject">#</a>
+			<code><a href="source-class-KHttpTokenInterface.html#89-100" title="Go to source code">setSubject</a>( <span>string <var>$subject</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Set the token subject</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Set the token subject</p>
+
+<p>This method sets the 'sub' (subject) claim in the JWT claim segment. This
+claim identifies the subject that issued the JWT. The Claims in a JWT are
+normally statements about the subject. The processing of this claim is generally
+application specific. The "sub" value is a case sensitive string containing a
+String or URI value. Use of this claim is OPTIONAL.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$subject</var></dt>
+						<dd><code>string</code><br>$subject</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><code><a href="class-KHttpToken.html">KHttpToken</a></code></code><br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getExpireTime" id="_getExpireTime">
+
+			<td class="attributes"><code>
+				 public 
+				DateTime
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getExpireTime">#</a>
+			<code><a href="source-class-KHttpTokenInterface.html#102-111" title="Go to source code">getExpireTime</a>( )</code>
+
+			<div class="description short">
+				
+<p>Get the expiration time of the token.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Get the expiration time of the token.</p>
+
+<p>The value of the claim parameter 'exp' as DateTime.</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>DateTime</code><br>A \DateTime instance<br />
+						<code>DateTime|null</code><br>A DateTime instance or NULL if the token doesn't contain and expiration time<br />
+					</div>
+
+					<h4>Throws</h4>
+					<div class="list">
+						<code>RuntimeException</code><br>If the data could not be parsed<br />
+					</div>
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="setExpireTime" id="_setExpireTime">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-KHttpResponse.html">KHttpResponse</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_setExpireTime">#</a>
+			<code><a href="source-class-KHttpTokenInterface.html#113-122" title="Go to source code">setExpireTime</a>( <span>DateTime <var>$date</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Sets the expiration time of the token.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Sets the expiration time of the token.</p>
+
+<p>Sets the 'exp' claim in the JWT claim segment. This claim identifies the
+expiration time on or after which the token MUST NOT be accepted for
+processing</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$date</var></dt>
+						<dd><code>DateTime</code><br>$date A DateTime instance</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><code><a href="class-KHttpResponse.html">KHttpResponse</a></code></code><br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getIssueTime" id="_getIssueTime">
+
+			<td class="attributes"><code>
+				 public 
+				DateTime
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getIssueTime">#</a>
+			<code><a href="source-class-KHttpTokenInterface.html#124-133" title="Go to source code">getIssueTime</a>( )</code>
+
+			<div class="description short">
+				
+<p>Get the issue time of the token.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Get the issue time of the token.</p>
+
+<p>The value of the claim parameter 'iat' as DateTime.</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>DateTime</code><br>A \DateTime instance<br />
+						<code>DateTime|null</code><br>A DateTime instance or NULL if the token doesn't contain and expiration time<br />
+					</div>
+
+					<h4>Throws</h4>
+					<div class="list">
+						<code>RuntimeException</code><br>If the data could not be parsed<br />
+					</div>
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="setIssueTime" id="_setIssueTime">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-KHttpToken.html">KHttpToken</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_setIssueTime">#</a>
+			<code><a href="source-class-KHttpTokenInterface.html#135-144" title="Go to source code">setIssueTime</a>( <span>DateTime <var>$date</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Sets the issue time of the token.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Sets the issue time of the token.</p>
+
+<p>This method sets the 'iat' claim in the JWT claim segment. This claim
+identifies the UTC time at which the JWT was issued.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$date</var></dt>
+						<dd><code>DateTime</code><br>$date A DateTime instance</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><code><a href="class-KHttpToken.html">KHttpToken</a></code></code><br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getClaim" id="_getClaim">
+
+			<td class="attributes"><code>
+				 public 
+				mixed
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getClaim">#</a>
+			<code><a href="source-class-KHttpTokenInterface.html#146-152" title="Go to source code">getClaim</a>( <span>string <var>$name</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Get a claim</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Get a claim</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$name</var></dt>
+						<dd><code>string</code><br>$name The name if the claim</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>mixed</code><br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="setClaim" id="_setClaim">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-KHttpToken.html">KHttpToken</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_setClaim">#</a>
+			<code><a href="source-class-KHttpTokenInterface.html#154-161" title="Go to source code">setClaim</a>( <span>string <var>$name</var></span>, <span>mixed <var>$value</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Sets a claim of the current token</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Sets a claim of the current token</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$name</var></dt>
+						<dd><code>string</code><br>$name The name if the claim</dd>
+						<dt><var>$value</var></dt>
+						<dd><code>mixed</code><br>$value The value of the claim</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><code><a href="class-KHttpToken.html">KHttpToken</a></code></code><br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getHeader" id="_getHeader">
+
+			<td class="attributes"><code>
+				 public 
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getHeader">#</a>
+			<code><a href="source-class-KHttpTokenInterface.html#163-168" title="Go to source code">getHeader</a>( )</code>
+
+			<div class="description short">
+				
+<p>Returns the header of the token</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Returns the header of the token</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>array</code><br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getSignature" id="_getSignature">
+
+			<td class="attributes"><code>
+				 public 
+				mixed
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getSignature">#</a>
+			<code><a href="source-class-KHttpTokenInterface.html#170-176" title="Go to source code">getSignature</a>( <span>string|null <var>$secret</var> = <span class="php-keyword1">null</span></span> )</code>
+
+			<div class="description short">
+				
+<p>Get the token signature</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Get the token signature</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$secret</var></dt>
+						<dd><code>string|null</code><br>$secret The secret key</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>mixed</code><br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getAge" id="_getAge">
+
+			<td class="attributes"><code>
+				 public 
+				integer|false
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getAge">#</a>
+			<code><a href="source-class-KHttpTokenInterface.html#178-183" title="Go to source code">getAge</a>( )</code>
+
+			<div class="description short">
+				
+<p>Returns the age of the token</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Returns the age of the token</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>integer|false</code><br>The age of the token in seconds or FALSE if the age couldn't be calculated<br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="toString" id="_toString">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_toString">#</a>
+			<code><a href="source-class-KHttpTokenInterface.html#185-194" title="Go to source code">toString</a>( )</code>
+
+			<div class="description short">
+				
+<p>Encode to a JWT string</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Encode to a JWT string</p>
+
+<p>This method returns the text representation of the name/value pair defined in
+the JWT token. First segment is the name/value pairs of the header segment and
+the second segment is the collection of the name/value pair of the claim
+segment.</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>string</code><br>A serialised JWT token string<br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="fromString" id="_fromString">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-KHttpToken.html">KHttpToken</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_fromString">#</a>
+			<code><a href="source-class-KHttpTokenInterface.html#196-203" title="Go to source code">fromString</a>( <span>string <var>$token</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Decode from JWT string</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Decode from JWT string</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$token</var></dt>
+						<dd><code>string</code><br>$token A serialised token</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><code><a href="class-KHttpToken.html">KHttpToken</a></code></code><br />
+					</div>
+
+					<h4>Throws</h4>
+					<div class="list">
+						<code>InvalidArgumentException</code><br>If the token is invalid<br />
+					</div>
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="verify" id="_verify">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_verify">#</a>
+			<code><a href="source-class-KHttpTokenInterface.html#205-215" title="Go to source code">verify</a>( <span>mixed <var>$secret</var></span>, <span>boolean <var>$signed</var> = <span class="php-keyword1">false</span></span> )</code>
+
+			<div class="description short">
+				
+<p>Verify the token</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Verify the token</p>
+
+<p>This method is used to verify the digitally signed JWT token. It does
+nothing, if the token is not signed (i.e., the crypto segment of the JWT token
+is an empty string).</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$secret</var></dt>
+						<dd><code>mixed</code><br>$secret The secret to be used to verify the HMAC signature bytes of the JWT
+token</dd>
+						<dt><var>$signed</var></dt>
+						<dd><code>boolean</code><br>$signed Ensure the token is signed. If FALSE, unsigned tokens will pass
+verification</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>boolean</code><br>Returns TRUE if the signature of the JWT token is valid, FALSE otherwise.<br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="sign" id="_sign">
+
+			<td class="attributes"><code>
+				 public 
+				String
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_sign">#</a>
+			<code><a href="source-class-KHttpTokenInterface.html#217-225" title="Go to source code">sign</a>( <span>mixed <var>$secret</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Sign the token</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Sign the token</p>
+
+<p>This method returns the Base64url representation of the JWT token including
+the Crypto segment.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$secret</var></dt>
+						<dd><code>mixed</code><br>$secret The MAC key or password to be used to compute the HMAC signature bytes.</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>String</code><br>the Base64url representation of the signed JWT token<br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="isExpired" id="_isExpired">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_isExpired">#</a>
+			<code><a href="source-class-KHttpTokenInterface.html#227-232" title="Go to source code">isExpired</a>( )</code>
+
+			<div class="description short">
+				
+<p>Checks whether the token is expired.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Checks whether the token is expired.</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>boolean</code><br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		</table>
+
+
+
+		<h3>Magic methods summary</h3>
+
+
+
+
+
+
+
+
+</div>
+	</div>
+
+	<div id="footer">
+		Nooku Framework API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+
+<script>
+    responsivemenu.init({
+        wrapper: document.querySelector('.header'),
+        toggleclass: 'button--hamburger',
+        togglecontent: 'menu <span class="lines"></span>'
+    });
+</script>
+
+</body>
+</html>

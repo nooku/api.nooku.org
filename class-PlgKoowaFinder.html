@@ -1,0 +1,1255 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<title>Class PlgKoowaFinder | Nooku Framework</title>
+
+	<script type="text/javascript" src="resources/combined.js?2640657843"></script>
+	<script type="text/javascript" src="elementlist.js?527661356"></script>
+	<script type="text/javascript" src="http://www.nooku.org/js/scripts.js"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/bootstrap.min.css?390653004" />
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?150590327" />
+    <link rel="stylesheet" type="text/css" media="all" href="http://www.nooku.org/css/header.css" />
+
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,300italic,700,400italic' rel='stylesheet' type='text/css' />
+
+    <link rel="shortcut icon" href="http://www.nooku.org/images/favicon.ico" type="image/x-icon" />
+
+	<script>
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] ||
+            function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-214238-5', 'auto');
+        ga('send', 'pageview');
+    </script>
+</head>
+
+<body class="no-js">
+    <script type="text/javascript">
+    function hasClass(e, t) {
+        return e.className.match(new RegExp("(\\s|^)" + t + "(\\s|$)"))
+    }
+    var el = document.body;
+    var cl = "no-js";
+    if (hasClass(el, cl)) {
+        var reg = new RegExp("(\\s|^)" + cl + "(\\s|$)");
+        el.className = el.className.replace(reg, " js-enabled")
+    }
+    </script>
+	<div class="header">
+            <div class="container">
+                <div class="group">
+                    <div class="header__brand brand"><a href="http://www.nooku.org"><img src="http://www.nooku.org/images/layout/logo.png" alt="Nooku Logo" /></a></div>
+                    <div class="header__navigation">
+                        <div class="navigation_container" role="navigation">
+                            <ul class="navbar initiated">
+                                <li class="navbar__item" role="menuitem"><a href="http://www.nooku.org/features/">Features</a></li>
+                                <li class="navbar__item" role="menuitem"><a href="http://www.nooku.org/get-started/">Get Started</a></li>
+                                <li class="navbar__item" role="menuitem"><a href="http://www.nooku.org/services/">Services</a></li>
+                                <li class="navbar__item" role="menuitem"><a href="http://www.nooku.org/community/">Community</a></li>
+                                <li class="navbar__item active" role="menuitem"><a href="http://www.nooku.org/docs/">Docs</a></li>
+                                <li class="navbar__item" role="menuitem"><a href="http://www.nooku.org/blog">Blog</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+	<div id="left">
+	<div id="menu">
+		<form id="search" class="form-search">
+			<input type="hidden" name="cx" value="" />
+			<input type="hidden" name="ie" value="UTF-8" />
+			<input type="text" name="q" class="search-query" placeholder="Search" />
+		</form>
+
+
+		<div id="groups">
+			<h3>Packages</h3>
+			<ul>
+				<li class="active"><a href="package-Koowa.html">Koowa<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.html">Component<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.html">Koowa<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Class.html">Class<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Class.Locator.html">Locator</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Controller.html">Controller<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Controller.Behavior.html">Behavior</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Controller.Permission.html">Permission</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Controller.Toolbar.html">Toolbar</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Database.html">Database<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Database.Adapter.html">Adapter</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Database.Behavior.html">Behavior</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Database.Table.html">Table</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Date.html">Date</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Decorator.html">Decorator</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Dispatcher.html">Dispatcher<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Dispatcher.Authenticator.html">Authenticator</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Dispatcher.Permission.html">Permission</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Dispatcher.Request.html">Request</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Dispatcher.Response.html">Response<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Dispatcher.Response.Transport.html">Transport</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Dispatcher.Router.html">Router</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Event.html">Event<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Event.Publisher.html">Publisher</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Event.Subscriber.html">Subscriber</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Exception.html">Exception</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Filesystem.html">Filesystem<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Filesystem.Stream.html">Stream</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Filter.html">Filter</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Model.html">Model</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Object.html">Object<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Object.Locator.html">Locator</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Template.html">Template<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Template.Filter.html">Filter</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Template.Helper.html">Helper</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Template.Locator.html">Locator</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Translator.html">Translator<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Translator.Catalogue.html">Catalogue</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Translator.Locator.html">Locator</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.User.html">User</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.View.html">View<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.View.Error.html">Error</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.View.Page.html">Page</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.View.Users.html">Users</a>
+						</li>
+							</ul></li></ul></li></ul></li>
+				<li><a href="package-Koowa.Library.html">Library<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Behavior.html">Behavior<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Behavior.Exception.html">Exception</a>
+						</li>
+				<li><a href="package-Koowa.Library.Behavior.Mixin.html">Mixin</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Class.html">Class<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Class.Loader.html">Loader</a>
+						</li>
+				<li><a href="package-Koowa.Library.Class.Locator.html">Locator</a>
+						</li>
+				<li><a href="package-Koowa.Library.Class.Registry.html">Registry</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Command.html">Command<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Command.Callback.html">Callback</a>
+						</li>
+				<li><a href="package-Koowa.Library.Command.Chain.html">Chain</a>
+						</li>
+				<li><a href="package-Koowa.Library.Command.Exception.html">Exception</a>
+						</li>
+				<li><a href="package-Koowa.Library.Command.Handler.html">Handler</a>
+						</li>
+				<li><a href="package-Koowa.Library.Command.Mixin.html">Mixin</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Controller.html">Controller<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Controller.Behavior.html">Behavior</a>
+						</li>
+				<li><a href="package-Koowa.Library.Controller.Context.html">Context</a>
+						</li>
+				<li><a href="package-Koowa.Library.Controller.Exception.html">Exception</a>
+						</li>
+				<li><a href="package-Koowa.Library.Controller.Permission.html">Permission</a>
+						</li>
+				<li><a href="package-Koowa.Library.Controller.Request.html">Request</a>
+						</li>
+				<li><a href="package-Koowa.Library.Controller.Response.html">Response</a>
+						</li>
+				<li><a href="package-Koowa.Library.Controller.Toolbar.html">Toolbar<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Controller.Toolbar.Command.html">Command</a>
+						</li>
+				<li><a href="package-Koowa.Library.Controller.Toolbar.Mixin.html">Mixin</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-Koowa.Library.Database.html">Database<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Database.Adapter.html">Adapter</a>
+						</li>
+				<li><a href="package-Koowa.Library.Database.Behavior.html">Behavior</a>
+						</li>
+				<li><a href="package-Koowa.Library.Database.Context.html">Context</a>
+						</li>
+				<li><a href="package-Koowa.Library.Database.Query.html">Query</a>
+						</li>
+				<li><a href="package-Koowa.Library.Database.Row.html">Row</a>
+						</li>
+				<li><a href="package-Koowa.Library.Database.Rowset.html">Rowset</a>
+						</li>
+				<li><a href="package-Koowa.Library.Database.Schema.html">Schema</a>
+						</li>
+				<li><a href="package-Koowa.Library.Database.Table.html">Table</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Date.html">Date</a>
+						</li>
+				<li><a href="package-Koowa.Library.Dispatcher.html">Dispatcher<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Dispatcher.Authenticator.html">Authenticator</a>
+						</li>
+				<li><a href="package-Koowa.Library.Dispatcher.Behavior.html">Behavior</a>
+						</li>
+				<li><a href="package-Koowa.Library.Dispatcher.Context.html">Context</a>
+						</li>
+				<li><a href="package-Koowa.Library.Dispatcher.Exception.html">Exception</a>
+						</li>
+				<li><a href="package-Koowa.Library.Dispatcher.Permission.html">Permission</a>
+						</li>
+				<li><a href="package-Koowa.Library.Dispatcher.Request.html">Request</a>
+						</li>
+				<li><a href="package-Koowa.Library.Dispatcher.Response.html">Response<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Dispatcher.Response.Transport.html">Transport</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Dispatcher.Router.html">Router</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Event.html">Event<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Event.Mixin.html">Mixin</a>
+						</li>
+				<li><a href="package-Koowa.Library.Event.Publisher.html">Publisher</a>
+						</li>
+				<li><a href="package-Koowa.Library.Event.Subscriber.html">Subscriber</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Exception.html">Exception<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Exception.Handler.html">Handler</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Filesystem.html">Filesystem<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Filesystem.Stream.html">Stream<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Filesystem.Stream.Filter.html">Filter</a>
+						</li>
+				<li><a href="package-Koowa.Library.Filesystem.Stream.Iterator.html">Iterator</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-Koowa.Library.Filter.html">Filter</a>
+						</li>
+				<li><a href="package-Koowa.Library.Http.html">Http<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Http.Cookie.html">Cookie</a>
+						</li>
+				<li><a href="package-Koowa.Library.Http.Exception.html">Exception<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Http.Exception.Unsupported.html">Unsupported</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Http.Message.html">Message</a>
+						</li>
+				<li><a href="package-Koowa.Library.Http.Request.html">Request</a>
+						</li>
+				<li><a href="package-Koowa.Library.Http.Response.html">Response</a>
+						</li>
+				<li><a href="package-Koowa.Library.Http.Token.html">Token</a>
+						</li>
+				<li><a href="package-Koowa.Library.Http.Url.html">Url</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Model.html">Model<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Model.Behavior.html">Behavior</a>
+						</li>
+				<li><a href="package-Koowa.Library.Model.Context.html">Context</a>
+						</li>
+				<li><a href="package-Koowa.Library.Model.Entity.html">Entity</a>
+						</li>
+				<li><a href="package-Koowa.Library.Model.Paginator.html">Paginator</a>
+						</li>
+				<li><a href="package-Koowa.Library.Model.State.html">State</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Object.html">Object<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Object.Bootstrapper.html">Bootstrapper</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Config.html">Config</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Decorator.html">Decorator</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Exception.html">Exception</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Identifier.html">Identifier</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Locator.html">Locator</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Manager.html">Manager</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Mixin.html">Mixin</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Registry.html">Registry</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.String.html">String<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.String.Inflector.html">Inflector</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Template.html">Template<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Template.Engine.html">Engine</a>
+						</li>
+				<li><a href="package-Koowa.Library.Template.Exception.html">Exception</a>
+						</li>
+				<li><a href="package-Koowa.Library.Template.Filter.html">Filter</a>
+						</li>
+				<li><a href="package-Koowa.Library.Template.Helper.html">Helper</a>
+						</li>
+				<li><a href="package-Koowa.Library.Template.Locator.html">Locator</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Translator.html">Translator<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Translator.Catalogue.html">Catalogue</a>
+						</li>
+				<li><a href="package-Koowa.Library.Translator.Inflector.html">Inflector</a>
+						</li>
+				<li><a href="package-Koowa.Library.Translator.Locator.html">Locator</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.User.html">User<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.User.Provider.html">Provider</a>
+						</li>
+				<li><a href="package-Koowa.Library.User.Session.html">Session<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.User.Session.Container.html">Container</a>
+						</li>
+				<li><a href="package-Koowa.Library.User.Session.Handler.html">Handler</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-Koowa.Library.View.html">View<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.View.Behavior.html">Behavior</a>
+						</li>
+				<li><a href="package-Koowa.Library.View.Context.html">Context</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-Koowa.Module.html">Module<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Module.Koowa.html">Koowa<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Module.Koowa.Template.html">Template<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Module.Koowa.Template.Filter.html">Filter</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Module.Koowa.View.html">View</a>
+						</li>
+							</ul></li></ul></li>
+				<li class="active"><a href="package-Koowa.Plugin.html">Plugin<span></span></a>
+						<ul>
+				<li class="active"><a href="package-Koowa.Plugin.Koowa.html">Koowa</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Wordpress.html">Wordpress<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Wordpress.Library.html">Library<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Wordpress.Library.Controller.html">Controller</a>
+						</li>
+							</ul></li></ul></li></ul></li>
+				<li><a href="package-Nooku.html">Nooku<span></span></a>
+						<ul>
+				<li><a href="package-Nooku.Library.html">Library<span></span></a>
+						<ul>
+				<li><a href="package-Nooku.Library.Template.html">Template<span></span></a>
+						<ul>
+				<li><a href="package-Nooku.Library.Template.Abstract.html">Abstract</a>
+						</li>
+							</ul></li></ul></li></ul></li>
+			</ul>
+		</div>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-PlgKoowaAbstract.html">PlgKoowaAbstract</a></li>
+				<li class="active"><a href="class-PlgKoowaFinder.html">PlgKoowaFinder</a></li>
+				<li><a href="class-PlgKoowaSubscriber.html">PlgKoowaSubscriber</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="class-PlgKoowaInterface.html">PlgKoowaInterface</a></li>
+			</ul>
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+	<div id="rightInner">
+<div id="content" class="class">
+	<h1>Class PlgKoowaFinder</h1>
+
+
+	<div class="description">
+	
+<p>Finder Plugin</p>
+
+<p>Finder plugin adapter for Koowa extensions.</p>
+
+	</div>
+
+	<dl class="tree well">
+		<dd style="padding-left:0px">
+FinderIndexerAdapter
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by" />
+<b><span>PlgKoowaFinder</span></b>			
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="alert alert-info">
+		<b>Abstract</b><br />
+		
+		
+		<b>Package:</b> <a href="package-Koowa.html">Koowa</a>\<a href="package-Koowa.Plugin.html">Plugin</a>\<a href="package-Koowa.Plugin.Koowa.html">Koowa</a><br />
+
+				<b>Copyright:</b>
+				Copyright (C) 2007 - 2014 Johan Janssens and Timble CVBA. (<a
+href="http://www.timble.net">http://www.timble.net</a>)<br />
+				<b>License:</b>
+				<a href="GNU">GPLv3 &lt;http://www.gnu.org/licenses/gpl.html&gt;</a><br />
+				<b>Author:</b>
+				Ercan Ozkaya &lt;<a
+href="https://github.com/ercanozkaya">https://github.com/ercanozkaya</a>&gt;<br />
+		<b>Located at</b> <a href="source-class-PlgKoowaFinder.html#17-377" title="Go to source code">libraries/koowa/plugins/koowa/finder.php</a><br />
+	</div>
+
+
+
+		<h2>Methods summary</h2>
+		<table class="summary table table-bordered table-striped" id="methods">
+		<tr data-order="__construct" id="___construct">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#___construct">#</a>
+			<code><a href="source-class-PlgKoowaFinder.html#55-77" title="Go to source code">__construct</a>( <span>object <var>&amp; $subject</var></span>, <span>array <var>$config</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Constructor</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Constructor</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$subject</var></dt>
+						<dd><code>object</code><br>&amp;$subject The object to observe</dd>
+						<dt><var>$config</var></dt>
+						<dd><code>array</code><br>$config An array that holds the plugin configuration</dd>
+					</dl></div>
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="_initialize" id="__initialize">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#__initialize">#</a>
+			<code><a href="source-class-PlgKoowaFinder.html#79-105" title="Go to source code">_initialize</a>( <span><code><a href="class-KObjectConfig.html">KObjectConfig</a></code> <var>$config</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Initializes the default configuration for the object</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Initializes the default configuration for the object</p>
+
+<p>Called from <code><a href="class-PlgKoowaFinder.html#___construct">PlgKoowaFinder::__construct()</a></code> as a first step of object
+instantiation.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$config</var></dt>
+						<dd><code><code><a href="class-KObjectConfig.html">KObjectConfig</a></code></code><br>$config Configuration options</dd>
+					</dl></div>
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="onFinderAfterDelete" id="_onFinderAfterDelete">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_onFinderAfterDelete">#</a>
+			<code><a href="source-class-PlgKoowaFinder.html#107-129" title="Go to source code">onFinderAfterDelete</a>( <span>string <var>$context</var></span>, <span>JTable <var>$table</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Method to remove the link information for items that have been deleted.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Method to remove the link information for items that have been deleted.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$context</var></dt>
+						<dd><code>string</code><br>$context The context of the action being performed.</dd>
+						<dt><var>$table</var></dt>
+						<dd><code>JTable</code><br>$table A JTable object containing the record to be deleted</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>boolean</code><br>True on success.<br />
+					</div>
+
+					<h4>Throws</h4>
+					<div class="list">
+						<code>Exception</code><br>on database error.<br />
+					</div>
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="onFinderAfterSave" id="_onFinderAfterSave">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_onFinderAfterSave">#</a>
+			<code><a href="source-class-PlgKoowaFinder.html#131-147" title="Go to source code">onFinderAfterSave</a>( <span>string <var>$context</var></span>, <span>JTable <var>$entity</var></span>, <span>boolean <var>$isNew</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Method to determine if the access level of an item changed.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Method to determine if the access level of an item changed.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$context</var></dt>
+						<dd><code>string</code><br>$context The context of the content passed to the plugin.</dd>
+						<dt><var>$entity</var></dt>
+						<dd><code>JTable</code><br>$entity A JTable object</dd>
+						<dt><var>$isNew</var></dt>
+						<dd><code>boolean</code><br>$isNew If the content has just been created</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>boolean</code><br>True on success.<br />
+					</div>
+
+					<h4>Throws</h4>
+					<div class="list">
+						<code>Exception</code><br>on database error.<br />
+					</div>
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="onFinderChangeState" id="_onFinderChangeState">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_onFinderChangeState">#</a>
+			<code><a href="source-class-PlgKoowaFinder.html#149-164" title="Go to source code">onFinderChangeState</a>( <span>string <var>$context</var></span>, <span>array <var>$pks</var></span>, <span>integer <var>$value</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Method to update the link information for items that have been changed from
+outside the edit screen. This is fired when the item is published, unpublished,
+archived, or unarchived from the list view.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Method to update the link information for items that have been changed from
+outside the edit screen. This is fired when the item is published, unpublished,
+archived, or unarchived from the list view.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$context</var></dt>
+						<dd><code>string</code><br>$context The context for the content passed to the plugin.</dd>
+						<dt><var>$pks</var></dt>
+						<dd><code>array</code><br>$pks A list of primary key ids of the content that has changed state.</dd>
+						<dt><var>$value</var></dt>
+						<dd><code>integer</code><br>$value The value of the state that the content has been changed to.</dd>
+					</dl></div>
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="index" id="_index">
+
+			<td class="attributes"><code>
+				 protected 
+				boolean|
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_index">#</a>
+			<code><a href="source-class-PlgKoowaFinder.html#166-198" title="Go to source code">index</a>( <span>FinderIndexerResult <var>$item</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Main index function run when indexing happens</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Main index function run when indexing happens</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$item</var></dt>
+						<dd><code>FinderIndexerResult</code><br>$item</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>boolean|</code><br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="setup" id="_setup">
+
+			<td class="attributes"><code>
+				 protected 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_setup">#</a>
+			<code><a href="source-class-PlgKoowaFinder.html#200-212" title="Go to source code">setup</a>( )</code>
+
+			<div class="description short">
+				
+<p>Method to setup the indexer to be run.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Method to setup the indexer to be run.</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>boolean</code><br>True on success.<br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="bootFramework" id="_bootFramework">
+
+			<td class="attributes"><code>
+				 protected 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_bootFramework">#</a>
+			<code><a href="source-class-PlgKoowaFinder.html#214-234" title="Go to source code">bootFramework</a>( )</code>
+
+			<div class="description short">
+				
+<p>Boots the Koowa framework if the plugin is running in CLI mode</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Boots the Koowa framework if the plugin is running in CLI mode</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>boolean</code><br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getContentCount" id="_getContentCount">
+
+			<td class="attributes"><code>
+				 protected 
+				integer
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getContentCount">#</a>
+			<code><a href="source-class-PlgKoowaFinder.html#236-245" title="Go to source code">getContentCount</a>( )</code>
+
+			<div class="description short">
+				
+<p>Method to get the number of content items available to index.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Method to get the number of content items available to index.</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>integer</code><br>The number of content items available to index.<br />
+					</div>
+
+					<h4>Throws</h4>
+					<div class="list">
+						<code>Exception</code><br>on database error.<br />
+					</div>
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getItem" id="_getItem">
+
+			<td class="attributes"><code>
+				 protected 
+				FinderIndexerResult
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getItem">#</a>
+			<code><a href="source-class-PlgKoowaFinder.html#247-258" title="Go to source code">getItem</a>( <span>integer <var>$id</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Method to get a content item to index.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Method to get a content item to index.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$id</var></dt>
+						<dd><code>integer</code><br>$id The id of the content item.</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>FinderIndexerResult</code><br>A FinderIndexerResult object.<br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getItems" id="_getItems">
+
+			<td class="attributes"><code>
+				 protected 
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getItems">#</a>
+			<code><a href="source-class-PlgKoowaFinder.html#260-283" title="Go to source code">getItems</a>( <span>integer <var>$offset</var></span>, <span>integer <var>$limit</var></span>, <span>JDatabaseQuery <var>$query</var> = <span class="php-keyword1">null</span></span> )</code>
+
+			<div class="description short">
+				
+<p>Method to get a list of content items to index.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Method to get a list of content items to index.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$offset</var></dt>
+						<dd><code>integer</code><br>$offset The list offset.</dd>
+						<dt><var>$limit</var></dt>
+						<dd><code>integer</code><br>$limit The list limit.</dd>
+						<dt><var>$query</var></dt>
+						<dd><code>JDatabaseQuery</code><br>$query A JDatabaseQuery object. [optional]</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>array</code><br>An array of FinderIndexerResult objects.<br />
+					</div>
+
+					<h4>Throws</h4>
+					<div class="list">
+						<code>Exception</code><br>on database error.<br />
+					</div>
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getModel" id="_getModel">
+
+			<td class="attributes"><code>
+				 protected 
+				<code><a href="class-KModelAbstract.html">KModelAbstract</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getModel">#</a>
+			<code><a href="source-class-PlgKoowaFinder.html#285-302" title="Go to source code">getModel</a>( )</code>
+
+			<div class="description short">
+				
+<p>Returns the model</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Returns the model</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><code><a href="class-KModelAbstract.html">KModelAbstract</a></code></code><br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getFinderItem" id="_getFinderItem">
+
+			<td class="attributes"><code>
+				 protected 
+				object
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getFinderItem">#</a>
+			<code><a href="source-class-PlgKoowaFinder.html#304-365" title="Go to source code">getFinderItem</a>( <span><code><a href="class-KModelEntityInterface.html">KModelEntityInterface</a></code> <var>$entity</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Turns a KModelEntityInterface object into a finder item</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Turns a KModelEntityInterface object into a finder item</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$entity</var></dt>
+						<dd><code><code><a href="class-KModelEntityInterface.html">KModelEntityInterface</a></code></code><br>$entity</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>object</code><br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getLink" id="_getLink">
+
+			<td class="attributes"><code>
+				 protected 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getLink">#</a>
+			<code><a href="source-class-PlgKoowaFinder.html#367-376" title="Go to source code">getLink</a>( <span><code><a href="class-KModelEntityInterface.html">KModelEntityInterface</a></code> <var>$entity</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Returns a link to a row</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Returns a link to a row</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$entity</var></dt>
+						<dd><code><code><a href="class-KModelEntityInterface.html">KModelEntityInterface</a></code></code><br>$entity</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>string</code><br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		</table>
+
+
+
+		<h3>Magic methods summary</h3>
+
+
+
+
+
+
+
+
+		<h2>Properties summary</h2>
+		<table class="summary table table-bordered table-striped" id="properties">
+		<tr data-order="package" id="$package">
+			<td class="attributes"><code>
+				protected  
+				string
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-PlgKoowaFinder.html#27-32" title="Go to source code"><var>$package</var></a>
+			</td>
+			<td class="description"><div>
+				<a href="#$package" class="anchor">#</a>
+
+				<div class="description short">
+					
+<p>Package name</p>
+
+				</div>
+
+				<div class="description detailed hidden">
+					
+<p>Package name</p>
+
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="entity" id="$entity">
+			<td class="attributes"><code>
+				protected  
+				string
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-PlgKoowaFinder.html#34-39" title="Go to source code"><var>$entity</var></a>
+			</td>
+			<td class="description"><div>
+				<a href="#$entity" class="anchor">#</a>
+
+				<div class="description short">
+					
+<p>Resource that the plugin will act on</p>
+
+				</div>
+
+				<div class="description detailed hidden">
+					
+<p>Resource that the plugin will act on</p>
+
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="model" id="$model">
+			<td class="attributes"><code>
+				protected  
+				<code><a href="class-KObjectIdentifier.html">KObjectIdentifier</a></code>
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-PlgKoowaFinder.html#41-46" title="Go to source code"><var>$model</var></a>
+			</td>
+			<td class="description"><div>
+				<a href="#$model" class="anchor">#</a>
+
+				<div class="description short">
+					
+<p>Model identifier/model object</p>
+
+				</div>
+
+				<div class="description detailed hidden">
+					
+<p>Model identifier/model object</p>
+
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="instructions" id="$instructions">
+			<td class="attributes"><code>
+				protected  
+				array
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-PlgKoowaFinder.html#48-53" title="Go to source code"><var>$instructions</var></a>
+			</td>
+			<td class="description"><div>
+				<a href="#$instructions" class="anchor">#</a>
+
+				<div class="description short">
+					
+<p>Array of instructions. These are used to tell the indexer to include certain
+properties their importance</p>
+
+				</div>
+
+				<div class="description detailed hidden">
+					
+<p>Array of instructions. These are used to tell the indexer to include certain
+properties their importance</p>
+
+
+				</div>
+			</div></td>
+		</tr>
+		</table>
+
+
+
+
+
+
+</div>
+	</div>
+
+	<div id="footer">
+		Nooku Framework API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+
+<script>
+    responsivemenu.init({
+        wrapper: document.querySelector('.header'),
+        toggleclass: 'button--hamburger',
+        togglecontent: 'menu <span class="lines"></span>'
+    });
+</script>
+
+</body>
+</html>

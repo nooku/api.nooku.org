@@ -1,0 +1,1500 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<title>Interface KHttpResponseInterface | Nooku Framework</title>
+
+	<script type="text/javascript" src="resources/combined.js?2640657843"></script>
+	<script type="text/javascript" src="elementlist.js?527661356"></script>
+	<script type="text/javascript" src="http://www.nooku.org/js/scripts.js"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/bootstrap.min.css?390653004" />
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?150590327" />
+    <link rel="stylesheet" type="text/css" media="all" href="http://www.nooku.org/css/header.css" />
+
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,300italic,700,400italic' rel='stylesheet' type='text/css' />
+
+    <link rel="shortcut icon" href="http://www.nooku.org/images/favicon.ico" type="image/x-icon" />
+
+	<script>
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] ||
+            function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-214238-5', 'auto');
+        ga('send', 'pageview');
+    </script>
+</head>
+
+<body class="no-js">
+    <script type="text/javascript">
+    function hasClass(e, t) {
+        return e.className.match(new RegExp("(\\s|^)" + t + "(\\s|$)"))
+    }
+    var el = document.body;
+    var cl = "no-js";
+    if (hasClass(el, cl)) {
+        var reg = new RegExp("(\\s|^)" + cl + "(\\s|$)");
+        el.className = el.className.replace(reg, " js-enabled")
+    }
+    </script>
+	<div class="header">
+            <div class="container">
+                <div class="group">
+                    <div class="header__brand brand"><a href="http://www.nooku.org"><img src="http://www.nooku.org/images/layout/logo.png" alt="Nooku Logo" /></a></div>
+                    <div class="header__navigation">
+                        <div class="navigation_container" role="navigation">
+                            <ul class="navbar initiated">
+                                <li class="navbar__item" role="menuitem"><a href="http://www.nooku.org/features/">Features</a></li>
+                                <li class="navbar__item" role="menuitem"><a href="http://www.nooku.org/get-started/">Get Started</a></li>
+                                <li class="navbar__item" role="menuitem"><a href="http://www.nooku.org/services/">Services</a></li>
+                                <li class="navbar__item" role="menuitem"><a href="http://www.nooku.org/community/">Community</a></li>
+                                <li class="navbar__item active" role="menuitem"><a href="http://www.nooku.org/docs/">Docs</a></li>
+                                <li class="navbar__item" role="menuitem"><a href="http://www.nooku.org/blog">Blog</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+	<div id="left">
+	<div id="menu">
+		<form id="search" class="form-search">
+			<input type="hidden" name="cx" value="" />
+			<input type="hidden" name="ie" value="UTF-8" />
+			<input type="text" name="q" class="search-query" placeholder="Search" />
+		</form>
+
+
+		<div id="groups">
+			<h3>Packages</h3>
+			<ul>
+				<li class="active"><a href="package-Koowa.html">Koowa<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.html">Component<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.html">Koowa<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Class.html">Class<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Class.Locator.html">Locator</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Controller.html">Controller<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Controller.Behavior.html">Behavior</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Controller.Permission.html">Permission</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Controller.Toolbar.html">Toolbar</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Database.html">Database<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Database.Adapter.html">Adapter</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Database.Behavior.html">Behavior</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Database.Table.html">Table</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Date.html">Date</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Decorator.html">Decorator</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Dispatcher.html">Dispatcher<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Dispatcher.Authenticator.html">Authenticator</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Dispatcher.Permission.html">Permission</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Dispatcher.Request.html">Request</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Dispatcher.Response.html">Response<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Dispatcher.Response.Transport.html">Transport</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Dispatcher.Router.html">Router</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Event.html">Event<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Event.Publisher.html">Publisher</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Event.Subscriber.html">Subscriber</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Exception.html">Exception</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Filesystem.html">Filesystem<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Filesystem.Stream.html">Stream</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Filter.html">Filter</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Model.html">Model</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Object.html">Object<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Object.Locator.html">Locator</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Template.html">Template<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Template.Filter.html">Filter</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Template.Helper.html">Helper</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Template.Locator.html">Locator</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Translator.html">Translator<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Translator.Catalogue.html">Catalogue</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Translator.Locator.html">Locator</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.User.html">User</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.View.html">View<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.View.Error.html">Error</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.View.Page.html">Page</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.View.Users.html">Users</a>
+						</li>
+							</ul></li></ul></li></ul></li>
+				<li class="active"><a href="package-Koowa.Library.html">Library<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Behavior.html">Behavior<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Behavior.Exception.html">Exception</a>
+						</li>
+				<li><a href="package-Koowa.Library.Behavior.Mixin.html">Mixin</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Class.html">Class<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Class.Loader.html">Loader</a>
+						</li>
+				<li><a href="package-Koowa.Library.Class.Locator.html">Locator</a>
+						</li>
+				<li><a href="package-Koowa.Library.Class.Registry.html">Registry</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Command.html">Command<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Command.Callback.html">Callback</a>
+						</li>
+				<li><a href="package-Koowa.Library.Command.Chain.html">Chain</a>
+						</li>
+				<li><a href="package-Koowa.Library.Command.Exception.html">Exception</a>
+						</li>
+				<li><a href="package-Koowa.Library.Command.Handler.html">Handler</a>
+						</li>
+				<li><a href="package-Koowa.Library.Command.Mixin.html">Mixin</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Controller.html">Controller<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Controller.Behavior.html">Behavior</a>
+						</li>
+				<li><a href="package-Koowa.Library.Controller.Context.html">Context</a>
+						</li>
+				<li><a href="package-Koowa.Library.Controller.Exception.html">Exception</a>
+						</li>
+				<li><a href="package-Koowa.Library.Controller.Permission.html">Permission</a>
+						</li>
+				<li><a href="package-Koowa.Library.Controller.Request.html">Request</a>
+						</li>
+				<li><a href="package-Koowa.Library.Controller.Response.html">Response</a>
+						</li>
+				<li><a href="package-Koowa.Library.Controller.Toolbar.html">Toolbar<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Controller.Toolbar.Command.html">Command</a>
+						</li>
+				<li><a href="package-Koowa.Library.Controller.Toolbar.Mixin.html">Mixin</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-Koowa.Library.Database.html">Database<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Database.Adapter.html">Adapter</a>
+						</li>
+				<li><a href="package-Koowa.Library.Database.Behavior.html">Behavior</a>
+						</li>
+				<li><a href="package-Koowa.Library.Database.Context.html">Context</a>
+						</li>
+				<li><a href="package-Koowa.Library.Database.Query.html">Query</a>
+						</li>
+				<li><a href="package-Koowa.Library.Database.Row.html">Row</a>
+						</li>
+				<li><a href="package-Koowa.Library.Database.Rowset.html">Rowset</a>
+						</li>
+				<li><a href="package-Koowa.Library.Database.Schema.html">Schema</a>
+						</li>
+				<li><a href="package-Koowa.Library.Database.Table.html">Table</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Date.html">Date</a>
+						</li>
+				<li><a href="package-Koowa.Library.Dispatcher.html">Dispatcher<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Dispatcher.Authenticator.html">Authenticator</a>
+						</li>
+				<li><a href="package-Koowa.Library.Dispatcher.Behavior.html">Behavior</a>
+						</li>
+				<li><a href="package-Koowa.Library.Dispatcher.Context.html">Context</a>
+						</li>
+				<li><a href="package-Koowa.Library.Dispatcher.Exception.html">Exception</a>
+						</li>
+				<li><a href="package-Koowa.Library.Dispatcher.Permission.html">Permission</a>
+						</li>
+				<li><a href="package-Koowa.Library.Dispatcher.Request.html">Request</a>
+						</li>
+				<li><a href="package-Koowa.Library.Dispatcher.Response.html">Response<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Dispatcher.Response.Transport.html">Transport</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Dispatcher.Router.html">Router</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Event.html">Event<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Event.Mixin.html">Mixin</a>
+						</li>
+				<li><a href="package-Koowa.Library.Event.Publisher.html">Publisher</a>
+						</li>
+				<li><a href="package-Koowa.Library.Event.Subscriber.html">Subscriber</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Exception.html">Exception<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Exception.Handler.html">Handler</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Filesystem.html">Filesystem<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Filesystem.Stream.html">Stream<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Filesystem.Stream.Filter.html">Filter</a>
+						</li>
+				<li><a href="package-Koowa.Library.Filesystem.Stream.Iterator.html">Iterator</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-Koowa.Library.Filter.html">Filter</a>
+						</li>
+				<li class="active"><a href="package-Koowa.Library.Http.html">Http<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Http.Cookie.html">Cookie</a>
+						</li>
+				<li><a href="package-Koowa.Library.Http.Exception.html">Exception<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Http.Exception.Unsupported.html">Unsupported</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Http.Message.html">Message</a>
+						</li>
+				<li><a href="package-Koowa.Library.Http.Request.html">Request</a>
+						</li>
+				<li class="active"><a href="package-Koowa.Library.Http.Response.html">Response</a>
+						</li>
+				<li><a href="package-Koowa.Library.Http.Token.html">Token</a>
+						</li>
+				<li><a href="package-Koowa.Library.Http.Url.html">Url</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Model.html">Model<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Model.Behavior.html">Behavior</a>
+						</li>
+				<li><a href="package-Koowa.Library.Model.Context.html">Context</a>
+						</li>
+				<li><a href="package-Koowa.Library.Model.Entity.html">Entity</a>
+						</li>
+				<li><a href="package-Koowa.Library.Model.Paginator.html">Paginator</a>
+						</li>
+				<li><a href="package-Koowa.Library.Model.State.html">State</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Object.html">Object<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Object.Bootstrapper.html">Bootstrapper</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Config.html">Config</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Decorator.html">Decorator</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Exception.html">Exception</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Identifier.html">Identifier</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Locator.html">Locator</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Manager.html">Manager</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Mixin.html">Mixin</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Registry.html">Registry</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.String.html">String<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.String.Inflector.html">Inflector</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Template.html">Template<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Template.Engine.html">Engine</a>
+						</li>
+				<li><a href="package-Koowa.Library.Template.Exception.html">Exception</a>
+						</li>
+				<li><a href="package-Koowa.Library.Template.Filter.html">Filter</a>
+						</li>
+				<li><a href="package-Koowa.Library.Template.Helper.html">Helper</a>
+						</li>
+				<li><a href="package-Koowa.Library.Template.Locator.html">Locator</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Translator.html">Translator<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Translator.Catalogue.html">Catalogue</a>
+						</li>
+				<li><a href="package-Koowa.Library.Translator.Inflector.html">Inflector</a>
+						</li>
+				<li><a href="package-Koowa.Library.Translator.Locator.html">Locator</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.User.html">User<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.User.Provider.html">Provider</a>
+						</li>
+				<li><a href="package-Koowa.Library.User.Session.html">Session<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.User.Session.Container.html">Container</a>
+						</li>
+				<li><a href="package-Koowa.Library.User.Session.Handler.html">Handler</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-Koowa.Library.View.html">View<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.View.Behavior.html">Behavior</a>
+						</li>
+				<li><a href="package-Koowa.Library.View.Context.html">Context</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-Koowa.Module.html">Module<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Module.Koowa.html">Koowa<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Module.Koowa.Template.html">Template<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Module.Koowa.Template.Filter.html">Filter</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Module.Koowa.View.html">View</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-Koowa.Plugin.html">Plugin<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Plugin.Koowa.html">Koowa</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Wordpress.html">Wordpress<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Wordpress.Library.html">Library<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Wordpress.Library.Controller.html">Controller</a>
+						</li>
+							</ul></li></ul></li></ul></li>
+				<li><a href="package-Nooku.html">Nooku<span></span></a>
+						<ul>
+				<li><a href="package-Nooku.Library.html">Library<span></span></a>
+						<ul>
+				<li><a href="package-Nooku.Library.Template.html">Template<span></span></a>
+						<ul>
+				<li><a href="package-Nooku.Library.Template.Abstract.html">Abstract</a>
+						</li>
+							</ul></li></ul></li></ul></li>
+			</ul>
+		</div>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-KHttpResponse.html">KHttpResponse</a></li>
+				<li><a href="class-KHttpResponseHeaders.html">KHttpResponseHeaders</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li class="active"><a href="class-KHttpResponseInterface.html">KHttpResponseInterface</a></li>
+			</ul>
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+	<div id="rightInner">
+<div id="content" class="class">
+	<h1>Interface KHttpResponseInterface</h1>
+
+
+	<div class="description">
+	
+<p>Http Response Interface</p>
+
+	</div>
+
+	<dl class="tree well">
+		<dd style="padding-left:0px">
+<b><span>KHttpResponseInterface</span></b>			
+			 implements 
+				<a href="class-KHttpMessageInterface.html"><span>KHttpMessageInterface</span></a>
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+	<div>
+		<h3>Direct known implementers</h3>
+		<p class="elementList">
+			<code><a href="class-KControllerResponseInterface.html">KControllerResponseInterface</a></code>, 
+			<code><a href="class-KHttpResponse.html">KHttpResponse</a></code>
+		</p>
+	</div>
+
+	<div>
+		<h3>Indirect known implementers</h3>
+		<p class="elementList">
+			<code><a href="class-ComKoowaDispatcherResponse.html">ComKoowaDispatcherResponse</a></code>, 
+			<code><a href="class-KControllerResponse.html">KControllerResponse</a></code>, 
+			<code><a href="class-KDispatcherResponse.html">KDispatcherResponse</a></code>, 
+			<code><a href="class-KDispatcherResponseAbstract.html">KDispatcherResponseAbstract</a></code>, 
+			<code><a href="class-KDispatcherResponseInterface.html">KDispatcherResponseInterface</a></code>
+		</p>
+	</div>
+
+
+
+	<div class="alert alert-info">
+		
+		
+		
+		<b>Package:</b> <a href="package-Koowa.html">Koowa</a>\<a href="package-Koowa.Library.html">Library</a>\<a href="package-Koowa.Library.Http.html">Http</a>\<a href="package-Koowa.Library.Http.Response.html">Response</a><br />
+
+				<b>Copyright:</b>
+				Copyright (C) 2007 - 2014 Johan Janssens and Timble CVBA. (<a
+href="http://www.timble.net">http://www.timble.net</a>)<br />
+				<b>License:</b>
+				<a href="GNU">GPLv3 &lt;http://www.gnu.org/licenses/gpl.html&gt;</a><br />
+				<b>Author:</b>
+				Johan Janssens &lt;<a
+href="https://github.com/johanjanssens">https://github.com/johanjanssens</a>&gt;<br />
+		<b>Located at</b> <a href="source-class-KHttpResponseInterface.html#10-223" title="Go to source code">libraries/koowa/libraries/http/response/interface.php</a><br />
+	</div>
+
+
+
+		<h2>Methods summary</h2>
+		<table class="summary table table-bordered table-striped" id="methods">
+		<tr data-order="setStatus" id="_setStatus">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-KHttpResponse.html">KHttpResponse</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_setStatus">#</a>
+			<code><a href="source-class-KHttpResponseInterface.html#18-28" title="Go to source code">setStatus</a>( <span>integer <var>$code</var></span>, <span>string <var>$message</var> = <span class="php-keyword1">null</span></span> )</code>
+
+			<div class="description short">
+				
+<p>Set HTTP status code and (optionally) message</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Set HTTP status code and (optionally) message</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$code</var></dt>
+						<dd><code>integer</code><br>$code</dd>
+						<dt><var>$message</var></dt>
+						<dd><code>string</code><br>$message</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><code><a href="class-KHttpResponse.html">KHttpResponse</a></code></code><br />
+					</div>
+
+					<h4>Throws</h4>
+					<div class="list">
+						<code>InvalidArgumentException</code><br />
+					</div>
+
+					<h4>Link</h4>
+					<div class="list">
+							<a href="http://tools.ietf.org/html/rfc2616#section-6.1.1">http://tools.ietf.org/html/rfc2616#section-6.1.1</a><br />
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getStatusCode" id="_getStatusCode">
+
+			<td class="attributes"><code>
+				 public 
+				integer
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getStatusCode">#</a>
+			<code><a href="source-class-KHttpResponseInterface.html#30-37" title="Go to source code">getStatusCode</a>( )</code>
+
+			<div class="description short">
+				
+<p>Retrieve HTTP status code</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Retrieve HTTP status code</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>integer</code><br />
+					</div>
+
+
+					<h4>Link</h4>
+					<div class="list">
+							<a href="http://tools.ietf.org/html/rfc2616#section-6.1.1">http://tools.ietf.org/html/rfc2616#section-6.1.1</a><br />
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getStatusMessage" id="_getStatusMessage">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getStatusMessage">#</a>
+			<code><a href="source-class-KHttpResponseInterface.html#39-44" title="Go to source code">getStatusMessage</a>( )</code>
+
+			<div class="description short">
+				
+<p>Get the http header status message based on a status code</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Get the http header status message based on a status code</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>string</code><br>The http status message<br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="setContentType" id="_setContentType">
+
+			<td class="attributes"><code>
+				 public 
+				HttpResponse
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_setContentType">#</a>
+			<code><a href="source-class-KHttpResponseInterface.html#46-54" title="Go to source code">setContentType</a>( <span>string <var>$type</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Sets the response content type</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Sets the response content type</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$type</var></dt>
+						<dd><code>string</code><br>$type Content type</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>HttpResponse</code><br />
+					</div>
+
+
+					<h4>Link</h4>
+					<div class="list">
+							<a href="http://tools.ietf.org/html/rfc2616#section-14.17">http://tools.ietf.org/html/rfc2616#section-14.17</a><br />
+					</div>
+
+
+					<h4>Implementation of</h4>
+					<div class="list"><code><a href="class-KHttpMessageInterface.html#_setContentType">KHttpMessageInterface::setContentType()</a></code></div>
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getContentType" id="_getContentType">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getContentType">#</a>
+			<code><a href="source-class-KHttpResponseInterface.html#56-63" title="Go to source code">getContentType</a>( )</code>
+
+			<div class="description short">
+				
+<p>Retrieves the response content type</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Retrieves the response content type</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>string</code><br>Character set<br />
+					</div>
+
+
+					<h4>Link</h4>
+					<div class="list">
+							<a href="http://tools.ietf.org/html/rfc2616#section-14.17">http://tools.ietf.org/html/rfc2616#section-14.17</a><br />
+					</div>
+
+
+					<h4>Implementation of</h4>
+					<div class="list"><code><a href="class-KHttpMessageInterface.html#_getContentType">KHttpMessageInterface::getContentType()</a></code></div>
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getDate" id="_getDate">
+
+			<td class="attributes"><code>
+				 public 
+				DateTime
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getDate">#</a>
+			<code><a href="source-class-KHttpResponseInterface.html#65-73" title="Go to source code">getDate</a>( )</code>
+
+			<div class="description short">
+				
+<p>Returns the Date header as a DateTime instance.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Returns the Date header as a DateTime instance.</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>DateTime</code><br>A \DateTime instance<br />
+					</div>
+
+					<h4>Throws</h4>
+					<div class="list">
+						<code>RuntimeException</code><br>When the header is not parseable<br />
+					</div>
+
+					<h4>See</h4>
+					<div class="list">
+							<a
+href="http://tools.ietf.org/html/rfc2616#section-14.18">http://tools.ietf.org/html/rfc2616#section-14.18</a><br />
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="setDate" id="_setDate">
+
+			<td class="attributes"><code>
+				 public 
+				HttpResponse
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_setDate">#</a>
+			<code><a href="source-class-KHttpResponseInterface.html#75-83" title="Go to source code">setDate</a>( <span>DateTime <var>$date</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Sets the Date header.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Sets the Date header.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$date</var></dt>
+						<dd><code>DateTime</code><br>$date A \DateTime instance</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>HttpResponse</code><br />
+					</div>
+
+
+					<h4>See</h4>
+					<div class="list">
+							<a
+href="http://tools.ietf.org/html/rfc2616#section-14.18">http://tools.ietf.org/html/rfc2616#section-14.18</a><br />
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getLastModified" id="_getLastModified">
+
+			<td class="attributes"><code>
+				 public 
+				DateTime
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getLastModified">#</a>
+			<code><a href="source-class-KHttpResponseInterface.html#85-92" title="Go to source code">getLastModified</a>( )</code>
+
+			<div class="description short">
+				
+<p>Returns the Last-Modified HTTP header as a DateTime instance.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Returns the Last-Modified HTTP header as a DateTime instance.</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>DateTime</code><br>A DateTime instance<br />
+					</div>
+
+
+					<h4>Link</h4>
+					<div class="list">
+							<a href="http://tools.ietf.org/html/rfc2616#section-14.29">http://tools.ietf.org/html/rfc2616#section-14.29</a><br />
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="setLastModified" id="_setLastModified">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-KHttpResponseInterface.html">KHttpResponseInterface</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_setLastModified">#</a>
+			<code><a href="source-class-KHttpResponseInterface.html#94-104" title="Go to source code">setLastModified</a>( <span>DateTime <var>$date</var> = <span class="php-keyword1">null</span></span> )</code>
+
+			<div class="description short">
+				
+<p>Sets the Last-Modified HTTP header with a DateTime instance.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Sets the Last-Modified HTTP header with a DateTime instance.</p>
+
+<p>If passed a null value, it removes the header.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$date</var></dt>
+						<dd><code>DateTime</code><br>$date A \DateTime instance</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><code><a href="class-KHttpResponseInterface.html">KHttpResponseInterface</a></code></code><br />
+					</div>
+
+
+					<h4>Link</h4>
+					<div class="list">
+							<a href="http://tools.ietf.org/html/rfc2616#section-14.29">http://tools.ietf.org/html/rfc2616#section-14.29</a><br />
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getExpires" id="_getExpires">
+
+			<td class="attributes"><code>
+				 public 
+				DateTime
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getExpires">#</a>
+			<code><a href="source-class-KHttpResponseInterface.html#106-113" title="Go to source code">getExpires</a>( )</code>
+
+			<div class="description short">
+				
+<p>Returns the value of the Expires header as a DateTime instance.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Returns the value of the Expires header as a DateTime instance.</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>DateTime</code><br>A DateTime instance<br />
+					</div>
+
+
+					<h4>Link</h4>
+					<div class="list">
+							<a href="http://tools.ietf.org/html/rfc2616#section-14.21">http://tools.ietf.org/html/rfc2616#section-14.21</a><br />
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="setExpires" id="_setExpires">
+
+			<td class="attributes"><code>
+				 public 
+				HttpResponse
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_setExpires">#</a>
+			<code><a href="source-class-KHttpResponseInterface.html#115-125" title="Go to source code">setExpires</a>( <span>DateTime <var>$date</var> = <span class="php-keyword1">null</span></span> )</code>
+
+			<div class="description short">
+				
+<p>Sets the Expires HTTP header with a DateTime instance.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Sets the Expires HTTP header with a DateTime instance.</p>
+
+<p>If passed a null value, it removes the header.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$date</var></dt>
+						<dd><code>DateTime</code><br>$date A \DateTime instance</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>HttpResponse</code><br />
+					</div>
+
+
+					<h4>Link</h4>
+					<div class="list">
+							<a href="http://tools.ietf.org/html/rfc2616#section-14.21">http://tools.ietf.org/html/rfc2616#section-14.21</a><br />
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getEtag" id="_getEtag">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getEtag">#</a>
+			<code><a href="source-class-KHttpResponseInterface.html#127-134" title="Go to source code">getEtag</a>( )</code>
+
+			<div class="description short">
+				
+<p>Returns the literal value of the ETag HTTP header.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Returns the literal value of the ETag HTTP header.</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>string</code><br>The ETag HTTP header<br />
+					</div>
+
+
+					<h4>Link</h4>
+					<div class="list">
+							<a href="http://tools.ietf.org/html/rfc2616#section-14.19">http://tools.ietf.org/html/rfc2616#section-14.19</a><br />
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="setEtag" id="_setEtag">
+
+			<td class="attributes"><code>
+				 public 
+				HttpResponse
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_setEtag">#</a>
+			<code><a href="source-class-KHttpResponseInterface.html#136-145" title="Go to source code">setEtag</a>( <span>string <var>$etag</var> = <span class="php-keyword1">null</span></span>, <span>Boolean <var>$weak</var> = <span class="php-keyword1">false</span></span> )</code>
+
+			<div class="description short">
+				
+<p>Sets the ETag value.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Sets the ETag value.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$etag</var></dt>
+						<dd><code>string</code><br>$etag The ETag unique identifier</dd>
+						<dt><var>$weak</var></dt>
+						<dd><code>Boolean</code><br>$weak Whether you want a weak ETag or not</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>HttpResponse</code><br />
+					</div>
+
+
+					<h4>Link</h4>
+					<div class="list">
+							<a href="http://tools.ietf.org/html/rfc2616#section-14.19">http://tools.ietf.org/html/rfc2616#section-14.19</a><br />
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getAge" id="_getAge">
+
+			<td class="attributes"><code>
+				 public 
+				integer
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getAge">#</a>
+			<code><a href="source-class-KHttpResponseInterface.html#147-154" title="Go to source code">getAge</a>( )</code>
+
+			<div class="description short">
+				
+<p>Returns the age of the response.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Returns the age of the response.</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>integer</code><br>The age of the response in seconds<br />
+					</div>
+
+
+					<h4>Link</h4>
+					<div class="list">
+							<a href="http://tools.ietf.org/html/rfc2616#section-14.6">http://tools.ietf.org/html/rfc2616#section-14.6</a><br />
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getMaxAge" id="_getMaxAge">
+
+			<td class="attributes"><code>
+				 public 
+				integer|null
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getMaxAge">#</a>
+			<code><a href="source-class-KHttpResponseInterface.html#156-164" title="Go to source code">getMaxAge</a>( )</code>
+
+			<div class="description short">
+				
+<p>Sets the number of seconds after the time specified in the response's Date
+header when the the response should no longer be considered fresh.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Sets the number of seconds after the time specified in the response's Date
+header when the the response should no longer be considered fresh.</p>
+
+<p>Uses the expires header to calculate the maximum age. It returns null when no
+max age can be established.</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>integer|null</code><br>Number of seconds<br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="isInvalid" id="_isInvalid">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_isInvalid">#</a>
+			<code><a href="source-class-KHttpResponseInterface.html#166-171" title="Go to source code">isInvalid</a>( )</code>
+
+			<div class="description short">
+				
+<p>Is the response invalid</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Is the response invalid</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>boolean</code><br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="isError" id="_isError">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_isError">#</a>
+			<code><a href="source-class-KHttpResponseInterface.html#173-178" title="Go to source code">isError</a>( )</code>
+
+			<div class="description short">
+				
+<p>Check if an http status code is an error</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Check if an http status code is an error</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>boolean</code><br>TRUE if the status code is an error code<br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="isRedirect" id="_isRedirect">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_isRedirect">#</a>
+			<code><a href="source-class-KHttpResponseInterface.html#180-185" title="Go to source code">isRedirect</a>( )</code>
+
+			<div class="description short">
+				
+<p>Do we have a redirect</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Do we have a redirect</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>boolean</code><br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="isSuccess" id="_isSuccess">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_isSuccess">#</a>
+			<code><a href="source-class-KHttpResponseInterface.html#187-192" title="Go to source code">isSuccess</a>( )</code>
+
+			<div class="description short">
+				
+<p>Was the response successful</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Was the response successful</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>boolean</code><br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="isValidateable" id="_isValidateable">
+
+			<td class="attributes"><code>
+				 public 
+				Boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_isValidateable">#</a>
+			<code><a href="source-class-KHttpResponseInterface.html#194-200" title="Go to source code">isValidateable</a>( )</code>
+
+			<div class="description short">
+				
+<p>Returns true if the response includes headers that can be used to validate
+the response with the origin server using a conditional GET request.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Returns true if the response includes headers that can be used to validate
+the response with the origin server using a conditional GET request.</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>Boolean</code><br>true if the response is validateable, false otherwise<br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="isCacheable" id="_isCacheable">
+
+			<td class="attributes"><code>
+				 public 
+				Boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_isCacheable">#</a>
+			<code><a href="source-class-KHttpResponseInterface.html#202-212" title="Go to source code">isCacheable</a>( )</code>
+
+			<div class="description short">
+				
+<p>Returns true if the response is worth caching under any circumstance.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Returns true if the response is worth caching under any circumstance.</p>
+
+<p>Responses with that are stale (Expired) or without cache validation
+(Last-Modified, ETag) headers are considered uncacheable.</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>Boolean</code><br>true if the response is worth caching, false otherwise<br />
+					</div>
+
+
+					<h4>Link</h4>
+					<div class="list">
+							<a href="http://tools.ietf.org/html/rfc2616#section-14.9.1">http://tools.ietf.org/html/rfc2616#section-14.9.1</a><br />
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="isStale" id="_isStale">
+
+			<td class="attributes"><code>
+				 public 
+				Boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_isStale">#</a>
+			<code><a href="source-class-KHttpResponseInterface.html#214-222" title="Go to source code">isStale</a>( )</code>
+
+			<div class="description short">
+				
+<p>Returns true if the response is "stale".</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Returns true if the response is "stale".</p>
+
+<p>When the responses is stale, the response may not be served from cache
+without first re-validating with the origin.</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>Boolean</code><br>true if the response is fresh, false otherwise<br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		</table>
+
+		<h3>Methods inherited from <a href="class-KHttpMessageInterface.html#methods">KHttpMessageInterface</a></h3>
+		<p class="elementList">
+			<code><a href="class-KHttpMessageInterface.html#_getContent">getContent()</a></code>, 
+			<code><a href="class-KHttpMessageInterface.html#_getHeaders">getHeaders()</a></code>, 
+			<code><a href="class-KHttpMessageInterface.html#_getVersion">getVersion()</a></code>, 
+			<code><a href="class-KHttpMessageInterface.html#_setContent">setContent()</a></code>, 
+			<code><a href="class-KHttpMessageInterface.html#_setHeaders">setHeaders()</a></code>, 
+			<code><a href="class-KHttpMessageInterface.html#_setVersion">setVersion()</a></code>, 
+			<code><a href="class-KHttpMessageInterface.html#_toString">toString()</a></code>
+		</p>
+
+
+		<h3>Magic methods summary</h3>
+
+
+
+
+
+
+
+
+</div>
+	</div>
+
+	<div id="footer">
+		Nooku Framework API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+
+<script>
+    responsivemenu.init({
+        wrapper: document.querySelector('.header'),
+        toggleclass: 'button--hamburger',
+        togglecontent: 'menu <span class="lines"></span>'
+    });
+</script>
+
+</body>
+</html>

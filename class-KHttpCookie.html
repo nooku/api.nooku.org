@@ -1,0 +1,1286 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<title>Class KHttpCookie | Nooku Framework</title>
+
+	<script type="text/javascript" src="resources/combined.js?2640657843"></script>
+	<script type="text/javascript" src="elementlist.js?527661356"></script>
+	<script type="text/javascript" src="http://www.nooku.org/js/scripts.js"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/bootstrap.min.css?390653004" />
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?150590327" />
+    <link rel="stylesheet" type="text/css" media="all" href="http://www.nooku.org/css/header.css" />
+
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,300italic,700,400italic' rel='stylesheet' type='text/css' />
+
+    <link rel="shortcut icon" href="http://www.nooku.org/images/favicon.ico" type="image/x-icon" />
+
+	<script>
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] ||
+            function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-214238-5', 'auto');
+        ga('send', 'pageview');
+    </script>
+</head>
+
+<body class="no-js">
+    <script type="text/javascript">
+    function hasClass(e, t) {
+        return e.className.match(new RegExp("(\\s|^)" + t + "(\\s|$)"))
+    }
+    var el = document.body;
+    var cl = "no-js";
+    if (hasClass(el, cl)) {
+        var reg = new RegExp("(\\s|^)" + cl + "(\\s|$)");
+        el.className = el.className.replace(reg, " js-enabled")
+    }
+    </script>
+	<div class="header">
+            <div class="container">
+                <div class="group">
+                    <div class="header__brand brand"><a href="http://www.nooku.org"><img src="http://www.nooku.org/images/layout/logo.png" alt="Nooku Logo" /></a></div>
+                    <div class="header__navigation">
+                        <div class="navigation_container" role="navigation">
+                            <ul class="navbar initiated">
+                                <li class="navbar__item" role="menuitem"><a href="http://www.nooku.org/features/">Features</a></li>
+                                <li class="navbar__item" role="menuitem"><a href="http://www.nooku.org/get-started/">Get Started</a></li>
+                                <li class="navbar__item" role="menuitem"><a href="http://www.nooku.org/services/">Services</a></li>
+                                <li class="navbar__item" role="menuitem"><a href="http://www.nooku.org/community/">Community</a></li>
+                                <li class="navbar__item active" role="menuitem"><a href="http://www.nooku.org/docs/">Docs</a></li>
+                                <li class="navbar__item" role="menuitem"><a href="http://www.nooku.org/blog">Blog</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+	<div id="left">
+	<div id="menu">
+		<form id="search" class="form-search">
+			<input type="hidden" name="cx" value="" />
+			<input type="hidden" name="ie" value="UTF-8" />
+			<input type="text" name="q" class="search-query" placeholder="Search" />
+		</form>
+
+
+		<div id="groups">
+			<h3>Packages</h3>
+			<ul>
+				<li class="active"><a href="package-Koowa.html">Koowa<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.html">Component<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.html">Koowa<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Class.html">Class<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Class.Locator.html">Locator</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Controller.html">Controller<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Controller.Behavior.html">Behavior</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Controller.Permission.html">Permission</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Controller.Toolbar.html">Toolbar</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Database.html">Database<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Database.Adapter.html">Adapter</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Database.Behavior.html">Behavior</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Database.Table.html">Table</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Date.html">Date</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Decorator.html">Decorator</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Dispatcher.html">Dispatcher<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Dispatcher.Authenticator.html">Authenticator</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Dispatcher.Permission.html">Permission</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Dispatcher.Request.html">Request</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Dispatcher.Response.html">Response<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Dispatcher.Response.Transport.html">Transport</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Dispatcher.Router.html">Router</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Event.html">Event<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Event.Publisher.html">Publisher</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Event.Subscriber.html">Subscriber</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Exception.html">Exception</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Filesystem.html">Filesystem<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Filesystem.Stream.html">Stream</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Filter.html">Filter</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Model.html">Model</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Object.html">Object<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Object.Locator.html">Locator</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Template.html">Template<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Template.Filter.html">Filter</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Template.Helper.html">Helper</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Template.Locator.html">Locator</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Translator.html">Translator<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Translator.Catalogue.html">Catalogue</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Translator.Locator.html">Locator</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.User.html">User</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.View.html">View<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.View.Error.html">Error</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.View.Page.html">Page</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.View.Users.html">Users</a>
+						</li>
+							</ul></li></ul></li></ul></li>
+				<li class="active"><a href="package-Koowa.Library.html">Library<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Behavior.html">Behavior<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Behavior.Exception.html">Exception</a>
+						</li>
+				<li><a href="package-Koowa.Library.Behavior.Mixin.html">Mixin</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Class.html">Class<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Class.Loader.html">Loader</a>
+						</li>
+				<li><a href="package-Koowa.Library.Class.Locator.html">Locator</a>
+						</li>
+				<li><a href="package-Koowa.Library.Class.Registry.html">Registry</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Command.html">Command<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Command.Callback.html">Callback</a>
+						</li>
+				<li><a href="package-Koowa.Library.Command.Chain.html">Chain</a>
+						</li>
+				<li><a href="package-Koowa.Library.Command.Exception.html">Exception</a>
+						</li>
+				<li><a href="package-Koowa.Library.Command.Handler.html">Handler</a>
+						</li>
+				<li><a href="package-Koowa.Library.Command.Mixin.html">Mixin</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Controller.html">Controller<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Controller.Behavior.html">Behavior</a>
+						</li>
+				<li><a href="package-Koowa.Library.Controller.Context.html">Context</a>
+						</li>
+				<li><a href="package-Koowa.Library.Controller.Exception.html">Exception</a>
+						</li>
+				<li><a href="package-Koowa.Library.Controller.Permission.html">Permission</a>
+						</li>
+				<li><a href="package-Koowa.Library.Controller.Request.html">Request</a>
+						</li>
+				<li><a href="package-Koowa.Library.Controller.Response.html">Response</a>
+						</li>
+				<li><a href="package-Koowa.Library.Controller.Toolbar.html">Toolbar<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Controller.Toolbar.Command.html">Command</a>
+						</li>
+				<li><a href="package-Koowa.Library.Controller.Toolbar.Mixin.html">Mixin</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-Koowa.Library.Database.html">Database<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Database.Adapter.html">Adapter</a>
+						</li>
+				<li><a href="package-Koowa.Library.Database.Behavior.html">Behavior</a>
+						</li>
+				<li><a href="package-Koowa.Library.Database.Context.html">Context</a>
+						</li>
+				<li><a href="package-Koowa.Library.Database.Query.html">Query</a>
+						</li>
+				<li><a href="package-Koowa.Library.Database.Row.html">Row</a>
+						</li>
+				<li><a href="package-Koowa.Library.Database.Rowset.html">Rowset</a>
+						</li>
+				<li><a href="package-Koowa.Library.Database.Schema.html">Schema</a>
+						</li>
+				<li><a href="package-Koowa.Library.Database.Table.html">Table</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Date.html">Date</a>
+						</li>
+				<li><a href="package-Koowa.Library.Dispatcher.html">Dispatcher<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Dispatcher.Authenticator.html">Authenticator</a>
+						</li>
+				<li><a href="package-Koowa.Library.Dispatcher.Behavior.html">Behavior</a>
+						</li>
+				<li><a href="package-Koowa.Library.Dispatcher.Context.html">Context</a>
+						</li>
+				<li><a href="package-Koowa.Library.Dispatcher.Exception.html">Exception</a>
+						</li>
+				<li><a href="package-Koowa.Library.Dispatcher.Permission.html">Permission</a>
+						</li>
+				<li><a href="package-Koowa.Library.Dispatcher.Request.html">Request</a>
+						</li>
+				<li><a href="package-Koowa.Library.Dispatcher.Response.html">Response<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Dispatcher.Response.Transport.html">Transport</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Dispatcher.Router.html">Router</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Event.html">Event<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Event.Mixin.html">Mixin</a>
+						</li>
+				<li><a href="package-Koowa.Library.Event.Publisher.html">Publisher</a>
+						</li>
+				<li><a href="package-Koowa.Library.Event.Subscriber.html">Subscriber</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Exception.html">Exception<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Exception.Handler.html">Handler</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Filesystem.html">Filesystem<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Filesystem.Stream.html">Stream<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Filesystem.Stream.Filter.html">Filter</a>
+						</li>
+				<li><a href="package-Koowa.Library.Filesystem.Stream.Iterator.html">Iterator</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-Koowa.Library.Filter.html">Filter</a>
+						</li>
+				<li class="active"><a href="package-Koowa.Library.Http.html">Http<span></span></a>
+						<ul>
+				<li class="active"><a href="package-Koowa.Library.Http.Cookie.html">Cookie</a>
+						</li>
+				<li><a href="package-Koowa.Library.Http.Exception.html">Exception<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Http.Exception.Unsupported.html">Unsupported</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Http.Message.html">Message</a>
+						</li>
+				<li><a href="package-Koowa.Library.Http.Request.html">Request</a>
+						</li>
+				<li><a href="package-Koowa.Library.Http.Response.html">Response</a>
+						</li>
+				<li><a href="package-Koowa.Library.Http.Token.html">Token</a>
+						</li>
+				<li><a href="package-Koowa.Library.Http.Url.html">Url</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Model.html">Model<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Model.Behavior.html">Behavior</a>
+						</li>
+				<li><a href="package-Koowa.Library.Model.Context.html">Context</a>
+						</li>
+				<li><a href="package-Koowa.Library.Model.Entity.html">Entity</a>
+						</li>
+				<li><a href="package-Koowa.Library.Model.Paginator.html">Paginator</a>
+						</li>
+				<li><a href="package-Koowa.Library.Model.State.html">State</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Object.html">Object<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Object.Bootstrapper.html">Bootstrapper</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Config.html">Config</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Decorator.html">Decorator</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Exception.html">Exception</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Identifier.html">Identifier</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Locator.html">Locator</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Manager.html">Manager</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Mixin.html">Mixin</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Registry.html">Registry</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.String.html">String<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.String.Inflector.html">Inflector</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Template.html">Template<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Template.Engine.html">Engine</a>
+						</li>
+				<li><a href="package-Koowa.Library.Template.Exception.html">Exception</a>
+						</li>
+				<li><a href="package-Koowa.Library.Template.Filter.html">Filter</a>
+						</li>
+				<li><a href="package-Koowa.Library.Template.Helper.html">Helper</a>
+						</li>
+				<li><a href="package-Koowa.Library.Template.Locator.html">Locator</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Translator.html">Translator<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Translator.Catalogue.html">Catalogue</a>
+						</li>
+				<li><a href="package-Koowa.Library.Translator.Inflector.html">Inflector</a>
+						</li>
+				<li><a href="package-Koowa.Library.Translator.Locator.html">Locator</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.User.html">User<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.User.Provider.html">Provider</a>
+						</li>
+				<li><a href="package-Koowa.Library.User.Session.html">Session<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.User.Session.Container.html">Container</a>
+						</li>
+				<li><a href="package-Koowa.Library.User.Session.Handler.html">Handler</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-Koowa.Library.View.html">View<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.View.Behavior.html">Behavior</a>
+						</li>
+				<li><a href="package-Koowa.Library.View.Context.html">Context</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-Koowa.Module.html">Module<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Module.Koowa.html">Koowa<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Module.Koowa.Template.html">Template<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Module.Koowa.Template.Filter.html">Filter</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Module.Koowa.View.html">View</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-Koowa.Plugin.html">Plugin<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Plugin.Koowa.html">Koowa</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Wordpress.html">Wordpress<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Wordpress.Library.html">Library<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Wordpress.Library.Controller.html">Controller</a>
+						</li>
+							</ul></li></ul></li></ul></li>
+				<li><a href="package-Nooku.html">Nooku<span></span></a>
+						<ul>
+				<li><a href="package-Nooku.Library.html">Library<span></span></a>
+						<ul>
+				<li><a href="package-Nooku.Library.Template.html">Template<span></span></a>
+						<ul>
+				<li><a href="package-Nooku.Library.Template.Abstract.html">Abstract</a>
+						</li>
+							</ul></li></ul></li></ul></li>
+			</ul>
+		</div>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li class="active"><a href="class-KHttpCookie.html">KHttpCookie</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="class-KHttpCookieInterface.html">KHttpCookieInterface</a></li>
+			</ul>
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+	<div id="rightInner">
+<div id="content" class="class">
+	<h1>Class KHttpCookie</h1>
+
+
+	<div class="description">
+	
+<p>Http Cookie</p>
+
+	</div>
+
+	<dl class="tree well">
+		<dd style="padding-left:0px">
+			<a href="class-KObject.html"><span>KObject</span></a>
+			
+			 implements 
+				<a href="class-KObjectInterface.html"><span>KObjectInterface</span></a>, 
+			
+				<a href="class-KObjectMixable.html"><span>KObjectMixable</span></a>, 
+			
+				<a href="class-KObjectHandlable.html"><span>KObjectHandlable</span></a>, 
+			
+				<a href="class-KObjectDecoratable.html"><span>KObjectDecoratable</span></a>
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by" />
+<b><span>KHttpCookie</span></b>			
+			 implements 
+				<a href="class-KHttpCookieInterface.html"><span>KHttpCookieInterface</span></a>
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="alert alert-info">
+		
+		
+		
+		<b>Package:</b> <a href="package-Koowa.html">Koowa</a>\<a href="package-Koowa.Library.html">Library</a>\<a href="package-Koowa.Library.Http.html">Http</a>\<a href="package-Koowa.Library.Http.Cookie.html">Cookie</a><br />
+
+				<b>Copyright:</b>
+				Copyright (C) 2007 - 2014 Johan Janssens and Timble CVBA. (<a
+href="http://www.timble.net">http://www.timble.net</a>)<br />
+				<b>License:</b>
+				<a href="GNU">GPLv3 &lt;http://www.gnu.org/licenses/gpl.html&gt;</a><br />
+				<b>Author:</b>
+				Johan Janssens &lt;<a
+href="https://github.com/johanjanssens">https://github.com/johanjanssens</a>&gt;<br />
+		<b>Located at</b> <a href="source-class-KHttpCookie.html#10-310" title="Go to source code">libraries/koowa/libraries/http/cookie/cookie.php</a><br />
+	</div>
+
+
+
+		<h2>Methods summary</h2>
+		<table class="summary table table-bordered table-striped" id="methods">
+		<tr data-order="__construct" id="___construct">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-KHttpCookie.html">KHttpCookie</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#___construct">#</a>
+			<code><a href="source-class-KHttpCookie.html#80-94" title="Go to source code">__construct</a>( <span><code><a href="class-KObjectConfig.html">KObjectConfig</a></code> <var>$config</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Constructor</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Constructor</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$config</var></dt>
+						<dd><code><code><a href="class-KObjectConfig.html">KObjectConfig</a></code>|null</code><br>$config An optional ObjectConfig object with configuration options</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><code><a href="class-KHttpCookie.html">KHttpCookie</a></code></code><br />
+					</div>
+
+
+
+					<h4>Overrides</h4>
+					<div class="list"><code><a href="class-KObject.html#___construct">KObject::__construct</a></code></div>
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="_initialize" id="__initialize">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#__initialize">#</a>
+			<code><a href="source-class-KHttpCookie.html#96-117" title="Go to source code">_initialize</a>( <span><code><a href="class-KObjectConfig.html">KObjectConfig</a></code> <var>$config</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Initializes the options for the object</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Initializes the options for the object</p>
+
+<p>Called from <code><a href="class-KHttpCookie.html#___construct">KHttpCookie::__construct()</a></code> as a first step of object instantiation</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$config</var></dt>
+						<dd><code><code><a href="class-KObjectConfig.html">KObjectConfig</a></code></code><br>$config An optional ObjectConfig object with configuration options</dd>
+					</dl></div>
+
+
+
+
+					<h4>Overrides</h4>
+					<div class="list"><code><a href="class-KObject.html#__initialize">KObject::_initialize</a></code></div>
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="setName" id="_setName">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-KHttpCookie.html">KHttpCookie</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_setName">#</a>
+			<code><a href="source-class-KHttpCookie.html#119-140" title="Go to source code">setName</a>( <span>string <var>$name</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Set the cookie name</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Set the cookie name</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$name</var></dt>
+						<dd><code>string</code><br>$name The name of the cookie</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><code><a href="class-KHttpCookie.html">KHttpCookie</a></code></code><br />
+					</div>
+
+					<h4>Throws</h4>
+					<div class="list">
+						<code>InvalidArgumentException</code><br>If the cookie name is not valid or is empty<br />
+					</div>
+
+
+
+					<h4>Implementation of</h4>
+					<div class="list"><code><a href="class-KHttpCookieInterface.html#_setName">KHttpCookieInterface::setName()</a></code></div>
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="setExpire" id="_setExpire">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-KHttpCookie.html">KHttpCookie</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_setExpire">#</a>
+			<code><a href="source-class-KHttpCookie.html#142-167" title="Go to source code">setExpire</a>( <span>integer|string|DateTime <var>$expire</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Set the cookie expiration time</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Set the cookie expiration time</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$expire</var></dt>
+						<dd><code>integer|string|DateTime</code><br>$expire The expiration time of the cookie</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><code><a href="class-KHttpCookie.html">KHttpCookie</a></code></code><br />
+					</div>
+
+					<h4>Throws</h4>
+					<div class="list">
+						<code>InvalidArgumentException</code><br>If the cookie expiration time is not valid<br />
+					</div>
+
+
+
+					<h4>Implementation of</h4>
+					<div class="list"><code><a href="class-KHttpCookieInterface.html#_setExpire">KHttpCookieInterface::setExpire()</a></code></div>
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="setPath" id="_setPath">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-KHttpCookie.html">KHttpCookie</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_setPath">#</a>
+			<code><a href="source-class-KHttpCookie.html#169-184" title="Go to source code">setPath</a>( <span>string <var>$path</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Set the cookie path</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Set the cookie path</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$path</var></dt>
+						<dd><code>string</code><br>$path The cookie path</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><code><a href="class-KHttpCookie.html">KHttpCookie</a></code></code><br />
+					</div>
+
+
+
+
+					<h4>Implementation of</h4>
+					<div class="list"><code><a href="class-KHttpCookieInterface.html#_setPath">KHttpCookieInterface::setPath()</a></code></div>
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="isSecure" id="_isSecure">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_isSecure">#</a>
+			<code><a href="source-class-KHttpCookie.html#186-194" title="Go to source code">isSecure</a>( )</code>
+
+			<div class="description short">
+				
+<p>Checks whether the cookie should only be transmitted over a secure HTTPS
+connection from the client.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Checks whether the cookie should only be transmitted over a secure HTTPS
+connection from the client.</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>boolean</code><br />
+					</div>
+
+
+
+
+					<h4>Implementation of</h4>
+					<div class="list"><code><a href="class-KHttpCookieInterface.html#_isSecure">KHttpCookieInterface::isSecure()</a></code></div>
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="isHttpOnly" id="_isHttpOnly">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_isHttpOnly">#</a>
+			<code><a href="source-class-KHttpCookie.html#196-204" title="Go to source code">isHttpOnly</a>( )</code>
+
+			<div class="description short">
+				
+<p>Checks whether the cookie will be made accessible only through the HTTP
+protocol.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Checks whether the cookie will be made accessible only through the HTTP
+protocol.</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>boolean</code><br />
+					</div>
+
+
+
+
+					<h4>Implementation of</h4>
+					<div class="list"><code><a href="class-KHttpCookieInterface.html#_isHttpOnly">KHttpCookieInterface::isHttpOnly()</a></code></div>
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="isCleared" id="_isCleared">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_isCleared">#</a>
+			<code><a href="source-class-KHttpCookie.html#206-214" title="Go to source code">isCleared</a>( )</code>
+
+			<div class="description short">
+				
+<p>Whether this cookie is about to be cleared</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Whether this cookie is about to be cleared</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>boolean</code><br />
+					</div>
+
+
+
+
+					<h4>Implementation of</h4>
+					<div class="list"><code><a href="class-KHttpCookieInterface.html#_isCleared">KHttpCookieInterface::isCleared()</a></code></div>
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="toString" id="_toString">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_toString">#</a>
+			<code><a href="source-class-KHttpCookie.html#216-252" title="Go to source code">toString</a>( )</code>
+
+			<div class="description short">
+				
+<p>Return a string representation of the cookie</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Return a string representation of the cookie</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>string</code><br />
+					</div>
+
+
+
+
+					<h4>Implementation of</h4>
+					<div class="list"><code><a href="class-KHttpCookieInterface.html#_toString">KHttpCookieInterface::toString()</a></code></div>
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="__set" id="___set">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#___set">#</a>
+			<code><a href="source-class-KHttpCookie.html#254-274" title="Go to source code">__set</a>( <span>string <var>$key</var></span>, <span>mixed <var>$value</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Set a cookie attribute by key</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Set a cookie attribute by key</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$key</var></dt>
+						<dd><code>string</code><br>$key The key name.</dd>
+						<dt><var>$value</var></dt>
+						<dd><code>mixed</code><br>$value The value for the key</dd>
+					</dl></div>
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="__get" id="___get">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				&amp;
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#___get">#</a>
+			<code><a href="source-class-KHttpCookie.html#276-299" title="Go to source code">__get</a>( <span>string <var>$key</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Get a cookie attribute by key</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Get a cookie attribute by key</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$key</var></dt>
+						<dd><code>string</code><br>$key The key name.</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>string</code><br>$value The corresponding value.<br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="__toString" id="___toString">
+
+			<td class="attributes"><code>
+				final public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#___toString">#</a>
+			<code><a href="source-class-KHttpCookie.html#301-309" title="Go to source code">__toString</a>( )</code>
+
+			<div class="description short">
+				
+<p>Allow PHP casting of this object</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Allow PHP casting of this object</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>string</code><br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		</table>
+
+		<h3>Methods inherited from <a href="class-KObject.html#methods">KObject</a></h3>
+		<p class="elementList">
+			<code><a href="class-KObject.html#___call">__call()</a></code>, 
+			<code><a href="class-KObject.html#___clone">__clone()</a></code>, 
+			<code><a href="class-KObject.html#_decorate">decorate()</a></code>, 
+			<code><a href="class-KObject.html#_getConfig">getConfig()</a></code>, 
+			<code><a href="class-KObject.html#_getHandle">getHandle()</a></code>, 
+			<code><a href="class-KObject.html#_getIdentifier">getIdentifier()</a></code>, 
+			<code><a href="class-KObject.html#_getMethods">getMethods()</a></code>, 
+			<code><a href="class-KObject.html#_getObject">getObject()</a></code>, 
+			<code><a href="class-KObject.html#_inherits">inherits()</a></code>, 
+			<code><a href="class-KObject.html#_mixin">mixin()</a></code>
+		</p>
+
+
+		<h3>Magic methods summary</h3>
+
+
+
+
+
+
+
+
+		<h2>Properties summary</h2>
+		<table class="summary table table-bordered table-striped" id="properties">
+		<tr data-order="_name" id="$_name">
+			<td class="attributes"><code>
+				protected  
+				string
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-KHttpCookie.html#18-23" title="Go to source code"><var>$_name</var></a>
+			</td>
+			<td class="description"><div>
+				<a href="#$_name" class="anchor">#</a>
+
+				<div class="description short">
+					
+<p>The name of the cookie</p>
+
+				</div>
+
+				<div class="description detailed hidden">
+					
+<p>The name of the cookie</p>
+
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="value" id="$value">
+			<td class="attributes"><code>
+				public  
+				string
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-KHttpCookie.html#25-32" title="Go to source code"><var>$value</var></a>
+			</td>
+			<td class="description"><div>
+				<a href="#$value" class="anchor">#</a>
+
+				<div class="description short">
+					
+<p>The value of the cookie.</p>
+
+				</div>
+
+				<div class="description detailed hidden">
+					
+<p>The value of the cookie.</p>
+
+<p>This value is stored on the clients computer; do not store sensitive
+information</p>
+
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="domain" id="$domain">
+			<td class="attributes"><code>
+				public  
+				string
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-KHttpCookie.html#34-43" title="Go to source code"><var>$domain</var></a>
+			</td>
+			<td class="description"><div>
+				<a href="#$domain" class="anchor">#</a>
+
+				<div class="description short">
+					
+<p>The domain that the cookie is available to.</p>
+
+				</div>
+
+				<div class="description detailed hidden">
+					
+<p>The domain that the cookie is available to.</p>
+
+<p>Setting the domain to 'www.example.com' will make the cookie available in the
+www subdomain and higher subdomains. Cookies available to a lower domain, such
+as 'example.com' will be available to higher subdomains, such as
+'www.example.com'</p>
+
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="_expire" id="$_expire">
+			<td class="attributes"><code>
+				protected  
+				integer
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-KHttpCookie.html#45-52" title="Go to source code"><var>$_expire</var></a>
+			</td>
+			<td class="description"><div>
+				<a href="#$_expire" class="anchor">#</a>
+
+				<div class="description short">
+					
+<p>The time the cookie expires.</p>
+
+				</div>
+
+				<div class="description detailed hidden">
+					
+<p>The time the cookie expires.</p>
+
+<p>This is a Unix timestamp so is in number of seconds since the epoch.</p>
+
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="_path" id="$_path">
+			<td class="attributes"><code>
+				protected  
+				string
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-KHttpCookie.html#54-63" title="Go to source code"><var>$_path</var></a>
+			</td>
+			<td class="description"><div>
+				<a href="#$_path" class="anchor">#</a>
+
+				<div class="description short">
+					
+<p>The path on the server in which the cookie will be available on</p>
+
+				</div>
+
+				<div class="description detailed hidden">
+					
+<p>The path on the server in which the cookie will be available on</p>
+
+<p>If set to '/', the cookie will be available within the entire domain. If set
+to '/foo/', the cookie will only be available within the /foo/ directory and all
+sub-directories such as /foo/bar/ of domain. The default value is the current
+directory that the cookie is being set in.</p>
+
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="secure" id="$secure">
+			<td class="attributes"><code>
+				public  
+				string
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-KHttpCookie.html#65-70" title="Go to source code"><var>$secure</var></a>
+			</td>
+			<td class="description"><div>
+				<a href="#$secure" class="anchor">#</a>
+
+				<div class="description short">
+					
+<p>When TRUE indicates that the cookie should only be transmitted over a secure
+HTTPS connection from the client.</p>
+
+				</div>
+
+				<div class="description detailed hidden">
+					
+<p>When TRUE indicates that the cookie should only be transmitted over a secure
+HTTPS connection from the client.</p>
+
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="http_only" id="$http_only">
+			<td class="attributes"><code>
+				public  
+				string
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-KHttpCookie.html#72-78" title="Go to source code"><var>$http_only</var></a>
+			</td>
+			<td class="description"><div>
+				<a href="#$http_only" class="anchor">#</a>
+
+				<div class="description short">
+					
+<p>When TRUE the cookie will be made accessible only through the HTTP protocol.
+This means that the cookie won't be accessible by scripting languages, such as
+JavaScript.</p>
+
+				</div>
+
+				<div class="description detailed hidden">
+					
+<p>When TRUE the cookie will be made accessible only through the HTTP protocol.
+This means that the cookie won't be accessible by scripting languages, such as
+JavaScript.</p>
+
+
+				</div>
+			</div></td>
+		</tr>
+		</table>
+
+		<h3>Properties inherited from <a href="class-KObject.html#properties">KObject</a></h3>
+		<p class="elementList">
+			<code><a href="class-KObject.html#$_mixed_methods"><var>$_mixed_methods</var></a></code>
+		</p>
+
+
+
+
+
+</div>
+	</div>
+
+	<div id="footer">
+		Nooku Framework API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+
+<script>
+    responsivemenu.init({
+        wrapper: document.querySelector('.header'),
+        toggleclass: 'button--hamburger',
+        togglecontent: 'menu <span class="lines"></span>'
+    });
+</script>
+
+</body>
+</html>

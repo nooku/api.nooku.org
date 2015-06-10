@@ -1,0 +1,1600 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<title>Class KControllerBehaviorEditable | Nooku Framework</title>
+
+	<script type="text/javascript" src="resources/combined.js?2640657843"></script>
+	<script type="text/javascript" src="elementlist.js?527661356"></script>
+	<script type="text/javascript" src="http://www.nooku.org/js/scripts.js"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/bootstrap.min.css?390653004" />
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?150590327" />
+    <link rel="stylesheet" type="text/css" media="all" href="http://www.nooku.org/css/header.css" />
+
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,300italic,700,400italic' rel='stylesheet' type='text/css' />
+
+    <link rel="shortcut icon" href="http://www.nooku.org/images/favicon.ico" type="image/x-icon" />
+
+	<script>
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] ||
+            function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-214238-5', 'auto');
+        ga('send', 'pageview');
+    </script>
+</head>
+
+<body class="no-js">
+    <script type="text/javascript">
+    function hasClass(e, t) {
+        return e.className.match(new RegExp("(\\s|^)" + t + "(\\s|$)"))
+    }
+    var el = document.body;
+    var cl = "no-js";
+    if (hasClass(el, cl)) {
+        var reg = new RegExp("(\\s|^)" + cl + "(\\s|$)");
+        el.className = el.className.replace(reg, " js-enabled")
+    }
+    </script>
+	<div class="header">
+            <div class="container">
+                <div class="group">
+                    <div class="header__brand brand"><a href="http://www.nooku.org"><img src="http://www.nooku.org/images/layout/logo.png" alt="Nooku Logo" /></a></div>
+                    <div class="header__navigation">
+                        <div class="navigation_container" role="navigation">
+                            <ul class="navbar initiated">
+                                <li class="navbar__item" role="menuitem"><a href="http://www.nooku.org/features/">Features</a></li>
+                                <li class="navbar__item" role="menuitem"><a href="http://www.nooku.org/get-started/">Get Started</a></li>
+                                <li class="navbar__item" role="menuitem"><a href="http://www.nooku.org/services/">Services</a></li>
+                                <li class="navbar__item" role="menuitem"><a href="http://www.nooku.org/community/">Community</a></li>
+                                <li class="navbar__item active" role="menuitem"><a href="http://www.nooku.org/docs/">Docs</a></li>
+                                <li class="navbar__item" role="menuitem"><a href="http://www.nooku.org/blog">Blog</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+	<div id="left">
+	<div id="menu">
+		<form id="search" class="form-search">
+			<input type="hidden" name="cx" value="" />
+			<input type="hidden" name="ie" value="UTF-8" />
+			<input type="text" name="q" class="search-query" placeholder="Search" />
+		</form>
+
+
+		<div id="groups">
+			<h3>Packages</h3>
+			<ul>
+				<li class="active"><a href="package-Koowa.html">Koowa<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.html">Component<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.html">Koowa<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Class.html">Class<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Class.Locator.html">Locator</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Controller.html">Controller<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Controller.Behavior.html">Behavior</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Controller.Permission.html">Permission</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Controller.Toolbar.html">Toolbar</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Database.html">Database<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Database.Adapter.html">Adapter</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Database.Behavior.html">Behavior</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Database.Table.html">Table</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Date.html">Date</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Decorator.html">Decorator</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Dispatcher.html">Dispatcher<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Dispatcher.Authenticator.html">Authenticator</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Dispatcher.Permission.html">Permission</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Dispatcher.Request.html">Request</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Dispatcher.Response.html">Response<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Dispatcher.Response.Transport.html">Transport</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Dispatcher.Router.html">Router</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Event.html">Event<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Event.Publisher.html">Publisher</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Event.Subscriber.html">Subscriber</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Exception.html">Exception</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Filesystem.html">Filesystem<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Filesystem.Stream.html">Stream</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Filter.html">Filter</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Model.html">Model</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Object.html">Object<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Object.Locator.html">Locator</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Template.html">Template<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Template.Filter.html">Filter</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Template.Helper.html">Helper</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Template.Locator.html">Locator</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Translator.html">Translator<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Translator.Catalogue.html">Catalogue</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Translator.Locator.html">Locator</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.User.html">User</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.View.html">View<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.View.Error.html">Error</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.View.Page.html">Page</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.View.Users.html">Users</a>
+						</li>
+							</ul></li></ul></li></ul></li>
+				<li class="active"><a href="package-Koowa.Library.html">Library<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Behavior.html">Behavior<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Behavior.Exception.html">Exception</a>
+						</li>
+				<li><a href="package-Koowa.Library.Behavior.Mixin.html">Mixin</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Class.html">Class<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Class.Loader.html">Loader</a>
+						</li>
+				<li><a href="package-Koowa.Library.Class.Locator.html">Locator</a>
+						</li>
+				<li><a href="package-Koowa.Library.Class.Registry.html">Registry</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Command.html">Command<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Command.Callback.html">Callback</a>
+						</li>
+				<li><a href="package-Koowa.Library.Command.Chain.html">Chain</a>
+						</li>
+				<li><a href="package-Koowa.Library.Command.Exception.html">Exception</a>
+						</li>
+				<li><a href="package-Koowa.Library.Command.Handler.html">Handler</a>
+						</li>
+				<li><a href="package-Koowa.Library.Command.Mixin.html">Mixin</a>
+						</li>
+							</ul></li>
+				<li class="active"><a href="package-Koowa.Library.Controller.html">Controller<span></span></a>
+						<ul>
+				<li class="active"><a href="package-Koowa.Library.Controller.Behavior.html">Behavior</a>
+						</li>
+				<li><a href="package-Koowa.Library.Controller.Context.html">Context</a>
+						</li>
+				<li><a href="package-Koowa.Library.Controller.Exception.html">Exception</a>
+						</li>
+				<li><a href="package-Koowa.Library.Controller.Permission.html">Permission</a>
+						</li>
+				<li><a href="package-Koowa.Library.Controller.Request.html">Request</a>
+						</li>
+				<li><a href="package-Koowa.Library.Controller.Response.html">Response</a>
+						</li>
+				<li><a href="package-Koowa.Library.Controller.Toolbar.html">Toolbar<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Controller.Toolbar.Command.html">Command</a>
+						</li>
+				<li><a href="package-Koowa.Library.Controller.Toolbar.Mixin.html">Mixin</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-Koowa.Library.Database.html">Database<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Database.Adapter.html">Adapter</a>
+						</li>
+				<li><a href="package-Koowa.Library.Database.Behavior.html">Behavior</a>
+						</li>
+				<li><a href="package-Koowa.Library.Database.Context.html">Context</a>
+						</li>
+				<li><a href="package-Koowa.Library.Database.Query.html">Query</a>
+						</li>
+				<li><a href="package-Koowa.Library.Database.Row.html">Row</a>
+						</li>
+				<li><a href="package-Koowa.Library.Database.Rowset.html">Rowset</a>
+						</li>
+				<li><a href="package-Koowa.Library.Database.Schema.html">Schema</a>
+						</li>
+				<li><a href="package-Koowa.Library.Database.Table.html">Table</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Date.html">Date</a>
+						</li>
+				<li><a href="package-Koowa.Library.Dispatcher.html">Dispatcher<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Dispatcher.Authenticator.html">Authenticator</a>
+						</li>
+				<li><a href="package-Koowa.Library.Dispatcher.Behavior.html">Behavior</a>
+						</li>
+				<li><a href="package-Koowa.Library.Dispatcher.Context.html">Context</a>
+						</li>
+				<li><a href="package-Koowa.Library.Dispatcher.Exception.html">Exception</a>
+						</li>
+				<li><a href="package-Koowa.Library.Dispatcher.Permission.html">Permission</a>
+						</li>
+				<li><a href="package-Koowa.Library.Dispatcher.Request.html">Request</a>
+						</li>
+				<li><a href="package-Koowa.Library.Dispatcher.Response.html">Response<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Dispatcher.Response.Transport.html">Transport</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Dispatcher.Router.html">Router</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Event.html">Event<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Event.Mixin.html">Mixin</a>
+						</li>
+				<li><a href="package-Koowa.Library.Event.Publisher.html">Publisher</a>
+						</li>
+				<li><a href="package-Koowa.Library.Event.Subscriber.html">Subscriber</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Exception.html">Exception<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Exception.Handler.html">Handler</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Filesystem.html">Filesystem<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Filesystem.Stream.html">Stream<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Filesystem.Stream.Filter.html">Filter</a>
+						</li>
+				<li><a href="package-Koowa.Library.Filesystem.Stream.Iterator.html">Iterator</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-Koowa.Library.Filter.html">Filter</a>
+						</li>
+				<li><a href="package-Koowa.Library.Http.html">Http<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Http.Cookie.html">Cookie</a>
+						</li>
+				<li><a href="package-Koowa.Library.Http.Exception.html">Exception<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Http.Exception.Unsupported.html">Unsupported</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Http.Message.html">Message</a>
+						</li>
+				<li><a href="package-Koowa.Library.Http.Request.html">Request</a>
+						</li>
+				<li><a href="package-Koowa.Library.Http.Response.html">Response</a>
+						</li>
+				<li><a href="package-Koowa.Library.Http.Token.html">Token</a>
+						</li>
+				<li><a href="package-Koowa.Library.Http.Url.html">Url</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Model.html">Model<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Model.Behavior.html">Behavior</a>
+						</li>
+				<li><a href="package-Koowa.Library.Model.Context.html">Context</a>
+						</li>
+				<li><a href="package-Koowa.Library.Model.Entity.html">Entity</a>
+						</li>
+				<li><a href="package-Koowa.Library.Model.Paginator.html">Paginator</a>
+						</li>
+				<li><a href="package-Koowa.Library.Model.State.html">State</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Object.html">Object<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Object.Bootstrapper.html">Bootstrapper</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Config.html">Config</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Decorator.html">Decorator</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Exception.html">Exception</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Identifier.html">Identifier</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Locator.html">Locator</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Manager.html">Manager</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Mixin.html">Mixin</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Registry.html">Registry</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.String.html">String<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.String.Inflector.html">Inflector</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Template.html">Template<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Template.Engine.html">Engine</a>
+						</li>
+				<li><a href="package-Koowa.Library.Template.Exception.html">Exception</a>
+						</li>
+				<li><a href="package-Koowa.Library.Template.Filter.html">Filter</a>
+						</li>
+				<li><a href="package-Koowa.Library.Template.Helper.html">Helper</a>
+						</li>
+				<li><a href="package-Koowa.Library.Template.Locator.html">Locator</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Translator.html">Translator<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Translator.Catalogue.html">Catalogue</a>
+						</li>
+				<li><a href="package-Koowa.Library.Translator.Inflector.html">Inflector</a>
+						</li>
+				<li><a href="package-Koowa.Library.Translator.Locator.html">Locator</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.User.html">User<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.User.Provider.html">Provider</a>
+						</li>
+				<li><a href="package-Koowa.Library.User.Session.html">Session<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.User.Session.Container.html">Container</a>
+						</li>
+				<li><a href="package-Koowa.Library.User.Session.Handler.html">Handler</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-Koowa.Library.View.html">View<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.View.Behavior.html">Behavior</a>
+						</li>
+				<li><a href="package-Koowa.Library.View.Context.html">Context</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-Koowa.Module.html">Module<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Module.Koowa.html">Koowa<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Module.Koowa.Template.html">Template<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Module.Koowa.Template.Filter.html">Filter</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Module.Koowa.View.html">View</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-Koowa.Plugin.html">Plugin<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Plugin.Koowa.html">Koowa</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Wordpress.html">Wordpress<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Wordpress.Library.html">Library<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Wordpress.Library.Controller.html">Controller</a>
+						</li>
+							</ul></li></ul></li></ul></li>
+				<li><a href="package-Nooku.html">Nooku<span></span></a>
+						<ul>
+				<li><a href="package-Nooku.Library.html">Library<span></span></a>
+						<ul>
+				<li><a href="package-Nooku.Library.Template.html">Template<span></span></a>
+						<ul>
+				<li><a href="package-Nooku.Library.Template.Abstract.html">Abstract</a>
+						</li>
+							</ul></li></ul></li></ul></li>
+			</ul>
+		</div>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-KControllerBehaviorAbstract.html">KControllerBehaviorAbstract</a></li>
+				<li class="active"><a href="class-KControllerBehaviorEditable.html">KControllerBehaviorEditable</a></li>
+				<li><a href="class-KControllerBehaviorPermissible.html">KControllerBehaviorPermissible</a></li>
+				<li><a href="class-KControllerBehaviorPersistable.html">KControllerBehaviorPersistable</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+	<div id="rightInner">
+<div id="content" class="class">
+	<h1>Class KControllerBehaviorEditable</h1>
+
+
+	<div class="description">
+	
+<p>Editable Controller Behavior</p>
+
+	</div>
+
+	<dl class="tree well">
+		<dd style="padding-left:0px">
+			<a href="class-KObjectMixinAbstract.html"><span>KObjectMixinAbstract</span></a>
+			
+			 implements 
+				<a href="class-KObjectMixinInterface.html"><span>KObjectMixinInterface</span></a>
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by" />
+			<a href="class-KCommandCallbackAbstract.html"><span>KCommandCallbackAbstract</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:60px">
+			<img src="resources/inherit.png" alt="Extended by" />
+			<a href="class-KBehaviorAbstract.html"><span>KBehaviorAbstract</span></a>
+			
+			 implements 
+				<a href="class-KBehaviorInterface.html"><span>KBehaviorInterface</span></a>
+			
+			
+		</dd>
+		<dd style="padding-left:90px">
+			<img src="resources/inherit.png" alt="Extended by" />
+			<a href="class-KControllerBehaviorAbstract.html"><span>KControllerBehaviorAbstract</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:120px">
+			<img src="resources/inherit.png" alt="Extended by" />
+<b><span>KControllerBehaviorEditable</span></b>			
+			
+			
+		</dd>
+	</dl>
+
+
+	<div>
+		<h3>Direct known subclasses</h3>
+		<p class="elementList">
+			<code><a href="class-ComKoowaControllerBehaviorEditable.html">ComKoowaControllerBehaviorEditable</a></code>
+		</p>
+	</div>
+
+
+
+
+
+
+	<div class="alert alert-info">
+		
+		
+		
+		<b>Package:</b> <a href="package-Koowa.html">Koowa</a>\<a href="package-Koowa.Library.html">Library</a>\<a href="package-Koowa.Library.Controller.html">Controller</a>\<a href="package-Koowa.Library.Controller.Behavior.html">Behavior</a><br />
+
+				<b>Copyright:</b>
+				Copyright (C) 2007 - 2014 Johan Janssens and Timble CVBA. (<a
+href="http://www.timble.net">http://www.timble.net</a>)<br />
+				<b>License:</b>
+				<a href="GNU">GPLv3 &lt;http://www.gnu.org/licenses/gpl.html&gt;</a><br />
+				<b>Author:</b>
+				Johan Janssens &lt;<a
+href="https://github.com/johanjanssens">https://github.com/johanjanssens</a>&gt;<br />
+		<b>Located at</b> <a href="source-class-KControllerBehaviorEditable.html#10-482" title="Go to source code">libraries/koowa/libraries/controller/behavior/editable.php</a><br />
+	</div>
+
+
+
+		<h2>Methods summary</h2>
+		<table class="summary table table-bordered table-striped" id="methods">
+		<tr data-order="__construct" id="___construct">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#___construct">#</a>
+			<code><a href="source-class-KControllerBehaviorEditable.html#32-53" title="Go to source code">__construct</a>( <span><code><a href="class-KObjectConfig.html">KObjectConfig</a></code> <var>$config</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Constructor</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Constructor</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$config</var></dt>
+						<dd><code><code><a href="class-KObjectConfig.html">KObjectConfig</a></code></code><br>$config Configuration options</dd>
+					</dl></div>
+
+
+					<h4>Throws</h4>
+					<div class="list">
+						<code>InvalidArgumentException</code><br />
+					</div>
+
+
+					<h4>Overrides</h4>
+					<div class="list"><code><a href="class-KBehaviorAbstract.html#___construct">KBehaviorAbstract::__construct</a></code></div>
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="_initialize" id="__initialize">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#__initialize">#</a>
+			<code><a href="source-class-KControllerBehaviorEditable.html#55-71" title="Go to source code">_initialize</a>( <span><code><a href="class-KObjectConfig.html">KObjectConfig</a></code> <var>$config</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Initializes the options for the object</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Initializes the options for the object</p>
+
+<p>Called from <code><a href="class-KControllerBehaviorEditable.html#___construct">KControllerBehaviorEditable::__construct()</a></code> as a first step of object
+instantiation.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$config</var></dt>
+						<dd><code><code><a href="class-KObjectConfig.html">KObjectConfig</a></code></code><br>$config A ObjectConfig object with configuration options</dd>
+					</dl></div>
+
+
+
+
+					<h4>Overrides</h4>
+					<div class="list"><code><a href="class-KBehaviorAbstract.html#__initialize">KBehaviorAbstract::_initialize</a></code></div>
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="isSupported" id="_isSupported">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_isSupported">#</a>
+			<code><a href="source-class-KControllerBehaviorEditable.html#73-88" title="Go to source code">isSupported</a>( )</code>
+
+			<div class="description short">
+				
+<p>Check if the behavior is supported</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Check if the behavior is supported</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>boolean</code><br>True on success, false otherwise<br />
+					</div>
+
+
+
+					<h4>Overrides</h4>
+					<div class="list"><code><a href="class-KBehaviorAbstract.html#_isSupported">KBehaviorAbstract::isSupported</a></code></div>
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getReferrer" id="_getReferrer">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-KHttpUrl.html">KHttpUrl</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getReferrer">#</a>
+			<code><a href="source-class-KControllerBehaviorEditable.html#90-106" title="Go to source code">getReferrer</a>( <span><code><a href="class-KControllerContextInterface.html">KControllerContextInterface</a></code> <var>$context</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Get the referrer</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Get the referrer</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$context</var></dt>
+						<dd><code><code><a href="class-KControllerContextInterface.html">KControllerContextInterface</a></code></code><br>$context A controller context object</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><code><a href="class-KHttpUrl.html">KHttpUrl</a></code></code><br>A HttpUrl object<br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="setReferrer" id="_setReferrer">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_setReferrer">#</a>
+			<code><a href="source-class-KControllerBehaviorEditable.html#108-134" title="Go to source code">setReferrer</a>( <span><code><a href="class-KControllerContextInterface.html">KControllerContextInterface</a></code> <var>$context</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Set the referrer</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Set the referrer</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$context</var></dt>
+						<dd><code><code><a href="class-KControllerContextInterface.html">KControllerContextInterface</a></code></code><br>$context A controller context object</dd>
+					</dl></div>
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="findReferrer" id="_findReferrer">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-KHttpUrl.html">KHttpUrl</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_findReferrer">#</a>
+			<code><a href="source-class-KControllerBehaviorEditable.html#136-155" title="Go to source code">findReferrer</a>( <span><code><a href="class-KControllerContextInterface.html">KControllerContextInterface</a></code> <var>$context</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Find the referrer based on the context</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Find the referrer based on the context</p>
+
+<p>Method is being called when no referrer can be found in the request or when
+request url and referrer are identical. Function should return a url that is
+different from the request url to avoid redirect loops.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$context</var></dt>
+						<dd><code><code><a href="class-KControllerContextInterface.html">KControllerContextInterface</a></code></code><br>$context</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><code><a href="class-KHttpUrl.html">KHttpUrl</a></code></code><br>A HttpUrl object<br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="_lockReferrer" id="__lockReferrer">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#__lockReferrer">#</a>
+			<code><a href="source-class-KControllerBehaviorEditable.html#157-172" title="Go to source code">_lockReferrer</a>( <span><code><a href="class-KControllerContextInterface.html">KControllerContextInterface</a></code> <var>$context</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Lock the referrer from updates</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Lock the referrer from updates</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$context</var></dt>
+						<dd><code><code><a href="class-KControllerContextInterface.html">KControllerContextInterface</a></code></code><br>$context A controller context object</dd>
+					</dl></div>
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="_unlockReferrer" id="__unlockReferrer">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#__unlockReferrer">#</a>
+			<code><a href="source-class-KControllerBehaviorEditable.html#174-183" title="Go to source code">_unlockReferrer</a>( <span><code><a href="class-KControllerContextInterface.html">KControllerContextInterface</a></code> <var>$context</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Unlock the referrer for updates</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Unlock the referrer for updates</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$context</var></dt>
+						<dd><code><code><a href="class-KControllerContextInterface.html">KControllerContextInterface</a></code></code><br>$context A controller context object</dd>
+					</dl></div>
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="_unsetReferrer" id="__unsetReferrer">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#__unsetReferrer">#</a>
+			<code><a href="source-class-KControllerBehaviorEditable.html#185-196" title="Go to source code">_unsetReferrer</a>( <span><code><a href="class-KControllerContextInterface.html">KControllerContextInterface</a></code> <var>$context</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Unset the referrer</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Unset the referrer</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$context</var></dt>
+						<dd><code><code><a href="class-KControllerContextInterface.html">KControllerContextInterface</a></code></code><br>$context A controller context object</dd>
+					</dl></div>
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="isLocked" id="_isLocked">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_isLocked">#</a>
+			<code><a href="source-class-KControllerBehaviorEditable.html#198-215" title="Go to source code">isLocked</a>( )</code>
+
+			<div class="description short">
+				
+<p>Check if the resource is locked</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Check if the resource is locked</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>boolean</code><br>Returns TRUE if the resource is locked, FALSE otherwise.<br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="isLockable" id="_isLockable">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_isLockable">#</a>
+			<code><a href="source-class-KControllerBehaviorEditable.html#217-239" title="Go to source code">isLockable</a>( )</code>
+
+			<div class="description short">
+				
+<p>Check if the resource is lockable</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Check if the resource is lockable</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>boolean</code><br>Returns TRUE if the resource is can be locked, FALSE otherwise.<br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="_lockResource" id="__lockResource">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#__lockResource">#</a>
+			<code><a href="source-class-KControllerBehaviorEditable.html#241-255" title="Go to source code">_lockResource</a>( <span><code><a href="class-KControllerContextInterface.html">KControllerContextInterface</a></code> <var>$context</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Lock the resource</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Lock the resource</p>
+
+<p>Only lock if the context contains a row object and if the user has an active
+session he can edit or delete the resource. Otherwise don't lock it.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$context</var></dt>
+						<dd><code><code><a href="class-KControllerContextInterface.html">KControllerContextInterface</a></code></code><br>$context A controller context object</dd>
+					</dl></div>
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="_unlockResource" id="__unlockResource">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#__unlockResource">#</a>
+			<code><a href="source-class-KControllerBehaviorEditable.html#257-268" title="Go to source code">_unlockResource</a>( <span><code><a href="class-KControllerContextInterface.html">KControllerContextInterface</a></code> <var>$context</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Unlock the resource</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Unlock the resource</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$context</var></dt>
+						<dd><code><code><a href="class-KControllerContextInterface.html">KControllerContextInterface</a></code></code><br>$context A controller context object</dd>
+					</dl></div>
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="canSave" id="_canSave">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_canSave">#</a>
+			<code><a href="source-class-KControllerBehaviorEditable.html#270-296" title="Go to source code">canSave</a>( )</code>
+
+			<div class="description short">
+				
+<p>Permission handler for save actions</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Permission handler for save actions</p>
+
+<p>Method returns TRUE if the controller implements the ControllerModellable
+interface.</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>boolean</code><br>Return TRUE if action is permitted. FALSE otherwise.<br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="canApply" id="_canApply">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_canApply">#</a>
+			<code><a href="source-class-KControllerBehaviorEditable.html#298-308" title="Go to source code">canApply</a>( )</code>
+
+			<div class="description short">
+				
+<p>Permission handler for apply actions</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Permission handler for apply actions</p>
+
+<p>Method returns TRUE if the controller implements the ControllerModellable
+interface.</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>boolean</code><br>Return TRUE if action is permitted. FALSE otherwise.<br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="canCancel" id="_canCancel">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_canCancel">#</a>
+			<code><a href="source-class-KControllerBehaviorEditable.html#310-324" title="Go to source code">canCancel</a>( )</code>
+
+			<div class="description short">
+				
+<p>Permission handler for cancel actions</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Permission handler for cancel actions</p>
+
+<p>Method returns TRUE if the controller implements the ControllerModellable
+interface.</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>boolean</code><br>Return TRUE if action is permitted. FALSE otherwise.<br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="_actionSave" id="__actionSave">
+
+			<td class="attributes"><code>
+				 protected 
+				<code><a href="class-KModelEntityInterface.html">KModelEntityInterface</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#__actionSave">#</a>
+			<code><a href="source-class-KControllerBehaviorEditable.html#326-354" title="Go to source code">_actionSave</a>( <span><code><a href="class-KControllerContextInterface.html">KControllerContextInterface</a></code> <var>$context</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Save action</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Save action</p>
+
+<p>This function wraps around the edit or add action. If the model state is
+unique a edit action will be executed, if not unique an add action will be
+executed.</p>
+
+<p>This function also sets the redirect to the referrer if the action succeeds
+and will redirect to the current url if the edit/add action fails while setting
+the status message.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$context</var></dt>
+						<dd><code><code><a href="class-KControllerContextInterface.html">KControllerContextInterface</a></code></code><br>$context A controller context object</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><code><a href="class-KModelEntityInterface.html">KModelEntityInterface</a></code></code><br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="_actionApply" id="__actionApply">
+
+			<td class="attributes"><code>
+				 protected 
+				<code><a href="class-KModelEntityInterface.html">KModelEntityInterface</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#__actionApply">#</a>
+			<code><a href="source-class-KControllerBehaviorEditable.html#356-395" title="Go to source code">_actionApply</a>( <span><code><a href="class-KControllerContextInterface.html">KControllerContextInterface</a></code> <var>$context</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Apply action</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Apply action</p>
+
+<p>This function wraps around the edit or add action. If the model state is
+unique a edit action will be executed, if not unique an add action will be
+executed.</p>
+
+<p>This function also sets the redirect to the current url for 'add' actions and
+will redirect to current url if the edit/add action fails while setting the
+status message.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$context</var></dt>
+						<dd><code><code><a href="class-KControllerContextInterface.html">KControllerContextInterface</a></code></code><br>$context A controller context object</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><code><a href="class-KModelEntityInterface.html">KModelEntityInterface</a></code></code><br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="_actionCancel" id="__actionCancel">
+
+			<td class="attributes"><code>
+				 protected 
+				<code><a href="class-KModelEntityInterface.html">KModelEntityInterface</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#__actionCancel">#</a>
+			<code><a href="source-class-KControllerBehaviorEditable.html#397-413" title="Go to source code">_actionCancel</a>( <span><code><a href="class-KControllerContextInterface.html">KControllerContextInterface</a></code> <var>$context</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Cancel action</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Cancel action</p>
+
+<p>This function will unlock the row(s) and set the redirect to the referrer</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$context</var></dt>
+						<dd><code><code><a href="class-KControllerContextInterface.html">KControllerContextInterface</a></code></code><br>$context A command context object</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><code><a href="class-KModelEntityInterface.html">KModelEntityInterface</a></code></code><br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="_afterRead" id="__afterRead">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#__afterRead">#</a>
+			<code><a href="source-class-KControllerBehaviorEditable.html#415-443" title="Go to source code">_afterRead</a>( <span><code><a href="class-KControllerContext.html">KControllerContext</a></code> <var>$context</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Add a lock flash message if the resource is locked</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Add a lock flash message if the resource is locked</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$context</var></dt>
+						<dd><code><code><a href="class-KControllerContext.html">KControllerContext</a></code></code><br>$context A command context object</dd>
+					</dl></div>
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="_beforeEdit" id="__beforeEdit">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#__beforeEdit">#</a>
+			<code><a href="source-class-KControllerBehaviorEditable.html#445-462" title="Go to source code">_beforeEdit</a>( <span><code><a href="class-KControllerContextInterface.html">KControllerContextInterface</a></code> <var>$context</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Prevent editing a locked resource</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Prevent editing a locked resource</p>
+
+<p>If the resource is locked a Retry-After header indicating the time at which
+the conflicting edits are expected to complete will be added. Clients should
+wait until at least this time before retrying the request.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$context</var></dt>
+						<dd><code><code><a href="class-KControllerContextInterface.html">KControllerContextInterface</a></code></code><br>$context A controller context object</dd>
+					</dl></div>
+
+
+					<h4>Throws</h4>
+					<div class="list">
+						<code><code><a href="class-KControllerExceptionResourceLocked.html">KControllerExceptionResourceLocked</a></code></code><br>If the resource is locked<br />
+					</div>
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="_beforeDelete" id="__beforeDelete">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#__beforeDelete">#</a>
+			<code><a href="source-class-KControllerBehaviorEditable.html#464-481" title="Go to source code">_beforeDelete</a>( <span><code><a href="class-KControllerContextInterface.html">KControllerContextInterface</a></code> <var>$context</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Prevent deleting a locked resource</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Prevent deleting a locked resource</p>
+
+<p>If the resource is locked a Retry-After header indicating the time at which
+the conflicting edits are expected to complete will be added. Clients should
+wait until at least this time before retrying the request.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$context</var></dt>
+						<dd><code><code><a href="class-KControllerContextInterface.html">KControllerContextInterface</a></code></code><br>$context A controller context object</dd>
+					</dl></div>
+
+
+					<h4>Throws</h4>
+					<div class="list">
+						<code><code><a href="class-KControllerExceptionResourceLocked.html">KControllerExceptionResourceLocked</a></code></code><br>If the resource is locked<br />
+					</div>
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		</table>
+
+		<h3>Methods inherited from <a href="class-KControllerBehaviorAbstract.html#methods">KControllerBehaviorAbstract</a></h3>
+		<p class="elementList">
+			<code><a href="class-KControllerBehaviorAbstract.html#_execute">execute()</a></code>, 
+			<code><a href="class-KControllerBehaviorAbstract.html#_getMixableMethods">getMixableMethods()</a></code>
+		</p>
+		<h3>Methods inherited from <a href="class-KBehaviorAbstract.html#methods">KBehaviorAbstract</a></h3>
+		<p class="elementList">
+			<code><a href="class-KBehaviorAbstract.html#_addCommandCallback">addCommandCallback()</a></code>, 
+			<code><a href="class-KBehaviorAbstract.html#_getConfig">getConfig()</a></code>, 
+			<code><a href="class-KBehaviorAbstract.html#_getHandle">getHandle()</a></code>, 
+			<code><a href="class-KBehaviorAbstract.html#_getIdentifier">getIdentifier()</a></code>, 
+			<code><a href="class-KBehaviorAbstract.html#_getName">getName()</a></code>, 
+			<code><a href="class-KBehaviorAbstract.html#_getObject">getObject()</a></code>, 
+			<code><a href="class-KBehaviorAbstract.html#_getPriority">getPriority()</a></code>
+		</p>
+		<h3>Methods inherited from <a href="class-KCommandCallbackAbstract.html#methods">KCommandCallbackAbstract</a></h3>
+		<p class="elementList">
+			<code><a href="class-KCommandCallbackAbstract.html#_getBreakCondition">getBreakCondition()</a></code>, 
+			<code><a href="class-KCommandCallbackAbstract.html#_getCommandCallbacks">getCommandCallbacks()</a></code>, 
+			<code><a href="class-KCommandCallbackAbstract.html#_invokeCallbacks">invokeCallbacks()</a></code>, 
+			<code><a href="class-KCommandCallbackAbstract.html#_invokeCommandCallback">invokeCommandCallback()</a></code>, 
+			<code><a href="class-KCommandCallbackAbstract.html#_removeCommandCallback">removeCommandCallback()</a></code>, 
+			<code><a href="class-KCommandCallbackAbstract.html#_setBreakCondition">setBreakCondition()</a></code>
+		</p>
+		<h3>Methods inherited from <a href="class-KObjectMixinAbstract.html#methods">KObjectMixinAbstract</a></h3>
+		<p class="elementList">
+			<code><a href="class-KObjectMixinAbstract.html#___call">__call()</a></code>, 
+			<code><a href="class-KObjectMixinAbstract.html#___get">__get()</a></code>, 
+			<code><a href="class-KObjectMixinAbstract.html#___isset">__isset()</a></code>, 
+			<code><a href="class-KObjectMixinAbstract.html#___set">__set()</a></code>, 
+			<code><a href="class-KObjectMixinAbstract.html#___unset">__unset()</a></code>, 
+			<code><a href="class-KObjectMixinAbstract.html#_getMethods">getMethods()</a></code>, 
+			<code><a href="class-KObjectMixinAbstract.html#_getMixer">getMixer()</a></code>, 
+			<code><a href="class-KObjectMixinAbstract.html#_onMixin">onMixin()</a></code>, 
+			<code><a href="class-KObjectMixinAbstract.html#_setMixer">setMixer()</a></code>
+		</p>
+
+
+		<h3>Magic methods summary</h3>
+
+
+
+
+
+		<h2>Constants summary</h2>
+
+		<h3>Constants inherited from <a href="class-KCommandHandlerInterface.html#constants">KCommandHandlerInterface</a></h3>
+		<p class="elementList">
+			<code><a href="class-KCommandHandlerInterface.html#PRIORITY_HIGH"><b>PRIORITY_HIGH</b></a></code>, 
+			<code><a href="class-KCommandHandlerInterface.html#PRIORITY_HIGHEST"><b>PRIORITY_HIGHEST</b></a></code>, 
+			<code><a href="class-KCommandHandlerInterface.html#PRIORITY_LOW"><b>PRIORITY_LOW</b></a></code>, 
+			<code><a href="class-KCommandHandlerInterface.html#PRIORITY_LOWEST"><b>PRIORITY_LOWEST</b></a></code>, 
+			<code><a href="class-KCommandHandlerInterface.html#PRIORITY_NORMAL"><b>PRIORITY_NORMAL</b></a></code>
+		</p>
+
+
+
+		<h2>Properties summary</h2>
+		<table class="summary table table-bordered table-striped" id="properties">
+		<tr data-order="_cookie_path" id="$_cookie_path">
+			<td class="attributes"><code>
+				protected  
+				string
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-KControllerBehaviorEditable.html#18-23" title="Go to source code"><var>$_cookie_path</var></a>
+			</td>
+			<td class="description"><div>
+				<a href="#$_cookie_path" class="anchor">#</a>
+
+				<div class="description short">
+					
+<p>The cookie path</p>
+
+				</div>
+
+				<div class="description detailed hidden">
+					
+<p>The cookie path</p>
+
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="_cookie_name" id="$_cookie_name">
+			<td class="attributes"><code>
+				protected  
+				string
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-KControllerBehaviorEditable.html#25-30" title="Go to source code"><var>$_cookie_name</var></a>
+			</td>
+			<td class="description"><div>
+				<a href="#$_cookie_name" class="anchor">#</a>
+
+				<div class="description short">
+					
+<p>The cookie name</p>
+
+				</div>
+
+				<div class="description detailed hidden">
+					
+<p>The cookie name</p>
+
+
+				</div>
+			</div></td>
+		</tr>
+		</table>
+
+		<h3>Properties inherited from <a href="class-KBehaviorAbstract.html#properties">KBehaviorAbstract</a></h3>
+		<p class="elementList">
+			<code><a href="class-KBehaviorAbstract.html#$_priority"><var>$_priority</var></a></code>
+		</p>
+		<h3>Properties inherited from <a href="class-KCommandCallbackAbstract.html#properties">KCommandCallbackAbstract</a></h3>
+		<p class="elementList">
+			<code><a href="class-KCommandCallbackAbstract.html#$_break_condition"><var>$_break_condition</var></a></code>
+		</p>
+
+
+
+
+
+</div>
+	</div>
+
+	<div id="footer">
+		Nooku Framework API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+
+<script>
+    responsivemenu.init({
+        wrapper: document.querySelector('.header'),
+        toggleclass: 'button--hamburger',
+        togglecontent: 'menu <span class="lines"></span>'
+    });
+</script>
+
+</body>
+</html>

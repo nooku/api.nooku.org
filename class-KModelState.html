@@ -1,0 +1,1487 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<title>Class KModelState | Nooku Framework</title>
+
+	<script type="text/javascript" src="resources/combined.js?2640657843"></script>
+	<script type="text/javascript" src="elementlist.js?527661356"></script>
+	<script type="text/javascript" src="http://www.nooku.org/js/scripts.js"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/bootstrap.min.css?390653004" />
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?150590327" />
+    <link rel="stylesheet" type="text/css" media="all" href="http://www.nooku.org/css/header.css" />
+
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,300italic,700,400italic' rel='stylesheet' type='text/css' />
+
+    <link rel="shortcut icon" href="http://www.nooku.org/images/favicon.ico" type="image/x-icon" />
+
+	<script>
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] ||
+            function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-214238-5', 'auto');
+        ga('send', 'pageview');
+    </script>
+</head>
+
+<body class="no-js">
+    <script type="text/javascript">
+    function hasClass(e, t) {
+        return e.className.match(new RegExp("(\\s|^)" + t + "(\\s|$)"))
+    }
+    var el = document.body;
+    var cl = "no-js";
+    if (hasClass(el, cl)) {
+        var reg = new RegExp("(\\s|^)" + cl + "(\\s|$)");
+        el.className = el.className.replace(reg, " js-enabled")
+    }
+    </script>
+	<div class="header">
+            <div class="container">
+                <div class="group">
+                    <div class="header__brand brand"><a href="http://www.nooku.org"><img src="http://www.nooku.org/images/layout/logo.png" alt="Nooku Logo" /></a></div>
+                    <div class="header__navigation">
+                        <div class="navigation_container" role="navigation">
+                            <ul class="navbar initiated">
+                                <li class="navbar__item" role="menuitem"><a href="http://www.nooku.org/features/">Features</a></li>
+                                <li class="navbar__item" role="menuitem"><a href="http://www.nooku.org/get-started/">Get Started</a></li>
+                                <li class="navbar__item" role="menuitem"><a href="http://www.nooku.org/services/">Services</a></li>
+                                <li class="navbar__item" role="menuitem"><a href="http://www.nooku.org/community/">Community</a></li>
+                                <li class="navbar__item active" role="menuitem"><a href="http://www.nooku.org/docs/">Docs</a></li>
+                                <li class="navbar__item" role="menuitem"><a href="http://www.nooku.org/blog">Blog</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+	<div id="left">
+	<div id="menu">
+		<form id="search" class="form-search">
+			<input type="hidden" name="cx" value="" />
+			<input type="hidden" name="ie" value="UTF-8" />
+			<input type="text" name="q" class="search-query" placeholder="Search" />
+		</form>
+
+
+		<div id="groups">
+			<h3>Packages</h3>
+			<ul>
+				<li class="active"><a href="package-Koowa.html">Koowa<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.html">Component<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.html">Koowa<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Class.html">Class<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Class.Locator.html">Locator</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Controller.html">Controller<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Controller.Behavior.html">Behavior</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Controller.Permission.html">Permission</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Controller.Toolbar.html">Toolbar</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Database.html">Database<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Database.Adapter.html">Adapter</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Database.Behavior.html">Behavior</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Database.Table.html">Table</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Date.html">Date</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Decorator.html">Decorator</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Dispatcher.html">Dispatcher<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Dispatcher.Authenticator.html">Authenticator</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Dispatcher.Permission.html">Permission</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Dispatcher.Request.html">Request</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Dispatcher.Response.html">Response<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Dispatcher.Response.Transport.html">Transport</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Dispatcher.Router.html">Router</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Event.html">Event<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Event.Publisher.html">Publisher</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Event.Subscriber.html">Subscriber</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Exception.html">Exception</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Filesystem.html">Filesystem<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Filesystem.Stream.html">Stream</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Filter.html">Filter</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Model.html">Model</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Object.html">Object<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Object.Locator.html">Locator</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Template.html">Template<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Template.Filter.html">Filter</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Template.Helper.html">Helper</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Template.Locator.html">Locator</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Translator.html">Translator<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Translator.Catalogue.html">Catalogue</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Translator.Locator.html">Locator</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.User.html">User</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.View.html">View<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.View.Error.html">Error</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.View.Page.html">Page</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.View.Users.html">Users</a>
+						</li>
+							</ul></li></ul></li></ul></li>
+				<li class="active"><a href="package-Koowa.Library.html">Library<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Behavior.html">Behavior<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Behavior.Exception.html">Exception</a>
+						</li>
+				<li><a href="package-Koowa.Library.Behavior.Mixin.html">Mixin</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Class.html">Class<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Class.Loader.html">Loader</a>
+						</li>
+				<li><a href="package-Koowa.Library.Class.Locator.html">Locator</a>
+						</li>
+				<li><a href="package-Koowa.Library.Class.Registry.html">Registry</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Command.html">Command<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Command.Callback.html">Callback</a>
+						</li>
+				<li><a href="package-Koowa.Library.Command.Chain.html">Chain</a>
+						</li>
+				<li><a href="package-Koowa.Library.Command.Exception.html">Exception</a>
+						</li>
+				<li><a href="package-Koowa.Library.Command.Handler.html">Handler</a>
+						</li>
+				<li><a href="package-Koowa.Library.Command.Mixin.html">Mixin</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Controller.html">Controller<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Controller.Behavior.html">Behavior</a>
+						</li>
+				<li><a href="package-Koowa.Library.Controller.Context.html">Context</a>
+						</li>
+				<li><a href="package-Koowa.Library.Controller.Exception.html">Exception</a>
+						</li>
+				<li><a href="package-Koowa.Library.Controller.Permission.html">Permission</a>
+						</li>
+				<li><a href="package-Koowa.Library.Controller.Request.html">Request</a>
+						</li>
+				<li><a href="package-Koowa.Library.Controller.Response.html">Response</a>
+						</li>
+				<li><a href="package-Koowa.Library.Controller.Toolbar.html">Toolbar<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Controller.Toolbar.Command.html">Command</a>
+						</li>
+				<li><a href="package-Koowa.Library.Controller.Toolbar.Mixin.html">Mixin</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-Koowa.Library.Database.html">Database<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Database.Adapter.html">Adapter</a>
+						</li>
+				<li><a href="package-Koowa.Library.Database.Behavior.html">Behavior</a>
+						</li>
+				<li><a href="package-Koowa.Library.Database.Context.html">Context</a>
+						</li>
+				<li><a href="package-Koowa.Library.Database.Query.html">Query</a>
+						</li>
+				<li><a href="package-Koowa.Library.Database.Row.html">Row</a>
+						</li>
+				<li><a href="package-Koowa.Library.Database.Rowset.html">Rowset</a>
+						</li>
+				<li><a href="package-Koowa.Library.Database.Schema.html">Schema</a>
+						</li>
+				<li><a href="package-Koowa.Library.Database.Table.html">Table</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Date.html">Date</a>
+						</li>
+				<li><a href="package-Koowa.Library.Dispatcher.html">Dispatcher<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Dispatcher.Authenticator.html">Authenticator</a>
+						</li>
+				<li><a href="package-Koowa.Library.Dispatcher.Behavior.html">Behavior</a>
+						</li>
+				<li><a href="package-Koowa.Library.Dispatcher.Context.html">Context</a>
+						</li>
+				<li><a href="package-Koowa.Library.Dispatcher.Exception.html">Exception</a>
+						</li>
+				<li><a href="package-Koowa.Library.Dispatcher.Permission.html">Permission</a>
+						</li>
+				<li><a href="package-Koowa.Library.Dispatcher.Request.html">Request</a>
+						</li>
+				<li><a href="package-Koowa.Library.Dispatcher.Response.html">Response<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Dispatcher.Response.Transport.html">Transport</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Dispatcher.Router.html">Router</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Event.html">Event<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Event.Mixin.html">Mixin</a>
+						</li>
+				<li><a href="package-Koowa.Library.Event.Publisher.html">Publisher</a>
+						</li>
+				<li><a href="package-Koowa.Library.Event.Subscriber.html">Subscriber</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Exception.html">Exception<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Exception.Handler.html">Handler</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Filesystem.html">Filesystem<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Filesystem.Stream.html">Stream<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Filesystem.Stream.Filter.html">Filter</a>
+						</li>
+				<li><a href="package-Koowa.Library.Filesystem.Stream.Iterator.html">Iterator</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-Koowa.Library.Filter.html">Filter</a>
+						</li>
+				<li><a href="package-Koowa.Library.Http.html">Http<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Http.Cookie.html">Cookie</a>
+						</li>
+				<li><a href="package-Koowa.Library.Http.Exception.html">Exception<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Http.Exception.Unsupported.html">Unsupported</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Http.Message.html">Message</a>
+						</li>
+				<li><a href="package-Koowa.Library.Http.Request.html">Request</a>
+						</li>
+				<li><a href="package-Koowa.Library.Http.Response.html">Response</a>
+						</li>
+				<li><a href="package-Koowa.Library.Http.Token.html">Token</a>
+						</li>
+				<li><a href="package-Koowa.Library.Http.Url.html">Url</a>
+						</li>
+							</ul></li>
+				<li class="active"><a href="package-Koowa.Library.Model.html">Model<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Model.Behavior.html">Behavior</a>
+						</li>
+				<li><a href="package-Koowa.Library.Model.Context.html">Context</a>
+						</li>
+				<li><a href="package-Koowa.Library.Model.Entity.html">Entity</a>
+						</li>
+				<li><a href="package-Koowa.Library.Model.Paginator.html">Paginator</a>
+						</li>
+				<li class="active"><a href="package-Koowa.Library.Model.State.html">State</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Object.html">Object<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Object.Bootstrapper.html">Bootstrapper</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Config.html">Config</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Decorator.html">Decorator</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Exception.html">Exception</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Identifier.html">Identifier</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Locator.html">Locator</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Manager.html">Manager</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Mixin.html">Mixin</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Registry.html">Registry</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.String.html">String<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.String.Inflector.html">Inflector</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Template.html">Template<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Template.Engine.html">Engine</a>
+						</li>
+				<li><a href="package-Koowa.Library.Template.Exception.html">Exception</a>
+						</li>
+				<li><a href="package-Koowa.Library.Template.Filter.html">Filter</a>
+						</li>
+				<li><a href="package-Koowa.Library.Template.Helper.html">Helper</a>
+						</li>
+				<li><a href="package-Koowa.Library.Template.Locator.html">Locator</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Translator.html">Translator<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Translator.Catalogue.html">Catalogue</a>
+						</li>
+				<li><a href="package-Koowa.Library.Translator.Inflector.html">Inflector</a>
+						</li>
+				<li><a href="package-Koowa.Library.Translator.Locator.html">Locator</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.User.html">User<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.User.Provider.html">Provider</a>
+						</li>
+				<li><a href="package-Koowa.Library.User.Session.html">Session<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.User.Session.Container.html">Container</a>
+						</li>
+				<li><a href="package-Koowa.Library.User.Session.Handler.html">Handler</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-Koowa.Library.View.html">View<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.View.Behavior.html">Behavior</a>
+						</li>
+				<li><a href="package-Koowa.Library.View.Context.html">Context</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-Koowa.Module.html">Module<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Module.Koowa.html">Koowa<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Module.Koowa.Template.html">Template<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Module.Koowa.Template.Filter.html">Filter</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Module.Koowa.View.html">View</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-Koowa.Plugin.html">Plugin<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Plugin.Koowa.html">Koowa</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Wordpress.html">Wordpress<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Wordpress.Library.html">Library<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Wordpress.Library.Controller.html">Controller</a>
+						</li>
+							</ul></li></ul></li></ul></li>
+				<li><a href="package-Nooku.html">Nooku<span></span></a>
+						<ul>
+				<li><a href="package-Nooku.Library.html">Library<span></span></a>
+						<ul>
+				<li><a href="package-Nooku.Library.Template.html">Template<span></span></a>
+						<ul>
+				<li><a href="package-Nooku.Library.Template.Abstract.html">Abstract</a>
+						</li>
+							</ul></li></ul></li></ul></li>
+			</ul>
+		</div>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li class="active"><a href="class-KModelState.html">KModelState</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="class-KModelStateInterface.html">KModelStateInterface</a></li>
+			</ul>
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+	<div id="rightInner">
+<div id="content" class="class">
+	<h1>Class KModelState</h1>
+
+
+	<div class="description">
+	
+<p>Model State</p>
+
+<p>A state requires a model object. It will call back to the model upon a state
+change by calling reset method.</p>
+
+<p>State values can only be of type scalar or array. Values are only filtered if
+not NULL. If the value is an empty string it will be filtered to NULL. Values
+will only be set if the state exists. To insert new states use the the insert()
+function.</p>
+
+	</div>
+
+	<dl class="tree well">
+		<dd style="padding-left:0px">
+			<a href="class-KObject.html"><span>KObject</span></a>
+			
+			 implements 
+				<a href="class-KObjectInterface.html"><span>KObjectInterface</span></a>, 
+			
+				<a href="class-KObjectMixable.html"><span>KObjectMixable</span></a>, 
+			
+				<a href="class-KObjectHandlable.html"><span>KObjectHandlable</span></a>, 
+			
+				<a href="class-KObjectDecoratable.html"><span>KObjectDecoratable</span></a>
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by" />
+			<a href="class-KObjectArray.html"><span>KObjectArray</span></a>
+			
+			 implements 
+<span>IteratorAggregate</span>, 
+			
+<span>ArrayAccess</span>, 
+			
+<span>Serializable</span>, 
+			
+<span>Countable</span>
+			
+			
+		</dd>
+		<dd style="padding-left:60px">
+			<img src="resources/inherit.png" alt="Extended by" />
+<b><span>KModelState</span></b>			
+			 implements 
+				<a href="class-KModelStateInterface.html"><span>KModelStateInterface</span></a>
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="alert alert-info">
+		
+		
+		
+		<b>Package:</b> <a href="package-Koowa.html">Koowa</a>\<a href="package-Koowa.Library.html">Library</a>\<a href="package-Koowa.Library.Model.html">Model</a>\<a href="package-Koowa.Library.Model.State.html">State</a><br />
+
+				<b>Copyright:</b>
+				Copyright (C) 2007 - 2014 Johan Janssens and Timble CVBA. (<a
+href="http://www.timble.net">http://www.timble.net</a>)<br />
+				<b>License:</b>
+				<a href="GNU">GPLv3 &lt;http://www.gnu.org/licenses/gpl.html&gt;</a><br />
+				<b>Author:</b>
+				Johan Janssens &lt;<a
+href="https://github.com/johanjanssens">https://github.com/johanjanssens</a>&gt;<br />
+		<b>Located at</b> <a href="source-class-KModelState.html#10-454" title="Go to source code">libraries/koowa/libraries/model/state/state.php</a><br />
+	</div>
+
+
+
+		<h2>Methods summary</h2>
+		<table class="summary table table-bordered table-striped" id="methods">
+		<tr data-order="__construct" id="___construct">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-KObjectArray.html">KObjectArray</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#___construct">#</a>
+			<code><a href="source-class-KModelState.html#31-57" title="Go to source code">__construct</a>( <span><code><a href="class-KObjectConfig.html">KObjectConfig</a></code> <var>$config</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Constructor</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Constructor</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$config</var></dt>
+						<dd><code><code><a href="class-KObjectConfig.html">KObjectConfig</a></code></code><br>$config An optional KObjectConfig object with configuration options</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><code><a href="class-KObjectArray.html">KObjectArray</a></code></code><br />
+					</div>
+
+					<h4>Throws</h4>
+					<div class="list">
+						<code>UnexpectedValueException</code><br />
+						<code>InvalidArgumentException</code><br />
+					</div>
+
+
+					<h4>Overrides</h4>
+					<div class="list"><code><a href="class-KObjectArray.html#___construct">KObjectArray::__construct</a></code></div>
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="_initialize" id="__initialize">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#__initialize">#</a>
+			<code><a href="source-class-KModelState.html#59-73" title="Go to source code">_initialize</a>( <span><code><a href="class-KObjectConfig.html">KObjectConfig</a></code> <var>$config</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Initializes the options for the object</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Initializes the options for the object</p>
+
+<p>Called from <code><a href="class-KModelState.html#___construct">KModelState::__construct()</a></code> as a first step of object
+instantiation.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$config</var></dt>
+						<dd><code><code><a href="class-KObjectConfig.html">KObjectConfig</a></code></code><br>$config An optional KObjectConfig object with configuration options</dd>
+					</dl></div>
+
+
+
+
+					<h4>Overrides</h4>
+					<div class="list"><code><a href="class-KObjectArray.html#__initialize">KObjectArray::_initialize</a></code></div>
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="insert" id="_insert">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-KModelState.html">KModelState</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_insert">#</a>
+			<code><a href="source-class-KModelState.html#75-107" title="Go to source code">insert</a>( <span>string <var>$name</var></span>, <span>mixed <var>$filter</var></span>, <span>mixed <var>$default</var> = <span class="php-keyword1">null</span></span>, <span>boolean <var>$unique</var> = <span class="php-keyword1">false</span></span>, <span>array <var>$required</var> = <span class="php-keyword1">array</span>()</span>, <span>boolean <var>$internal</var> = <span class="php-keyword1">false</span></span> )</code>
+
+			<div class="description short">
+				
+<p>Insert a new state</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Insert a new state</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$name</var></dt>
+						<dd><code>string</code><br>$name The name of the state</dd>
+						<dt><var>$filter</var></dt>
+						<dd><code>mixed</code><br>$filter Filter(s), can be a FilterInterface object, a filter name or an array of
+filter names</dd>
+						<dt><var>$default</var></dt>
+						<dd><code>mixed</code><br>$default The default value of the state</dd>
+						<dt><var>$unique</var></dt>
+						<dd><code>boolean</code><br>$unique TRUE if the state uniquely identifies an entity, FALSE otherwise.
+Default FALSE.</dd>
+						<dt><var>$required</var></dt>
+						<dd><code>array</code><br>$required Array of required states to determine if the state is unique. Only
+applicable if the state is unqiue.</dd>
+						<dt><var>$internal</var></dt>
+						<dd><code>boolean</code><br>$internal If TRUE the state will be considered internal and should not be
+included in a routes. Default FALSE.</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><code><a href="class-KModelState.html">KModelState</a></code></code><br />
+					</div>
+
+
+
+
+					<h4>Implementation of</h4>
+					<div class="list"><code><a href="class-KModelStateInterface.html#_insert">KModelStateInterface::insert()</a></code></div>
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="get" id="_get">
+
+			<td class="attributes"><code>
+				 public 
+				mixed
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_get">#</a>
+			<code><a href="source-class-KModelState.html#109-124" title="Go to source code">get</a>( <span>string <var>$name</var></span>, <span>mixed <var>$default</var> = <span class="php-keyword1">null</span></span> )</code>
+
+			<div class="description short">
+				
+<p>Retrieve a configuration item and return $default if there is no element
+set.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Retrieve a configuration item and return $default if there is no element
+set.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$name</var></dt>
+						<dd><code>string</code><br>$name The state name</dd>
+						<dt><var>$default</var></dt>
+						<dd><code>mixed</code><br>$default The state default value if no state can be found</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>mixed</code><br />
+					</div>
+
+
+
+
+					<h4>Implementation of</h4>
+					<div class="list"><code><a href="class-KModelStateInterface.html#_get">KModelStateInterface::get()</a></code></div>
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="set" id="_set">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-KModelInterface.html">KModelInterface</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_set">#</a>
+			<code><a href="source-class-KModelState.html#126-147" title="Go to source code">set</a>( <span>string <var>$name</var></span>, <span>mixed <var>$value</var> = <span class="php-keyword1">null</span></span> )</code>
+
+			<div class="description short">
+				
+<p>Set the a state value</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Set the a state value</p>
+
+<p>This function only acts on existing states, if a state has changed it will
+call back to the model triggering a reset action.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$name</var></dt>
+						<dd><code>string</code><br>$name The state name.</dd>
+						<dt><var>$value</var></dt>
+						<dd><code>mixed</code><br>$value The state value.</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><code><a href="class-KModelInterface.html">KModelInterface</a></code></code><br />
+					</div>
+
+
+
+
+					<h4>Implementation of</h4>
+					<div class="list"><code><a href="class-KModelStateInterface.html#_set">KModelStateInterface::set()</a></code></div>
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="has" id="_has">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_has">#</a>
+			<code><a href="source-class-KModelState.html#149-158" title="Go to source code">has</a>( <span>string <var>$name</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Check if a state exists</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Check if a state exists</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$name</var></dt>
+						<dd><code>string</code><br>$name The state name.</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>boolean</code><br />
+					</div>
+
+
+
+
+					<h4>Implementation of</h4>
+					<div class="list"><code><a href="class-KModelStateInterface.html#_has">KModelStateInterface::has()</a></code></div>
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="remove" id="_remove">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-KModelState.html">KModelState</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_remove">#</a>
+			<code><a href="source-class-KModelState.html#160-170" title="Go to source code">remove</a>( <span>string <var>$name</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Remove an existing state</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Remove an existing state</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$name</var></dt>
+						<dd><code>string</code><br>$name The name of the state</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><code><a href="class-KModelState.html">KModelState</a></code></code><br />
+					</div>
+
+
+
+
+					<h4>Implementation of</h4>
+					<div class="list"><code><a href="class-KModelStateInterface.html#_remove">KModelStateInterface::remove()</a></code></div>
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="reset" id="_reset">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-KModelState.html">KModelState</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_reset">#</a>
+			<code><a href="source-class-KModelState.html#172-185" title="Go to source code">reset</a>( <span>boolean <var>$default</var> = <span class="php-keyword1">true</span></span> )</code>
+
+			<div class="description short">
+				
+<p>Reset all state data and revert to the default state</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Reset all state data and revert to the default state</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$default</var></dt>
+						<dd><code>boolean</code><br>$default If TRUE use defaults when resetting. Default is TRUE</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><code><a href="class-KModelState.html">KModelState</a></code></code><br />
+					</div>
+
+
+
+
+					<h4>Implementation of</h4>
+					<div class="list"><code><a href="class-KModelStateInterface.html#_reset">KModelStateInterface::reset()</a></code></div>
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="count" id="_count">
+
+			<td class="attributes"><code>
+				 public 
+				integer
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_count">#</a>
+			<code><a href="source-class-KModelState.html#187-196" title="Go to source code">count</a>( )</code>
+
+			<div class="description short">
+				
+<p>Get the total number of entities</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Get the total number of entities</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>integer</code><br />
+					</div>
+
+
+
+					<h4>Overrides</h4>
+					<div class="list"><code><a href="class-KObjectArray.html#_count">KObjectArray::count</a></code></div>
+
+					<h4>Implementation of</h4>
+					<div class="list"><code><a href="class-KModelStateInterface.html#_count">KModelStateInterface::count()</a></code></div>
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="setValues" id="_setValues">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-KModelState.html">KModelState</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_setValues">#</a>
+			<code><a href="source-class-KModelState.html#198-211" title="Go to source code">setValues</a>( <span>array <var>$data</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Set the state values from an array</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Set the state values from an array</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$data</var></dt>
+						<dd><code>array</code><br>$data An associative array of state values by name</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><code><a href="class-KModelState.html">KModelState</a></code></code><br />
+					</div>
+
+
+
+
+					<h4>Implementation of</h4>
+					<div class="list"><code><a href="class-KModelStateInterface.html#_setValues">KModelStateInterface::setValues()</a></code></div>
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getValues" id="_getValues">
+
+			<td class="attributes"><code>
+				 public 
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getValues">#</a>
+			<code><a href="source-class-KModelState.html#213-263" title="Go to source code">getValues</a>( <span>boolean <var>$unique</var> = <span class="php-keyword1">false</span></span> )</code>
+
+			<div class="description short">
+				
+<p>Get the state data</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Get the state data</p>
+
+<p>This function only returns states that have been been set.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$unique</var></dt>
+						<dd><code>boolean</code><br>$unique If TRUE only retrieve unique state values, default FALSE</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>array</code><br>An associative array of state values by name<br />
+					</div>
+
+
+
+
+					<h4>Implementation of</h4>
+					<div class="list"><code><a href="class-KModelStateInterface.html#_getValues">KModelStateInterface::getValues()</a></code></div>
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="setProperty" id="_setProperty">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-KModelState.html">KModelState</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_setProperty">#</a>
+			<code><a href="source-class-KModelState.html#265-283" title="Go to source code">setProperty</a>( <span>string <var>$name</var></span>, <span>string <var>$property</var></span>, <span>mixed <var>$value</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Set a state property</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Set a state property</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$name</var></dt>
+						<dd><code>string</code><br>$name The name of the state</dd>
+						<dt><var>$property</var></dt>
+						<dd><code>string</code><br>$property The name of the property</dd>
+						<dt><var>$value</var></dt>
+						<dd><code>mixed</code><br>$value The value of the property</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><code><a href="class-KModelState.html">KModelState</a></code></code><br />
+					</div>
+
+
+
+
+					<h4>Implementation of</h4>
+					<div class="list"><code><a href="class-KModelStateInterface.html#_setProperty">KModelStateInterface::setProperty()</a></code></div>
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getProperty" id="_getProperty">
+
+			<td class="attributes"><code>
+				 public 
+				mixed|null
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getProperty">#</a>
+			<code><a href="source-class-KModelState.html#285-303" title="Go to source code">getProperty</a>( <span>string <var>$name</var></span>, <span>string <var>$property</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Get a state property</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Get a state property</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$name</var></dt>
+						<dd><code>string</code><br>$name The name of the state</dd>
+						<dt><var>$property</var></dt>
+						<dd><code>string</code><br>$property The name of the property</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>mixed|null</code><br>Return the property value or NULL if the property does not exist<br />
+					</div>
+
+
+
+
+					<h4>Implementation of</h4>
+					<div class="list"><code><a href="class-KModelStateInterface.html#_getProperty">KModelStateInterface::getProperty()</a></code></div>
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="hasProperty" id="_hasProperty">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_hasProperty">#</a>
+			<code><a href="source-class-KModelState.html#305-320" title="Go to source code">hasProperty</a>( <span>string <var>$name</var></span>, <span>string <var>$property</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Check if a state property exists</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Check if a state property exists</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$name</var></dt>
+						<dd><code>string</code><br>$name The name of the state</dd>
+						<dt><var>$property</var></dt>
+						<dd><code>string</code><br>$property The name of the property</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>boolean</code><br>Return TRUE if the the property exists, FALSE otherwise<br />
+					</div>
+
+
+
+
+					<h4>Implementation of</h4>
+					<div class="list"><code><a href="class-KModelStateInterface.html#_hasProperty">KModelStateInterface::hasProperty()</a></code></div>
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="isUnique" id="_isUnique">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_isUnique">#</a>
+			<code><a href="source-class-KModelState.html#322-350" title="Go to source code">isUnique</a>( )</code>
+
+			<div class="description short">
+				
+<p>Check if the state information is unique</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Check if the state information is unique</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>boolean</code><br>TRUE if the state is unique, otherwise FALSE.<br />
+					</div>
+
+
+
+
+					<h4>Implementation of</h4>
+					<div class="list"><code><a href="class-KModelStateInterface.html#_isUnique">KModelStateInterface::isUnique()</a></code></div>
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="isEmpty" id="_isEmpty">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_isEmpty">#</a>
+			<code><a href="source-class-KModelState.html#352-367" title="Go to source code">isEmpty</a>( <span>array <var>$exclude</var> = <span class="php-keyword1">array</span>()</span> )</code>
+
+			<div class="description short">
+				
+<p>Check if the state information is empty</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Check if the state information is empty</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$exclude</var></dt>
+						<dd><code>array</code><br>$exclude An array of states names to exclude.</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>boolean</code><br>TRUE if the state is empty, otherwise FALSE.<br />
+					</div>
+
+
+
+
+					<h4>Implementation of</h4>
+					<div class="list"><code><a href="class-KModelStateInterface.html#_isEmpty">KModelStateInterface::isEmpty()</a></code></div>
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="offsetGet" id="_offsetGet">
+
+			<td class="attributes"><code>
+				 public 
+				mixed
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_offsetGet">#</a>
+			<code><a href="source-class-KModelState.html#369-384" title="Go to source code">offsetGet</a>( <span>string <var>$name</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Get an state value</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Get an state value</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$name</var></dt>
+						<dd><code>string</code><br>$name</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>mixed</code><br>The state value<br />
+					</div>
+
+
+
+					<h4>Overrides</h4>
+					<div class="list"><code><a href="class-KObjectArray.html#_offsetGet">KObjectArray::offsetGet</a></code></div>
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="offsetSet" id="_offsetSet">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_offsetSet">#</a>
+			<code><a href="source-class-KModelState.html#386-428" title="Go to source code">offsetSet</a>( <span>string <var>$name</var></span>, <span>mixed|array <var>$value</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Set an state value</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Set an state value</p>
+
+<p>This function only accepts scalar or array values. Values are only filtered
+if not NULL. If the value is an empty string it will be filtered to NULL. Values
+will only be set if the state exists. Function will not create new states. Use
+the insert() function instead.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$name</var></dt>
+						<dd><code>string</code><br>$name</dd>
+						<dt><var>$value</var></dt>
+						<dd><code>mixed|array</code><br>$value</dd>
+					</dl></div>
+
+
+					<h4>Throws</h4>
+					<div class="list">
+						<code>UnexpectedValueException</code><br>If the value is not a scalar or an array<br />
+					</div>
+
+
+					<h4>Overrides</h4>
+					<div class="list"><code><a href="class-KObjectArray.html#_offsetSet">KObjectArray::offsetSet</a></code></div>
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="_validate" id="__validate">
+
+			<td class="attributes"><code>
+				 protected 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#__validate">#</a>
+			<code><a href="source-class-KModelState.html#430-453" title="Go to source code">_validate</a>( <span>object <var>$state</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Validate a unique state.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Validate a unique state.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$state</var></dt>
+						<dd><code>object</code><br>$state The state object.</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>boolean</code><br>True if unique state is valid, false otherwise.<br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		</table>
+
+		<h3>Methods inherited from <a href="class-KObjectArray.html#methods">KObjectArray</a></h3>
+		<p class="elementList">
+			<code><a href="class-KObjectArray.html#___get">__get()</a></code>, 
+			<code><a href="class-KObjectArray.html#___isset">__isset()</a></code>, 
+			<code><a href="class-KObjectArray.html#___set">__set()</a></code>, 
+			<code><a href="class-KObjectArray.html#___unset">__unset()</a></code>, 
+			<code><a href="class-KObjectArray.html#_fromArray">fromArray()</a></code>, 
+			<code><a href="class-KObjectArray.html#_getIterator">getIterator()</a></code>, 
+			<code><a href="class-KObjectArray.html#_offsetExists">offsetExists()</a></code>, 
+			<code><a href="class-KObjectArray.html#_offsetUnset">offsetUnset()</a></code>, 
+			<code><a href="class-KObjectArray.html#_serialize">serialize()</a></code>, 
+			<code><a href="class-KObjectArray.html#_toArray">toArray()</a></code>, 
+			<code><a href="class-KObjectArray.html#_unserialize">unserialize()</a></code>
+		</p>
+		<h3>Methods inherited from <a href="class-KObject.html#methods">KObject</a></h3>
+		<p class="elementList">
+			<code><a href="class-KObject.html#___call">__call()</a></code>, 
+			<code><a href="class-KObject.html#___clone">__clone()</a></code>, 
+			<code><a href="class-KObject.html#_decorate">decorate()</a></code>, 
+			<code><a href="class-KObject.html#_getConfig">getConfig()</a></code>, 
+			<code><a href="class-KObject.html#_getHandle">getHandle()</a></code>, 
+			<code><a href="class-KObject.html#_getIdentifier">getIdentifier()</a></code>, 
+			<code><a href="class-KObject.html#_getMethods">getMethods()</a></code>, 
+			<code><a href="class-KObject.html#_getObject">getObject()</a></code>, 
+			<code><a href="class-KObject.html#_inherits">inherits()</a></code>, 
+			<code><a href="class-KObject.html#_mixin">mixin()</a></code>
+		</p>
+
+
+		<h3>Magic methods summary</h3>
+
+
+
+
+
+
+
+
+		<h2>Properties summary</h2>
+
+		<h3>Properties inherited from <a href="class-KObjectArray.html#properties">KObjectArray</a></h3>
+		<p class="elementList">
+			<code><a href="class-KObjectArray.html#$_data"><var>$_data</var></a></code>
+		</p>
+		<h3>Properties inherited from <a href="class-KObject.html#properties">KObject</a></h3>
+		<p class="elementList">
+			<code><a href="class-KObject.html#$_mixed_methods"><var>$_mixed_methods</var></a></code>
+		</p>
+
+
+
+
+
+</div>
+	</div>
+
+	<div id="footer">
+		Nooku Framework API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+
+<script>
+    responsivemenu.init({
+        wrapper: document.querySelector('.header'),
+        toggleclass: 'button--hamburger',
+        togglecontent: 'menu <span class="lines"></span>'
+    });
+</script>
+
+</body>
+</html>

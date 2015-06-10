@@ -1,0 +1,1413 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<title>Class KControllerAbstract | Nooku Framework</title>
+
+	<script type="text/javascript" src="resources/combined.js?2640657843"></script>
+	<script type="text/javascript" src="elementlist.js?527661356"></script>
+	<script type="text/javascript" src="http://www.nooku.org/js/scripts.js"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/bootstrap.min.css?390653004" />
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?150590327" />
+    <link rel="stylesheet" type="text/css" media="all" href="http://www.nooku.org/css/header.css" />
+
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,300italic,700,400italic' rel='stylesheet' type='text/css' />
+
+    <link rel="shortcut icon" href="http://www.nooku.org/images/favicon.ico" type="image/x-icon" />
+
+	<script>
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] ||
+            function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-214238-5', 'auto');
+        ga('send', 'pageview');
+    </script>
+</head>
+
+<body class="no-js">
+    <script type="text/javascript">
+    function hasClass(e, t) {
+        return e.className.match(new RegExp("(\\s|^)" + t + "(\\s|$)"))
+    }
+    var el = document.body;
+    var cl = "no-js";
+    if (hasClass(el, cl)) {
+        var reg = new RegExp("(\\s|^)" + cl + "(\\s|$)");
+        el.className = el.className.replace(reg, " js-enabled")
+    }
+    </script>
+	<div class="header">
+            <div class="container">
+                <div class="group">
+                    <div class="header__brand brand"><a href="http://www.nooku.org"><img src="http://www.nooku.org/images/layout/logo.png" alt="Nooku Logo" /></a></div>
+                    <div class="header__navigation">
+                        <div class="navigation_container" role="navigation">
+                            <ul class="navbar initiated">
+                                <li class="navbar__item" role="menuitem"><a href="http://www.nooku.org/features/">Features</a></li>
+                                <li class="navbar__item" role="menuitem"><a href="http://www.nooku.org/get-started/">Get Started</a></li>
+                                <li class="navbar__item" role="menuitem"><a href="http://www.nooku.org/services/">Services</a></li>
+                                <li class="navbar__item" role="menuitem"><a href="http://www.nooku.org/community/">Community</a></li>
+                                <li class="navbar__item active" role="menuitem"><a href="http://www.nooku.org/docs/">Docs</a></li>
+                                <li class="navbar__item" role="menuitem"><a href="http://www.nooku.org/blog">Blog</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+	<div id="left">
+	<div id="menu">
+		<form id="search" class="form-search">
+			<input type="hidden" name="cx" value="" />
+			<input type="hidden" name="ie" value="UTF-8" />
+			<input type="text" name="q" class="search-query" placeholder="Search" />
+		</form>
+
+
+		<div id="groups">
+			<h3>Packages</h3>
+			<ul>
+				<li class="active"><a href="package-Koowa.html">Koowa<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.html">Component<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.html">Koowa<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Class.html">Class<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Class.Locator.html">Locator</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Controller.html">Controller<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Controller.Behavior.html">Behavior</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Controller.Permission.html">Permission</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Controller.Toolbar.html">Toolbar</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Database.html">Database<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Database.Adapter.html">Adapter</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Database.Behavior.html">Behavior</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Database.Table.html">Table</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Date.html">Date</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Decorator.html">Decorator</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Dispatcher.html">Dispatcher<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Dispatcher.Authenticator.html">Authenticator</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Dispatcher.Permission.html">Permission</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Dispatcher.Request.html">Request</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Dispatcher.Response.html">Response<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Dispatcher.Response.Transport.html">Transport</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Dispatcher.Router.html">Router</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Event.html">Event<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Event.Publisher.html">Publisher</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Event.Subscriber.html">Subscriber</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Exception.html">Exception</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Filesystem.html">Filesystem<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Filesystem.Stream.html">Stream</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Filter.html">Filter</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Model.html">Model</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Object.html">Object<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Object.Locator.html">Locator</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Template.html">Template<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Template.Filter.html">Filter</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Template.Helper.html">Helper</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Template.Locator.html">Locator</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Translator.html">Translator<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Translator.Catalogue.html">Catalogue</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Translator.Locator.html">Locator</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.User.html">User</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.View.html">View<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.View.Error.html">Error</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.View.Page.html">Page</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.View.Users.html">Users</a>
+						</li>
+							</ul></li></ul></li></ul></li>
+				<li class="active"><a href="package-Koowa.Library.html">Library<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Behavior.html">Behavior<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Behavior.Exception.html">Exception</a>
+						</li>
+				<li><a href="package-Koowa.Library.Behavior.Mixin.html">Mixin</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Class.html">Class<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Class.Loader.html">Loader</a>
+						</li>
+				<li><a href="package-Koowa.Library.Class.Locator.html">Locator</a>
+						</li>
+				<li><a href="package-Koowa.Library.Class.Registry.html">Registry</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Command.html">Command<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Command.Callback.html">Callback</a>
+						</li>
+				<li><a href="package-Koowa.Library.Command.Chain.html">Chain</a>
+						</li>
+				<li><a href="package-Koowa.Library.Command.Exception.html">Exception</a>
+						</li>
+				<li><a href="package-Koowa.Library.Command.Handler.html">Handler</a>
+						</li>
+				<li><a href="package-Koowa.Library.Command.Mixin.html">Mixin</a>
+						</li>
+							</ul></li>
+				<li class="active"><a href="package-Koowa.Library.Controller.html">Controller<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Controller.Behavior.html">Behavior</a>
+						</li>
+				<li><a href="package-Koowa.Library.Controller.Context.html">Context</a>
+						</li>
+				<li><a href="package-Koowa.Library.Controller.Exception.html">Exception</a>
+						</li>
+				<li><a href="package-Koowa.Library.Controller.Permission.html">Permission</a>
+						</li>
+				<li><a href="package-Koowa.Library.Controller.Request.html">Request</a>
+						</li>
+				<li><a href="package-Koowa.Library.Controller.Response.html">Response</a>
+						</li>
+				<li><a href="package-Koowa.Library.Controller.Toolbar.html">Toolbar<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Controller.Toolbar.Command.html">Command</a>
+						</li>
+				<li><a href="package-Koowa.Library.Controller.Toolbar.Mixin.html">Mixin</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-Koowa.Library.Database.html">Database<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Database.Adapter.html">Adapter</a>
+						</li>
+				<li><a href="package-Koowa.Library.Database.Behavior.html">Behavior</a>
+						</li>
+				<li><a href="package-Koowa.Library.Database.Context.html">Context</a>
+						</li>
+				<li><a href="package-Koowa.Library.Database.Query.html">Query</a>
+						</li>
+				<li><a href="package-Koowa.Library.Database.Row.html">Row</a>
+						</li>
+				<li><a href="package-Koowa.Library.Database.Rowset.html">Rowset</a>
+						</li>
+				<li><a href="package-Koowa.Library.Database.Schema.html">Schema</a>
+						</li>
+				<li><a href="package-Koowa.Library.Database.Table.html">Table</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Date.html">Date</a>
+						</li>
+				<li><a href="package-Koowa.Library.Dispatcher.html">Dispatcher<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Dispatcher.Authenticator.html">Authenticator</a>
+						</li>
+				<li><a href="package-Koowa.Library.Dispatcher.Behavior.html">Behavior</a>
+						</li>
+				<li><a href="package-Koowa.Library.Dispatcher.Context.html">Context</a>
+						</li>
+				<li><a href="package-Koowa.Library.Dispatcher.Exception.html">Exception</a>
+						</li>
+				<li><a href="package-Koowa.Library.Dispatcher.Permission.html">Permission</a>
+						</li>
+				<li><a href="package-Koowa.Library.Dispatcher.Request.html">Request</a>
+						</li>
+				<li><a href="package-Koowa.Library.Dispatcher.Response.html">Response<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Dispatcher.Response.Transport.html">Transport</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Dispatcher.Router.html">Router</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Event.html">Event<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Event.Mixin.html">Mixin</a>
+						</li>
+				<li><a href="package-Koowa.Library.Event.Publisher.html">Publisher</a>
+						</li>
+				<li><a href="package-Koowa.Library.Event.Subscriber.html">Subscriber</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Exception.html">Exception<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Exception.Handler.html">Handler</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Filesystem.html">Filesystem<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Filesystem.Stream.html">Stream<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Filesystem.Stream.Filter.html">Filter</a>
+						</li>
+				<li><a href="package-Koowa.Library.Filesystem.Stream.Iterator.html">Iterator</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-Koowa.Library.Filter.html">Filter</a>
+						</li>
+				<li><a href="package-Koowa.Library.Http.html">Http<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Http.Cookie.html">Cookie</a>
+						</li>
+				<li><a href="package-Koowa.Library.Http.Exception.html">Exception<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Http.Exception.Unsupported.html">Unsupported</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Http.Message.html">Message</a>
+						</li>
+				<li><a href="package-Koowa.Library.Http.Request.html">Request</a>
+						</li>
+				<li><a href="package-Koowa.Library.Http.Response.html">Response</a>
+						</li>
+				<li><a href="package-Koowa.Library.Http.Token.html">Token</a>
+						</li>
+				<li><a href="package-Koowa.Library.Http.Url.html">Url</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Model.html">Model<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Model.Behavior.html">Behavior</a>
+						</li>
+				<li><a href="package-Koowa.Library.Model.Context.html">Context</a>
+						</li>
+				<li><a href="package-Koowa.Library.Model.Entity.html">Entity</a>
+						</li>
+				<li><a href="package-Koowa.Library.Model.Paginator.html">Paginator</a>
+						</li>
+				<li><a href="package-Koowa.Library.Model.State.html">State</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Object.html">Object<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Object.Bootstrapper.html">Bootstrapper</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Config.html">Config</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Decorator.html">Decorator</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Exception.html">Exception</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Identifier.html">Identifier</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Locator.html">Locator</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Manager.html">Manager</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Mixin.html">Mixin</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Registry.html">Registry</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.String.html">String<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.String.Inflector.html">Inflector</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Template.html">Template<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Template.Engine.html">Engine</a>
+						</li>
+				<li><a href="package-Koowa.Library.Template.Exception.html">Exception</a>
+						</li>
+				<li><a href="package-Koowa.Library.Template.Filter.html">Filter</a>
+						</li>
+				<li><a href="package-Koowa.Library.Template.Helper.html">Helper</a>
+						</li>
+				<li><a href="package-Koowa.Library.Template.Locator.html">Locator</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Translator.html">Translator<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Translator.Catalogue.html">Catalogue</a>
+						</li>
+				<li><a href="package-Koowa.Library.Translator.Inflector.html">Inflector</a>
+						</li>
+				<li><a href="package-Koowa.Library.Translator.Locator.html">Locator</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.User.html">User<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.User.Provider.html">Provider</a>
+						</li>
+				<li><a href="package-Koowa.Library.User.Session.html">Session<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.User.Session.Container.html">Container</a>
+						</li>
+				<li><a href="package-Koowa.Library.User.Session.Handler.html">Handler</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-Koowa.Library.View.html">View<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.View.Behavior.html">Behavior</a>
+						</li>
+				<li><a href="package-Koowa.Library.View.Context.html">Context</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-Koowa.Module.html">Module<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Module.Koowa.html">Koowa<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Module.Koowa.Template.html">Template<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Module.Koowa.Template.Filter.html">Filter</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Module.Koowa.View.html">View</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-Koowa.Plugin.html">Plugin<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Plugin.Koowa.html">Koowa</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Wordpress.html">Wordpress<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Wordpress.Library.html">Library<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Wordpress.Library.Controller.html">Controller</a>
+						</li>
+							</ul></li></ul></li></ul></li>
+				<li><a href="package-Nooku.html">Nooku<span></span></a>
+						<ul>
+				<li><a href="package-Nooku.Library.html">Library<span></span></a>
+						<ul>
+				<li><a href="package-Nooku.Library.Template.html">Template<span></span></a>
+						<ul>
+				<li><a href="package-Nooku.Library.Template.Abstract.html">Abstract</a>
+						</li>
+							</ul></li></ul></li></ul></li>
+			</ul>
+		</div>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li class="active"><a href="class-KControllerAbstract.html">KControllerAbstract</a></li>
+				<li><a href="class-KControllerDefault.html">KControllerDefault</a></li>
+				<li><a href="class-KControllerModel.html">KControllerModel</a></li>
+				<li><a href="class-KControllerView.html">KControllerView</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="class-KControllerInterface.html">KControllerInterface</a></li>
+				<li><a href="class-KControllerModellable.html">KControllerModellable</a></li>
+				<li><a href="class-KControllerViewable.html">KControllerViewable</a></li>
+			</ul>
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+	<div id="rightInner">
+<div id="content" class="class">
+	<h1>Class KControllerAbstract</h1>
+
+
+	<div class="description">
+	
+<p>Abstract Controller</p>
+
+<p>Note: Concrete controllers must have a singular name</p>
+
+	</div>
+
+	<dl class="tree well">
+		<dd style="padding-left:0px">
+			<a href="class-KObject.html"><span>KObject</span></a>
+			
+			 implements 
+				<a href="class-KObjectInterface.html"><span>KObjectInterface</span></a>, 
+			
+				<a href="class-KObjectMixable.html"><span>KObjectMixable</span></a>, 
+			
+				<a href="class-KObjectHandlable.html"><span>KObjectHandlable</span></a>, 
+			
+				<a href="class-KObjectDecoratable.html"><span>KObjectDecoratable</span></a>
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by" />
+<b><span>KControllerAbstract</span></b>			
+			 implements 
+				<a href="class-KControllerInterface.html"><span>KControllerInterface</span></a>, 
+			
+				<a href="class-KCommandCallbackDelegate.html"><span>KCommandCallbackDelegate</span></a>
+			
+			
+		</dd>
+	</dl>
+
+
+	<div>
+		<h3>Direct known subclasses</h3>
+		<p class="elementList">
+			<code><a href="class-KControllerView.html">KControllerView</a></code>, 
+			<code><a href="class-KDispatcherAbstract.html">KDispatcherAbstract</a></code>
+		</p>
+	</div>
+
+	<div>
+		<h3>Indirect known subclasses</h3>
+		<p class="elementList">
+			<code><a href="class-ComKoowaControllerDefault.html">ComKoowaControllerDefault</a></code>, 
+			<code><a href="class-ComKoowaControllerError.html">ComKoowaControllerError</a></code>, 
+			<code><a href="class-KDispatcherHttp.html">KDispatcherHttp</a></code>, 
+			<code><a href="class-ComKoowaControllerModel.html">ComKoowaControllerModel</a></code>, 
+			<code><a href="class-ComKoowaControllerPage.html">ComKoowaControllerPage</a></code>, 
+			<code><a href="class-ComKoowaControllerUser.html">ComKoowaControllerUser</a></code>, 
+			<code><a href="class-ComKoowaControllerView.html">ComKoowaControllerView</a></code>, 
+			<code><a href="class-ComKoowaDispatcherHttp.html">ComKoowaDispatcherHttp</a></code>, 
+			<code><a href="class-KControllerDefault.html">KControllerDefault</a></code>, 
+			<code><a href="class-KControllerModel.html">KControllerModel</a></code>, 
+			<code><a href="class-KDispatcherDefault.html">KDispatcherDefault</a></code>
+		</p>
+	</div>
+
+
+
+
+
+	<div class="alert alert-info">
+		<b>Abstract</b><br />
+		
+		
+		<b>Package:</b> <a href="package-Koowa.html">Koowa</a>\<a href="package-Koowa.Library.html">Library</a>\<a href="package-Koowa.Library.Controller.html">Controller</a><br />
+
+				<b>Copyright:</b>
+				Copyright (C) 2007 - 2014 Johan Janssens and Timble CVBA. (<a
+href="http://www.timble.net">http://www.timble.net</a>)<br />
+				<b>License:</b>
+				<a href="GNU">GPLv3 &lt;http://www.gnu.org/licenses/gpl.html&gt;</a><br />
+				<b>Author:</b>
+				Johan Janssens &lt;<a
+href="https://github.com/johanjanssens">https://github.com/johanjanssens</a>&gt;<br />
+		<b>Located at</b> <a href="source-class-KControllerAbstract.html#10-409" title="Go to source code">libraries/koowa/libraries/controller/abstract.php</a><br />
+	</div>
+
+
+
+		<h2>Methods summary</h2>
+		<table class="summary table table-bordered table-striped" id="methods">
+		<tr data-order="__construct" id="___construct">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#___construct">#</a>
+			<code><a href="source-class-KControllerAbstract.html#55-81" title="Go to source code">__construct</a>( <span><code><a href="class-KObjectConfig.html">KObjectConfig</a></code> <var>$config</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Constructor.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Constructor.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$config</var></dt>
+						<dd><code><code><a href="class-KObjectConfig.html">KObjectConfig</a></code></code><br>$config Configuration options.</dd>
+					</dl></div>
+
+
+
+
+					<h4>Overrides</h4>
+					<div class="list"><code><a href="class-KObject.html#___construct">KObject::__construct</a></code></div>
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="_initialize" id="__initialize">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#__initialize">#</a>
+			<code><a href="source-class-KControllerAbstract.html#83-104" title="Go to source code">_initialize</a>( <span><code><a href="class-KObjectConfig.html">KObjectConfig</a></code> <var>$config</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Initializes the default configuration for the object</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Initializes the default configuration for the object</p>
+
+<p>Called from <code><a href="class-KControllerAbstract.html#___construct">KControllerAbstract::__construct()</a></code> as a first step of object
+instantiation.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$config</var></dt>
+						<dd><code><code><a href="class-KObjectConfig.html">KObjectConfig</a></code></code><br>$config Configuration options.</dd>
+					</dl></div>
+
+
+
+
+					<h4>Overrides</h4>
+					<div class="list"><code><a href="class-KObject.html#__initialize">KObject::_initialize</a></code></div>
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="isDispatched" id="_isDispatched">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_isDispatched">#</a>
+			<code><a href="source-class-KControllerAbstract.html#106-114" title="Go to source code">isDispatched</a>( )</code>
+
+			<div class="description short">
+				
+<p>Has the controller been dispatched</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Has the controller been dispatched</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>boolean</code><br>Returns true if the controller has been dispatched<br />
+					</div>
+
+
+
+
+					<h4>Implementation of</h4>
+					<div class="list"><code><a href="class-KControllerInterface.html#_isDispatched">KControllerInterface::isDispatched()</a></code></div>
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="execute" id="_execute">
+
+			<td class="attributes"><code>
+				 public 
+				mixed|boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_execute">#</a>
+			<code><a href="source-class-KControllerAbstract.html#116-166" title="Go to source code">execute</a>( <span>string <var>$action</var></span>, <span><code><a href="class-KControllerContextInterface.html">KControllerContextInterface</a></code> <var>$context</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Execute an action by triggering a method in the derived class.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Execute an action by triggering a method in the derived class.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$action</var></dt>
+						<dd><code>string</code><br>$action The action to execute</dd>
+						<dt><var>$context</var></dt>
+						<dd><code><code><a href="class-KControllerContextInterface.html">KControllerContextInterface</a></code></code><br>$context A command context object</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>mixed|boolean</code><br>The value returned by the called method, false in error case.<br />
+					</div>
+
+					<h4>Throws</h4>
+					<div class="list">
+						<code>Exception</code><br />
+						<code>BadMethodCallException</code><br />
+					</div>
+
+
+
+					<h4>Implementation of</h4>
+					<div class="list"><code><a href="class-KControllerInterface.html#_execute">KControllerInterface::execute()</a></code></div>
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="invokeCommandCallback" id="_invokeCommandCallback">
+
+			<td class="attributes"><code>
+				 public 
+				mixed
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_invokeCommandCallback">#</a>
+			<code><a href="source-class-KControllerAbstract.html#168-178" title="Go to source code">invokeCommandCallback</a>( <span>string <var>$method</var></span>, <span><code><a href="class-KCommandInterface.html">KCommandInterface</a></code> <var>$command</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Invoke a command handler</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Invoke a command handler</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$method</var></dt>
+						<dd><code>string</code><br>$method The name of the method to be executed</dd>
+						<dt><var>$command</var></dt>
+						<dd><code><code><a href="class-KCommandInterface.html">KCommandInterface</a></code></code><br>$command The command</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>mixed</code><br>Return the result of the handler.<br />
+					</div>
+
+
+
+
+					<h4>Implementation of</h4>
+					<div class="list"><code><a href="class-KCommandCallbackDelegate.html#_invokeCommandCallback">KCommandCallbackDelegate::invokeCommandCallback()</a></code></div>
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="mixin" id="_mixin">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-KObject.html">KObject</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_mixin">#</a>
+			<code><a href="source-class-KControllerAbstract.html#180-207" title="Go to source code">mixin</a>( <span>array <var>$mixin</var></span>, <span>array <var>$config</var> = <span class="php-keyword1">array</span>()</span> )</code>
+
+			<div class="description short">
+				
+<p>Mixin an object</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Mixin an object</p>
+
+<p>When using mixin(), the calling object inherits the methods of the mixed in
+objects, in a LIFO order.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$mixin</var></dt>
+						<dd><code>array</code><br>$config An optional associative array of configuration options</dd>
+						<dt><var>$config</var></dt>
+						<dd><code>array</code><br>$config An optional associative array of configuration options</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><code><a href="class-KObject.html">KObject</a></code></code><br />
+					</div>
+
+					<h4>Throws</h4>
+					<div class="list">
+						<code><code><a href="class-KObjectExceptionInvalidIdentifier.html">KObjectExceptionInvalidIdentifier</a></code></code><br>If the identifier is not valid<br />
+						<code>UnexpectedValueException</code><br>If the mixin does not implement the KObjectMixinInterface<br />
+					</div>
+
+					<h4>@param</h4>
+					<div class="list">
+							mixed $mixin An object that implements KObjectMixinInterface, KObjectIdentifier
+object or valid identifier string<br />
+					</div>
+
+					<h4>Overrides</h4>
+					<div class="list"><code><a href="class-KObject.html#_mixin">KObject::mixin</a></code></div>
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getActions" id="_getActions">
+
+			<td class="attributes"><code>
+				 public 
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getActions">#</a>
+			<code><a href="source-class-KControllerAbstract.html#209-231" title="Go to source code">getActions</a>( )</code>
+
+			<div class="description short">
+				
+<p>Gets the available actions in the controller.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Gets the available actions in the controller.</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>array</code><br>Array[i] of action names.<br />
+					</div>
+
+
+
+
+					<h4>Implementation of</h4>
+					<div class="list"><code><a href="class-KControllerInterface.html#_getActions">KControllerInterface::getActions()</a></code></div>
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="setRequest" id="_setRequest">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-KControllerAbstract.html">KControllerAbstract</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_setRequest">#</a>
+			<code><a href="source-class-KControllerAbstract.html#233-243" title="Go to source code">setRequest</a>( <span><code><a href="class-KControllerRequestInterface.html">KControllerRequestInterface</a></code> <var>$request</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Set the request object</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Set the request object</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$request</var></dt>
+						<dd><code><code><a href="class-KControllerRequestInterface.html">KControllerRequestInterface</a></code></code><br>$request A request object</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><code><a href="class-KControllerAbstract.html">KControllerAbstract</a></code></code><br />
+					</div>
+
+
+
+
+					<h4>Implementation of</h4>
+					<div class="list"><code><a href="class-KControllerInterface.html#_setRequest">KControllerInterface::setRequest()</a></code></div>
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getRequest" id="_getRequest">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-KControllerRequestInterface.html">KControllerRequestInterface</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getRequest">#</a>
+			<code><a href="source-class-KControllerAbstract.html#245-268" title="Go to source code">getRequest</a>( )</code>
+
+			<div class="description short">
+				
+<p>Get the request object</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Get the request object</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><code><a href="class-KControllerRequestInterface.html">KControllerRequestInterface</a></code></code><br />
+					</div>
+
+					<h4>Throws</h4>
+					<div class="list">
+						<code>UnexpectedValueException</code><br>If the request doesn't implement the ControllerRequestInterface<br />
+					</div>
+
+
+
+					<h4>Implementation of</h4>
+					<div class="list"><code><a href="class-KControllerInterface.html#_getRequest">KControllerInterface::getRequest()</a></code></div>
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="setResponse" id="_setResponse">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-KControllerAbstract.html">KControllerAbstract</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_setResponse">#</a>
+			<code><a href="source-class-KControllerAbstract.html#270-280" title="Go to source code">setResponse</a>( <span><code><a href="class-KControllerResponseInterface.html">KControllerResponseInterface</a></code> <var>$response</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Set the response object</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Set the response object</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$response</var></dt>
+						<dd><code><code><a href="class-KControllerResponseInterface.html">KControllerResponseInterface</a></code></code><br>$response A response object</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><code><a href="class-KControllerAbstract.html">KControllerAbstract</a></code></code><br />
+					</div>
+
+
+
+
+					<h4>Implementation of</h4>
+					<div class="list"><code><a href="class-KControllerInterface.html#_setResponse">KControllerInterface::setResponse()</a></code></div>
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getResponse" id="_getResponse">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-KControllerResponseInterface.html">KControllerResponseInterface</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getResponse">#</a>
+			<code><a href="source-class-KControllerAbstract.html#282-306" title="Go to source code">getResponse</a>( )</code>
+
+			<div class="description short">
+				
+<p>Get the response object</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Get the response object</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><code><a href="class-KControllerResponseInterface.html">KControllerResponseInterface</a></code></code><br />
+					</div>
+
+					<h4>Throws</h4>
+					<div class="list">
+						<code>UnexpectedValueException</code><br>If the response doesn't implement the ControllerResponseInterface<br />
+					</div>
+
+
+
+					<h4>Implementation of</h4>
+					<div class="list"><code><a href="class-KControllerInterface.html#_getResponse">KControllerInterface::getResponse()</a></code></div>
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="setUser" id="_setUser">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-KControllerAbstract.html">KControllerAbstract</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_setUser">#</a>
+			<code><a href="source-class-KControllerAbstract.html#308-318" title="Go to source code">setUser</a>( <span><code><a href="class-KUserInterface.html">KUserInterface</a></code> <var>$user</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Set the user object</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Set the user object</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$user</var></dt>
+						<dd><code><code><a href="class-KUserInterface.html">KUserInterface</a></code></code><br>$user A request object</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><code><a href="class-KControllerAbstract.html">KControllerAbstract</a></code></code><br />
+					</div>
+
+
+
+
+					<h4>Implementation of</h4>
+					<div class="list"><code><a href="class-KControllerInterface.html#_setUser">KControllerInterface::setUser()</a></code></div>
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getUser" id="_getUser">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-KUserInterface.html">KUserInterface</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getUser">#</a>
+			<code><a href="source-class-KControllerAbstract.html#320-343" title="Go to source code">getUser</a>( )</code>
+
+			<div class="description short">
+				
+<p>Get the user object</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Get the user object</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><code><a href="class-KUserInterface.html">KUserInterface</a></code></code><br />
+					</div>
+
+					<h4>Throws</h4>
+					<div class="list">
+						<code>UnexpectedValueException</code><br>If the user doesn't implement the KUserInterface<br />
+					</div>
+
+
+
+					<h4>Implementation of</h4>
+					<div class="list"><code><a href="class-KControllerInterface.html#_getUser">KControllerInterface::getUser()</a></code></div>
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getContext" id="_getContext">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-KControllerContext.html">KControllerContext</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getContext">#</a>
+			<code><a href="source-class-KControllerAbstract.html#345-359" title="Go to source code">getContext</a>( )</code>
+
+			<div class="description short">
+				
+<p>Get the controller context</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Get the controller context</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><code><a href="class-KControllerContext.html">KControllerContext</a></code></code><br />
+					</div>
+
+
+
+
+					<h4>Implementation of</h4>
+					<div class="list"><code><a href="class-KControllerInterface.html#_getContext">KControllerInterface::getContext()</a></code></div>
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="__call" id="___call">
+
+			<td class="attributes"><code>
+				 public 
+				mixed
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#___call">#</a>
+			<code><a href="source-class-KControllerAbstract.html#361-408" title="Go to source code">__call</a>( <span>string <var>$method</var></span>, <span>array <var>$args</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Execute a controller action by it's name.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Execute a controller action by it's name.</p>
+
+<p>Function is also capable of checking is a behavior has been mixed
+successfully using is[Behavior] function. If the behavior exists the function
+will return TRUE, otherwise FALSE.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$method</var></dt>
+						<dd><code>string</code><br>$method Method name</dd>
+						<dt><var>$args</var></dt>
+						<dd><code>array</code><br>$args Array containing all the arguments for the original call</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>mixed</code><br />
+					</div>
+
+					<h4>Throws</h4>
+					<div class="list">
+						<code>BadMethodCallException</code><br>If method could not be found<br />
+					</div>
+
+					<h4>See</h4>
+					<div class="list">
+							<code><code><a href="class-KControllerAbstract.html#_execute">KControllerAbstract::execute()</a></code></code><br />
+					</div>
+
+					<h4>Overrides</h4>
+					<div class="list"><code><a href="class-KObject.html#___call">KObject::__call</a></code></div>
+
+			</div>
+			</div></td>
+		</tr>
+		</table>
+
+		<h3>Methods inherited from <a href="class-KObject.html#methods">KObject</a></h3>
+		<p class="elementList">
+			<code><a href="class-KObject.html#___clone">__clone()</a></code>, 
+			<code><a href="class-KObject.html#_decorate">decorate()</a></code>, 
+			<code><a href="class-KObject.html#_getConfig">getConfig()</a></code>, 
+			<code><a href="class-KObject.html#_getHandle">getHandle()</a></code>, 
+			<code><a href="class-KObject.html#_getIdentifier">getIdentifier()</a></code>, 
+			<code><a href="class-KObject.html#_getMethods">getMethods()</a></code>, 
+			<code><a href="class-KObject.html#_getObject">getObject()</a></code>, 
+			<code><a href="class-KObject.html#_inherits">inherits()</a></code>
+		</p>
+
+
+		<h3>Magic methods summary</h3>
+
+
+
+
+
+
+
+
+		<h2>Properties summary</h2>
+		<table class="summary table table-bordered table-striped" id="properties">
+		<tr data-order="_actions" id="$_actions">
+			<td class="attributes"><code>
+				protected  
+				array
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-KControllerAbstract.html#20-25" title="Go to source code"><var>$_actions</var></a>
+			</td>
+			<td class="description"><div>
+				<a href="#$_actions" class="anchor">#</a>
+
+				<div class="description short">
+					
+<p>The class actions</p>
+
+				</div>
+
+				<div class="description detailed hidden">
+					
+<p>The class actions</p>
+
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="_response" id="$_response">
+			<td class="attributes"><code>
+				protected  
+				string|object
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-KControllerAbstract.html#27-32" title="Go to source code"><var>$_response</var></a>
+			</td>
+			<td class="description"><div>
+				<a href="#$_response" class="anchor">#</a>
+
+				<div class="description short">
+					
+<p>Response object or identifier</p>
+
+				</div>
+
+				<div class="description detailed hidden">
+					
+<p>Response object or identifier</p>
+
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="_request" id="$_request">
+			<td class="attributes"><code>
+				protected  
+				string|object
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-KControllerAbstract.html#34-39" title="Go to source code"><var>$_request</var></a>
+			</td>
+			<td class="description"><div>
+				<a href="#$_request" class="anchor">#</a>
+
+				<div class="description short">
+					
+<p>Request object or identifier</p>
+
+				</div>
+
+				<div class="description detailed hidden">
+					
+<p>Request object or identifier</p>
+
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="_user" id="$_user">
+			<td class="attributes"><code>
+				protected  
+				string|object
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-KControllerAbstract.html#41-46" title="Go to source code"><var>$_user</var></a>
+			</td>
+			<td class="description"><div>
+				<a href="#$_user" class="anchor">#</a>
+
+				<div class="description short">
+					
+<p>User object or identifier</p>
+
+				</div>
+
+				<div class="description detailed hidden">
+					
+<p>User object or identifier</p>
+
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="_dispatched" id="$_dispatched">
+			<td class="attributes"><code>
+				protected  
+				boolean
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-KControllerAbstract.html#48-53" title="Go to source code"><var>$_dispatched</var></a>
+			</td>
+			<td class="description"><div>
+				<a href="#$_dispatched" class="anchor">#</a>
+
+				<div class="description short">
+					
+<p>Has the controller been dispatched</p>
+
+				</div>
+
+				<div class="description detailed hidden">
+					
+<p>Has the controller been dispatched</p>
+
+
+				</div>
+			</div></td>
+		</tr>
+		</table>
+
+		<h3>Properties inherited from <a href="class-KObject.html#properties">KObject</a></h3>
+		<p class="elementList">
+			<code><a href="class-KObject.html#$_mixed_methods"><var>$_mixed_methods</var></a></code>
+		</p>
+
+
+
+
+
+</div>
+	</div>
+
+	<div id="footer">
+		Nooku Framework API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+
+<script>
+    responsivemenu.init({
+        wrapper: document.querySelector('.header'),
+        toggleclass: 'button--hamburger',
+        togglecontent: 'menu <span class="lines"></span>'
+    });
+</script>
+
+</body>
+</html>

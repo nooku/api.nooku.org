@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+	<meta name="robots" content="noindex" />
+
+	<title>File libraries/koowa/libraries/object/config/php.php | Nooku Framework</title>
+
+	<script type="text/javascript" src="resources/combined.js?2640657843"></script>
+	<script type="text/javascript" src="elementlist.js?527661356"></script>
+	<script type="text/javascript" src="http://www.nooku.org/js/scripts.js"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/bootstrap.min.css?390653004" />
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?150590327" />
+    <link rel="stylesheet" type="text/css" media="all" href="http://www.nooku.org/css/header.css" />
+
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,300italic,700,400italic' rel='stylesheet' type='text/css' />
+
+    <link rel="shortcut icon" href="http://www.nooku.org/images/favicon.ico" type="image/x-icon" />
+
+	<script>
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] ||
+            function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-214238-5', 'auto');
+        ga('send', 'pageview');
+    </script>
+</head>
+
+<body class="no-js">
+    <script type="text/javascript">
+    function hasClass(e, t) {
+        return e.className.match(new RegExp("(\\s|^)" + t + "(\\s|$)"))
+    }
+    var el = document.body;
+    var cl = "no-js";
+    if (hasClass(el, cl)) {
+        var reg = new RegExp("(\\s|^)" + cl + "(\\s|$)");
+        el.className = el.className.replace(reg, " js-enabled")
+    }
+    </script>
+	<div class="header">
+            <div class="container">
+                <div class="group">
+                    <div class="header__brand brand"><a href="http://www.nooku.org"><img src="http://www.nooku.org/images/layout/logo.png" alt="Nooku Logo" /></a></div>
+                    <div class="header__navigation">
+                        <div class="navigation_container" role="navigation">
+                            <ul class="navbar initiated">
+                                <li class="navbar__item" role="menuitem"><a href="http://www.nooku.org/features/">Features</a></li>
+                                <li class="navbar__item" role="menuitem"><a href="http://www.nooku.org/get-started/">Get Started</a></li>
+                                <li class="navbar__item" role="menuitem"><a href="http://www.nooku.org/services/">Services</a></li>
+                                <li class="navbar__item" role="menuitem"><a href="http://www.nooku.org/community/">Community</a></li>
+                                <li class="navbar__item active" role="menuitem"><a href="http://www.nooku.org/docs/">Docs</a></li>
+                                <li class="navbar__item" role="menuitem"><a href="http://www.nooku.org/blog">Blog</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+	<div id="left">
+	<div id="menu">
+		<form id="search" class="form-search">
+			<input type="hidden" name="cx" value="" />
+			<input type="hidden" name="ie" value="UTF-8" />
+			<input type="text" name="q" class="search-query" placeholder="Search" />
+		</form>
+
+
+		<div id="groups">
+			<h3>Packages</h3>
+			<ul>
+				<li class="active"><a href="package-Koowa.html">Koowa<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.html">Component<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.html">Koowa<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Class.html">Class<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Class.Locator.html">Locator</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Controller.html">Controller<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Controller.Behavior.html">Behavior</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Controller.Permission.html">Permission</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Controller.Toolbar.html">Toolbar</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Database.html">Database<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Database.Adapter.html">Adapter</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Database.Behavior.html">Behavior</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Database.Table.html">Table</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Date.html">Date</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Decorator.html">Decorator</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Dispatcher.html">Dispatcher<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Dispatcher.Authenticator.html">Authenticator</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Dispatcher.Permission.html">Permission</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Dispatcher.Request.html">Request</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Dispatcher.Response.html">Response<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Dispatcher.Response.Transport.html">Transport</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Dispatcher.Router.html">Router</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Event.html">Event<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Event.Publisher.html">Publisher</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Event.Subscriber.html">Subscriber</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Exception.html">Exception</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Filesystem.html">Filesystem<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Filesystem.Stream.html">Stream</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Filter.html">Filter</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Model.html">Model</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Object.html">Object<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Object.Locator.html">Locator</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Template.html">Template<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Template.Filter.html">Filter</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Template.Helper.html">Helper</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Template.Locator.html">Locator</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Translator.html">Translator<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Translator.Catalogue.html">Catalogue</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Translator.Locator.html">Locator</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.User.html">User</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.View.html">View<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.View.Error.html">Error</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.View.Page.html">Page</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.View.Users.html">Users</a>
+						</li>
+							</ul></li></ul></li></ul></li>
+				<li class="active"><a href="package-Koowa.Library.html">Library<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Behavior.html">Behavior<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Behavior.Exception.html">Exception</a>
+						</li>
+				<li><a href="package-Koowa.Library.Behavior.Mixin.html">Mixin</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Class.html">Class<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Class.Loader.html">Loader</a>
+						</li>
+				<li><a href="package-Koowa.Library.Class.Locator.html">Locator</a>
+						</li>
+				<li><a href="package-Koowa.Library.Class.Registry.html">Registry</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Command.html">Command<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Command.Callback.html">Callback</a>
+						</li>
+				<li><a href="package-Koowa.Library.Command.Chain.html">Chain</a>
+						</li>
+				<li><a href="package-Koowa.Library.Command.Exception.html">Exception</a>
+						</li>
+				<li><a href="package-Koowa.Library.Command.Handler.html">Handler</a>
+						</li>
+				<li><a href="package-Koowa.Library.Command.Mixin.html">Mixin</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Controller.html">Controller<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Controller.Behavior.html">Behavior</a>
+						</li>
+				<li><a href="package-Koowa.Library.Controller.Context.html">Context</a>
+						</li>
+				<li><a href="package-Koowa.Library.Controller.Exception.html">Exception</a>
+						</li>
+				<li><a href="package-Koowa.Library.Controller.Permission.html">Permission</a>
+						</li>
+				<li><a href="package-Koowa.Library.Controller.Request.html">Request</a>
+						</li>
+				<li><a href="package-Koowa.Library.Controller.Response.html">Response</a>
+						</li>
+				<li><a href="package-Koowa.Library.Controller.Toolbar.html">Toolbar<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Controller.Toolbar.Command.html">Command</a>
+						</li>
+				<li><a href="package-Koowa.Library.Controller.Toolbar.Mixin.html">Mixin</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-Koowa.Library.Database.html">Database<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Database.Adapter.html">Adapter</a>
+						</li>
+				<li><a href="package-Koowa.Library.Database.Behavior.html">Behavior</a>
+						</li>
+				<li><a href="package-Koowa.Library.Database.Context.html">Context</a>
+						</li>
+				<li><a href="package-Koowa.Library.Database.Query.html">Query</a>
+						</li>
+				<li><a href="package-Koowa.Library.Database.Row.html">Row</a>
+						</li>
+				<li><a href="package-Koowa.Library.Database.Rowset.html">Rowset</a>
+						</li>
+				<li><a href="package-Koowa.Library.Database.Schema.html">Schema</a>
+						</li>
+				<li><a href="package-Koowa.Library.Database.Table.html">Table</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Date.html">Date</a>
+						</li>
+				<li><a href="package-Koowa.Library.Dispatcher.html">Dispatcher<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Dispatcher.Authenticator.html">Authenticator</a>
+						</li>
+				<li><a href="package-Koowa.Library.Dispatcher.Behavior.html">Behavior</a>
+						</li>
+				<li><a href="package-Koowa.Library.Dispatcher.Context.html">Context</a>
+						</li>
+				<li><a href="package-Koowa.Library.Dispatcher.Exception.html">Exception</a>
+						</li>
+				<li><a href="package-Koowa.Library.Dispatcher.Permission.html">Permission</a>
+						</li>
+				<li><a href="package-Koowa.Library.Dispatcher.Request.html">Request</a>
+						</li>
+				<li><a href="package-Koowa.Library.Dispatcher.Response.html">Response<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Dispatcher.Response.Transport.html">Transport</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Dispatcher.Router.html">Router</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Event.html">Event<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Event.Mixin.html">Mixin</a>
+						</li>
+				<li><a href="package-Koowa.Library.Event.Publisher.html">Publisher</a>
+						</li>
+				<li><a href="package-Koowa.Library.Event.Subscriber.html">Subscriber</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Exception.html">Exception<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Exception.Handler.html">Handler</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Filesystem.html">Filesystem<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Filesystem.Stream.html">Stream<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Filesystem.Stream.Filter.html">Filter</a>
+						</li>
+				<li><a href="package-Koowa.Library.Filesystem.Stream.Iterator.html">Iterator</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-Koowa.Library.Filter.html">Filter</a>
+						</li>
+				<li><a href="package-Koowa.Library.Http.html">Http<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Http.Cookie.html">Cookie</a>
+						</li>
+				<li><a href="package-Koowa.Library.Http.Exception.html">Exception<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Http.Exception.Unsupported.html">Unsupported</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Http.Message.html">Message</a>
+						</li>
+				<li><a href="package-Koowa.Library.Http.Request.html">Request</a>
+						</li>
+				<li><a href="package-Koowa.Library.Http.Response.html">Response</a>
+						</li>
+				<li><a href="package-Koowa.Library.Http.Token.html">Token</a>
+						</li>
+				<li><a href="package-Koowa.Library.Http.Url.html">Url</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Model.html">Model<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Model.Behavior.html">Behavior</a>
+						</li>
+				<li><a href="package-Koowa.Library.Model.Context.html">Context</a>
+						</li>
+				<li><a href="package-Koowa.Library.Model.Entity.html">Entity</a>
+						</li>
+				<li><a href="package-Koowa.Library.Model.Paginator.html">Paginator</a>
+						</li>
+				<li><a href="package-Koowa.Library.Model.State.html">State</a>
+						</li>
+							</ul></li>
+				<li class="active"><a href="package-Koowa.Library.Object.html">Object<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Object.Bootstrapper.html">Bootstrapper</a>
+						</li>
+				<li class="active"><a href="package-Koowa.Library.Object.Config.html">Config</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Decorator.html">Decorator</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Exception.html">Exception</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Identifier.html">Identifier</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Locator.html">Locator</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Manager.html">Manager</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Mixin.html">Mixin</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Registry.html">Registry</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.String.html">String<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.String.Inflector.html">Inflector</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Template.html">Template<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Template.Engine.html">Engine</a>
+						</li>
+				<li><a href="package-Koowa.Library.Template.Exception.html">Exception</a>
+						</li>
+				<li><a href="package-Koowa.Library.Template.Filter.html">Filter</a>
+						</li>
+				<li><a href="package-Koowa.Library.Template.Helper.html">Helper</a>
+						</li>
+				<li><a href="package-Koowa.Library.Template.Locator.html">Locator</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Translator.html">Translator<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Translator.Catalogue.html">Catalogue</a>
+						</li>
+				<li><a href="package-Koowa.Library.Translator.Inflector.html">Inflector</a>
+						</li>
+				<li><a href="package-Koowa.Library.Translator.Locator.html">Locator</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.User.html">User<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.User.Provider.html">Provider</a>
+						</li>
+				<li><a href="package-Koowa.Library.User.Session.html">Session<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.User.Session.Container.html">Container</a>
+						</li>
+				<li><a href="package-Koowa.Library.User.Session.Handler.html">Handler</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-Koowa.Library.View.html">View<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.View.Behavior.html">Behavior</a>
+						</li>
+				<li><a href="package-Koowa.Library.View.Context.html">Context</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-Koowa.Module.html">Module<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Module.Koowa.html">Koowa<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Module.Koowa.Template.html">Template<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Module.Koowa.Template.Filter.html">Filter</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Module.Koowa.View.html">View</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-Koowa.Plugin.html">Plugin<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Plugin.Koowa.html">Koowa</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Wordpress.html">Wordpress<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Wordpress.Library.html">Library<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Wordpress.Library.Controller.html">Controller</a>
+						</li>
+							</ul></li></ul></li></ul></li>
+				<li><a href="package-Nooku.html">Nooku<span></span></a>
+						<ul>
+				<li><a href="package-Nooku.Library.html">Library<span></span></a>
+						<ul>
+				<li><a href="package-Nooku.Library.Template.html">Template<span></span></a>
+						<ul>
+				<li><a href="package-Nooku.Library.Template.Abstract.html">Abstract</a>
+						</li>
+							</ul></li></ul></li></ul></li>
+			</ul>
+		</div>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-KObjectConfig.html">KObjectConfig</a></li>
+				<li><a href="class-KObjectConfigFactory.html">KObjectConfigFactory</a></li>
+				<li><a href="class-KObjectConfigFormat.html">KObjectConfigFormat</a></li>
+				<li><a href="class-KObjectConfigIni.html">KObjectConfigIni</a></li>
+				<li><a href="class-KObjectConfigJson.html">KObjectConfigJson</a></li>
+				<li class="active"><a href="class-KObjectConfigPhp.html">KObjectConfigPhp</a></li>
+				<li><a href="class-KObjectConfigXml.html">KObjectConfigXml</a></li>
+				<li><a href="class-KObjectConfigYaml.html">KObjectConfigYaml</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="class-KObjectConfigInterface.html">KObjectConfigInterface</a></li>
+				<li><a href="class-KObjectConfigSerializable.html">KObjectConfigSerializable</a></li>
+			</ul>
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+	<div id="rightInner">
+<pre id="source"><code><span id="1" class="l"><a class="l" href="#1"> 1 </a><span class="xlang">&lt;?php</span>
+</span><span id="2" class="l"><a class="l" href="#2"> 2 </a><span class="php-comment">/**
+</span></span><span id="3" class="l"><a class="l" href="#3"> 3 </a><span class="php-comment"> * Nooku Framework - http://nooku.org/framework
+</span></span><span id="4" class="l"><a class="l" href="#4"> 4 </a><span class="php-comment"> *
+</span></span><span id="5" class="l"><a class="l" href="#5"> 5 </a><span class="php-comment"> * @copyright   Copyright (C) 2007 - 2014 Johan Janssens and Timble CVBA. (http://www.timble.net)
+</span></span><span id="6" class="l"><a class="l" href="#6"> 6 </a><span class="php-comment"> * @license     GNU GPLv3 &lt;http://www.gnu.org/licenses/gpl.html&gt;
+</span></span><span id="7" class="l"><a class="l" href="#7"> 7 </a><span class="php-comment"> * @link        https://github.com/nooku/nooku-framework for the canonical source repository
+</span></span><span id="8" class="l"><a class="l" href="#8"> 8 </a><span class="php-comment"> */</span>
+</span><span id="9" class="l"><a class="l" href="#9"> 9 </a>
+</span><span id="10" class="l"><a class="l" href="#10">10 </a><span class="php-comment">/**
+</span></span><span id="11" class="l"><a class="l" href="#11">11 </a><span class="php-comment"> * Object Config Php
+</span></span><span id="12" class="l"><a class="l" href="#12">12 </a><span class="php-comment"> *
+</span></span><span id="13" class="l"><a class="l" href="#13">13 </a><span class="php-comment"> * @author  Johan Janssens &lt;https://github.com/johanjanssens&gt;
+</span></span><span id="14" class="l"><a class="l" href="#14">14 </a><span class="php-comment"> * @package Koowa\Library\Object\Config
+</span></span><span id="15" class="l"><a class="l" href="#15">15 </a><span class="php-comment"> */</span>
+</span><span id="16" class="l"><a class="l" href="#16">16 </a><span class="php-keyword1">class</span> <a id="KObjectConfigPhp" href="#KObjectConfigPhp">KObjectConfigPhp</a> <span class="php-keyword1">extends</span> KObjectConfigFormat
+</span><span id="17" class="l"><a class="l" href="#17">17 </a>{
+</span><span id="18" class="l"><a class="l" href="#18">18 </a>    <span class="php-comment">/**
+</span></span><span id="19" class="l"><a class="l" href="#19">19 </a><span class="php-comment">     * Read from a string and create an array
+</span></span><span id="20" class="l"><a class="l" href="#20">20 </a><span class="php-comment">     *
+</span></span><span id="21" class="l"><a class="l" href="#21">21 </a><span class="php-comment">     * @param  string $string
+</span></span><span id="22" class="l"><a class="l" href="#22">22 </a><span class="php-comment">     * @param  bool    $object  If TRUE return a ConfigObject, if FALSE return an array. Default TRUE.
+</span></span><span id="23" class="l"><a class="l" href="#23">23 </a><span class="php-comment">     * @throws DomainException
+</span></span><span id="24" class="l"><a class="l" href="#24">24 </a><span class="php-comment">     * @return KObjectConfigPhp|array
+</span></span><span id="25" class="l"><a class="l" href="#25">25 </a><span class="php-comment">     */</span>
+</span><span id="26" class="l"><a class="l" href="#26">26 </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_fromString" href="#_fromString">fromString</a>(<span class="php-var">$string</span>, <span class="php-var">$object</span> = <span class="php-keyword1">true</span>)
+</span><span id="27" class="l"><a class="l" href="#27">27 </a>    {
+</span><span id="28" class="l"><a class="l" href="#28">28 </a>        <span class="php-var">$data</span> = <span class="php-keyword1">array</span>();
+</span><span id="29" class="l"><a class="l" href="#29">29 </a>
+</span><span id="30" class="l"><a class="l" href="#30">30 </a>        <span class="php-keyword1">if</span>(!<span class="php-keyword1">empty</span>(<span class="php-var">$string</span>))
+</span><span id="31" class="l"><a class="l" href="#31">31 </a>        {
+</span><span id="32" class="l"><a class="l" href="#32">32 </a>            <span class="php-var">$data</span> = <span class="php-keyword2">eval</span>(<span class="php-var">$string</span>);
+</span><span id="33" class="l"><a class="l" href="#33">33 </a>
+</span><span id="34" class="l"><a class="l" href="#34">34 </a>            <span class="php-keyword1">if</span>(<span class="php-var">$data</span> === <span class="php-keyword1">false</span>) {
+</span><span id="35" class="l"><a class="l" href="#35">35 </a>                <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> DomainException(<span class="php-quote">'Cannot evaluate data from PHP string'</span>);
+</span><span id="36" class="l"><a class="l" href="#36">36 </a>            }
+</span><span id="37" class="l"><a class="l" href="#37">37 </a>        }
+</span><span id="38" class="l"><a class="l" href="#38">38 </a>
+</span><span id="39" class="l"><a class="l" href="#39">39 </a>        <span class="php-keyword1">return</span> <span class="php-var">$object</span> ? <span class="php-var">$this</span>-&gt;merge(<span class="php-var">$data</span>) : <span class="php-var">$data</span>;
+</span><span id="40" class="l"><a class="l" href="#40">40 </a>    }
+</span><span id="41" class="l"><a class="l" href="#41">41 </a>
+</span><span id="42" class="l"><a class="l" href="#42">42 </a>    <span class="php-comment">/**
+</span></span><span id="43" class="l"><a class="l" href="#43">43 </a><span class="php-comment">     * Write a config object to a string.
+</span></span><span id="44" class="l"><a class="l" href="#44">44 </a><span class="php-comment">     *
+</span></span><span id="45" class="l"><a class="l" href="#45">45 </a><span class="php-comment">     * @return string|false   Returns a parsable string representation of the data.. False on failure.
+</span></span><span id="46" class="l"><a class="l" href="#46">46 </a><span class="php-comment">     */</span>
+</span><span id="47" class="l"><a class="l" href="#47">47 </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_toString" href="#_toString">toString</a>()
+</span><span id="48" class="l"><a class="l" href="#48">48 </a>    {
+</span><span id="49" class="l"><a class="l" href="#49">49 </a>        <span class="php-var">$data</span> = <span class="php-var">$this</span>-&gt;toArray();
+</span><span id="50" class="l"><a class="l" href="#50">50 </a>
+</span><span id="51" class="l"><a class="l" href="#51">51 </a>        <span class="php-keyword1">return</span> <span class="php-quote">'&lt;?php return '</span>.<span class="php-keyword2">var_export</span>(<span class="php-var">$data</span>, <span class="php-keyword1">true</span>).<span class="php-quote">';'</span>;
+</span><span id="52" class="l"><a class="l" href="#52">52 </a>    }
+</span><span id="53" class="l"><a class="l" href="#53">53 </a>
+</span><span id="54" class="l"><a class="l" href="#54">54 </a>    <span class="php-comment">/**
+</span></span><span id="55" class="l"><a class="l" href="#55">55 </a><span class="php-comment">     * Read from a file and create a config object
+</span></span><span id="56" class="l"><a class="l" href="#56">56 </a><span class="php-comment">     *
+</span></span><span id="57" class="l"><a class="l" href="#57">57 </a><span class="php-comment">     * @param  string $filename
+</span></span><span id="58" class="l"><a class="l" href="#58">58 </a><span class="php-comment">     * @param  bool    $object  If TRUE return a ConfigObject, if FALSE return an array. Default TRUE.
+</span></span><span id="59" class="l"><a class="l" href="#59">59 </a><span class="php-comment">     * @throws RuntimeException If file doesn't exist is not readable or cannot be included.
+</span></span><span id="60" class="l"><a class="l" href="#60">60 </a><span class="php-comment">     * @return KObjectConfigPhp|array
+</span></span><span id="61" class="l"><a class="l" href="#61">61 </a><span class="php-comment">     */</span>
+</span><span id="62" class="l"><a class="l" href="#62">62 </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_fromFile" href="#_fromFile">fromFile</a>(<span class="php-var">$filename</span>, <span class="php-var">$object</span> = <span class="php-keyword1">true</span>)
+</span><span id="63" class="l"><a class="l" href="#63">63 </a>    {
+</span><span id="64" class="l"><a class="l" href="#64">64 </a>        <span class="php-keyword1">if</span> (!<span class="php-keyword2">is_file</span>(<span class="php-var">$filename</span>) || !<span class="php-keyword2">is_readable</span>(<span class="php-var">$filename</span>)) {
+</span><span id="65" class="l"><a class="l" href="#65">65 </a>            <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> RuntimeException(<span class="php-keyword2">sprintf</span>(<span class="php-quote">&quot;File '%s' doesn't exist or not readable&quot;</span>, <span class="php-var">$filename</span>));
+</span><span id="66" class="l"><a class="l" href="#66">66 </a>        }
+</span><span id="67" class="l"><a class="l" href="#67">67 </a>
+</span><span id="68" class="l"><a class="l" href="#68">68 </a>        <span class="php-var">$data</span> = <span class="php-var">$this</span>-&gt;_includeFile(<span class="php-var">$filename</span>);
+</span><span id="69" class="l"><a class="l" href="#69">69 </a>
+</span><span id="70" class="l"><a class="l" href="#70">70 </a>        <span class="php-keyword1">return</span> <span class="php-var">$object</span> ? <span class="php-var">$this</span>-&gt;merge(<span class="php-var">$data</span>) : <span class="php-var">$data</span>;
+</span><span id="71" class="l"><a class="l" href="#71">71 </a>    }
+</span><span id="72" class="l"><a class="l" href="#72">72 </a>
+</span><span id="73" class="l"><a class="l" href="#73">73 </a>    <span class="php-comment">/**
+</span></span><span id="74" class="l"><a class="l" href="#74">74 </a><span class="php-comment">     * Includes a file without exposing caller method's scope
+</span></span><span id="75" class="l"><a class="l" href="#75">75 </a><span class="php-comment">     *
+</span></span><span id="76" class="l"><a class="l" href="#76">76 </a><span class="php-comment">     * @param  string $filename
+</span></span><span id="77" class="l"><a class="l" href="#77">77 </a><span class="php-comment">     * @return mixed
+</span></span><span id="78" class="l"><a class="l" href="#78">78 </a><span class="php-comment">     */</span>
+</span><span id="79" class="l"><a class="l" href="#79">79 </a>    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> <a id="__includeFile" href="#__includeFile">_includeFile</a>(<span class="php-var">$filename</span>)
+</span><span id="80" class="l"><a class="l" href="#80">80 </a>    {
+</span><span id="81" class="l"><a class="l" href="#81">81 </a>        <span class="php-keyword1">return</span> <span class="php-keyword1">require</span> <span class="php-var">$filename</span>;
+</span><span id="82" class="l"><a class="l" href="#82">82 </a>    }
+</span><span id="83" class="l"><a class="l" href="#83">83 </a></span>}</code></pre>
+	</div>
+
+	<div id="footer">
+		Nooku Framework API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+
+<script>
+    responsivemenu.init({
+        wrapper: document.querySelector('.header'),
+        toggleclass: 'button--hamburger',
+        togglecontent: 'menu <span class="lines"></span>'
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,1421 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<title>Interface KModelEntityInterface | Nooku Framework</title>
+
+	<script type="text/javascript" src="resources/combined.js?2640657843"></script>
+	<script type="text/javascript" src="elementlist.js?527661356"></script>
+	<script type="text/javascript" src="http://www.nooku.org/js/scripts.js"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/bootstrap.min.css?390653004" />
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?150590327" />
+    <link rel="stylesheet" type="text/css" media="all" href="http://www.nooku.org/css/header.css" />
+
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,300italic,700,400italic' rel='stylesheet' type='text/css' />
+
+    <link rel="shortcut icon" href="http://www.nooku.org/images/favicon.ico" type="image/x-icon" />
+
+	<script>
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] ||
+            function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-214238-5', 'auto');
+        ga('send', 'pageview');
+    </script>
+</head>
+
+<body class="no-js">
+    <script type="text/javascript">
+    function hasClass(e, t) {
+        return e.className.match(new RegExp("(\\s|^)" + t + "(\\s|$)"))
+    }
+    var el = document.body;
+    var cl = "no-js";
+    if (hasClass(el, cl)) {
+        var reg = new RegExp("(\\s|^)" + cl + "(\\s|$)");
+        el.className = el.className.replace(reg, " js-enabled")
+    }
+    </script>
+	<div class="header">
+            <div class="container">
+                <div class="group">
+                    <div class="header__brand brand"><a href="http://www.nooku.org"><img src="http://www.nooku.org/images/layout/logo.png" alt="Nooku Logo" /></a></div>
+                    <div class="header__navigation">
+                        <div class="navigation_container" role="navigation">
+                            <ul class="navbar initiated">
+                                <li class="navbar__item" role="menuitem"><a href="http://www.nooku.org/features/">Features</a></li>
+                                <li class="navbar__item" role="menuitem"><a href="http://www.nooku.org/get-started/">Get Started</a></li>
+                                <li class="navbar__item" role="menuitem"><a href="http://www.nooku.org/services/">Services</a></li>
+                                <li class="navbar__item" role="menuitem"><a href="http://www.nooku.org/community/">Community</a></li>
+                                <li class="navbar__item active" role="menuitem"><a href="http://www.nooku.org/docs/">Docs</a></li>
+                                <li class="navbar__item" role="menuitem"><a href="http://www.nooku.org/blog">Blog</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+	<div id="left">
+	<div id="menu">
+		<form id="search" class="form-search">
+			<input type="hidden" name="cx" value="" />
+			<input type="hidden" name="ie" value="UTF-8" />
+			<input type="text" name="q" class="search-query" placeholder="Search" />
+		</form>
+
+
+		<div id="groups">
+			<h3>Packages</h3>
+			<ul>
+				<li class="active"><a href="package-Koowa.html">Koowa<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.html">Component<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.html">Koowa<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Class.html">Class<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Class.Locator.html">Locator</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Controller.html">Controller<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Controller.Behavior.html">Behavior</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Controller.Permission.html">Permission</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Controller.Toolbar.html">Toolbar</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Database.html">Database<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Database.Adapter.html">Adapter</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Database.Behavior.html">Behavior</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Database.Table.html">Table</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Date.html">Date</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Decorator.html">Decorator</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Dispatcher.html">Dispatcher<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Dispatcher.Authenticator.html">Authenticator</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Dispatcher.Permission.html">Permission</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Dispatcher.Request.html">Request</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Dispatcher.Response.html">Response<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Dispatcher.Response.Transport.html">Transport</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Dispatcher.Router.html">Router</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Event.html">Event<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Event.Publisher.html">Publisher</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Event.Subscriber.html">Subscriber</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Exception.html">Exception</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Filesystem.html">Filesystem<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Filesystem.Stream.html">Stream</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Filter.html">Filter</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Model.html">Model</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Object.html">Object<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Object.Locator.html">Locator</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Template.html">Template<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Template.Filter.html">Filter</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Template.Helper.html">Helper</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Template.Locator.html">Locator</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Translator.html">Translator<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Translator.Catalogue.html">Catalogue</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Translator.Locator.html">Locator</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.User.html">User</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.View.html">View<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.View.Error.html">Error</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.View.Page.html">Page</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.View.Users.html">Users</a>
+						</li>
+							</ul></li></ul></li></ul></li>
+				<li class="active"><a href="package-Koowa.Library.html">Library<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Behavior.html">Behavior<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Behavior.Exception.html">Exception</a>
+						</li>
+				<li><a href="package-Koowa.Library.Behavior.Mixin.html">Mixin</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Class.html">Class<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Class.Loader.html">Loader</a>
+						</li>
+				<li><a href="package-Koowa.Library.Class.Locator.html">Locator</a>
+						</li>
+				<li><a href="package-Koowa.Library.Class.Registry.html">Registry</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Command.html">Command<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Command.Callback.html">Callback</a>
+						</li>
+				<li><a href="package-Koowa.Library.Command.Chain.html">Chain</a>
+						</li>
+				<li><a href="package-Koowa.Library.Command.Exception.html">Exception</a>
+						</li>
+				<li><a href="package-Koowa.Library.Command.Handler.html">Handler</a>
+						</li>
+				<li><a href="package-Koowa.Library.Command.Mixin.html">Mixin</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Controller.html">Controller<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Controller.Behavior.html">Behavior</a>
+						</li>
+				<li><a href="package-Koowa.Library.Controller.Context.html">Context</a>
+						</li>
+				<li><a href="package-Koowa.Library.Controller.Exception.html">Exception</a>
+						</li>
+				<li><a href="package-Koowa.Library.Controller.Permission.html">Permission</a>
+						</li>
+				<li><a href="package-Koowa.Library.Controller.Request.html">Request</a>
+						</li>
+				<li><a href="package-Koowa.Library.Controller.Response.html">Response</a>
+						</li>
+				<li><a href="package-Koowa.Library.Controller.Toolbar.html">Toolbar<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Controller.Toolbar.Command.html">Command</a>
+						</li>
+				<li><a href="package-Koowa.Library.Controller.Toolbar.Mixin.html">Mixin</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-Koowa.Library.Database.html">Database<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Database.Adapter.html">Adapter</a>
+						</li>
+				<li><a href="package-Koowa.Library.Database.Behavior.html">Behavior</a>
+						</li>
+				<li><a href="package-Koowa.Library.Database.Context.html">Context</a>
+						</li>
+				<li><a href="package-Koowa.Library.Database.Query.html">Query</a>
+						</li>
+				<li><a href="package-Koowa.Library.Database.Row.html">Row</a>
+						</li>
+				<li><a href="package-Koowa.Library.Database.Rowset.html">Rowset</a>
+						</li>
+				<li><a href="package-Koowa.Library.Database.Schema.html">Schema</a>
+						</li>
+				<li><a href="package-Koowa.Library.Database.Table.html">Table</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Date.html">Date</a>
+						</li>
+				<li><a href="package-Koowa.Library.Dispatcher.html">Dispatcher<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Dispatcher.Authenticator.html">Authenticator</a>
+						</li>
+				<li><a href="package-Koowa.Library.Dispatcher.Behavior.html">Behavior</a>
+						</li>
+				<li><a href="package-Koowa.Library.Dispatcher.Context.html">Context</a>
+						</li>
+				<li><a href="package-Koowa.Library.Dispatcher.Exception.html">Exception</a>
+						</li>
+				<li><a href="package-Koowa.Library.Dispatcher.Permission.html">Permission</a>
+						</li>
+				<li><a href="package-Koowa.Library.Dispatcher.Request.html">Request</a>
+						</li>
+				<li><a href="package-Koowa.Library.Dispatcher.Response.html">Response<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Dispatcher.Response.Transport.html">Transport</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Dispatcher.Router.html">Router</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Event.html">Event<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Event.Mixin.html">Mixin</a>
+						</li>
+				<li><a href="package-Koowa.Library.Event.Publisher.html">Publisher</a>
+						</li>
+				<li><a href="package-Koowa.Library.Event.Subscriber.html">Subscriber</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Exception.html">Exception<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Exception.Handler.html">Handler</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Filesystem.html">Filesystem<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Filesystem.Stream.html">Stream<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Filesystem.Stream.Filter.html">Filter</a>
+						</li>
+				<li><a href="package-Koowa.Library.Filesystem.Stream.Iterator.html">Iterator</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-Koowa.Library.Filter.html">Filter</a>
+						</li>
+				<li><a href="package-Koowa.Library.Http.html">Http<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Http.Cookie.html">Cookie</a>
+						</li>
+				<li><a href="package-Koowa.Library.Http.Exception.html">Exception<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Http.Exception.Unsupported.html">Unsupported</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Http.Message.html">Message</a>
+						</li>
+				<li><a href="package-Koowa.Library.Http.Request.html">Request</a>
+						</li>
+				<li><a href="package-Koowa.Library.Http.Response.html">Response</a>
+						</li>
+				<li><a href="package-Koowa.Library.Http.Token.html">Token</a>
+						</li>
+				<li><a href="package-Koowa.Library.Http.Url.html">Url</a>
+						</li>
+							</ul></li>
+				<li class="active"><a href="package-Koowa.Library.Model.html">Model<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Model.Behavior.html">Behavior</a>
+						</li>
+				<li><a href="package-Koowa.Library.Model.Context.html">Context</a>
+						</li>
+				<li class="active"><a href="package-Koowa.Library.Model.Entity.html">Entity</a>
+						</li>
+				<li><a href="package-Koowa.Library.Model.Paginator.html">Paginator</a>
+						</li>
+				<li><a href="package-Koowa.Library.Model.State.html">State</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Object.html">Object<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Object.Bootstrapper.html">Bootstrapper</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Config.html">Config</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Decorator.html">Decorator</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Exception.html">Exception</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Identifier.html">Identifier</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Locator.html">Locator</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Manager.html">Manager</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Mixin.html">Mixin</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Registry.html">Registry</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.String.html">String<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.String.Inflector.html">Inflector</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Template.html">Template<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Template.Engine.html">Engine</a>
+						</li>
+				<li><a href="package-Koowa.Library.Template.Exception.html">Exception</a>
+						</li>
+				<li><a href="package-Koowa.Library.Template.Filter.html">Filter</a>
+						</li>
+				<li><a href="package-Koowa.Library.Template.Helper.html">Helper</a>
+						</li>
+				<li><a href="package-Koowa.Library.Template.Locator.html">Locator</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Translator.html">Translator<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Translator.Catalogue.html">Catalogue</a>
+						</li>
+				<li><a href="package-Koowa.Library.Translator.Inflector.html">Inflector</a>
+						</li>
+				<li><a href="package-Koowa.Library.Translator.Locator.html">Locator</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.User.html">User<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.User.Provider.html">Provider</a>
+						</li>
+				<li><a href="package-Koowa.Library.User.Session.html">Session<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.User.Session.Container.html">Container</a>
+						</li>
+				<li><a href="package-Koowa.Library.User.Session.Handler.html">Handler</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-Koowa.Library.View.html">View<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.View.Behavior.html">Behavior</a>
+						</li>
+				<li><a href="package-Koowa.Library.View.Context.html">Context</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-Koowa.Module.html">Module<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Module.Koowa.html">Koowa<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Module.Koowa.Template.html">Template<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Module.Koowa.Template.Filter.html">Filter</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Module.Koowa.View.html">View</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-Koowa.Plugin.html">Plugin<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Plugin.Koowa.html">Koowa</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Wordpress.html">Wordpress<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Wordpress.Library.html">Library<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Wordpress.Library.Controller.html">Controller</a>
+						</li>
+							</ul></li></ul></li></ul></li>
+				<li><a href="package-Nooku.html">Nooku<span></span></a>
+						<ul>
+				<li><a href="package-Nooku.Library.html">Library<span></span></a>
+						<ul>
+				<li><a href="package-Nooku.Library.Template.html">Template<span></span></a>
+						<ul>
+				<li><a href="package-Nooku.Library.Template.Abstract.html">Abstract</a>
+						</li>
+							</ul></li></ul></li></ul></li>
+			</ul>
+		</div>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-KModelEntityAbstract.html">KModelEntityAbstract</a></li>
+				<li><a href="class-KModelEntityComposite.html">KModelEntityComposite</a></li>
+				<li><a href="class-KModelEntityDefault.html">KModelEntityDefault</a></li>
+				<li><a href="class-KModelEntityImmutable.html">KModelEntityImmutable</a></li>
+				<li><a href="class-KModelEntityRow.html">KModelEntityRow</a></li>
+				<li><a href="class-KModelEntityRowset.html">KModelEntityRowset</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="class-KModelEntityComposable.html">KModelEntityComposable</a></li>
+				<li class="active"><a href="class-KModelEntityInterface.html">KModelEntityInterface</a></li>
+			</ul>
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+	<div id="rightInner">
+<div id="content" class="class">
+	<h1>Interface KModelEntityInterface</h1>
+
+
+	<div class="description">
+	
+<p>Model Entity Interface</p>
+
+	</div>
+
+	<dl class="tree well">
+		<dd style="padding-left:0px">
+<b><span>KModelEntityInterface</span></b>			
+			 implements 
+<span>IteratorAggregate</span>, 
+			
+<span>ArrayAccess</span>, 
+			
+<span>Serializable</span>, 
+			
+<span>Countable</span>
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+	<div>
+		<h3>Direct known implementers</h3>
+		<p class="elementList">
+			<code><a href="class-KModelEntityAbstract.html">KModelEntityAbstract</a></code>, 
+			<code><a href="class-KModelEntityComposite.html">KModelEntityComposite</a></code>, 
+			<code><a href="class-KModelEntityRow.html">KModelEntityRow</a></code>, 
+			<code><a href="class-KModelEntityRowset.html">KModelEntityRowset</a></code>
+		</p>
+	</div>
+
+	<div>
+		<h3>Indirect known implementers</h3>
+		<p class="elementList">
+			<code><a href="class-ComKoowaModelEntityUser.html">ComKoowaModelEntityUser</a></code>, 
+			<code><a href="class-KModelEntityDefault.html">KModelEntityDefault</a></code>, 
+			<code><a href="class-KModelEntityImmutable.html">KModelEntityImmutable</a></code>
+		</p>
+	</div>
+
+
+
+	<div class="alert alert-info">
+		
+		
+		
+		<b>Package:</b> <a href="package-Koowa.html">Koowa</a>\<a href="package-Koowa.Library.html">Library</a>\<a href="package-Koowa.Library.Model.html">Model</a>\<a href="package-Koowa.Library.Model.Entity.html">Entity</a><br />
+
+				<b>Copyright:</b>
+				Copyright (C) 2007 - 2014 Johan Janssens and Timble CVBA. (<a
+href="http://www.timble.net">http://www.timble.net</a>)<br />
+				<b>License:</b>
+				<a href="GNU">GPLv3 &lt;http://www.gnu.org/licenses/gpl.html&gt;</a><br />
+				<b>Author:</b>
+				Johan Janssens &lt;<a
+href="https://github.com/johanjanssens">https://github.com/johanjanssens</a>&gt;<br />
+		<b>Located at</b> <a href="source-class-KModelEntityInterface.html#10-173" title="Go to source code">libraries/koowa/libraries/model/entity/interface.php</a><br />
+	</div>
+
+
+
+		<h2>Methods summary</h2>
+		<table class="summary table table-bordered table-striped" id="methods">
+		<tr data-order="save" id="_save">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-KModelEntityInterface.html">KModelEntityInterface</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_save">#</a>
+			<code><a href="source-class-KModelEntityInterface.html#27-35" title="Go to source code">save</a>( )</code>
+
+			<div class="description short">
+				
+<p>Saves the to the data store</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Saves the to the data store</p>
+
+<p>This performs an intelligent insert/update and reloads the properties with
+fresh data from the table on success.</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><code><a href="class-KModelEntityInterface.html">KModelEntityInterface</a></code></code><br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="delete" id="_delete">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-KModelEntityInterface.html">KModelEntityInterface</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_delete">#</a>
+			<code><a href="source-class-KModelEntityInterface.html#37-42" title="Go to source code">delete</a>( )</code>
+
+			<div class="description short">
+				
+<p>Deletes the entity form the data store</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Deletes the entity form the data store</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><code><a href="class-KModelEntityInterface.html">KModelEntityInterface</a></code></code><br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="reset" id="_reset">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-KModelEntityInterface.html">KModelEntityInterface</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_reset">#</a>
+			<code><a href="source-class-KModelEntityInterface.html#44-49" title="Go to source code">reset</a>( )</code>
+
+			<div class="description short">
+				
+<p>Resets to the entity to it's default properties</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Resets to the entity to it's default properties</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><code><a href="class-KModelEntityInterface.html">KModelEntityInterface</a></code></code><br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getIdentityKey" id="_getIdentityKey">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getIdentityKey">#</a>
+			<code><a href="source-class-KModelEntityInterface.html#51-56" title="Go to source code">getIdentityKey</a>( )</code>
+
+			<div class="description short">
+				
+<p>Get the entity key</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Get the entity key</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>string</code><br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getProperty" id="_getProperty">
+
+			<td class="attributes"><code>
+				 public 
+				mixed
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getProperty">#</a>
+			<code><a href="source-class-KModelEntityInterface.html#58-64" title="Go to source code">getProperty</a>( <span>string <var>$name</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Get a property</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Get a property</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$name</var></dt>
+						<dd><code>string</code><br>$name The property name.</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>mixed</code><br>The property value.<br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="setProperty" id="_setProperty">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-KModelEntityInterface.html">KModelEntityInterface</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_setProperty">#</a>
+			<code><a href="source-class-KModelEntityInterface.html#66-78" title="Go to source code">setProperty</a>( <span>string <var>$name</var></span>, <span>mixed <var>$value</var></span>, <span>boolean <var>$modified</var> = <span class="php-keyword1">true</span></span> )</code>
+
+			<div class="description short">
+				
+<p>Set a property</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Set a property</p>
+
+<p>If the value is the same as the current value and the entity is loaded from
+the data store the value will not be reset. If the entity is new the value will
+be (re)set and marked as modified</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$name</var></dt>
+						<dd><code>string</code><br>$name The property name.</dd>
+						<dt><var>$value</var></dt>
+						<dd><code>mixed</code><br>$value The property value.</dd>
+						<dt><var>$modified</var></dt>
+						<dd><code>boolean</code><br>$modified If TRUE, update the modified information for the property</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><code><a href="class-KModelEntityInterface.html">KModelEntityInterface</a></code></code><br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="hasProperty" id="_hasProperty">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_hasProperty">#</a>
+			<code><a href="source-class-KModelEntityInterface.html#80-86" title="Go to source code">hasProperty</a>( <span>string <var>$name</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Test existence of a property</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Test existence of a property</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$name</var></dt>
+						<dd><code>string</code><br>$name The property name.</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>boolean</code><br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="removeProperty" id="_removeProperty">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-KModelEntityInterface.html">KModelEntityInterface</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_removeProperty">#</a>
+			<code><a href="source-class-KModelEntityInterface.html#88-94" title="Go to source code">removeProperty</a>( <span>string <var>$name</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Remove a property</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Remove a property</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$name</var></dt>
+						<dd><code>string</code><br>$name The property name.</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><code><a href="class-KModelEntityInterface.html">KModelEntityInterface</a></code></code><br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getProperties" id="_getProperties">
+
+			<td class="attributes"><code>
+				 public 
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getProperties">#</a>
+			<code><a href="source-class-KModelEntityInterface.html#96-102" title="Go to source code">getProperties</a>( <span>boolean <var>$modified</var> = <span class="php-keyword1">false</span></span> )</code>
+
+			<div class="description short">
+				
+<p>Get the properties</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Get the properties</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$modified</var></dt>
+						<dd><code>boolean</code><br>$modified If TRUE, only return the modified data.</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>array</code><br>An associative array of entity properties<br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="setProperties" id="_setProperties">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-KModelEntityInterface.html">KModelEntityInterface</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_setProperties">#</a>
+			<code><a href="source-class-KModelEntityInterface.html#104-111" title="Go to source code">setProperties</a>( <span>mixed <var>$properties</var></span>, <span>boolean <var>$modified</var> = <span class="php-keyword1">true</span></span> )</code>
+
+			<div class="description short">
+				
+<p>Set the properties</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Set the properties</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$properties</var></dt>
+						<dd><code>mixed</code><br>$properties Either and associative array, an object or a KModelEntityInterface</dd>
+						<dt><var>$modified</var></dt>
+						<dd><code>boolean</code><br>$modified If TRUE, update the modified information for each column being set.</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><code><a href="class-KModelEntityInterface.html">KModelEntityInterface</a></code></code><br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getComputedProperties" id="_getComputedProperties">
+
+			<td class="attributes"><code>
+				 public 
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getComputedProperties">#</a>
+			<code><a href="source-class-KModelEntityInterface.html#113-118" title="Go to source code">getComputedProperties</a>( )</code>
+
+			<div class="description short">
+				
+<p>Get a list of the computed properties</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Get a list of the computed properties</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>array</code><br>An array<br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getStatus" id="_getStatus">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getStatus">#</a>
+			<code><a href="source-class-KModelEntityInterface.html#120-125" title="Go to source code">getStatus</a>( )</code>
+
+			<div class="description short">
+				
+<p>Returns the status.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Returns the status.</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>string</code><br>The status value.<br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="setStatus" id="_setStatus">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-KModelEntityInterface.html">KModelEntityInterface</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_setStatus">#</a>
+			<code><a href="source-class-KModelEntityInterface.html#127-133" title="Go to source code">setStatus</a>( <span>string|null <var>$status</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Set the status</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Set the status</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$status</var></dt>
+						<dd><code>string|null</code><br>$status The status value or NULL to reset the status</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><code><a href="class-KModelEntityInterface.html">KModelEntityInterface</a></code></code><br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getStatusMessage" id="_getStatusMessage">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getStatusMessage">#</a>
+			<code><a href="source-class-KModelEntityInterface.html#135-140" title="Go to source code">getStatusMessage</a>( )</code>
+
+			<div class="description short">
+				
+<p>Returns the status message</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Returns the status message</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>string</code><br>The status message<br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="setStatusMessage" id="_setStatusMessage">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-KModelEntityInterface.html">KModelEntityInterface</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_setStatusMessage">#</a>
+			<code><a href="source-class-KModelEntityInterface.html#142-148" title="Go to source code">setStatusMessage</a>( <span>string <var>$message</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Set the status message</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Set the status message</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$message</var></dt>
+						<dd><code>string</code><br>$message The status message</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><code><a href="class-KModelEntityInterface.html">KModelEntityInterface</a></code></code><br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="isNew" id="_isNew">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_isNew">#</a>
+			<code><a href="source-class-KModelEntityInterface.html#150-155" title="Go to source code">isNew</a>( )</code>
+
+			<div class="description short">
+				
+<p>Checks if the entity is new or not</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Checks if the entity is new or not</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>boolean</code><br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="isModified" id="_isModified">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_isModified">#</a>
+			<code><a href="source-class-KModelEntityInterface.html#157-165" title="Go to source code">isModified</a>( <span>string <var>$property</var> = <span class="php-keyword1">null</span></span> )</code>
+
+			<div class="description short">
+				
+<p>Check if the entity or specific entity property has been modified.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Check if the entity or specific entity property has been modified.</p>
+
+<p>If a specific property name is giving method will return TRUE only if this
+property was modified.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$property</var></dt>
+						<dd><code>string</code><br>$property The property name</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>boolean</code><br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="isConnected" id="_isConnected">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_isConnected">#</a>
+			<code><a href="source-class-KModelEntityInterface.html#167-172" title="Go to source code">isConnected</a>( )</code>
+
+			<div class="description short">
+				
+<p>Test if the entity is connected to a data store</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Test if the entity is connected to a data store</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>boolean</code><br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		</table>
+
+		<h3>Methods inherited from IteratorAggregate</h3>
+		<p class="elementList">
+			<code>getIterator()</code>
+		</p>
+		<h3>Methods inherited from ArrayAccess</h3>
+		<p class="elementList">
+			<code>offsetExists()</code>, 
+			<code>offsetGet()</code>, 
+			<code>offsetSet()</code>, 
+			<code>offsetUnset()</code>
+		</p>
+		<h3>Methods inherited from Serializable</h3>
+		<p class="elementList">
+			<code>serialize()</code>, 
+			<code>unserialize()</code>
+		</p>
+		<h3>Methods inherited from Countable</h3>
+		<p class="elementList">
+			<code>count()</code>
+		</p>
+
+
+		<h3>Magic methods summary</h3>
+
+
+
+
+
+		<h2>Constants summary</h2>
+		<table class="summary table table-bordered table-striped" id="constants">
+		<tr data-order="STATUS_FETCHED" id="STATUS_FETCHED">
+
+			<td class="attributes"><code>string</code></td>
+			<td class="name"><code>
+					<a href="source-class-KModelEntityInterface.html#18-21" title="Go to source code"><b>STATUS_FETCHED</b></a>
+			</code></td>
+			<td class="value"><code><span class="php-quote">'fetched'</span></code></td>
+			<td class="description"><div>
+				<a href="#STATUS_FETCHED" class="anchor">#</a>
+
+				<div class="description short">
+					
+<p>Entity States</p>
+
+				</div>
+
+				<div class="description detailed hidden">
+					
+<p>Entity States</p>
+
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="STATUS_DELETED" id="STATUS_DELETED">
+
+			<td class="attributes"><code>string</code></td>
+			<td class="name"><code>
+					<a href="source-class-KModelEntityInterface.html#22" title="Go to source code"><b>STATUS_DELETED</b></a>
+			</code></td>
+			<td class="value"><code><span class="php-quote">'deleted'</span></code></td>
+			<td class="description"><div>
+				<a href="#STATUS_DELETED" class="anchor">#</a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="STATUS_CREATED" id="STATUS_CREATED">
+
+			<td class="attributes"><code>string</code></td>
+			<td class="name"><code>
+					<a href="source-class-KModelEntityInterface.html#23" title="Go to source code"><b>STATUS_CREATED</b></a>
+			</code></td>
+			<td class="value"><code><span class="php-quote">'created'</span></code></td>
+			<td class="description"><div>
+				<a href="#STATUS_CREATED" class="anchor">#</a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="STATUS_UPDATED" id="STATUS_UPDATED">
+
+			<td class="attributes"><code>string</code></td>
+			<td class="name"><code>
+					<a href="source-class-KModelEntityInterface.html#24" title="Go to source code"><b>STATUS_UPDATED</b></a>
+			</code></td>
+			<td class="value"><code><span class="php-quote">'updated'</span></code></td>
+			<td class="description"><div>
+				<a href="#STATUS_UPDATED" class="anchor">#</a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="STATUS_FAILED" id="STATUS_FAILED">
+
+			<td class="attributes"><code>string</code></td>
+			<td class="name"><code>
+					<a href="source-class-KModelEntityInterface.html#25" title="Go to source code"><b>STATUS_FAILED</b></a>
+			</code></td>
+			<td class="value"><code><span class="php-quote">'failed'</span></code></td>
+			<td class="description"><div>
+				<a href="#STATUS_FAILED" class="anchor">#</a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</div></td>
+		</tr>
+		</table>
+
+
+
+
+</div>
+	</div>
+
+	<div id="footer">
+		Nooku Framework API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+
+<script>
+    responsivemenu.init({
+        wrapper: document.querySelector('.header'),
+        toggleclass: 'button--hamburger',
+        togglecontent: 'menu <span class="lines"></span>'
+    });
+</script>
+
+</body>
+</html>

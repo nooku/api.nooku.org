@@ -1,0 +1,1552 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<title>Interface KUserSessionInterface | Nooku Framework</title>
+
+	<script type="text/javascript" src="resources/combined.js?2640657843"></script>
+	<script type="text/javascript" src="elementlist.js?527661356"></script>
+	<script type="text/javascript" src="http://www.nooku.org/js/scripts.js"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/bootstrap.min.css?390653004" />
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?150590327" />
+    <link rel="stylesheet" type="text/css" media="all" href="http://www.nooku.org/css/header.css" />
+
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,300italic,700,400italic' rel='stylesheet' type='text/css' />
+
+    <link rel="shortcut icon" href="http://www.nooku.org/images/favicon.ico" type="image/x-icon" />
+
+	<script>
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] ||
+            function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-214238-5', 'auto');
+        ga('send', 'pageview');
+    </script>
+</head>
+
+<body class="no-js">
+    <script type="text/javascript">
+    function hasClass(e, t) {
+        return e.className.match(new RegExp("(\\s|^)" + t + "(\\s|$)"))
+    }
+    var el = document.body;
+    var cl = "no-js";
+    if (hasClass(el, cl)) {
+        var reg = new RegExp("(\\s|^)" + cl + "(\\s|$)");
+        el.className = el.className.replace(reg, " js-enabled")
+    }
+    </script>
+	<div class="header">
+            <div class="container">
+                <div class="group">
+                    <div class="header__brand brand"><a href="http://www.nooku.org"><img src="http://www.nooku.org/images/layout/logo.png" alt="Nooku Logo" /></a></div>
+                    <div class="header__navigation">
+                        <div class="navigation_container" role="navigation">
+                            <ul class="navbar initiated">
+                                <li class="navbar__item" role="menuitem"><a href="http://www.nooku.org/features/">Features</a></li>
+                                <li class="navbar__item" role="menuitem"><a href="http://www.nooku.org/get-started/">Get Started</a></li>
+                                <li class="navbar__item" role="menuitem"><a href="http://www.nooku.org/services/">Services</a></li>
+                                <li class="navbar__item" role="menuitem"><a href="http://www.nooku.org/community/">Community</a></li>
+                                <li class="navbar__item active" role="menuitem"><a href="http://www.nooku.org/docs/">Docs</a></li>
+                                <li class="navbar__item" role="menuitem"><a href="http://www.nooku.org/blog">Blog</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+	<div id="left">
+	<div id="menu">
+		<form id="search" class="form-search">
+			<input type="hidden" name="cx" value="" />
+			<input type="hidden" name="ie" value="UTF-8" />
+			<input type="text" name="q" class="search-query" placeholder="Search" />
+		</form>
+
+
+		<div id="groups">
+			<h3>Packages</h3>
+			<ul>
+				<li class="active"><a href="package-Koowa.html">Koowa<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.html">Component<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.html">Koowa<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Class.html">Class<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Class.Locator.html">Locator</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Controller.html">Controller<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Controller.Behavior.html">Behavior</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Controller.Permission.html">Permission</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Controller.Toolbar.html">Toolbar</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Database.html">Database<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Database.Adapter.html">Adapter</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Database.Behavior.html">Behavior</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Database.Table.html">Table</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Date.html">Date</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Decorator.html">Decorator</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Dispatcher.html">Dispatcher<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Dispatcher.Authenticator.html">Authenticator</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Dispatcher.Permission.html">Permission</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Dispatcher.Request.html">Request</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Dispatcher.Response.html">Response<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Dispatcher.Response.Transport.html">Transport</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Dispatcher.Router.html">Router</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Event.html">Event<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Event.Publisher.html">Publisher</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Event.Subscriber.html">Subscriber</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Exception.html">Exception</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Filesystem.html">Filesystem<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Filesystem.Stream.html">Stream</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Filter.html">Filter</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Model.html">Model</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Object.html">Object<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Object.Locator.html">Locator</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Template.html">Template<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Template.Filter.html">Filter</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Template.Helper.html">Helper</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Template.Locator.html">Locator</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Translator.html">Translator<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Translator.Catalogue.html">Catalogue</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Translator.Locator.html">Locator</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.User.html">User</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.View.html">View<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.View.Error.html">Error</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.View.Page.html">Page</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.View.Users.html">Users</a>
+						</li>
+							</ul></li></ul></li></ul></li>
+				<li class="active"><a href="package-Koowa.Library.html">Library<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Behavior.html">Behavior<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Behavior.Exception.html">Exception</a>
+						</li>
+				<li><a href="package-Koowa.Library.Behavior.Mixin.html">Mixin</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Class.html">Class<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Class.Loader.html">Loader</a>
+						</li>
+				<li><a href="package-Koowa.Library.Class.Locator.html">Locator</a>
+						</li>
+				<li><a href="package-Koowa.Library.Class.Registry.html">Registry</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Command.html">Command<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Command.Callback.html">Callback</a>
+						</li>
+				<li><a href="package-Koowa.Library.Command.Chain.html">Chain</a>
+						</li>
+				<li><a href="package-Koowa.Library.Command.Exception.html">Exception</a>
+						</li>
+				<li><a href="package-Koowa.Library.Command.Handler.html">Handler</a>
+						</li>
+				<li><a href="package-Koowa.Library.Command.Mixin.html">Mixin</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Controller.html">Controller<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Controller.Behavior.html">Behavior</a>
+						</li>
+				<li><a href="package-Koowa.Library.Controller.Context.html">Context</a>
+						</li>
+				<li><a href="package-Koowa.Library.Controller.Exception.html">Exception</a>
+						</li>
+				<li><a href="package-Koowa.Library.Controller.Permission.html">Permission</a>
+						</li>
+				<li><a href="package-Koowa.Library.Controller.Request.html">Request</a>
+						</li>
+				<li><a href="package-Koowa.Library.Controller.Response.html">Response</a>
+						</li>
+				<li><a href="package-Koowa.Library.Controller.Toolbar.html">Toolbar<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Controller.Toolbar.Command.html">Command</a>
+						</li>
+				<li><a href="package-Koowa.Library.Controller.Toolbar.Mixin.html">Mixin</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-Koowa.Library.Database.html">Database<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Database.Adapter.html">Adapter</a>
+						</li>
+				<li><a href="package-Koowa.Library.Database.Behavior.html">Behavior</a>
+						</li>
+				<li><a href="package-Koowa.Library.Database.Context.html">Context</a>
+						</li>
+				<li><a href="package-Koowa.Library.Database.Query.html">Query</a>
+						</li>
+				<li><a href="package-Koowa.Library.Database.Row.html">Row</a>
+						</li>
+				<li><a href="package-Koowa.Library.Database.Rowset.html">Rowset</a>
+						</li>
+				<li><a href="package-Koowa.Library.Database.Schema.html">Schema</a>
+						</li>
+				<li><a href="package-Koowa.Library.Database.Table.html">Table</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Date.html">Date</a>
+						</li>
+				<li><a href="package-Koowa.Library.Dispatcher.html">Dispatcher<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Dispatcher.Authenticator.html">Authenticator</a>
+						</li>
+				<li><a href="package-Koowa.Library.Dispatcher.Behavior.html">Behavior</a>
+						</li>
+				<li><a href="package-Koowa.Library.Dispatcher.Context.html">Context</a>
+						</li>
+				<li><a href="package-Koowa.Library.Dispatcher.Exception.html">Exception</a>
+						</li>
+				<li><a href="package-Koowa.Library.Dispatcher.Permission.html">Permission</a>
+						</li>
+				<li><a href="package-Koowa.Library.Dispatcher.Request.html">Request</a>
+						</li>
+				<li><a href="package-Koowa.Library.Dispatcher.Response.html">Response<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Dispatcher.Response.Transport.html">Transport</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Dispatcher.Router.html">Router</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Event.html">Event<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Event.Mixin.html">Mixin</a>
+						</li>
+				<li><a href="package-Koowa.Library.Event.Publisher.html">Publisher</a>
+						</li>
+				<li><a href="package-Koowa.Library.Event.Subscriber.html">Subscriber</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Exception.html">Exception<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Exception.Handler.html">Handler</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Filesystem.html">Filesystem<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Filesystem.Stream.html">Stream<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Filesystem.Stream.Filter.html">Filter</a>
+						</li>
+				<li><a href="package-Koowa.Library.Filesystem.Stream.Iterator.html">Iterator</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-Koowa.Library.Filter.html">Filter</a>
+						</li>
+				<li><a href="package-Koowa.Library.Http.html">Http<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Http.Cookie.html">Cookie</a>
+						</li>
+				<li><a href="package-Koowa.Library.Http.Exception.html">Exception<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Http.Exception.Unsupported.html">Unsupported</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Http.Message.html">Message</a>
+						</li>
+				<li><a href="package-Koowa.Library.Http.Request.html">Request</a>
+						</li>
+				<li><a href="package-Koowa.Library.Http.Response.html">Response</a>
+						</li>
+				<li><a href="package-Koowa.Library.Http.Token.html">Token</a>
+						</li>
+				<li><a href="package-Koowa.Library.Http.Url.html">Url</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Model.html">Model<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Model.Behavior.html">Behavior</a>
+						</li>
+				<li><a href="package-Koowa.Library.Model.Context.html">Context</a>
+						</li>
+				<li><a href="package-Koowa.Library.Model.Entity.html">Entity</a>
+						</li>
+				<li><a href="package-Koowa.Library.Model.Paginator.html">Paginator</a>
+						</li>
+				<li><a href="package-Koowa.Library.Model.State.html">State</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Object.html">Object<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Object.Bootstrapper.html">Bootstrapper</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Config.html">Config</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Decorator.html">Decorator</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Exception.html">Exception</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Identifier.html">Identifier</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Locator.html">Locator</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Manager.html">Manager</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Mixin.html">Mixin</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Registry.html">Registry</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.String.html">String<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.String.Inflector.html">Inflector</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Template.html">Template<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Template.Engine.html">Engine</a>
+						</li>
+				<li><a href="package-Koowa.Library.Template.Exception.html">Exception</a>
+						</li>
+				<li><a href="package-Koowa.Library.Template.Filter.html">Filter</a>
+						</li>
+				<li><a href="package-Koowa.Library.Template.Helper.html">Helper</a>
+						</li>
+				<li><a href="package-Koowa.Library.Template.Locator.html">Locator</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Translator.html">Translator<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Translator.Catalogue.html">Catalogue</a>
+						</li>
+				<li><a href="package-Koowa.Library.Translator.Inflector.html">Inflector</a>
+						</li>
+				<li><a href="package-Koowa.Library.Translator.Locator.html">Locator</a>
+						</li>
+							</ul></li>
+				<li class="active"><a href="package-Koowa.Library.User.html">User<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.User.Provider.html">Provider</a>
+						</li>
+				<li class="active"><a href="package-Koowa.Library.User.Session.html">Session<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.User.Session.Container.html">Container</a>
+						</li>
+				<li><a href="package-Koowa.Library.User.Session.Handler.html">Handler</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-Koowa.Library.View.html">View<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.View.Behavior.html">Behavior</a>
+						</li>
+				<li><a href="package-Koowa.Library.View.Context.html">Context</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-Koowa.Module.html">Module<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Module.Koowa.html">Koowa<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Module.Koowa.Template.html">Template<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Module.Koowa.Template.Filter.html">Filter</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Module.Koowa.View.html">View</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-Koowa.Plugin.html">Plugin<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Plugin.Koowa.html">Koowa</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Wordpress.html">Wordpress<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Wordpress.Library.html">Library<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Wordpress.Library.Controller.html">Controller</a>
+						</li>
+							</ul></li></ul></li></ul></li>
+				<li><a href="package-Nooku.html">Nooku<span></span></a>
+						<ul>
+				<li><a href="package-Nooku.Library.html">Library<span></span></a>
+						<ul>
+				<li><a href="package-Nooku.Library.Template.html">Template<span></span></a>
+						<ul>
+				<li><a href="package-Nooku.Library.Template.Abstract.html">Abstract</a>
+						</li>
+							</ul></li></ul></li></ul></li>
+			</ul>
+		</div>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-KUserSession.html">KUserSession</a></li>
+				<li><a href="class-KUserSessionAbstract.html">KUserSessionAbstract</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li class="active"><a href="class-KUserSessionInterface.html">KUserSessionInterface</a></li>
+			</ul>
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+	<div id="rightInner">
+<div id="content" class="class">
+	<h1>Interface KUserSessionInterface</h1>
+
+
+	<div class="description">
+	
+<p>User Session Interface</p>
+
+<p>Provides access to session-state values as well as session-level settings and
+lifetime management methods.</p>
+
+	</div>
+
+
+
+
+
+	<div>
+		<h3>Direct known implementers</h3>
+		<p class="elementList">
+			<code><a href="class-KUserSessionAbstract.html">KUserSessionAbstract</a></code>
+		</p>
+	</div>
+
+	<div>
+		<h3>Indirect known implementers</h3>
+		<p class="elementList">
+			<code><a href="class-KUserSession.html">KUserSession</a></code>
+		</p>
+	</div>
+
+
+
+	<div class="alert alert-info">
+		
+		
+		
+		<b>Package:</b> <a href="package-Koowa.html">Koowa</a>\<a href="package-Koowa.Library.html">Library</a>\<a href="package-Koowa.Library.User.html">User</a>\<a href="package-Koowa.Library.User.Session.html">Session</a><br />
+
+				<b>Copyright:</b>
+				Copyright (C) 2007 - 2014 Johan Janssens and Timble CVBA. (<a
+href="http://www.timble.net">http://www.timble.net</a>)<br />
+				<b>License:</b>
+				<a href="GNU">GPLv3 &lt;http://www.gnu.org/licenses/gpl.html&gt;</a><br />
+				<b>Author:</b>
+				Johan Janssens &lt;<a
+href="https://github.com/johanjanssens">https://github.com/johanjanssens</a>&gt;<br />
+		<b>Located at</b> <a href="source-class-KUserSessionInterface.html#10-239" title="Go to source code">libraries/koowa/libraries/user/session/interface.php</a><br />
+	</div>
+
+
+
+		<h2>Methods summary</h2>
+		<table class="summary table table-bordered table-striped" id="methods">
+		<tr data-order="getLifetime" id="_getLifetime">
+
+			<td class="attributes"><code>
+				 public 
+				integer
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getLifetime">#</a>
+			<code><a href="source-class-KUserSessionInterface.html#20-25" title="Go to source code">getLifetime</a>( )</code>
+
+			<div class="description short">
+				
+<p>Get the session life time</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Get the session life time</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>integer</code><br>The session life time in seconds<br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="setLifetime" id="_setLifetime">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-KUserSessionContainerMetadata.html">KUserSessionContainerMetadata</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_setLifetime">#</a>
+			<code><a href="source-class-KUserSessionInterface.html#27-36" title="Go to source code">setLifetime</a>( <span>integer <var>$lifetime</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Set the session life time</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Set the session life time</p>
+
+<p>This specifies the number of seconds after which data will expire. An expired
+session will be destroyed automatically during session start.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$lifetime</var></dt>
+						<dd><code>integer</code><br>$lifetime The session lifetime in seconds</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><code><a href="class-KUserSessionContainerMetadata.html">KUserSessionContainerMetadata</a></code></code><br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="setNamespace" id="_setNamespace">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-KUserSession.html">KUserSession</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_setNamespace">#</a>
+			<code><a href="source-class-KUserSessionInterface.html#38-48" title="Go to source code">setNamespace</a>( <span>string <var>$namespace</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Set the global session namespace</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Set the global session namespace</p>
+
+<p>This specifies namespace that is used when storing or retrieving attributes
+from the $_SESSION global. The namespace prevents session conflicts when the
+session is shared.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$namespace</var></dt>
+						<dd><code>string</code><br>$namespace The session namespace</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><code><a href="class-KUserSession.html">KUserSession</a></code></code><br />
+					</div>
+
+					<h4>Throws</h4>
+					<div class="list">
+						<code>LogicException</code><br>When changing the namespace of an active session<br />
+					</div>
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getNamespace" id="_getNamespace">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getNamespace">#</a>
+			<code><a href="source-class-KUserSessionInterface.html#50-55" title="Go to source code">getNamespace</a>( )</code>
+
+			<div class="description short">
+				
+<p>Get the session namespace</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Get the session namespace</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>string</code><br>The session namespace<br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getToken" id="_getToken">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getToken">#</a>
+			<code><a href="source-class-KUserSessionInterface.html#57-63" title="Go to source code">getToken</a>( <span>boolean <var>$refresh</var> = <span class="php-keyword1">false</span></span> )</code>
+
+			<div class="description short">
+				
+<p>Get the session token, if a token isn't set yet one will be generated.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Get the session token, if a token isn't set yet one will be generated.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$refresh</var></dt>
+						<dd><code>boolean</code><br>$refresh If true, a new token to be created</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>string</code><br>The session token<br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getId" id="_getId">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getId">#</a>
+			<code><a href="source-class-KUserSessionInterface.html#65-70" title="Go to source code">getId</a>( )</code>
+
+			<div class="description short">
+				
+<p>Get the session id</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Get the session id</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>string</code><br>The session id<br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="setId" id="_setId">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-KUserSessionInterface.html">KUserSessionInterface</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_setId">#</a>
+			<code><a href="source-class-KUserSessionInterface.html#72-79" title="Go to source code">setId</a>( <span>string <var>$session_id</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Set the session id</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Set the session id</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$session_id</var></dt>
+						<dd><code>string</code><br>$session_id</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><code><a href="class-KUserSessionInterface.html">KUserSessionInterface</a></code></code><br />
+					</div>
+
+					<h4>Throws</h4>
+					<div class="list">
+						<code>LogicException</code><br>When changing the id of an active session<br />
+					</div>
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getName" id="_getName">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getName">#</a>
+			<code><a href="source-class-KUserSessionInterface.html#81-86" title="Go to source code">getName</a>( )</code>
+
+			<div class="description short">
+				
+<p>Get the session name</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Get the session name</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>string</code><br>The session name<br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="setName" id="_setName">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-KUserSessionInterface.html">KUserSessionInterface</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_setName">#</a>
+			<code><a href="source-class-KUserSessionInterface.html#88-95" title="Go to source code">setName</a>( <span>string <var>$name</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Set the session name</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Set the session name</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$name</var></dt>
+						<dd><code>string</code><br>$name</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><code><a href="class-KUserSessionInterface.html">KUserSessionInterface</a></code></code><br />
+					</div>
+
+					<h4>Throws</h4>
+					<div class="list">
+						<code>LogicException</code><br>When changing the name of an active session<br />
+					</div>
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="setHandler" id="_setHandler">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-KUserSession.html">KUserSession</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_setHandler">#</a>
+			<code><a href="source-class-KUserSessionInterface.html#97-105" title="Go to source code">setHandler</a>( <span>mixed <var>$handler</var></span>, <span>array <var>$config</var> = <span class="php-keyword1">array</span>()</span> )</code>
+
+			<div class="description short">
+				
+<p>Method to set a session handler object</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Method to set a session handler object</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$handler</var></dt>
+						<dd><code>mixed</code><br>$handler An object that implements ObjectInterface, ObjectIdentifier object or
+valid identifier string</dd>
+						<dt><var>$config</var></dt>
+						<dd><code>array</code><br>$config An optional associative array of configuration settings</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><code><a href="class-KUserSession.html">KUserSession</a></code></code><br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getHandler" id="_getHandler">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-KUserSessionHandlerInterface.html">KUserSessionHandlerInterface</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getHandler">#</a>
+			<code><a href="source-class-KUserSessionInterface.html#107-113" title="Go to source code">getHandler</a>( )</code>
+
+			<div class="description short">
+				
+<p>Get the session handler object</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Get the session handler object</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><code><a href="class-KUserSessionHandlerInterface.html">KUserSessionHandlerInterface</a></code></code><br />
+					</div>
+
+					<h4>Throws</h4>
+					<div class="list">
+						<code>UnexpectedValueException</code><br>If the identifier is not a session handler identifier<br />
+					</div>
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="hasContainer" id="_hasContainer">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_hasContainer">#</a>
+			<code><a href="source-class-KUserSessionInterface.html#115-121" title="Go to source code">hasContainer</a>( <span>string <var>$name</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Check if a container exists</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Check if a container exists</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$name</var></dt>
+						<dd><code>string</code><br>$name The name of the behavior</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>boolean</code><br>TRUE if the behavior exists, FALSE otherwise<br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getContainer" id="_getContainer">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-KUserSessionContainerInterface.html">KUserSessionContainerInterface</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getContainer">#</a>
+			<code><a href="source-class-KUserSessionInterface.html#123-133" title="Go to source code">getContainer</a>( <span>mixed <var>$name</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Get the session attribute container object</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Get the session attribute container object</p>
+
+<p>If the container does not exist a container will be created on the fly.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$name</var></dt>
+						<dd><code>mixed</code><br>$name An object that implements ObjectInterface, ObjectIdentifier object or
+valid identifier string</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><code><a href="class-KUserSessionContainerInterface.html">KUserSessionContainerInterface</a></code></code><br />
+					</div>
+
+					<h4>Throws</h4>
+					<div class="list">
+						<code>UnexpectedValueException</code><br>If the identifier is not a session container identifier<br />
+					</div>
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="start" id="_start">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-KUserSessionInterface.html">KUserSessionInterface</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_start">#</a>
+			<code><a href="source-class-KUserSessionInterface.html#135-142" title="Go to source code">start</a>( )</code>
+
+			<div class="description short">
+				
+<p>Starts the session storage and load the session data into memory</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Starts the session storage and load the session data into memory</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><code><a href="class-KUserSessionInterface.html">KUserSessionInterface</a></code></code><br />
+					</div>
+
+					<h4>Throws</h4>
+					<div class="list">
+						<code>RuntimeException</code><br>If something goes wrong starting the session.<br />
+					</div>
+
+					<h4>See</h4>
+					<div class="list">
+							session_start()<br />
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="refresh" id="_refresh">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-KUserSession.html">KUserSession</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_refresh">#</a>
+			<code><a href="source-class-KUserSessionInterface.html#144-152" title="Go to source code">refresh</a>( )</code>
+
+			<div class="description short">
+				
+<p>Refresh the session data in the memory containers</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Refresh the session data in the memory containers</p>
+
+<p>This function will load the data from $_SESSION in the various registered
+containers, based on the container namespace.</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><code><a href="class-KUserSession.html">KUserSession</a></code></code><br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="close" id="_close">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-KUserSessionInterface.html">KUserSessionInterface</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_close">#</a>
+			<code><a href="source-class-KUserSessionInterface.html#154-167" title="Go to source code">close</a>( )</code>
+
+			<div class="description short">
+				
+<p>Force the session to be saved and closed.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Force the session to be saved and closed.</p>
+
+<p>Session data is usually stored after your script terminated without the need
+to call DispatcherSession::save(), but as session data is locked to prevent
+concurrent writes only one script may operate on a session at any time.</p>
+
+<p>When using framesets together with sessions you will experience the frames
+loading one by one due to this locking. You can reduce the time needed to load
+all the frames by ending the session as soon as all changes to session variables
+are done.</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><code><a href="class-KUserSessionInterface.html">KUserSessionInterface</a></code></code><br />
+					</div>
+
+
+					<h4>See</h4>
+					<div class="list">
+							session_write_close()<br />
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="clear" id="_clear">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-KUserSessionInterface.html">KUserSessionInterface</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_clear">#</a>
+			<code><a href="source-class-KUserSessionInterface.html#169-175" title="Go to source code">clear</a>( )</code>
+
+			<div class="description short">
+				
+<p>Clear all session data in memory.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Clear all session data in memory.</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><code><a href="class-KUserSessionInterface.html">KUserSessionInterface</a></code></code><br />
+					</div>
+
+
+					<h4>See</h4>
+					<div class="list">
+							session_unset()<br />
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="destroy" id="_destroy">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-KUserSessionInterface.html">KUserSessionInterface</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_destroy">#</a>
+			<code><a href="source-class-KUserSessionInterface.html#177-188" title="Go to source code">destroy</a>( )</code>
+
+			<div class="description short">
+				
+<p>Frees all session variables and destroys all data registered to a session</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Frees all session variables and destroys all data registered to a session</p>
+
+<p>This method resets the $_SESSION variable and destroys all of the data
+associated with the current session in its storage (file or DB). It forces new
+session to be started after this method is called. It does not unset the session
+cookie.</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><code><a href="class-KUserSessionInterface.html">KUserSessionInterface</a></code></code><br />
+					</div>
+
+
+					<h4>See</h4>
+					<div class="list">
+							session_unset()<br />
+							session_destroy()<br />
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="fork" id="_fork">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-KUserSessionInterface.html">KUserSessionInterface</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_fork">#</a>
+			<code><a href="source-class-KUserSessionInterface.html#190-204" title="Go to source code">fork</a>( <span>Boolean <var>$destroy</var> = <span class="php-keyword1">false</span></span>, <span>integer <var>$lifetime</var> = <span class="php-keyword1">null</span></span> )</code>
+
+			<div class="description short">
+				
+<p>Migrates the current session to a new session id while maintaining all
+session data</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Migrates the current session to a new session id while maintaining all
+session data</p>
+
+<p>Note : fork and destroy should not clear the session data in memory only
+delete the session data from persistent storage.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$destroy</var></dt>
+						<dd><code>Boolean</code><br>$destroy If TRUE, destroy session when forking.</dd>
+						<dt><var>$lifetime</var></dt>
+						<dd><code>integer</code><br>$lifetime Sets the cookie lifetime for the session cookie. A null value will
+leave the system settings unchanged, 0 sets the cookie to expire with browser
+session. Time is in seconds, and is not a Unix timestamp.</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><code><a href="class-KUserSessionInterface.html">KUserSessionInterface</a></code></code><br />
+					</div>
+
+					<h4>Throws</h4>
+					<div class="list">
+						<code>RuntimeException</code><br>If an error occurs while regenerating this storage<br />
+					</div>
+
+					<h4>See</h4>
+					<div class="list">
+							session_regenerate_id()<br />
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="get" id="_get">
+
+			<td class="attributes"><code>
+				 public 
+				mixed
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_get">#</a>
+			<code><a href="source-class-KUserSessionInterface.html#206-213" title="Go to source code">get</a>( <span>string <var>$identifier</var></span>, <span>mixed <var>$default</var> = <span class="php-keyword1">null</span></span> )</code>
+
+			<div class="description short">
+				
+<p>Get a session attribute</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Get a session attribute</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$identifier</var></dt>
+						<dd><code>string</code><br>$identifier Attribute identifier, eg .foo.bar</dd>
+						<dt><var>$default</var></dt>
+						<dd><code>mixed</code><br>$default Default value when the attribute doesn't exist</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>mixed</code><br>The value<br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="set" id="_set">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-KUserSessionInterface.html">KUserSessionInterface</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_set">#</a>
+			<code><a href="source-class-KUserSessionInterface.html#215-222" title="Go to source code">set</a>( <span>mixed <var>$identifier</var></span>, <span>mixed <var>$value</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Set a session attribute</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Set a session attribute</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$identifier</var></dt>
+						<dd><code>mixed</code><br>$identifier Attribute identifier, eg foo.bar</dd>
+						<dt><var>$value</var></dt>
+						<dd><code>mixed</code><br>$value Attribute value</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><code><a href="class-KUserSessionInterface.html">KUserSessionInterface</a></code></code><br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="has" id="_has">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_has">#</a>
+			<code><a href="source-class-KUserSessionInterface.html#224-230" title="Go to source code">has</a>( <span>string <var>$identifier</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Check if a session attribute exists</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Check if a session attribute exists</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$identifier</var></dt>
+						<dd><code>string</code><br>$identifier Attribute identifier, eg foo.bar</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>boolean</code><br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="remove" id="_remove">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-KUserSessionInterface.html">KUserSessionInterface</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_remove">#</a>
+			<code><a href="source-class-KUserSessionInterface.html#232-238" title="Go to source code">remove</a>( <span>string <var>$identifier</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Removes an session attribute</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Removes an session attribute</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$identifier</var></dt>
+						<dd><code>string</code><br>$identifier Attribute identifier, eg foo.bar</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><code><a href="class-KUserSessionInterface.html">KUserSessionInterface</a></code></code><br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		</table>
+
+
+
+		<h3>Magic methods summary</h3>
+
+
+
+
+
+
+
+
+</div>
+	</div>
+
+	<div id="footer">
+		Nooku Framework API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+
+<script>
+    responsivemenu.init({
+        wrapper: document.querySelector('.header'),
+        toggleclass: 'button--hamburger',
+        togglecontent: 'menu <span class="lines"></span>'
+    });
+</script>
+
+</body>
+</html>

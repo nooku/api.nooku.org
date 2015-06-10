@@ -1,0 +1,1689 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<title>Class KDatabaseAdapterMysqli | Nooku Framework</title>
+
+	<script type="text/javascript" src="resources/combined.js?2640657843"></script>
+	<script type="text/javascript" src="elementlist.js?527661356"></script>
+	<script type="text/javascript" src="http://www.nooku.org/js/scripts.js"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/bootstrap.min.css?390653004" />
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?150590327" />
+    <link rel="stylesheet" type="text/css" media="all" href="http://www.nooku.org/css/header.css" />
+
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,300italic,700,400italic' rel='stylesheet' type='text/css' />
+
+    <link rel="shortcut icon" href="http://www.nooku.org/images/favicon.ico" type="image/x-icon" />
+
+	<script>
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] ||
+            function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-214238-5', 'auto');
+        ga('send', 'pageview');
+    </script>
+</head>
+
+<body class="no-js">
+    <script type="text/javascript">
+    function hasClass(e, t) {
+        return e.className.match(new RegExp("(\\s|^)" + t + "(\\s|$)"))
+    }
+    var el = document.body;
+    var cl = "no-js";
+    if (hasClass(el, cl)) {
+        var reg = new RegExp("(\\s|^)" + cl + "(\\s|$)");
+        el.className = el.className.replace(reg, " js-enabled")
+    }
+    </script>
+	<div class="header">
+            <div class="container">
+                <div class="group">
+                    <div class="header__brand brand"><a href="http://www.nooku.org"><img src="http://www.nooku.org/images/layout/logo.png" alt="Nooku Logo" /></a></div>
+                    <div class="header__navigation">
+                        <div class="navigation_container" role="navigation">
+                            <ul class="navbar initiated">
+                                <li class="navbar__item" role="menuitem"><a href="http://www.nooku.org/features/">Features</a></li>
+                                <li class="navbar__item" role="menuitem"><a href="http://www.nooku.org/get-started/">Get Started</a></li>
+                                <li class="navbar__item" role="menuitem"><a href="http://www.nooku.org/services/">Services</a></li>
+                                <li class="navbar__item" role="menuitem"><a href="http://www.nooku.org/community/">Community</a></li>
+                                <li class="navbar__item active" role="menuitem"><a href="http://www.nooku.org/docs/">Docs</a></li>
+                                <li class="navbar__item" role="menuitem"><a href="http://www.nooku.org/blog">Blog</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+	<div id="left">
+	<div id="menu">
+		<form id="search" class="form-search">
+			<input type="hidden" name="cx" value="" />
+			<input type="hidden" name="ie" value="UTF-8" />
+			<input type="text" name="q" class="search-query" placeholder="Search" />
+		</form>
+
+
+		<div id="groups">
+			<h3>Packages</h3>
+			<ul>
+				<li class="active"><a href="package-Koowa.html">Koowa<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.html">Component<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.html">Koowa<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Class.html">Class<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Class.Locator.html">Locator</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Controller.html">Controller<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Controller.Behavior.html">Behavior</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Controller.Permission.html">Permission</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Controller.Toolbar.html">Toolbar</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Database.html">Database<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Database.Adapter.html">Adapter</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Database.Behavior.html">Behavior</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Database.Table.html">Table</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Date.html">Date</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Decorator.html">Decorator</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Dispatcher.html">Dispatcher<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Dispatcher.Authenticator.html">Authenticator</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Dispatcher.Permission.html">Permission</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Dispatcher.Request.html">Request</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Dispatcher.Response.html">Response<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Dispatcher.Response.Transport.html">Transport</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Dispatcher.Router.html">Router</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Event.html">Event<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Event.Publisher.html">Publisher</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Event.Subscriber.html">Subscriber</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Exception.html">Exception</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Filesystem.html">Filesystem<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Filesystem.Stream.html">Stream</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Filter.html">Filter</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Model.html">Model</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Object.html">Object<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Object.Locator.html">Locator</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Template.html">Template<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Template.Filter.html">Filter</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Template.Helper.html">Helper</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Template.Locator.html">Locator</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Translator.html">Translator<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Translator.Catalogue.html">Catalogue</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Translator.Locator.html">Locator</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.User.html">User</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.View.html">View<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.View.Error.html">Error</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.View.Page.html">Page</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.View.Users.html">Users</a>
+						</li>
+							</ul></li></ul></li></ul></li>
+				<li class="active"><a href="package-Koowa.Library.html">Library<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Behavior.html">Behavior<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Behavior.Exception.html">Exception</a>
+						</li>
+				<li><a href="package-Koowa.Library.Behavior.Mixin.html">Mixin</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Class.html">Class<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Class.Loader.html">Loader</a>
+						</li>
+				<li><a href="package-Koowa.Library.Class.Locator.html">Locator</a>
+						</li>
+				<li><a href="package-Koowa.Library.Class.Registry.html">Registry</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Command.html">Command<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Command.Callback.html">Callback</a>
+						</li>
+				<li><a href="package-Koowa.Library.Command.Chain.html">Chain</a>
+						</li>
+				<li><a href="package-Koowa.Library.Command.Exception.html">Exception</a>
+						</li>
+				<li><a href="package-Koowa.Library.Command.Handler.html">Handler</a>
+						</li>
+				<li><a href="package-Koowa.Library.Command.Mixin.html">Mixin</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Controller.html">Controller<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Controller.Behavior.html">Behavior</a>
+						</li>
+				<li><a href="package-Koowa.Library.Controller.Context.html">Context</a>
+						</li>
+				<li><a href="package-Koowa.Library.Controller.Exception.html">Exception</a>
+						</li>
+				<li><a href="package-Koowa.Library.Controller.Permission.html">Permission</a>
+						</li>
+				<li><a href="package-Koowa.Library.Controller.Request.html">Request</a>
+						</li>
+				<li><a href="package-Koowa.Library.Controller.Response.html">Response</a>
+						</li>
+				<li><a href="package-Koowa.Library.Controller.Toolbar.html">Toolbar<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Controller.Toolbar.Command.html">Command</a>
+						</li>
+				<li><a href="package-Koowa.Library.Controller.Toolbar.Mixin.html">Mixin</a>
+						</li>
+							</ul></li></ul></li>
+				<li class="active"><a href="package-Koowa.Library.Database.html">Database<span></span></a>
+						<ul>
+				<li class="active"><a href="package-Koowa.Library.Database.Adapter.html">Adapter</a>
+						</li>
+				<li><a href="package-Koowa.Library.Database.Behavior.html">Behavior</a>
+						</li>
+				<li><a href="package-Koowa.Library.Database.Context.html">Context</a>
+						</li>
+				<li><a href="package-Koowa.Library.Database.Query.html">Query</a>
+						</li>
+				<li><a href="package-Koowa.Library.Database.Row.html">Row</a>
+						</li>
+				<li><a href="package-Koowa.Library.Database.Rowset.html">Rowset</a>
+						</li>
+				<li><a href="package-Koowa.Library.Database.Schema.html">Schema</a>
+						</li>
+				<li><a href="package-Koowa.Library.Database.Table.html">Table</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Date.html">Date</a>
+						</li>
+				<li><a href="package-Koowa.Library.Dispatcher.html">Dispatcher<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Dispatcher.Authenticator.html">Authenticator</a>
+						</li>
+				<li><a href="package-Koowa.Library.Dispatcher.Behavior.html">Behavior</a>
+						</li>
+				<li><a href="package-Koowa.Library.Dispatcher.Context.html">Context</a>
+						</li>
+				<li><a href="package-Koowa.Library.Dispatcher.Exception.html">Exception</a>
+						</li>
+				<li><a href="package-Koowa.Library.Dispatcher.Permission.html">Permission</a>
+						</li>
+				<li><a href="package-Koowa.Library.Dispatcher.Request.html">Request</a>
+						</li>
+				<li><a href="package-Koowa.Library.Dispatcher.Response.html">Response<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Dispatcher.Response.Transport.html">Transport</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Dispatcher.Router.html">Router</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Event.html">Event<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Event.Mixin.html">Mixin</a>
+						</li>
+				<li><a href="package-Koowa.Library.Event.Publisher.html">Publisher</a>
+						</li>
+				<li><a href="package-Koowa.Library.Event.Subscriber.html">Subscriber</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Exception.html">Exception<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Exception.Handler.html">Handler</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Filesystem.html">Filesystem<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Filesystem.Stream.html">Stream<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Filesystem.Stream.Filter.html">Filter</a>
+						</li>
+				<li><a href="package-Koowa.Library.Filesystem.Stream.Iterator.html">Iterator</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-Koowa.Library.Filter.html">Filter</a>
+						</li>
+				<li><a href="package-Koowa.Library.Http.html">Http<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Http.Cookie.html">Cookie</a>
+						</li>
+				<li><a href="package-Koowa.Library.Http.Exception.html">Exception<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Http.Exception.Unsupported.html">Unsupported</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Http.Message.html">Message</a>
+						</li>
+				<li><a href="package-Koowa.Library.Http.Request.html">Request</a>
+						</li>
+				<li><a href="package-Koowa.Library.Http.Response.html">Response</a>
+						</li>
+				<li><a href="package-Koowa.Library.Http.Token.html">Token</a>
+						</li>
+				<li><a href="package-Koowa.Library.Http.Url.html">Url</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Model.html">Model<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Model.Behavior.html">Behavior</a>
+						</li>
+				<li><a href="package-Koowa.Library.Model.Context.html">Context</a>
+						</li>
+				<li><a href="package-Koowa.Library.Model.Entity.html">Entity</a>
+						</li>
+				<li><a href="package-Koowa.Library.Model.Paginator.html">Paginator</a>
+						</li>
+				<li><a href="package-Koowa.Library.Model.State.html">State</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Object.html">Object<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Object.Bootstrapper.html">Bootstrapper</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Config.html">Config</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Decorator.html">Decorator</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Exception.html">Exception</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Identifier.html">Identifier</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Locator.html">Locator</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Manager.html">Manager</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Mixin.html">Mixin</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Registry.html">Registry</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.String.html">String<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.String.Inflector.html">Inflector</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Template.html">Template<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Template.Engine.html">Engine</a>
+						</li>
+				<li><a href="package-Koowa.Library.Template.Exception.html">Exception</a>
+						</li>
+				<li><a href="package-Koowa.Library.Template.Filter.html">Filter</a>
+						</li>
+				<li><a href="package-Koowa.Library.Template.Helper.html">Helper</a>
+						</li>
+				<li><a href="package-Koowa.Library.Template.Locator.html">Locator</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Translator.html">Translator<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Translator.Catalogue.html">Catalogue</a>
+						</li>
+				<li><a href="package-Koowa.Library.Translator.Inflector.html">Inflector</a>
+						</li>
+				<li><a href="package-Koowa.Library.Translator.Locator.html">Locator</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.User.html">User<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.User.Provider.html">Provider</a>
+						</li>
+				<li><a href="package-Koowa.Library.User.Session.html">Session<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.User.Session.Container.html">Container</a>
+						</li>
+				<li><a href="package-Koowa.Library.User.Session.Handler.html">Handler</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-Koowa.Library.View.html">View<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.View.Behavior.html">Behavior</a>
+						</li>
+				<li><a href="package-Koowa.Library.View.Context.html">Context</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-Koowa.Module.html">Module<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Module.Koowa.html">Koowa<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Module.Koowa.Template.html">Template<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Module.Koowa.Template.Filter.html">Filter</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Module.Koowa.View.html">View</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-Koowa.Plugin.html">Plugin<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Plugin.Koowa.html">Koowa</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Wordpress.html">Wordpress<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Wordpress.Library.html">Library<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Wordpress.Library.Controller.html">Controller</a>
+						</li>
+							</ul></li></ul></li></ul></li>
+				<li><a href="package-Nooku.html">Nooku<span></span></a>
+						<ul>
+				<li><a href="package-Nooku.Library.html">Library<span></span></a>
+						<ul>
+				<li><a href="package-Nooku.Library.Template.html">Template<span></span></a>
+						<ul>
+				<li><a href="package-Nooku.Library.Template.Abstract.html">Abstract</a>
+						</li>
+							</ul></li></ul></li></ul></li>
+			</ul>
+		</div>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-KDatabaseAdapterAbstract.html">KDatabaseAdapterAbstract</a></li>
+				<li class="active"><a href="class-KDatabaseAdapterMysqli.html">KDatabaseAdapterMysqli</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="class-KDatabaseAdapterInterface.html">KDatabaseAdapterInterface</a></li>
+			</ul>
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+	<div id="rightInner">
+<div id="content" class="class">
+	<h1>Class KDatabaseAdapterMysqli</h1>
+
+
+	<div class="description">
+	
+<p>Mysqli Database Adapter</p>
+
+	</div>
+
+	<dl class="tree well">
+		<dd style="padding-left:0px">
+			<a href="class-KObject.html"><span>KObject</span></a>
+			
+			 implements 
+				<a href="class-KObjectInterface.html"><span>KObjectInterface</span></a>, 
+			
+				<a href="class-KObjectMixable.html"><span>KObjectMixable</span></a>, 
+			
+				<a href="class-KObjectHandlable.html"><span>KObjectHandlable</span></a>, 
+			
+				<a href="class-KObjectDecoratable.html"><span>KObjectDecoratable</span></a>
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by" />
+			<a href="class-KDatabaseAdapterAbstract.html"><span>KDatabaseAdapterAbstract</span></a>
+			
+			 implements 
+				<a href="class-KDatabaseAdapterInterface.html"><span>KDatabaseAdapterInterface</span></a>, 
+			
+				<a href="class-KObjectMultiton.html"><span>KObjectMultiton</span></a>
+			
+			
+		</dd>
+		<dd style="padding-left:60px">
+			<img src="resources/inherit.png" alt="Extended by" />
+<b><span>KDatabaseAdapterMysqli</span></b>			
+			
+			
+		</dd>
+	</dl>
+
+
+	<div>
+		<h3>Direct known subclasses</h3>
+		<p class="elementList">
+			<code><a href="class-ComKoowaDatabaseAdapterMysqli.html">ComKoowaDatabaseAdapterMysqli</a></code>
+		</p>
+	</div>
+
+
+
+
+
+
+	<div class="alert alert-info">
+		
+		
+		
+		<b>Package:</b> <a href="package-Koowa.html">Koowa</a>\<a href="package-Koowa.Library.html">Library</a>\<a href="package-Koowa.Library.Database.html">Database</a>\<a href="package-Koowa.Library.Database.Adapter.html">Adapter</a><br />
+
+				<b>Copyright:</b>
+				Copyright (C) 2007 - 2014 Johan Janssens and Timble CVBA. (<a
+href="http://www.timble.net">http://www.timble.net</a>)<br />
+				<b>License:</b>
+				<a href="GNU">GPLv3 &lt;http://www.gnu.org/licenses/gpl.html&gt;</a><br />
+				<b>Author:</b>
+				Johan Janssens &lt;<a
+href="https://github.com/johanjanssens">https://github.com/johanjanssens</a>&gt;<br />
+		<b>Located at</b> <a href="source-class-KDatabaseAdapterMysqli.html#10-613" title="Go to source code">libraries/koowa/libraries/database/adapter/mysqli.php</a><br />
+	</div>
+
+
+
+		<h2>Methods summary</h2>
+		<table class="summary table table-bordered table-striped" id="methods">
+		<tr data-order="_initialize" id="__initialize">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#__initialize">#</a>
+			<code><a href="source-class-KDatabaseAdapterMysqli.html#89-109" title="Go to source code">_initialize</a>( <span><code><a href="class-KObjectConfig.html">KObjectConfig</a></code> <var>$config</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Initializes the options for the object</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Initializes the options for the object</p>
+
+<p>Called from <code><a href="class-KDatabaseAdapterAbstract.html#___construct">KDatabaseAdapterAbstract::__construct()</a></code> as a first step of object
+instantiation.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$config</var></dt>
+						<dd><code><code><a href="class-KObjectConfig.html">KObjectConfig</a></code></code><br>$config An optional KObjectConfig object with configuration options.</dd>
+					</dl></div>
+
+
+
+
+					<h4>Overrides</h4>
+					<div class="list"><code><a href="class-KDatabaseAdapterAbstract.html#__initialize">KDatabaseAdapterAbstract::_initialize</a></code></div>
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="connect" id="_connect">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-KDatabaseAdapterMysqli.html">KDatabaseAdapterMysqli</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_connect">#</a>
+			<code><a href="source-class-KDatabaseAdapterMysqli.html#111-145" title="Go to source code">connect</a>( )</code>
+
+			<div class="description short">
+				
+<p>Connect to the db</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Connect to the db</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><code><a href="class-KDatabaseAdapterMysqli.html">KDatabaseAdapterMysqli</a></code></code><br />
+					</div>
+
+					<h4>Throws</h4>
+					<div class="list">
+						<code>RuntimeException</code><br />
+					</div>
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="disconnect" id="_disconnect">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-KDatabaseAdapterMysqli.html">KDatabaseAdapterMysqli</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_disconnect">#</a>
+			<code><a href="source-class-KDatabaseAdapterMysqli.html#147-162" title="Go to source code">disconnect</a>( )</code>
+
+			<div class="description short">
+				
+<p>Disconnect from db</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Disconnect from db</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><code><a href="class-KDatabaseAdapterMysqli.html">KDatabaseAdapterMysqli</a></code></code><br />
+					</div>
+
+
+
+					<h4>Overrides</h4>
+					<div class="list"><code><a href="class-KDatabaseAdapterAbstract.html#_disconnect">KDatabaseAdapterAbstract::disconnect</a></code></div>
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="isConnected" id="_isConnected">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_isConnected">#</a>
+			<code><a href="source-class-KDatabaseAdapterMysqli.html#164-172" title="Go to source code">isConnected</a>( )</code>
+
+			<div class="description short">
+				
+<p>Check if the connection is active</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Check if the connection is active</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>boolean</code><br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="setConnection" id="_setConnection">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-KDatabaseAdapterAbstract.html">KDatabaseAdapterAbstract</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_setConnection">#</a>
+			<code><a href="source-class-KDatabaseAdapterMysqli.html#174-189" title="Go to source code">setConnection</a>( <span>resource <var>$resource</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Set the connection</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Set the connection</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$resource</var></dt>
+						<dd><code>resource</code><br>$resource The connection resource</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><code><a href="class-KDatabaseAdapterAbstract.html">KDatabaseAdapterAbstract</a></code></code><br />
+					</div>
+
+					<h4>Throws</h4>
+					<div class="list">
+						<code>InvalidArgumentException</code><br>If the resource is not an MySQLi instance<br />
+					</div>
+
+
+					<h4>Overrides</h4>
+					<div class="list"><code><a href="class-KDatabaseAdapterAbstract.html#_setConnection">KDatabaseAdapterAbstract::setConnection</a></code></div>
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getDatabase" id="_getDatabase">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getDatabase">#</a>
+			<code><a href="source-class-KDatabaseAdapterMysqli.html#191-206" title="Go to source code">getDatabase</a>( )</code>
+
+			<div class="description short">
+				
+<p>Get the database name</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Get the database name</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>string</code><br>The database name<br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="setDatabase" id="_setDatabase">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-KDatabaseAdapterAbstract.html">KDatabaseAdapterAbstract</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_setDatabase">#</a>
+			<code><a href="source-class-KDatabaseAdapterMysqli.html#208-224" title="Go to source code">setDatabase</a>( <span>string <var>$database</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Set the database name</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Set the database name</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$database</var></dt>
+						<dd><code>string</code><br>$database The database name</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><code><a href="class-KDatabaseAdapterAbstract.html">KDatabaseAdapterAbstract</a></code></code><br />
+					</div>
+
+					<h4>Throws</h4>
+					<div class="list">
+						<code>RuntimeException</code><br />
+					</div>
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getTableSchema" id="_getTableSchema">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-KDatabaseSchemaTable.html">KDatabaseSchemaTable</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getTableSchema">#</a>
+			<code><a href="source-class-KDatabaseAdapterMysqli.html#226-243" title="Go to source code">getTableSchema</a>( <span>string <var>$table</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Retrieves the table schema information about the given table</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Retrieves the table schema information about the given table</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$table</var></dt>
+						<dd><code>string</code><br>$table A table name or a list of table names</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><code><a href="class-KDatabaseSchemaTable.html">KDatabaseSchemaTable</a></code></code><br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="lockTable" id="_lockTable">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_lockTable">#</a>
+			<code><a href="source-class-KDatabaseAdapterMysqli.html#245-267" title="Go to source code">lockTable</a>( <span>string <var>$table</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Locks a table</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Locks a table</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$table</var></dt>
+						<dd><code>string</code><br>$table The name of the table.</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>boolean</code><br>TRUE on success, FALSE otherwise.<br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="unlockTable" id="_unlockTable">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_unlockTable">#</a>
+			<code><a href="source-class-KDatabaseAdapterMysqli.html#269-290" title="Go to source code">unlockTable</a>( )</code>
+
+			<div class="description short">
+				
+<p>Unlocks tables</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Unlocks tables</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>boolean</code><br>TRUE on success, FALSE otherwise.<br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="_fetchField" id="__fetchField">
+
+			<td class="attributes"><code>
+				 protected 
+				mixed
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#__fetchField">#</a>
+			<code><a href="source-class-KDatabaseAdapterMysqli.html#292-309" title="Go to source code">_fetchField</a>( <span>mysqli_result <var>$result</var></span>, <span>integer <var>$key</var> = <span class="php-num">0</span></span> )</code>
+
+			<div class="description short">
+				
+<p>Fetch the first field of the first row</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Fetch the first field of the first row</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$result</var></dt>
+						<dd><code>mysqli_result</code><br>$result The result object. A result set identifier returned by the select()
+function</dd>
+						<dt><var>$key</var></dt>
+						<dd><code>integer</code><br>$key The index to use</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>mixed</code><br>The value returned in the query or null if the query failed.<br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="_fetchFieldList" id="__fetchFieldList">
+
+			<td class="attributes"><code>
+				 protected 
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#__fetchFieldList">#</a>
+			<code><a href="source-class-KDatabaseAdapterMysqli.html#311-330" title="Go to source code">_fetchFieldList</a>( <span>mysqli_result <var>$result</var></span>, <span>integer <var>$key</var> = <span class="php-num">0</span></span> )</code>
+
+			<div class="description short">
+				
+<p>Fetch an array of single field results</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Fetch an array of single field results</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$result</var></dt>
+						<dd><code>mysqli_result</code><br>$result The result object. A result set identifier returned by the select()
+function</dd>
+						<dt><var>$key</var></dt>
+						<dd><code>integer</code><br>$key The index to use</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>array</code><br>A sequential array of returned rows.<br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="_fetchArray" id="__fetchArray">
+
+			<td class="attributes"><code>
+				 protected 
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#__fetchArray">#</a>
+			<code><a href="source-class-KDatabaseAdapterMysqli.html#332-344" title="Go to source code">_fetchArray</a>( <span>mysqli_result <var>$result</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Fetch the first row of a result set as an associative array</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Fetch the first row of a result set as an associative array</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$result</var></dt>
+						<dd><code>mysqli_result</code><br>$result The result object. A result set identifier returned by the select()
+function</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>array</code><br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="_fetchArrayList" id="__fetchArrayList">
+
+			<td class="attributes"><code>
+				 protected 
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#__fetchArrayList">#</a>
+			<code><a href="source-class-KDatabaseAdapterMysqli.html#346-371" title="Go to source code">_fetchArrayList</a>( <span>mysqli_result <var>$result</var></span>, <span>string <var>$key</var> = <span class="php-quote">''</span></span> )</code>
+
+			<div class="description short">
+				
+<p>Fetch all result rows of a result set as an array of associative arrays</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Fetch all result rows of a result set as an array of associative arrays</p>
+
+<p>If <var>key</var> is not empty then the returned array is indexed by the
+value of the database key. Returns <var>null</var> if the query fails.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$result</var></dt>
+						<dd><code>mysqli_result</code><br>$result The result object. A result set identifier returned by the select()
+function</dd>
+						<dt><var>$key</var></dt>
+						<dd><code>string</code><br>$key The column name of the index to use</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>array</code><br>If key is empty as sequential list of returned records.<br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="_fetchObject" id="__fetchObject">
+
+			<td class="attributes"><code>
+				 protected 
+				object
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#__fetchObject">#</a>
+			<code><a href="source-class-KDatabaseAdapterMysqli.html#373-385" title="Go to source code">_fetchObject</a>( <span>mysqli_result <var>$result</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Fetch the first row of a result set as an object</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Fetch the first row of a result set as an object</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$result</var></dt>
+						<dd><code>mysqli_result</code><br>$result The result object. A result set identifier returned by the select()
+function</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>object</code><br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="_fetchObjectList" id="__fetchObjectList">
+
+			<td class="attributes"><code>
+				 protected 
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#__fetchObjectList">#</a>
+			<code><a href="source-class-KDatabaseAdapterMysqli.html#387-412" title="Go to source code">_fetchObjectList</a>( <span>mysqli_result <var>$result</var></span>, <span>string <var>$key</var> = <span class="php-quote">''</span></span> )</code>
+
+			<div class="description short">
+				
+<p>Fetch all rows of a result set as an array of objects</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Fetch all rows of a result set as an array of objects</p>
+
+<p>If <var>key</var> is not empty then the returned array is indexed by the
+value of the database key. Returns <var>null</var> if the query fails.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$result</var></dt>
+						<dd><code>mysqli_result</code><br>$result The result object. A result set identifier returned by the select()
+function</dd>
+						<dt><var>$key</var></dt>
+						<dd><code>string</code><br>$key The column name of the index to use</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>array</code><br>If <var>key</var> is empty as sequential array of returned rows.<br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="_quoteValue" id="__quoteValue">
+
+			<td class="attributes"><code>
+				 protected 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#__quoteValue">#</a>
+			<code><a href="source-class-KDatabaseAdapterMysqli.html#414-424" title="Go to source code">_quoteValue</a>( <span>mixed <var>$value</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Safely quotes a value for an SQL statement.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Safely quotes a value for an SQL statement.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$value</var></dt>
+						<dd><code>mixed</code><br>$value The value to quote</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>string</code><br>An SQL-safe quoted value<br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="_fetchTableInfo" id="__fetchTableInfo">
+
+			<td class="attributes"><code>
+				 protected 
+				<code><a href="class-KDatabaseSchemaTable.html">KDatabaseSchemaTable</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#__fetchTableInfo">#</a>
+			<code><a href="source-class-KDatabaseAdapterMysqli.html#426-445" title="Go to source code">_fetchTableInfo</a>( <span>string <var>$table</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Retrieves the table schema information about the given tables</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Retrieves the table schema information about the given tables</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$table</var></dt>
+						<dd><code>string</code><br>$table A table name.</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><code><a href="class-KDatabaseSchemaTable.html">KDatabaseSchemaTable</a></code></code><br>or null if the table doesn't exist.<br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="_fetchTableColumns" id="__fetchTableColumns">
+
+			<td class="attributes"><code>
+				 protected 
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#__fetchTableColumns">#</a>
+			<code><a href="source-class-KDatabaseAdapterMysqli.html#447-473" title="Go to source code">_fetchTableColumns</a>( <span>string <var>$table</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Retrieves the column schema information about the given table</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Retrieves the column schema information about the given table</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$table</var></dt>
+						<dd><code>string</code><br>$table A table name</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>array</code><br>An array of columns<br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="_fetchTableIndexes" id="__fetchTableIndexes">
+
+			<td class="attributes"><code>
+				 protected 
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#__fetchTableIndexes">#</a>
+			<code><a href="source-class-KDatabaseAdapterMysqli.html#475-496" title="Go to source code">_fetchTableIndexes</a>( <span>string <var>$table</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Retrieves the index information about the given table</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Retrieves the index information about the given table</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$table</var></dt>
+						<dd><code>string</code><br>$table A table name</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>array</code><br>An associative array of indexes by index name<br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="_parseTableInfo" id="__parseTableInfo">
+
+			<td class="attributes"><code>
+				 protected 
+				<code><a href="class-KDatabaseSchemaTable.html">KDatabaseSchemaTable</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#__parseTableInfo">#</a>
+			<code><a href="source-class-KDatabaseAdapterMysqli.html#498-517" title="Go to source code">_parseTableInfo</a>( <span>object <var>$info</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Parses the raw table schema information</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Parses the raw table schema information</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$info</var></dt>
+						<dd><code>object</code><br>$info The raw table schema information.</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><code><a href="class-KDatabaseSchemaTable.html">KDatabaseSchemaTable</a></code></code><br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="_parseColumnInfo" id="__parseColumnInfo">
+
+			<td class="attributes"><code>
+				 protected 
+				<code><a href="class-KDatabaseSchemaColumn.html">KDatabaseSchemaColumn</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#__parseColumnInfo">#</a>
+			<code><a href="source-class-KDatabaseAdapterMysqli.html#519-571" title="Go to source code">_parseColumnInfo</a>( <span>object <var>$info</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Parse the raw column schema information</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Parse the raw column schema information</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$info</var></dt>
+						<dd><code>object</code><br>$info The raw column schema information</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><code><a href="class-KDatabaseSchemaColumn.html">KDatabaseSchemaColumn</a></code></code><br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="_parseColumnType" id="__parseColumnType">
+
+			<td class="attributes"><code>
+				 protected 
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#__parseColumnType">#</a>
+			<code><a href="source-class-KDatabaseAdapterMysqli.html#573-612" title="Go to source code">_parseColumnType</a>( <span>string <var>$spec</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Given a raw column specification, parse into datatype, length, and decimal
+scope.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Given a raw column specification, parse into datatype, length, and decimal
+scope.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$spec</var></dt>
+						<dd><code>string</code><br>$spec The column specification; for example, "VARCHAR(255)" or "NUMERIC(10,2)"
+or "float(6,2) UNSIGNED" or ENUM('yes','no','maybe')</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>array</code><br>A sequential array of the column type, size, and scope.<br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		</table>
+
+		<h3>Methods inherited from <a href="class-KDatabaseAdapterAbstract.html#methods">KDatabaseAdapterAbstract</a></h3>
+		<p class="elementList">
+			<code><a href="class-KDatabaseAdapterAbstract.html#___construct">__construct()</a></code>, 
+			<code><a href="class-KDatabaseAdapterAbstract.html#___destruct">__destruct()</a></code>, 
+			<code><a href="class-KDatabaseAdapterAbstract.html#__quoteIdentifier">_quoteIdentifier()</a></code>, 
+			<code><a href="class-KDatabaseAdapterAbstract.html#_delete">delete()</a></code>, 
+			<code><a href="class-KDatabaseAdapterAbstract.html#_execute">execute()</a></code>, 
+			<code><a href="class-KDatabaseAdapterAbstract.html#_getCharset">getCharset()</a></code>, 
+			<code><a href="class-KDatabaseAdapterAbstract.html#_getConnection">getConnection()</a></code>, 
+			<code><a href="class-KDatabaseAdapterAbstract.html#_getContext">getContext()</a></code>, 
+			<code><a href="class-KDatabaseAdapterAbstract.html#_getInsertId">getInsertId()</a></code>, 
+			<code><a href="class-KDatabaseAdapterAbstract.html#_getTableNeedle">getTableNeedle()</a></code>, 
+			<code><a href="class-KDatabaseAdapterAbstract.html#_getTablePrefix">getTablePrefix()</a></code>, 
+			<code><a href="class-KDatabaseAdapterAbstract.html#_insert">insert()</a></code>, 
+			<code><a href="class-KDatabaseAdapterAbstract.html#_quoteIdentifier">quoteIdentifier()</a></code>, 
+			<code><a href="class-KDatabaseAdapterAbstract.html#_quoteValue">quoteValue()</a></code>, 
+			<code><a href="class-KDatabaseAdapterAbstract.html#_reconnect">reconnect()</a></code>, 
+			<code><a href="class-KDatabaseAdapterAbstract.html#_replaceTableNeedle">replaceTableNeedle()</a></code>, 
+			<code><a href="class-KDatabaseAdapterAbstract.html#_select">select()</a></code>, 
+			<code><a href="class-KDatabaseAdapterAbstract.html#_setCharset">setCharset()</a></code>, 
+			<code><a href="class-KDatabaseAdapterAbstract.html#_setTablePrefix">setTablePrefix()</a></code>, 
+			<code><a href="class-KDatabaseAdapterAbstract.html#_update">update()</a></code>
+		</p>
+		<h3>Methods inherited from <a href="class-KObject.html#methods">KObject</a></h3>
+		<p class="elementList">
+			<code><a href="class-KObject.html#___call">__call()</a></code>, 
+			<code><a href="class-KObject.html#___clone">__clone()</a></code>, 
+			<code><a href="class-KObject.html#_decorate">decorate()</a></code>, 
+			<code><a href="class-KObject.html#_getConfig">getConfig()</a></code>, 
+			<code><a href="class-KObject.html#_getHandle">getHandle()</a></code>, 
+			<code><a href="class-KObject.html#_getIdentifier">getIdentifier()</a></code>, 
+			<code><a href="class-KObject.html#_getMethods">getMethods()</a></code>, 
+			<code><a href="class-KObject.html#_getObject">getObject()</a></code>, 
+			<code><a href="class-KObject.html#_inherits">inherits()</a></code>, 
+			<code><a href="class-KObject.html#_mixin">mixin()</a></code>
+		</p>
+
+
+		<h3>Magic methods summary</h3>
+
+
+
+
+
+
+
+
+		<h2>Properties summary</h2>
+		<table class="summary table table-bordered table-striped" id="properties">
+		<tr data-order="_identifier_quote" id="$_identifier_quote">
+			<td class="attributes"><code>
+				protected  
+				string
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-KDatabaseAdapterMysqli.html#18-23" title="Go to source code"><var>$_identifier_quote</var></a>
+			</td>
+			<td class="description"><div>
+				<a href="#$_identifier_quote" class="anchor">#</a>
+
+				<div class="description short">
+					
+<p>Quote for query identifiers</p>
+
+				</div>
+
+				<div class="description detailed hidden">
+					
+<p>Quote for query identifiers</p>
+
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="_database" id="$_database">
+			<td class="attributes"><code>
+				protected  
+				string
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-KDatabaseAdapterMysqli.html#25-30" title="Go to source code"><var>$_database</var></a>
+			</td>
+			<td class="description"><div>
+				<a href="#$_database" class="anchor">#</a>
+
+				<div class="description short">
+					
+<p>The database name of the active connection</p>
+
+				</div>
+
+				<div class="description detailed hidden">
+					
+<p>The database name of the active connection</p>
+
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="_type_map" id="$_type_map">
+			<td class="attributes"><code>
+				protected  
+				array
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-KDatabaseAdapterMysqli.html#32-87" title="Go to source code"><var>$_type_map</var></a>
+			</td>
+			<td class="description"><div>
+				<a href="#$_type_map" class="anchor">#</a>
+
+				<div class="description short">
+					
+<p>Map of native MySQL types to generic types used when reading table column
+information.</p>
+
+				</div>
+
+				<div class="description detailed hidden">
+					
+<p>Map of native MySQL types to generic types used when reading table column
+information.</p>
+
+
+				</div>
+			</div></td>
+		</tr>
+		</table>
+
+		<h3>Properties inherited from <a href="class-KDatabaseAdapterAbstract.html#properties">KDatabaseAdapterAbstract</a></h3>
+		<p class="elementList">
+			<code><a href="class-KDatabaseAdapterAbstract.html#$_affected_rows"><var>$_affected_rows</var></a></code>, 
+			<code><a href="class-KDatabaseAdapterAbstract.html#$_charset"><var>$_charset</var></a></code>, 
+			<code><a href="class-KDatabaseAdapterAbstract.html#$_connected"><var>$_connected</var></a></code>, 
+			<code><a href="class-KDatabaseAdapterAbstract.html#$_connection"><var>$_connection</var></a></code>, 
+			<code><a href="class-KDatabaseAdapterAbstract.html#$_insert_id"><var>$_insert_id</var></a></code>, 
+			<code><a href="class-KDatabaseAdapterAbstract.html#$_table_needle"><var>$_table_needle</var></a></code>, 
+			<code><a href="class-KDatabaseAdapterAbstract.html#$_table_prefix"><var>$_table_prefix</var></a></code>, 
+			<code><a href="class-KDatabaseAdapterAbstract.html#$_table_schema"><var>$_table_schema</var></a></code>
+		</p>
+		<h3>Properties inherited from <a href="class-KObject.html#properties">KObject</a></h3>
+		<p class="elementList">
+			<code><a href="class-KObject.html#$_mixed_methods"><var>$_mixed_methods</var></a></code>
+		</p>
+
+
+
+
+
+</div>
+	</div>
+
+	<div id="footer">
+		Nooku Framework API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+
+<script>
+    responsivemenu.init({
+        wrapper: document.querySelector('.header'),
+        toggleclass: 'button--hamburger',
+        togglecontent: 'menu <span class="lines"></span>'
+    });
+</script>
+
+</body>
+</html>

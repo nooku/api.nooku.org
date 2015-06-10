@@ -1,0 +1,1623 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<title>Interface KDispatcherRequestInterface | Nooku Framework</title>
+
+	<script type="text/javascript" src="resources/combined.js?2640657843"></script>
+	<script type="text/javascript" src="elementlist.js?527661356"></script>
+	<script type="text/javascript" src="http://www.nooku.org/js/scripts.js"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/bootstrap.min.css?390653004" />
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?150590327" />
+    <link rel="stylesheet" type="text/css" media="all" href="http://www.nooku.org/css/header.css" />
+
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,300italic,700,400italic' rel='stylesheet' type='text/css' />
+
+    <link rel="shortcut icon" href="http://www.nooku.org/images/favicon.ico" type="image/x-icon" />
+
+	<script>
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] ||
+            function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-214238-5', 'auto');
+        ga('send', 'pageview');
+    </script>
+</head>
+
+<body class="no-js">
+    <script type="text/javascript">
+    function hasClass(e, t) {
+        return e.className.match(new RegExp("(\\s|^)" + t + "(\\s|$)"))
+    }
+    var el = document.body;
+    var cl = "no-js";
+    if (hasClass(el, cl)) {
+        var reg = new RegExp("(\\s|^)" + cl + "(\\s|$)");
+        el.className = el.className.replace(reg, " js-enabled")
+    }
+    </script>
+	<div class="header">
+            <div class="container">
+                <div class="group">
+                    <div class="header__brand brand"><a href="http://www.nooku.org"><img src="http://www.nooku.org/images/layout/logo.png" alt="Nooku Logo" /></a></div>
+                    <div class="header__navigation">
+                        <div class="navigation_container" role="navigation">
+                            <ul class="navbar initiated">
+                                <li class="navbar__item" role="menuitem"><a href="http://www.nooku.org/features/">Features</a></li>
+                                <li class="navbar__item" role="menuitem"><a href="http://www.nooku.org/get-started/">Get Started</a></li>
+                                <li class="navbar__item" role="menuitem"><a href="http://www.nooku.org/services/">Services</a></li>
+                                <li class="navbar__item" role="menuitem"><a href="http://www.nooku.org/community/">Community</a></li>
+                                <li class="navbar__item active" role="menuitem"><a href="http://www.nooku.org/docs/">Docs</a></li>
+                                <li class="navbar__item" role="menuitem"><a href="http://www.nooku.org/blog">Blog</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+	<div id="left">
+	<div id="menu">
+		<form id="search" class="form-search">
+			<input type="hidden" name="cx" value="" />
+			<input type="hidden" name="ie" value="UTF-8" />
+			<input type="text" name="q" class="search-query" placeholder="Search" />
+		</form>
+
+
+		<div id="groups">
+			<h3>Packages</h3>
+			<ul>
+				<li class="active"><a href="package-Koowa.html">Koowa<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.html">Component<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.html">Koowa<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Class.html">Class<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Class.Locator.html">Locator</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Controller.html">Controller<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Controller.Behavior.html">Behavior</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Controller.Permission.html">Permission</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Controller.Toolbar.html">Toolbar</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Database.html">Database<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Database.Adapter.html">Adapter</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Database.Behavior.html">Behavior</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Database.Table.html">Table</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Date.html">Date</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Decorator.html">Decorator</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Dispatcher.html">Dispatcher<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Dispatcher.Authenticator.html">Authenticator</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Dispatcher.Permission.html">Permission</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Dispatcher.Request.html">Request</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Dispatcher.Response.html">Response<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Dispatcher.Response.Transport.html">Transport</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Dispatcher.Router.html">Router</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Event.html">Event<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Event.Publisher.html">Publisher</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Event.Subscriber.html">Subscriber</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Exception.html">Exception</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Filesystem.html">Filesystem<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Filesystem.Stream.html">Stream</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Filter.html">Filter</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Model.html">Model</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Object.html">Object<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Object.Locator.html">Locator</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Template.html">Template<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Template.Filter.html">Filter</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Template.Helper.html">Helper</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Template.Locator.html">Locator</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Translator.html">Translator<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Translator.Catalogue.html">Catalogue</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Translator.Locator.html">Locator</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.User.html">User</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.View.html">View<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.View.Error.html">Error</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.View.Page.html">Page</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.View.Users.html">Users</a>
+						</li>
+							</ul></li></ul></li></ul></li>
+				<li class="active"><a href="package-Koowa.Library.html">Library<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Behavior.html">Behavior<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Behavior.Exception.html">Exception</a>
+						</li>
+				<li><a href="package-Koowa.Library.Behavior.Mixin.html">Mixin</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Class.html">Class<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Class.Loader.html">Loader</a>
+						</li>
+				<li><a href="package-Koowa.Library.Class.Locator.html">Locator</a>
+						</li>
+				<li><a href="package-Koowa.Library.Class.Registry.html">Registry</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Command.html">Command<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Command.Callback.html">Callback</a>
+						</li>
+				<li><a href="package-Koowa.Library.Command.Chain.html">Chain</a>
+						</li>
+				<li><a href="package-Koowa.Library.Command.Exception.html">Exception</a>
+						</li>
+				<li><a href="package-Koowa.Library.Command.Handler.html">Handler</a>
+						</li>
+				<li><a href="package-Koowa.Library.Command.Mixin.html">Mixin</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Controller.html">Controller<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Controller.Behavior.html">Behavior</a>
+						</li>
+				<li><a href="package-Koowa.Library.Controller.Context.html">Context</a>
+						</li>
+				<li><a href="package-Koowa.Library.Controller.Exception.html">Exception</a>
+						</li>
+				<li><a href="package-Koowa.Library.Controller.Permission.html">Permission</a>
+						</li>
+				<li><a href="package-Koowa.Library.Controller.Request.html">Request</a>
+						</li>
+				<li><a href="package-Koowa.Library.Controller.Response.html">Response</a>
+						</li>
+				<li><a href="package-Koowa.Library.Controller.Toolbar.html">Toolbar<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Controller.Toolbar.Command.html">Command</a>
+						</li>
+				<li><a href="package-Koowa.Library.Controller.Toolbar.Mixin.html">Mixin</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-Koowa.Library.Database.html">Database<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Database.Adapter.html">Adapter</a>
+						</li>
+				<li><a href="package-Koowa.Library.Database.Behavior.html">Behavior</a>
+						</li>
+				<li><a href="package-Koowa.Library.Database.Context.html">Context</a>
+						</li>
+				<li><a href="package-Koowa.Library.Database.Query.html">Query</a>
+						</li>
+				<li><a href="package-Koowa.Library.Database.Row.html">Row</a>
+						</li>
+				<li><a href="package-Koowa.Library.Database.Rowset.html">Rowset</a>
+						</li>
+				<li><a href="package-Koowa.Library.Database.Schema.html">Schema</a>
+						</li>
+				<li><a href="package-Koowa.Library.Database.Table.html">Table</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Date.html">Date</a>
+						</li>
+				<li class="active"><a href="package-Koowa.Library.Dispatcher.html">Dispatcher<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Dispatcher.Authenticator.html">Authenticator</a>
+						</li>
+				<li><a href="package-Koowa.Library.Dispatcher.Behavior.html">Behavior</a>
+						</li>
+				<li><a href="package-Koowa.Library.Dispatcher.Context.html">Context</a>
+						</li>
+				<li><a href="package-Koowa.Library.Dispatcher.Exception.html">Exception</a>
+						</li>
+				<li><a href="package-Koowa.Library.Dispatcher.Permission.html">Permission</a>
+						</li>
+				<li class="active"><a href="package-Koowa.Library.Dispatcher.Request.html">Request</a>
+						</li>
+				<li><a href="package-Koowa.Library.Dispatcher.Response.html">Response<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Dispatcher.Response.Transport.html">Transport</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Dispatcher.Router.html">Router</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Event.html">Event<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Event.Mixin.html">Mixin</a>
+						</li>
+				<li><a href="package-Koowa.Library.Event.Publisher.html">Publisher</a>
+						</li>
+				<li><a href="package-Koowa.Library.Event.Subscriber.html">Subscriber</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Exception.html">Exception<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Exception.Handler.html">Handler</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Filesystem.html">Filesystem<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Filesystem.Stream.html">Stream<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Filesystem.Stream.Filter.html">Filter</a>
+						</li>
+				<li><a href="package-Koowa.Library.Filesystem.Stream.Iterator.html">Iterator</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-Koowa.Library.Filter.html">Filter</a>
+						</li>
+				<li><a href="package-Koowa.Library.Http.html">Http<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Http.Cookie.html">Cookie</a>
+						</li>
+				<li><a href="package-Koowa.Library.Http.Exception.html">Exception<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Http.Exception.Unsupported.html">Unsupported</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Http.Message.html">Message</a>
+						</li>
+				<li><a href="package-Koowa.Library.Http.Request.html">Request</a>
+						</li>
+				<li><a href="package-Koowa.Library.Http.Response.html">Response</a>
+						</li>
+				<li><a href="package-Koowa.Library.Http.Token.html">Token</a>
+						</li>
+				<li><a href="package-Koowa.Library.Http.Url.html">Url</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Model.html">Model<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Model.Behavior.html">Behavior</a>
+						</li>
+				<li><a href="package-Koowa.Library.Model.Context.html">Context</a>
+						</li>
+				<li><a href="package-Koowa.Library.Model.Entity.html">Entity</a>
+						</li>
+				<li><a href="package-Koowa.Library.Model.Paginator.html">Paginator</a>
+						</li>
+				<li><a href="package-Koowa.Library.Model.State.html">State</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Object.html">Object<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Object.Bootstrapper.html">Bootstrapper</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Config.html">Config</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Decorator.html">Decorator</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Exception.html">Exception</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Identifier.html">Identifier</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Locator.html">Locator</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Manager.html">Manager</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Mixin.html">Mixin</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Registry.html">Registry</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.String.html">String<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.String.Inflector.html">Inflector</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Template.html">Template<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Template.Engine.html">Engine</a>
+						</li>
+				<li><a href="package-Koowa.Library.Template.Exception.html">Exception</a>
+						</li>
+				<li><a href="package-Koowa.Library.Template.Filter.html">Filter</a>
+						</li>
+				<li><a href="package-Koowa.Library.Template.Helper.html">Helper</a>
+						</li>
+				<li><a href="package-Koowa.Library.Template.Locator.html">Locator</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Translator.html">Translator<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Translator.Catalogue.html">Catalogue</a>
+						</li>
+				<li><a href="package-Koowa.Library.Translator.Inflector.html">Inflector</a>
+						</li>
+				<li><a href="package-Koowa.Library.Translator.Locator.html">Locator</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.User.html">User<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.User.Provider.html">Provider</a>
+						</li>
+				<li><a href="package-Koowa.Library.User.Session.html">Session<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.User.Session.Container.html">Container</a>
+						</li>
+				<li><a href="package-Koowa.Library.User.Session.Handler.html">Handler</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-Koowa.Library.View.html">View<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.View.Behavior.html">Behavior</a>
+						</li>
+				<li><a href="package-Koowa.Library.View.Context.html">Context</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-Koowa.Module.html">Module<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Module.Koowa.html">Koowa<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Module.Koowa.Template.html">Template<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Module.Koowa.Template.Filter.html">Filter</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Module.Koowa.View.html">View</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-Koowa.Plugin.html">Plugin<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Plugin.Koowa.html">Koowa</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Wordpress.html">Wordpress<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Wordpress.Library.html">Library<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Wordpress.Library.Controller.html">Controller</a>
+						</li>
+							</ul></li></ul></li></ul></li>
+				<li><a href="package-Nooku.html">Nooku<span></span></a>
+						<ul>
+				<li><a href="package-Nooku.Library.html">Library<span></span></a>
+						<ul>
+				<li><a href="package-Nooku.Library.Template.html">Template<span></span></a>
+						<ul>
+				<li><a href="package-Nooku.Library.Template.Abstract.html">Abstract</a>
+						</li>
+							</ul></li></ul></li></ul></li>
+			</ul>
+		</div>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-KDispatcherRequest.html">KDispatcherRequest</a></li>
+				<li><a href="class-KDispatcherRequestAbstract.html">KDispatcherRequestAbstract</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li class="active"><a href="class-KDispatcherRequestInterface.html">KDispatcherRequestInterface</a></li>
+			</ul>
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+	<div id="rightInner">
+<div id="content" class="class">
+	<h1>Interface KDispatcherRequestInterface</h1>
+
+
+	<div class="description">
+	
+<p>Dispatcher Request Interface</p>
+
+	</div>
+
+	<dl class="tree well">
+		<dd style="padding-left:0px">
+<b><span>KDispatcherRequestInterface</span></b>			
+			 implements 
+				<a href="class-KControllerRequestInterface.html"><span>KControllerRequestInterface</span></a>
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+	<div>
+		<h3>Direct known implementers</h3>
+		<p class="elementList">
+			<code><a href="class-KDispatcherRequestAbstract.html">KDispatcherRequestAbstract</a></code>
+		</p>
+	</div>
+
+	<div>
+		<h3>Indirect known implementers</h3>
+		<p class="elementList">
+			<code><a href="class-ComKoowaDispatcherRequest.html">ComKoowaDispatcherRequest</a></code>, 
+			<code><a href="class-KDispatcherRequest.html">KDispatcherRequest</a></code>
+		</p>
+	</div>
+
+
+
+	<div class="alert alert-info">
+		
+		
+		
+		<b>Package:</b> <a href="package-Koowa.html">Koowa</a>\<a href="package-Koowa.Library.html">Library</a>\<a href="package-Koowa.Library.Dispatcher.html">Dispatcher</a>\<a href="package-Koowa.Library.Dispatcher.Request.html">Request</a><br />
+
+				<b>Copyright:</b>
+				Copyright (C) 2007 - 2014 Johan Janssens and Timble CVBA. (<a
+href="http://www.timble.net">http://www.timble.net</a>)<br />
+				<b>License:</b>
+				<a href="GNU">GPLv3 &lt;http://www.gnu.org/licenses/gpl.html&gt;</a><br />
+				<b>Author:</b>
+				Johan Janssens &lt;<a
+href="https://github.com/johanjanssens">https://github.com/johanjanssens</a>&gt;<br />
+		<b>Located at</b> <a href="source-class-KDispatcherRequestInterface.html#10-256" title="Go to source code">libraries/koowa/libraries/dispatcher/request/interface.php</a><br />
+	</div>
+
+
+
+		<h2>Methods summary</h2>
+		<table class="summary table table-bordered table-striped" id="methods">
+		<tr data-order="setProxies" id="_setProxies">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-KDispatcherRequestInterface.html">KDispatcherRequestInterface</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_setProxies">#</a>
+			<code><a href="source-class-KDispatcherRequestInterface.html#18-26" title="Go to source code">setProxies</a>( <span>array <var>$proxies</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Sets a list of trusted proxies.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Sets a list of trusted proxies.</p>
+
+<p>You should only list the reverse proxies that you manage directly.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$proxies</var></dt>
+						<dd><code>array</code><br>$proxies A list of trusted proxies</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><code><a href="class-KDispatcherRequestInterface.html">KDispatcherRequestInterface</a></code></code><br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getProxies" id="_getProxies">
+
+			<td class="attributes"><code>
+				 public 
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getProxies">#</a>
+			<code><a href="source-class-KDispatcherRequestInterface.html#28-33" title="Go to source code">getProxies</a>( )</code>
+
+			<div class="description short">
+				
+<p>Gets the list of trusted proxies.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Gets the list of trusted proxies.</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>array</code><br>An array of trusted proxies.<br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="setCookies" id="_setCookies">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-KDispatcherRequestInterface.html">KDispatcherRequestInterface</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_setCookies">#</a>
+			<code><a href="source-class-KDispatcherRequestInterface.html#35-41" title="Go to source code">setCookies</a>( <span>array <var>$cookies</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Set the request cookies</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Set the request cookies</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$cookies</var></dt>
+						<dd><code>array</code><br>$cookies</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><code><a href="class-KDispatcherRequestInterface.html">KDispatcherRequestInterface</a></code></code><br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getCookies" id="_getCookies">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-KHttpMessageParameters.html">KHttpMessageParameters</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getCookies">#</a>
+			<code><a href="source-class-KDispatcherRequestInterface.html#43-48" title="Go to source code">getCookies</a>( )</code>
+
+			<div class="description short">
+				
+<p>Get the request cookies</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Get the request cookies</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><code><a href="class-KHttpMessageParameters.html">KHttpMessageParameters</a></code></code><br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="setFiles" id="_setFiles">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-KDispatcherRequestInterface.html">KDispatcherRequestInterface</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_setFiles">#</a>
+			<code><a href="source-class-KDispatcherRequestInterface.html#50-56" title="Go to source code">setFiles</a>( <span>array <var>$files</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Set the request files</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Set the request files</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$files</var></dt>
+						<dd><code>array</code><br>$files</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><code><a href="class-KDispatcherRequestInterface.html">KDispatcherRequestInterface</a></code></code><br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getFiles" id="_getFiles">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-KHttpMessageParameters.html">KHttpMessageParameters</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getFiles">#</a>
+			<code><a href="source-class-KDispatcherRequestInterface.html#58-63" title="Go to source code">getFiles</a>( )</code>
+
+			<div class="description short">
+				
+<p>Get the request files</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Get the request files</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><code><a href="class-KHttpMessageParameters.html">KHttpMessageParameters</a></code></code><br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getScheme" id="_getScheme">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getScheme">#</a>
+			<code><a href="source-class-KDispatcherRequestInterface.html#65-70" title="Go to source code">getScheme</a>( )</code>
+
+			<div class="description short">
+				
+<p>Gets the request's scheme.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Gets the request's scheme.</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>string</code><br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getHost" id="_getHost">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getHost">#</a>
+			<code><a href="source-class-KDispatcherRequestInterface.html#72-81" title="Go to source code">getHost</a>( )</code>
+
+			<div class="description short">
+				
+<p>Returns the host name.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Returns the host name.</p>
+
+<p>This method can read the client host from the "X-Forwarded-Host" header when
+the request is proxied and the proxy is trusted. The "X-Forwarded-Host" header
+must contain the client host name.</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>string</code><br />
+					</div>
+
+					<h4>Throws</h4>
+					<div class="list">
+						<code>UnexpectedValueException</code><br>when the host name is invalid<br />
+					</div>
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getPort" id="_getPort">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getPort">#</a>
+			<code><a href="source-class-KDispatcherRequestInterface.html#83-91" title="Go to source code">getPort</a>( )</code>
+
+			<div class="description short">
+				
+<p>Returns the port on which the request is made.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Returns the port on which the request is made.</p>
+
+<p>This method can read the client port from the "X-Forwarded-Port" header when
+the request is proxied and the proxy is trusted. The "X-Forwarded-Port" header
+must contain the client port.</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>string</code><br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getReferrer" id="_getReferrer">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-KHttpUrl.html">KHttpUrl</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getReferrer">#</a>
+			<code><a href="source-class-KDispatcherRequestInterface.html#93-102" title="Go to source code">getReferrer</a>( <span>boolean <var>$isInternal</var> = <span class="php-keyword1">true</span></span> )</code>
+
+			<div class="description short">
+				
+<p>Returns the HTTP referrer.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Returns the HTTP referrer.</p>
+
+<p>'referer' a commonly used misspelling word for 'referrer'</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$isInternal</var></dt>
+						<dd><code>boolean</code><br>$isInternal Only allow internal url's</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><code><a href="class-KHttpUrl.html">KHttpUrl</a></code></code><br>A HttpUrl object<br />
+					</div>
+
+
+					<h4>Link</h4>
+					<div class="list">
+							<a href="http://en.wikipedia.org/wiki/HTTP_referrer">http://en.wikipedia.org/wiki/HTTP_referrer</a><br />
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getAgent" id="_getAgent">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getAgent">#</a>
+			<code><a href="source-class-KDispatcherRequestInterface.html#104-109" title="Go to source code">getAgent</a>( )</code>
+
+			<div class="description short">
+				
+<p>Returns the client information doing the request</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Returns the client information doing the request</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>string</code><br>$_SERVER['HTTP_USER_AGENT'] or an empty string if it's not supplied in the
+request<br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getAddress" id="_getAddress">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getAddress">#</a>
+			<code><a href="source-class-KDispatcherRequestInterface.html#111-123" title="Go to source code">getAddress</a>( )</code>
+
+			<div class="description short">
+				
+<p>Returns the client IP address.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Returns the client IP address.</p>
+
+<p>This method can read the client port from the "X-Forwarded-For" header when
+the request is proxied and the proxy is trusted. The "X-Forwarded-For" header
+must contain the client port. The "X-Forwarded-For" header value is a
+comma+space separated list of IP addresses, the left-most being the original
+client, and each successive proxy that passed the request adding the IP address
+where it received the request from.</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>string</code><br>Client IP address or an empty string if it's not supplied in the request<br />
+					</div>
+
+
+					<h4>See</h4>
+					<div class="list">
+							<a
+href="http://tools.ietf.org/html/draft-ietf-appsawg-http-forwarded-10#section-5.2">http://tools.ietf.org/html/draft-ietf-appsawg-http-forwarded-10#section-5.2</a><br />
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getBaseUrl" id="_getBaseUrl">
+
+			<td class="attributes"><code>
+				 public 
+				object
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getBaseUrl">#</a>
+			<code><a href="source-class-KDispatcherRequestInterface.html#125-139" title="Go to source code">getBaseUrl</a>( )</code>
+
+			<div class="description short">
+				
+<p>Returns the base URL from which this request is executed.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Returns the base URL from which this request is executed.</p>
+
+<p>The base URL never ends with a / and t also includes the script filename
+(e.g. index.php) if one exists.</p>
+
+<p>Suppose this request is instantiated from /mysite on localhost:<br />
+* <a href="http://localhost/mysite">http://localhost/mysite</a> returns an empty
+string * <a
+href="http://localhost/mysite/about">http://localhost/mysite/about</a> returns
+'/about' * <a
+href="http://localhost/mysite/enco%20ded">http://localhost/mysite/enco%20ded</a>
+returns '/enco%20ded' * <a
+href="http://localhost/mysite/about?var=1">http://localhost/mysite/about?var=1</a>
+returns '/about'</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>object</code><br>A HttpUrl object<br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="setBaseUrl" id="_setBaseUrl">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-KDispatcherRequest.html">KDispatcherRequest</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_setBaseUrl">#</a>
+			<code><a href="source-class-KDispatcherRequestInterface.html#141-147" title="Go to source code">setBaseUrl</a>( <span>string <var>$url</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Set the base URL for which the request is executed.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Set the base URL for which the request is executed.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$url</var></dt>
+						<dd><code>string</code><br>$url</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><code><a href="class-KDispatcherRequest.html">KDispatcherRequest</a></code></code><br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getBasePath" id="_getBasePath">
+
+			<td class="attributes"><code>
+				 public 
+				object
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getBasePath">#</a>
+			<code><a href="source-class-KDispatcherRequestInterface.html#149-154" title="Go to source code">getBasePath</a>( )</code>
+
+			<div class="description short">
+				
+<p>Returns the base url of the request.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Returns the base url of the request.</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>object</code><br>A HttpUrl object<br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="setBasePath" id="_setBasePath">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-KDispatcherRequest.html">KDispatcherRequest</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_setBasePath">#</a>
+			<code><a href="source-class-KDispatcherRequestInterface.html#156-162" title="Go to source code">setBasePath</a>( <span>string <var>$path</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Set the base path for which the request is executed.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Set the base path for which the request is executed.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$path</var></dt>
+						<dd><code>string</code><br>$path</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><code><a href="class-KDispatcherRequest.html">KDispatcherRequest</a></code></code><br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getFormat" id="_getFormat">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getFormat">#</a>
+			<code><a href="source-class-KDispatcherRequestInterface.html#164-174" title="Go to source code">getFormat</a>( )</code>
+
+			<div class="description short">
+				
+<p>Return the request format</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Return the request format</p>
+
+<p>Find the format by using following sequence :</p>
+
+<ol>
+	<li>Use the the 'format' request parameter</li>
+
+	<li>Use the accept header with the highest quality apply the reverse format map
+	to find the format.</li>
+</ol>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>string</code><br>The request format or NULL if no format could be found<br />
+					</div>
+
+
+
+
+					<h4>Implementation of</h4>
+					<div class="list"><code><a href="class-KControllerRequestInterface.html#_getFormat">KControllerRequestInterface::getFormat()</a></code></div>
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="addFormat" id="_addFormat">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-KDispatcherRequestInterface.html">KDispatcherRequestInterface</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_addFormat">#</a>
+			<code><a href="source-class-KDispatcherRequestInterface.html#176-184" title="Go to source code">addFormat</a>( <span>string <var>$format</var></span>, <span>string|array <var>$mime_types</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Associates a format with mime types.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Associates a format with mime types.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$format</var></dt>
+						<dd><code>string</code><br>$format The format</dd>
+						<dt><var>$mime_types</var></dt>
+						<dd><code>string|array</code><br>$mime_types The associated mime types (the preferred one must be the first as it
+will be used as the content type)</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><code><a href="class-KDispatcherRequestInterface.html">KDispatcherRequestInterface</a></code></code><br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getLanguages" id="_getLanguages">
+
+			<td class="attributes"><code>
+				 public 
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getLanguages">#</a>
+			<code><a href="source-class-KDispatcherRequestInterface.html#186-191" title="Go to source code">getLanguages</a>( )</code>
+
+			<div class="description short">
+				
+<p>Gets a list of languages acceptable by the client browser.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Gets a list of languages acceptable by the client browser.</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>array</code><br>Languages ordered in the user browser preferences<br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getCharsets" id="_getCharsets">
+
+			<td class="attributes"><code>
+				 public 
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getCharsets">#</a>
+			<code><a href="source-class-KDispatcherRequestInterface.html#193-198" title="Go to source code">getCharsets</a>( )</code>
+
+			<div class="description short">
+				
+<p>Gets a list of charsets acceptable by the client browser.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Gets a list of charsets acceptable by the client browser.</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>array</code><br>List of charsets in preferable order<br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getRanges" id="_getRanges">
+
+			<td class="attributes"><code>
+				 public 
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getRanges">#</a>
+			<code><a href="source-class-KDispatcherRequestInterface.html#200-208" title="Go to source code">getRanges</a>( )</code>
+
+			<div class="description short">
+				
+<p>Gets the request ranges</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Gets the request ranges</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>array</code><br>List of request ranges<br />
+					</div>
+
+					<h4>Throws</h4>
+					<div class="list">
+						<code><code><a href="class-KHttpExceptionRangeNotSatisfied.html">KHttpExceptionRangeNotSatisfied</a></code></code><br>If the range info is not valid or if the start offset is large then the end
+offset<br />
+					</div>
+
+					<h4>Link</h4>
+					<div class="list">
+							: <a
+href="http://tools.ietf.org/html/rfc2616#section-14.35">http://tools.ietf.org/html/rfc2616#section-14.35</a><br />
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="isSecure" id="_isSecure">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_isSecure">#</a>
+			<code><a href="source-class-KDispatcherRequestInterface.html#210-220" title="Go to source code">isSecure</a>( )</code>
+
+			<div class="description short">
+				
+<p>Checks whether the request is secure or not.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Checks whether the request is secure or not.</p>
+
+<p>This method can read the client scheme from the "X-Forwarded-Proto" header
+when the request is proxied and the proxy is trusted. The "X-Forwarded-Proto"
+header must contain the protocol: "https" or "http".</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>boolean</code><br />
+					</div>
+
+
+					<h4>Link</h4>
+					<div class="list">
+							<a href="http://tools.ietf.org/html/draft-ietf-appsawg-http-forwarded-10#section-5.4">http://tools.ietf.org/html/draft-ietf-appsawg-http-forwarded-10#section-5.4</a><br />
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="isProxied" id="_isProxied">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_isProxied">#</a>
+			<code><a href="source-class-KDispatcherRequestInterface.html#222-233" title="Go to source code">isProxied</a>( )</code>
+
+			<div class="description short">
+				
+<p>Checks whether the request is proxied or not.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Checks whether the request is proxied or not.</p>
+
+<p>This method reads the proxy IP from the "X-Forwarded-By" header. The
+"X-Forwarded-By" header MUST contain the proxy IP address (and, potentially, a
+port number). If no "X-Forwarded-By" header can be found, or the header IP
+address doesn't match the list of trusted proxies the function will return
+false.</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>boolean</code><br>Return TRUE if the request is proxied and the proxy is trusted. FALSE otherwise.<br />
+					</div>
+
+
+					<h4>Link</h4>
+					<div class="list">
+							<a href="http://tools.ietf.org/html/draft-ietf-appsawg-http-forwarded-10#page-7">http://tools.ietf.org/html/draft-ietf-appsawg-http-forwarded-10#page-7</a><br />
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="isDownload" id="_isDownload">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_isDownload">#</a>
+			<code><a href="source-class-KDispatcherRequestInterface.html#235-245" title="Go to source code">isDownload</a>( )</code>
+
+			<div class="description short">
+				
+<p>Check if the request is downloadable or not.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Check if the request is downloadable or not.</p>
+
+<p>A request is downloading if one of the following conditions are met :</p>
+
+<ol>
+	<li>The request query contains a 'force-download' parameter</li>
+
+	<li>The request accepts specifies either the application/force-download or
+	application/octet-stream mime types</li>
+</ol>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>boolean</code><br>Returns TRUE If the request is downloadable. FALSE otherwise.<br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="isStreaming" id="_isStreaming">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_isStreaming">#</a>
+			<code><a href="source-class-KDispatcherRequestInterface.html#247-255" title="Go to source code">isStreaming</a>( )</code>
+
+			<div class="description short">
+				
+<p>Check if the request is streaming</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Check if the request is streaming</p>
+
+<p>Responses that contain a Range header is considered to be streaming.</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>boolean</code><br />
+					</div>
+
+
+					<h4>Link</h4>
+					<div class="list">
+							: <a
+href="http://tools.ietf.org/html/rfc2616#section-14.35">http://tools.ietf.org/html/rfc2616#section-14.35</a><br />
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		</table>
+
+		<h3>Methods inherited from <a href="class-KControllerRequestInterface.html#methods">KControllerRequestInterface</a></h3>
+		<p class="elementList">
+			<code><a href="class-KControllerRequestInterface.html#_getData">getData()</a></code>, 
+			<code><a href="class-KControllerRequestInterface.html#_getQuery">getQuery()</a></code>, 
+			<code><a href="class-KControllerRequestInterface.html#_setData">setData()</a></code>, 
+			<code><a href="class-KControllerRequestInterface.html#_setFormat">setFormat()</a></code>, 
+			<code><a href="class-KControllerRequestInterface.html#_setQuery">setQuery()</a></code>
+		</p>
+
+
+		<h3>Magic methods summary</h3>
+
+
+
+
+
+
+
+
+</div>
+	</div>
+
+	<div id="footer">
+		Nooku Framework API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+
+<script>
+    responsivemenu.init({
+        wrapper: document.querySelector('.header'),
+        toggleclass: 'button--hamburger',
+        togglecontent: 'menu <span class="lines"></span>'
+    });
+</script>
+
+</body>
+</html>

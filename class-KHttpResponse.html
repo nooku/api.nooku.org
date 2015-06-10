@@ -1,0 +1,2567 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<title>Class KHttpResponse | Nooku Framework</title>
+
+	<script type="text/javascript" src="resources/combined.js?2640657843"></script>
+	<script type="text/javascript" src="elementlist.js?527661356"></script>
+	<script type="text/javascript" src="http://www.nooku.org/js/scripts.js"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/bootstrap.min.css?390653004" />
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?150590327" />
+    <link rel="stylesheet" type="text/css" media="all" href="http://www.nooku.org/css/header.css" />
+
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,300italic,700,400italic' rel='stylesheet' type='text/css' />
+
+    <link rel="shortcut icon" href="http://www.nooku.org/images/favicon.ico" type="image/x-icon" />
+
+	<script>
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] ||
+            function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-214238-5', 'auto');
+        ga('send', 'pageview');
+    </script>
+</head>
+
+<body class="no-js">
+    <script type="text/javascript">
+    function hasClass(e, t) {
+        return e.className.match(new RegExp("(\\s|^)" + t + "(\\s|$)"))
+    }
+    var el = document.body;
+    var cl = "no-js";
+    if (hasClass(el, cl)) {
+        var reg = new RegExp("(\\s|^)" + cl + "(\\s|$)");
+        el.className = el.className.replace(reg, " js-enabled")
+    }
+    </script>
+	<div class="header">
+            <div class="container">
+                <div class="group">
+                    <div class="header__brand brand"><a href="http://www.nooku.org"><img src="http://www.nooku.org/images/layout/logo.png" alt="Nooku Logo" /></a></div>
+                    <div class="header__navigation">
+                        <div class="navigation_container" role="navigation">
+                            <ul class="navbar initiated">
+                                <li class="navbar__item" role="menuitem"><a href="http://www.nooku.org/features/">Features</a></li>
+                                <li class="navbar__item" role="menuitem"><a href="http://www.nooku.org/get-started/">Get Started</a></li>
+                                <li class="navbar__item" role="menuitem"><a href="http://www.nooku.org/services/">Services</a></li>
+                                <li class="navbar__item" role="menuitem"><a href="http://www.nooku.org/community/">Community</a></li>
+                                <li class="navbar__item active" role="menuitem"><a href="http://www.nooku.org/docs/">Docs</a></li>
+                                <li class="navbar__item" role="menuitem"><a href="http://www.nooku.org/blog">Blog</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+	<div id="left">
+	<div id="menu">
+		<form id="search" class="form-search">
+			<input type="hidden" name="cx" value="" />
+			<input type="hidden" name="ie" value="UTF-8" />
+			<input type="text" name="q" class="search-query" placeholder="Search" />
+		</form>
+
+
+		<div id="groups">
+			<h3>Packages</h3>
+			<ul>
+				<li class="active"><a href="package-Koowa.html">Koowa<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.html">Component<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.html">Koowa<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Class.html">Class<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Class.Locator.html">Locator</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Controller.html">Controller<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Controller.Behavior.html">Behavior</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Controller.Permission.html">Permission</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Controller.Toolbar.html">Toolbar</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Database.html">Database<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Database.Adapter.html">Adapter</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Database.Behavior.html">Behavior</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Database.Table.html">Table</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Date.html">Date</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Decorator.html">Decorator</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Dispatcher.html">Dispatcher<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Dispatcher.Authenticator.html">Authenticator</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Dispatcher.Permission.html">Permission</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Dispatcher.Request.html">Request</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Dispatcher.Response.html">Response<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Dispatcher.Response.Transport.html">Transport</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Dispatcher.Router.html">Router</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Event.html">Event<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Event.Publisher.html">Publisher</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Event.Subscriber.html">Subscriber</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Exception.html">Exception</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Filesystem.html">Filesystem<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Filesystem.Stream.html">Stream</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Filter.html">Filter</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Model.html">Model</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Object.html">Object<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Object.Locator.html">Locator</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Template.html">Template<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Template.Filter.html">Filter</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Template.Helper.html">Helper</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Template.Locator.html">Locator</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Translator.html">Translator<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Translator.Catalogue.html">Catalogue</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Translator.Locator.html">Locator</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.User.html">User</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.View.html">View<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.View.Error.html">Error</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.View.Page.html">Page</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.View.Users.html">Users</a>
+						</li>
+							</ul></li></ul></li></ul></li>
+				<li class="active"><a href="package-Koowa.Library.html">Library<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Behavior.html">Behavior<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Behavior.Exception.html">Exception</a>
+						</li>
+				<li><a href="package-Koowa.Library.Behavior.Mixin.html">Mixin</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Class.html">Class<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Class.Loader.html">Loader</a>
+						</li>
+				<li><a href="package-Koowa.Library.Class.Locator.html">Locator</a>
+						</li>
+				<li><a href="package-Koowa.Library.Class.Registry.html">Registry</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Command.html">Command<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Command.Callback.html">Callback</a>
+						</li>
+				<li><a href="package-Koowa.Library.Command.Chain.html">Chain</a>
+						</li>
+				<li><a href="package-Koowa.Library.Command.Exception.html">Exception</a>
+						</li>
+				<li><a href="package-Koowa.Library.Command.Handler.html">Handler</a>
+						</li>
+				<li><a href="package-Koowa.Library.Command.Mixin.html">Mixin</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Controller.html">Controller<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Controller.Behavior.html">Behavior</a>
+						</li>
+				<li><a href="package-Koowa.Library.Controller.Context.html">Context</a>
+						</li>
+				<li><a href="package-Koowa.Library.Controller.Exception.html">Exception</a>
+						</li>
+				<li><a href="package-Koowa.Library.Controller.Permission.html">Permission</a>
+						</li>
+				<li><a href="package-Koowa.Library.Controller.Request.html">Request</a>
+						</li>
+				<li><a href="package-Koowa.Library.Controller.Response.html">Response</a>
+						</li>
+				<li><a href="package-Koowa.Library.Controller.Toolbar.html">Toolbar<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Controller.Toolbar.Command.html">Command</a>
+						</li>
+				<li><a href="package-Koowa.Library.Controller.Toolbar.Mixin.html">Mixin</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-Koowa.Library.Database.html">Database<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Database.Adapter.html">Adapter</a>
+						</li>
+				<li><a href="package-Koowa.Library.Database.Behavior.html">Behavior</a>
+						</li>
+				<li><a href="package-Koowa.Library.Database.Context.html">Context</a>
+						</li>
+				<li><a href="package-Koowa.Library.Database.Query.html">Query</a>
+						</li>
+				<li><a href="package-Koowa.Library.Database.Row.html">Row</a>
+						</li>
+				<li><a href="package-Koowa.Library.Database.Rowset.html">Rowset</a>
+						</li>
+				<li><a href="package-Koowa.Library.Database.Schema.html">Schema</a>
+						</li>
+				<li><a href="package-Koowa.Library.Database.Table.html">Table</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Date.html">Date</a>
+						</li>
+				<li><a href="package-Koowa.Library.Dispatcher.html">Dispatcher<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Dispatcher.Authenticator.html">Authenticator</a>
+						</li>
+				<li><a href="package-Koowa.Library.Dispatcher.Behavior.html">Behavior</a>
+						</li>
+				<li><a href="package-Koowa.Library.Dispatcher.Context.html">Context</a>
+						</li>
+				<li><a href="package-Koowa.Library.Dispatcher.Exception.html">Exception</a>
+						</li>
+				<li><a href="package-Koowa.Library.Dispatcher.Permission.html">Permission</a>
+						</li>
+				<li><a href="package-Koowa.Library.Dispatcher.Request.html">Request</a>
+						</li>
+				<li><a href="package-Koowa.Library.Dispatcher.Response.html">Response<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Dispatcher.Response.Transport.html">Transport</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Dispatcher.Router.html">Router</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Event.html">Event<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Event.Mixin.html">Mixin</a>
+						</li>
+				<li><a href="package-Koowa.Library.Event.Publisher.html">Publisher</a>
+						</li>
+				<li><a href="package-Koowa.Library.Event.Subscriber.html">Subscriber</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Exception.html">Exception<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Exception.Handler.html">Handler</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Filesystem.html">Filesystem<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Filesystem.Stream.html">Stream<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Filesystem.Stream.Filter.html">Filter</a>
+						</li>
+				<li><a href="package-Koowa.Library.Filesystem.Stream.Iterator.html">Iterator</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-Koowa.Library.Filter.html">Filter</a>
+						</li>
+				<li class="active"><a href="package-Koowa.Library.Http.html">Http<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Http.Cookie.html">Cookie</a>
+						</li>
+				<li><a href="package-Koowa.Library.Http.Exception.html">Exception<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Http.Exception.Unsupported.html">Unsupported</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Http.Message.html">Message</a>
+						</li>
+				<li><a href="package-Koowa.Library.Http.Request.html">Request</a>
+						</li>
+				<li class="active"><a href="package-Koowa.Library.Http.Response.html">Response</a>
+						</li>
+				<li><a href="package-Koowa.Library.Http.Token.html">Token</a>
+						</li>
+				<li><a href="package-Koowa.Library.Http.Url.html">Url</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Model.html">Model<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Model.Behavior.html">Behavior</a>
+						</li>
+				<li><a href="package-Koowa.Library.Model.Context.html">Context</a>
+						</li>
+				<li><a href="package-Koowa.Library.Model.Entity.html">Entity</a>
+						</li>
+				<li><a href="package-Koowa.Library.Model.Paginator.html">Paginator</a>
+						</li>
+				<li><a href="package-Koowa.Library.Model.State.html">State</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Object.html">Object<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Object.Bootstrapper.html">Bootstrapper</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Config.html">Config</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Decorator.html">Decorator</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Exception.html">Exception</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Identifier.html">Identifier</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Locator.html">Locator</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Manager.html">Manager</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Mixin.html">Mixin</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Registry.html">Registry</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.String.html">String<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.String.Inflector.html">Inflector</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Template.html">Template<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Template.Engine.html">Engine</a>
+						</li>
+				<li><a href="package-Koowa.Library.Template.Exception.html">Exception</a>
+						</li>
+				<li><a href="package-Koowa.Library.Template.Filter.html">Filter</a>
+						</li>
+				<li><a href="package-Koowa.Library.Template.Helper.html">Helper</a>
+						</li>
+				<li><a href="package-Koowa.Library.Template.Locator.html">Locator</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Translator.html">Translator<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Translator.Catalogue.html">Catalogue</a>
+						</li>
+				<li><a href="package-Koowa.Library.Translator.Inflector.html">Inflector</a>
+						</li>
+				<li><a href="package-Koowa.Library.Translator.Locator.html">Locator</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.User.html">User<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.User.Provider.html">Provider</a>
+						</li>
+				<li><a href="package-Koowa.Library.User.Session.html">Session<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.User.Session.Container.html">Container</a>
+						</li>
+				<li><a href="package-Koowa.Library.User.Session.Handler.html">Handler</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-Koowa.Library.View.html">View<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.View.Behavior.html">Behavior</a>
+						</li>
+				<li><a href="package-Koowa.Library.View.Context.html">Context</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-Koowa.Module.html">Module<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Module.Koowa.html">Koowa<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Module.Koowa.Template.html">Template<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Module.Koowa.Template.Filter.html">Filter</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Module.Koowa.View.html">View</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-Koowa.Plugin.html">Plugin<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Plugin.Koowa.html">Koowa</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Wordpress.html">Wordpress<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Wordpress.Library.html">Library<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Wordpress.Library.Controller.html">Controller</a>
+						</li>
+							</ul></li></ul></li></ul></li>
+				<li><a href="package-Nooku.html">Nooku<span></span></a>
+						<ul>
+				<li><a href="package-Nooku.Library.html">Library<span></span></a>
+						<ul>
+				<li><a href="package-Nooku.Library.Template.html">Template<span></span></a>
+						<ul>
+				<li><a href="package-Nooku.Library.Template.Abstract.html">Abstract</a>
+						</li>
+							</ul></li></ul></li></ul></li>
+			</ul>
+		</div>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li class="active"><a href="class-KHttpResponse.html">KHttpResponse</a></li>
+				<li><a href="class-KHttpResponseHeaders.html">KHttpResponseHeaders</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="class-KHttpResponseInterface.html">KHttpResponseInterface</a></li>
+			</ul>
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+	<div id="rightInner">
+<div id="content" class="class">
+	<h1>Class KHttpResponse</h1>
+
+
+	<div class="description">
+	
+<p>Http Response</p>
+
+	</div>
+
+	<dl class="tree well">
+		<dd style="padding-left:0px">
+			<a href="class-KObject.html"><span>KObject</span></a>
+			
+			 implements 
+				<a href="class-KObjectInterface.html"><span>KObjectInterface</span></a>, 
+			
+				<a href="class-KObjectMixable.html"><span>KObjectMixable</span></a>, 
+			
+				<a href="class-KObjectHandlable.html"><span>KObjectHandlable</span></a>, 
+			
+				<a href="class-KObjectDecoratable.html"><span>KObjectDecoratable</span></a>
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by" />
+			<a href="class-KHttpMessage.html"><span>KHttpMessage</span></a>
+			
+			 implements 
+				<a href="class-KHttpMessageInterface.html"><span>KHttpMessageInterface</span></a>
+			
+			
+		</dd>
+		<dd style="padding-left:60px">
+			<img src="resources/inherit.png" alt="Extended by" />
+<b><span>KHttpResponse</span></b>			
+			 implements 
+				<a href="class-KHttpResponseInterface.html"><span>KHttpResponseInterface</span></a>
+			
+			
+		</dd>
+	</dl>
+
+
+	<div>
+		<h3>Direct known subclasses</h3>
+		<p class="elementList">
+			<code><a href="class-KControllerResponse.html">KControllerResponse</a></code>
+		</p>
+	</div>
+
+	<div>
+		<h3>Indirect known subclasses</h3>
+		<p class="elementList">
+			<code><a href="class-ComKoowaDispatcherResponse.html">ComKoowaDispatcherResponse</a></code>, 
+			<code><a href="class-KDispatcherResponse.html">KDispatcherResponse</a></code>, 
+			<code><a href="class-KDispatcherResponseAbstract.html">KDispatcherResponseAbstract</a></code>
+		</p>
+	</div>
+
+
+
+
+
+	<div class="alert alert-info">
+		
+		
+		
+		<b>Package:</b> <a href="package-Koowa.html">Koowa</a>\<a href="package-Koowa.Library.html">Library</a>\<a href="package-Koowa.Library.Http.html">Http</a>\<a href="package-Koowa.Library.Http.Response.html">Response</a><br />
+
+				<b>Copyright:</b>
+				Copyright (C) 2007 - 2014 Johan Janssens and Timble CVBA. (<a
+href="http://www.timble.net">http://www.timble.net</a>)<br />
+				<b>License:</b>
+				<a href="GNU">GPLv3 &lt;http://www.gnu.org/licenses/gpl.html&gt;</a><br />
+				<b>Author:</b>
+				Johan Janssens &lt;<a
+href="https://github.com/johanjanssens">https://github.com/johanjanssens</a>&gt;<br />
+				<b>Link:</b>
+				<a href="http://tools.ietf.org/html/rfc2616#section-6">http://tools.ietf.org/html/rfc2616#section-6</a><br />
+				<b>Link:</b>
+				<a href="http://en.wikipedia.org/wiki/List_of_HTTP_status_codes">http://en.wikipedia.org/wiki/List_of_HTTP_status_codes</a><br />
+		<b>Located at</b> <a href="source-class-KHttpResponse.html#10-588" title="Go to source code">libraries/koowa/libraries/http/response/response.php</a><br />
+	</div>
+
+
+
+		<h2>Methods summary</h2>
+		<table class="summary table table-bordered table-striped" id="methods">
+		<tr data-order="__construct" id="___construct">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-KHttpResponse.html">KHttpResponse</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#___construct">#</a>
+			<code><a href="source-class-KHttpResponse.html#141-158" title="Go to source code">__construct</a>( <span><code><a href="class-KObjectConfig.html">KObjectConfig</a></code> <var>$config</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Constructor</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Constructor</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$config</var></dt>
+						<dd><code><code><a href="class-KObjectConfig.html">KObjectConfig</a></code>|null</code><br>$config An optional ObjectConfig object with configuration options</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><code><a href="class-KHttpResponse.html">KHttpResponse</a></code></code><br />
+					</div>
+
+
+
+					<h4>Overrides</h4>
+					<div class="list"><code><a href="class-KHttpMessage.html#___construct">KHttpMessage::__construct</a></code></div>
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="_initialize" id="__initialize">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#__initialize">#</a>
+			<code><a href="source-class-KHttpResponse.html#160-179" title="Go to source code">_initialize</a>( <span><code><a href="class-KObjectConfig.html">KObjectConfig</a></code> <var>$config</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Initializes the default configuration for the object</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Initializes the default configuration for the object</p>
+
+<p>Called from <code><a href="class-KHttpResponse.html#___construct">KHttpResponse::__construct()</a></code> as a first step of object
+instantiation.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$config</var></dt>
+						<dd><code><code><a href="class-KObjectConfig.html">KObjectConfig</a></code></code><br>$config An optional ObjectConfig object with configuration options.</dd>
+					</dl></div>
+
+
+
+
+					<h4>Overrides</h4>
+					<div class="list"><code><a href="class-KHttpMessage.html#__initialize">KHttpMessage::_initialize</a></code></div>
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="setHeaders" id="_setHeaders">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-KHttpResponse.html">KHttpResponse</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_setHeaders">#</a>
+			<code><a href="source-class-KHttpResponse.html#181-191" title="Go to source code">setHeaders</a>( <span>array <var>$headers</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Set the header parameters</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Set the header parameters</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$headers</var></dt>
+						<dd><code>array</code><br>$headers</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><code><a href="class-KHttpResponse.html">KHttpResponse</a></code></code><br />
+					</div>
+
+
+
+					<h4>Overrides</h4>
+					<div class="list"><code><a href="class-KHttpMessage.html#_setHeaders">KHttpMessage::setHeaders</a></code></div>
+
+					<h4>Implementation of</h4>
+					<div class="list"><code><a href="class-KHttpMessageInterface.html#_setHeaders">KHttpMessageInterface::setHeaders()</a></code></div>
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="setStatus" id="_setStatus">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-KHttpResponse.html">KHttpResponse</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_setStatus">#</a>
+			<code><a href="source-class-KHttpResponse.html#194-215" title="Go to source code">setStatus</a>( <span>integer <var>$code</var></span>, <span>string <var>$message</var> = <span class="php-keyword1">null</span></span> )</code>
+
+			<div class="description short">
+				
+<p>Set HTTP status code and (optionally) message</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Set HTTP status code and (optionally) message</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$code</var></dt>
+						<dd><code>integer</code><br>$code</dd>
+						<dt><var>$message</var></dt>
+						<dd><code>string</code><br>$message</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><code><a href="class-KHttpResponse.html">KHttpResponse</a></code></code><br />
+					</div>
+
+					<h4>Throws</h4>
+					<div class="list">
+						<code>InvalidArgumentException</code><br />
+					</div>
+
+
+
+					<h4>Implementation of</h4>
+					<div class="list"><code><a href="class-KHttpResponseInterface.html#_setStatus">KHttpResponseInterface::setStatus()</a></code></div>
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getStatusCode" id="_getStatusCode">
+
+			<td class="attributes"><code>
+				 public 
+				integer
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getStatusCode">#</a>
+			<code><a href="source-class-KHttpResponse.html#217-225" title="Go to source code">getStatusCode</a>( )</code>
+
+			<div class="description short">
+				
+<p>Retrieve HTTP status code</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Retrieve HTTP status code</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>integer</code><br />
+					</div>
+
+
+
+
+					<h4>Implementation of</h4>
+					<div class="list"><code><a href="class-KHttpResponseInterface.html#_getStatusCode">KHttpResponseInterface::getStatusCode()</a></code></div>
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getStatusMessage" id="_getStatusMessage">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getStatusMessage">#</a>
+			<code><a href="source-class-KHttpResponse.html#227-243" title="Go to source code">getStatusMessage</a>( )</code>
+
+			<div class="description short">
+				
+<p>Get the http header status message based on a status code</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Get the http header status message based on a status code</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>string</code><br>The http status message<br />
+					</div>
+
+
+
+
+					<h4>Implementation of</h4>
+					<div class="list"><code><a href="class-KHttpResponseInterface.html#_getStatusMessage">KHttpResponseInterface::getStatusMessage()</a></code></div>
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="setContentType" id="_setContentType">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-KHttpResponse.html">KHttpResponse</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_setContentType">#</a>
+			<code><a href="source-class-KHttpResponse.html#245-259" title="Go to source code">setContentType</a>( <span>string <var>$type</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Sets the response content type</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Sets the response content type</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$type</var></dt>
+						<dd><code>string</code><br>$type Content type</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><code><a href="class-KHttpResponse.html">KHttpResponse</a></code></code><br />
+					</div>
+
+
+					<h4>See</h4>
+					<div class="list">
+							<a
+href="http://tools.ietf.org/html/rfc2616#section-14.17">http://tools.ietf.org/html/rfc2616#section-14.17</a><br />
+					</div>
+
+					<h4>Overrides</h4>
+					<div class="list"><code><a href="class-KHttpMessage.html#_setContentType">KHttpMessage::setContentType</a></code></div>
+
+					<h4>Implementation of</h4>
+					<div class="list"><code><a href="class-KHttpResponseInterface.html#_setContentType">KHttpResponseInterface::setContentType()</a></code></div>
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getContentType" id="_getContentType">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getContentType">#</a>
+			<code><a href="source-class-KHttpResponse.html#261-271" title="Go to source code">getContentType</a>( )</code>
+
+			<div class="description short">
+				
+<p>Retrieves the response content type</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Retrieves the response content type</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>string</code><br>Character set<br />
+					</div>
+
+
+					<h4>Link</h4>
+					<div class="list">
+							<a href="http://tools.ietf.org/html/rfc2616#section-14.17">http://tools.ietf.org/html/rfc2616#section-14.17</a><br />
+					</div>
+
+					<h4>Overrides</h4>
+					<div class="list"><code><a href="class-KHttpMessage.html#_getContentType">KHttpMessage::getContentType</a></code></div>
+
+					<h4>Implementation of</h4>
+					<div class="list"><code><a href="class-KHttpResponseInterface.html#_getContentType">KHttpResponseInterface::getContentType()</a></code></div>
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getDate" id="_getDate">
+
+			<td class="attributes"><code>
+				 public 
+				DateTime|null
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getDate">#</a>
+			<code><a href="source-class-KHttpResponse.html#273-296" title="Go to source code">getDate</a>( )</code>
+
+			<div class="description short">
+				
+<p>Returns the Date header as a DateTime instance.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Returns the Date header as a DateTime instance.</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>DateTime|null</code><br>A DateTime instance or NULL if no Date header exists<br />
+					</div>
+
+					<h4>Throws</h4>
+					<div class="list">
+						<code>RuntimeException</code><br>If the Date header could not be parsed<br />
+					</div>
+
+					<h4>Link</h4>
+					<div class="list">
+							<a href="http://tools.ietf.org/html/rfc2616#section-14.18">http://tools.ietf.org/html/rfc2616#section-14.18</a><br />
+					</div>
+
+
+					<h4>Implementation of</h4>
+					<div class="list"><code><a href="class-KHttpResponseInterface.html#_getDate">KHttpResponseInterface::getDate()</a></code></div>
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="setDate" id="_setDate">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-KHttpResponse.html">KHttpResponse</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_setDate">#</a>
+			<code><a href="source-class-KHttpResponse.html#298-312" title="Go to source code">setDate</a>( <span>DateTime <var>$date</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Sets the Date header.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Sets the Date header.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$date</var></dt>
+						<dd><code>DateTime</code><br>$date A DateTime instance</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><code><a href="class-KHttpResponse.html">KHttpResponse</a></code></code><br />
+					</div>
+
+
+					<h4>See</h4>
+					<div class="list">
+							<a
+href="http://tools.ietf.org/html/rfc2616#section-14.18">http://tools.ietf.org/html/rfc2616#section-14.18</a><br />
+					</div>
+
+
+					<h4>Implementation of</h4>
+					<div class="list"><code><a href="class-KHttpResponseInterface.html#_setDate">KHttpResponseInterface::setDate()</a></code></div>
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getLastModified" id="_getLastModified">
+
+			<td class="attributes"><code>
+				 public 
+				DateTime|null
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getLastModified">#</a>
+			<code><a href="source-class-KHttpResponse.html#314-337" title="Go to source code">getLastModified</a>( )</code>
+
+			<div class="description short">
+				
+<p>Returns the Last-Modified HTTP header as a DateTime instance.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Returns the Last-Modified HTTP header as a DateTime instance.</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>DateTime|null</code><br>A DateTime instance or NULL if no Last-Modified header exists<br />
+					</div>
+
+					<h4>Throws</h4>
+					<div class="list">
+						<code>RuntimeException</code><br>If the Last-Modified header could not be parsed<br />
+					</div>
+
+					<h4>Link</h4>
+					<div class="list">
+							<a href="http://tools.ietf.org/html/rfc2616#section-14.29">http://tools.ietf.org/html/rfc2616#section-14.29</a><br />
+					</div>
+
+
+					<h4>Implementation of</h4>
+					<div class="list"><code><a href="class-KHttpResponseInterface.html#_getLastModified">KHttpResponseInterface::getLastModified()</a></code></div>
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="setLastModified" id="_setLastModified">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-KHttpResponse.html">KHttpResponse</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_setLastModified">#</a>
+			<code><a href="source-class-KHttpResponse.html#339-360" title="Go to source code">setLastModified</a>( <span>DateTime <var>$date</var> = <span class="php-keyword1">null</span></span> )</code>
+
+			<div class="description short">
+				
+<p>Sets the Last-Modified HTTP header with a DateTime instance.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Sets the Last-Modified HTTP header with a DateTime instance.</p>
+
+<p>If passed a null value, it removes the header.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$date</var></dt>
+						<dd><code>DateTime</code><br>$date A \DateTime instance</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><code><a href="class-KHttpResponse.html">KHttpResponse</a></code></code><br />
+					</div>
+
+
+					<h4>Link</h4>
+					<div class="list">
+							<a href="http://tools.ietf.org/html/rfc2616#section-14.29">http://tools.ietf.org/html/rfc2616#section-14.29</a><br />
+					</div>
+
+
+					<h4>Implementation of</h4>
+					<div class="list"><code><a href="class-KHttpResponseInterface.html#_setLastModified">KHttpResponseInterface::setLastModified()</a></code></div>
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getExpires" id="_getExpires">
+
+			<td class="attributes"><code>
+				 public 
+				DateTime|null
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getExpires">#</a>
+			<code><a href="source-class-KHttpResponse.html#362-385" title="Go to source code">getExpires</a>( )</code>
+
+			<div class="description short">
+				
+<p>Returns the value of the Expires header as a DateTime instance.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Returns the value of the Expires header as a DateTime instance.</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>DateTime|null</code><br>A DateTime instance or NULL if no Expires header exists<br />
+					</div>
+
+					<h4>Throws</h4>
+					<div class="list">
+						<code>RuntimeException</code><br>If the Expires header could not be parsed<br />
+					</div>
+
+					<h4>Link</h4>
+					<div class="list">
+							<a href="http://tools.ietf.org/html/rfc2616#section-14.21">http://tools.ietf.org/html/rfc2616#section-14.21</a><br />
+					</div>
+
+
+					<h4>Implementation of</h4>
+					<div class="list"><code><a href="class-KHttpResponseInterface.html#_getExpires">KHttpResponseInterface::getExpires()</a></code></div>
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="setExpires" id="_setExpires">
+
+			<td class="attributes"><code>
+				 public 
+				HttpResponse
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_setExpires">#</a>
+			<code><a href="source-class-KHttpResponse.html#387-408" title="Go to source code">setExpires</a>( <span>DateTime <var>$date</var> = <span class="php-keyword1">null</span></span> )</code>
+
+			<div class="description short">
+				
+<p>Sets the Expires HTTP header with a DateTime instance.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Sets the Expires HTTP header with a DateTime instance.</p>
+
+<p>If passed a null value, it removes the header.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$date</var></dt>
+						<dd><code>DateTime</code><br>$date A \DateTime instance</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>HttpResponse</code><br />
+					</div>
+
+
+					<h4>Link</h4>
+					<div class="list">
+							<a href="http://tools.ietf.org/html/rfc2616#section-14.21">http://tools.ietf.org/html/rfc2616#section-14.21</a><br />
+					</div>
+
+
+					<h4>Implementation of</h4>
+					<div class="list"><code><a href="class-KHttpResponseInterface.html#_setExpires">KHttpResponseInterface::setExpires()</a></code></div>
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getEtag" id="_getEtag">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getEtag">#</a>
+			<code><a href="source-class-KHttpResponse.html#410-420" title="Go to source code">getEtag</a>( )</code>
+
+			<div class="description short">
+				
+<p>Returns the literal value of the ETag HTTP header.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Returns the literal value of the ETag HTTP header.</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>string</code><br>The ETag HTTP header<br />
+					</div>
+
+
+					<h4>Link</h4>
+					<div class="list">
+							<a href="http://tools.ietf.org/html/rfc2616#section-14.19">http://tools.ietf.org/html/rfc2616#section-14.19</a><br />
+					</div>
+
+
+					<h4>Implementation of</h4>
+					<div class="list"><code><a href="class-KHttpResponseInterface.html#_getEtag">KHttpResponseInterface::getEtag()</a></code></div>
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="setEtag" id="_setEtag">
+
+			<td class="attributes"><code>
+				 public 
+				HttpResponse
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_setEtag">#</a>
+			<code><a href="source-class-KHttpResponse.html#422-444" title="Go to source code">setEtag</a>( <span>string <var>$etag</var> = <span class="php-keyword1">null</span></span>, <span>Boolean <var>$weak</var> = <span class="php-keyword1">false</span></span> )</code>
+
+			<div class="description short">
+				
+<p>Sets the ETag value.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Sets the ETag value.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$etag</var></dt>
+						<dd><code>string</code><br>$etag The ETag unique identifier</dd>
+						<dt><var>$weak</var></dt>
+						<dd><code>Boolean</code><br>$weak Whether you want a weak ETag or not</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>HttpResponse</code><br />
+					</div>
+
+
+					<h4>Link</h4>
+					<div class="list">
+							<a href="http://tools.ietf.org/html/rfc2616#section-14.19">http://tools.ietf.org/html/rfc2616#section-14.19</a><br />
+					</div>
+
+
+					<h4>Implementation of</h4>
+					<div class="list"><code><a href="class-KHttpResponseInterface.html#_setEtag">KHttpResponseInterface::setEtag()</a></code></div>
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getAge" id="_getAge">
+
+			<td class="attributes"><code>
+				 public 
+				integer
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getAge">#</a>
+			<code><a href="source-class-KHttpResponse.html#446-459" title="Go to source code">getAge</a>( )</code>
+
+			<div class="description short">
+				
+<p>Returns the age of the response.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Returns the age of the response.</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>integer</code><br>The age of the response in seconds<br />
+					</div>
+
+
+					<h4>Link</h4>
+					<div class="list">
+							<a href="http://tools.ietf.org/html/rfc2616#section-14.6">http://tools.ietf.org/html/rfc2616#section-14.6</a><br />
+					</div>
+
+
+					<h4>Implementation of</h4>
+					<div class="list"><code><a href="class-KHttpResponseInterface.html#_getAge">KHttpResponseInterface::getAge()</a></code></div>
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getMaxAge" id="_getMaxAge">
+
+			<td class="attributes"><code>
+				 public 
+				integer|null
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getMaxAge">#</a>
+			<code><a href="source-class-KHttpResponse.html#461-476" title="Go to source code">getMaxAge</a>( )</code>
+
+			<div class="description short">
+				
+<p>Sets the number of seconds after the time specified in the response's Date
+header when the the response should no longer be considered fresh.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Sets the number of seconds after the time specified in the response's Date
+header when the the response should no longer be considered fresh.</p>
+
+<p>Uses the expires header to calculate the maximum age. It returns null when no
+max age can be established.</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>integer|null</code><br>Number of seconds<br />
+					</div>
+
+
+
+
+					<h4>Implementation of</h4>
+					<div class="list"><code><a href="class-KHttpResponseInterface.html#_getMaxAge">KHttpResponseInterface::getMaxAge()</a></code></div>
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="isInvalid" id="_isInvalid">
+
+			<td class="attributes"><code>
+				 public 
+				Boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_isInvalid">#</a>
+			<code><a href="source-class-KHttpResponse.html#478-486" title="Go to source code">isInvalid</a>( )</code>
+
+			<div class="description short">
+				
+<p>Is the response invalid</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Is the response invalid</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>Boolean</code><br />
+					</div>
+
+
+
+
+					<h4>Implementation of</h4>
+					<div class="list"><code><a href="class-KHttpResponseInterface.html#_isInvalid">KHttpResponseInterface::isInvalid()</a></code></div>
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="isError" id="_isError">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_isError">#</a>
+			<code><a href="source-class-KHttpResponse.html#489-497" title="Go to source code">isError</a>( )</code>
+
+			<div class="description short">
+				
+<p>Check if an http status code is an error</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Check if an http status code is an error</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>boolean</code><br>TRUE if the status code is an error code<br />
+					</div>
+
+
+
+
+					<h4>Implementation of</h4>
+					<div class="list"><code><a href="class-KHttpResponseInterface.html#_isError">KHttpResponseInterface::isError()</a></code></div>
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="isRedirect" id="_isRedirect">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_isRedirect">#</a>
+			<code><a href="source-class-KHttpResponse.html#499-508" title="Go to source code">isRedirect</a>( )</code>
+
+			<div class="description short">
+				
+<p>Do we have a redirect</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Do we have a redirect</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>boolean</code><br />
+					</div>
+
+
+
+
+					<h4>Implementation of</h4>
+					<div class="list"><code><a href="class-KHttpResponseInterface.html#_isRedirect">KHttpResponseInterface::isRedirect()</a></code></div>
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="isSuccess" id="_isSuccess">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_isSuccess">#</a>
+			<code><a href="source-class-KHttpResponse.html#510-519" title="Go to source code">isSuccess</a>( )</code>
+
+			<div class="description short">
+				
+<p>Was the response successful</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Was the response successful</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>boolean</code><br />
+					</div>
+
+
+
+
+					<h4>Implementation of</h4>
+					<div class="list"><code><a href="class-KHttpResponseInterface.html#_isSuccess">KHttpResponseInterface::isSuccess()</a></code></div>
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="isValidateable" id="_isValidateable">
+
+			<td class="attributes"><code>
+				 public 
+				Boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_isValidateable">#</a>
+			<code><a href="source-class-KHttpResponse.html#521-530" title="Go to source code">isValidateable</a>( )</code>
+
+			<div class="description short">
+				
+<p>Returns true if the response includes headers that can be used to validate
+the response with the origin server using a conditional GET request.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Returns true if the response includes headers that can be used to validate
+the response with the origin server using a conditional GET request.</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>Boolean</code><br>true if the response is validateable, false otherwise<br />
+					</div>
+
+
+
+
+					<h4>Implementation of</h4>
+					<div class="list"><code><a href="class-KHttpResponseInterface.html#_isValidateable">KHttpResponseInterface::isValidateable()</a></code></div>
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="isCacheable" id="_isCacheable">
+
+			<td class="attributes"><code>
+				 public 
+				Boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_isCacheable">#</a>
+			<code><a href="source-class-KHttpResponse.html#532-553" title="Go to source code">isCacheable</a>( )</code>
+
+			<div class="description short">
+				
+<p>Returns true if the response is worth caching under any circumstance.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Returns true if the response is worth caching under any circumstance.</p>
+
+<p>Responses with that are stale (Expired) or without cache validation
+(Last-Modified, ETag) heades are considered uncacheable.</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>Boolean</code><br>true if the response is worth caching, false otherwise<br />
+					</div>
+
+
+					<h4>Link</h4>
+					<div class="list">
+							<a href="http://tools.ietf.org/html/rfc2616#section-14.9.1">http://tools.ietf.org/html/rfc2616#section-14.9.1</a><br />
+					</div>
+
+
+					<h4>Implementation of</h4>
+					<div class="list"><code><a href="class-KHttpResponseInterface.html#_isCacheable">KHttpResponseInterface::isCacheable()</a></code></div>
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="isStale" id="_isStale">
+
+			<td class="attributes"><code>
+				 public 
+				Boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_isStale">#</a>
+			<code><a href="source-class-KHttpResponse.html#555-571" title="Go to source code">isStale</a>( )</code>
+
+			<div class="description short">
+				
+<p>Returns true if the response is "stale".</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Returns true if the response is "stale".</p>
+
+<p>When the responses is stale, the response may not be served from cache
+without first re-validating with the origin.</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>Boolean</code><br>true if the response is stale, false otherwise<br />
+					</div>
+
+
+
+
+					<h4>Implementation of</h4>
+					<div class="list"><code><a href="class-KHttpResponseInterface.html#_isStale">KHttpResponseInterface::isStale()</a></code></div>
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="toString" id="_toString">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_toString">#</a>
+			<code><a href="source-class-KHttpResponse.html#573-587" title="Go to source code">toString</a>( )</code>
+
+			<div class="description short">
+				
+<p>Render entire response as HTTP response string</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Render entire response as HTTP response string</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>string</code><br />
+					</div>
+
+
+
+					<h4>Overrides</h4>
+					<div class="list"><code><a href="class-KHttpMessage.html#_toString">KHttpMessage::toString</a></code></div>
+
+					<h4>Implementation of</h4>
+					<div class="list"><code><a href="class-KHttpMessageInterface.html#_toString">KHttpMessageInterface::toString()</a></code></div>
+			</div>
+			</div></td>
+		</tr>
+		</table>
+
+		<h3>Methods inherited from <a href="class-KHttpMessage.html#methods">KHttpMessage</a></h3>
+		<p class="elementList">
+			<code><a href="class-KHttpMessage.html#___clone">__clone()</a></code>, 
+			<code><a href="class-KHttpMessage.html#___toString">__toString()</a></code>, 
+			<code><a href="class-KHttpMessage.html#_getContent">getContent()</a></code>, 
+			<code><a href="class-KHttpMessage.html#_getHeaders">getHeaders()</a></code>, 
+			<code><a href="class-KHttpMessage.html#_getVersion">getVersion()</a></code>, 
+			<code><a href="class-KHttpMessage.html#_setContent">setContent()</a></code>, 
+			<code><a href="class-KHttpMessage.html#_setVersion">setVersion()</a></code>
+		</p>
+		<h3>Methods inherited from <a href="class-KObject.html#methods">KObject</a></h3>
+		<p class="elementList">
+			<code><a href="class-KObject.html#___call">__call()</a></code>, 
+			<code><a href="class-KObject.html#_decorate">decorate()</a></code>, 
+			<code><a href="class-KObject.html#_getConfig">getConfig()</a></code>, 
+			<code><a href="class-KObject.html#_getHandle">getHandle()</a></code>, 
+			<code><a href="class-KObject.html#_getIdentifier">getIdentifier()</a></code>, 
+			<code><a href="class-KObject.html#_getMethods">getMethods()</a></code>, 
+			<code><a href="class-KObject.html#_getObject">getObject()</a></code>, 
+			<code><a href="class-KObject.html#_inherits">inherits()</a></code>, 
+			<code><a href="class-KObject.html#_mixin">mixin()</a></code>
+		</p>
+
+
+		<h3>Magic methods summary</h3>
+
+
+
+
+
+		<h2>Constants summary</h2>
+		<table class="summary table table-bordered table-striped" id="constants">
+		<tr data-order="OK" id="OK">
+
+			<td class="attributes"><code>integer</code></td>
+			<td class="name"><code>
+					<a href="source-class-KHttpResponse.html#43" title="Go to source code"><b>OK</b></a>
+			</code></td>
+			<td class="value"><code><span class="php-num">200</span></code></td>
+			<td class="description"><div>
+				<a href="#OK" class="anchor">#</a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="CREATED" id="CREATED">
+
+			<td class="attributes"><code>integer</code></td>
+			<td class="name"><code>
+					<a href="source-class-KHttpResponse.html#44" title="Go to source code"><b>CREATED</b></a>
+			</code></td>
+			<td class="value"><code><span class="php-num">201</span></code></td>
+			<td class="description"><div>
+				<a href="#CREATED" class="anchor">#</a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="ACCEPTED" id="ACCEPTED">
+
+			<td class="attributes"><code>integer</code></td>
+			<td class="name"><code>
+					<a href="source-class-KHttpResponse.html#45" title="Go to source code"><b>ACCEPTED</b></a>
+			</code></td>
+			<td class="value"><code><span class="php-num">202</span></code></td>
+			<td class="description"><div>
+				<a href="#ACCEPTED" class="anchor">#</a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="NO_CONTENT" id="NO_CONTENT">
+
+			<td class="attributes"><code>integer</code></td>
+			<td class="name"><code>
+					<a href="source-class-KHttpResponse.html#46" title="Go to source code"><b>NO_CONTENT</b></a>
+			</code></td>
+			<td class="value"><code><span class="php-num">204</span></code></td>
+			<td class="description"><div>
+				<a href="#NO_CONTENT" class="anchor">#</a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="RESET_CONTENT" id="RESET_CONTENT">
+
+			<td class="attributes"><code>integer</code></td>
+			<td class="name"><code>
+					<a href="source-class-KHttpResponse.html#47" title="Go to source code"><b>RESET_CONTENT</b></a>
+			</code></td>
+			<td class="value"><code><span class="php-num">205</span></code></td>
+			<td class="description"><div>
+				<a href="#RESET_CONTENT" class="anchor">#</a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="PARTIAL_CONTENT" id="PARTIAL_CONTENT">
+
+			<td class="attributes"><code>integer</code></td>
+			<td class="name"><code>
+					<a href="source-class-KHttpResponse.html#48" title="Go to source code"><b>PARTIAL_CONTENT</b></a>
+			</code></td>
+			<td class="value"><code><span class="php-num">206</span></code></td>
+			<td class="description"><div>
+				<a href="#PARTIAL_CONTENT" class="anchor">#</a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="MOVED_PERMANENTLY" id="MOVED_PERMANENTLY">
+
+			<td class="attributes"><code>integer</code></td>
+			<td class="name"><code>
+					<a href="source-class-KHttpResponse.html#51" title="Go to source code"><b>MOVED_PERMANENTLY</b></a>
+			</code></td>
+			<td class="value"><code><span class="php-num">301</span></code></td>
+			<td class="description"><div>
+				<a href="#MOVED_PERMANENTLY" class="anchor">#</a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="FOUND" id="FOUND">
+
+			<td class="attributes"><code>integer</code></td>
+			<td class="name"><code>
+					<a href="source-class-KHttpResponse.html#52" title="Go to source code"><b>FOUND</b></a>
+			</code></td>
+			<td class="value"><code><span class="php-num">302</span></code></td>
+			<td class="description"><div>
+				<a href="#FOUND" class="anchor">#</a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="SEE_OTHER" id="SEE_OTHER">
+
+			<td class="attributes"><code>integer</code></td>
+			<td class="name"><code>
+					<a href="source-class-KHttpResponse.html#53" title="Go to source code"><b>SEE_OTHER</b></a>
+			</code></td>
+			<td class="value"><code><span class="php-num">303</span></code></td>
+			<td class="description"><div>
+				<a href="#SEE_OTHER" class="anchor">#</a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="NOT_MODIFIED" id="NOT_MODIFIED">
+
+			<td class="attributes"><code>integer</code></td>
+			<td class="name"><code>
+					<a href="source-class-KHttpResponse.html#54" title="Go to source code"><b>NOT_MODIFIED</b></a>
+			</code></td>
+			<td class="value"><code><span class="php-num">304</span></code></td>
+			<td class="description"><div>
+				<a href="#NOT_MODIFIED" class="anchor">#</a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="USE_PROXY" id="USE_PROXY">
+
+			<td class="attributes"><code>integer</code></td>
+			<td class="name"><code>
+					<a href="source-class-KHttpResponse.html#55" title="Go to source code"><b>USE_PROXY</b></a>
+			</code></td>
+			<td class="value"><code><span class="php-num">305</span></code></td>
+			<td class="description"><div>
+				<a href="#USE_PROXY" class="anchor">#</a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="TEMPORARY_REDIRECT" id="TEMPORARY_REDIRECT">
+
+			<td class="attributes"><code>integer</code></td>
+			<td class="name"><code>
+					<a href="source-class-KHttpResponse.html#56" title="Go to source code"><b>TEMPORARY_REDIRECT</b></a>
+			</code></td>
+			<td class="value"><code><span class="php-num">307</span></code></td>
+			<td class="description"><div>
+				<a href="#TEMPORARY_REDIRECT" class="anchor">#</a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="BAD_REQUEST" id="BAD_REQUEST">
+
+			<td class="attributes"><code>integer</code></td>
+			<td class="name"><code>
+					<a href="source-class-KHttpResponse.html#59" title="Go to source code"><b>BAD_REQUEST</b></a>
+			</code></td>
+			<td class="value"><code><span class="php-num">400</span></code></td>
+			<td class="description"><div>
+				<a href="#BAD_REQUEST" class="anchor">#</a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="UNAUTHORIZED" id="UNAUTHORIZED">
+
+			<td class="attributes"><code>integer</code></td>
+			<td class="name"><code>
+					<a href="source-class-KHttpResponse.html#60" title="Go to source code"><b>UNAUTHORIZED</b></a>
+			</code></td>
+			<td class="value"><code><span class="php-num">401</span></code></td>
+			<td class="description"><div>
+				<a href="#UNAUTHORIZED" class="anchor">#</a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="FORBIDDEN" id="FORBIDDEN">
+
+			<td class="attributes"><code>integer</code></td>
+			<td class="name"><code>
+					<a href="source-class-KHttpResponse.html#61" title="Go to source code"><b>FORBIDDEN</b></a>
+			</code></td>
+			<td class="value"><code><span class="php-num">403</span></code></td>
+			<td class="description"><div>
+				<a href="#FORBIDDEN" class="anchor">#</a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="NOT_FOUND" id="NOT_FOUND">
+
+			<td class="attributes"><code>integer</code></td>
+			<td class="name"><code>
+					<a href="source-class-KHttpResponse.html#62" title="Go to source code"><b>NOT_FOUND</b></a>
+			</code></td>
+			<td class="value"><code><span class="php-num">404</span></code></td>
+			<td class="description"><div>
+				<a href="#NOT_FOUND" class="anchor">#</a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="METHOD_NOT_ALLOWED" id="METHOD_NOT_ALLOWED">
+
+			<td class="attributes"><code>integer</code></td>
+			<td class="name"><code>
+					<a href="source-class-KHttpResponse.html#63" title="Go to source code"><b>METHOD_NOT_ALLOWED</b></a>
+			</code></td>
+			<td class="value"><code><span class="php-num">405</span></code></td>
+			<td class="description"><div>
+				<a href="#METHOD_NOT_ALLOWED" class="anchor">#</a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="NOT_ACCEPTABLE" id="NOT_ACCEPTABLE">
+
+			<td class="attributes"><code>integer</code></td>
+			<td class="name"><code>
+					<a href="source-class-KHttpResponse.html#64" title="Go to source code"><b>NOT_ACCEPTABLE</b></a>
+			</code></td>
+			<td class="value"><code><span class="php-num">406</span></code></td>
+			<td class="description"><div>
+				<a href="#NOT_ACCEPTABLE" class="anchor">#</a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="REQUEST_TIMEOUT" id="REQUEST_TIMEOUT">
+
+			<td class="attributes"><code>integer</code></td>
+			<td class="name"><code>
+					<a href="source-class-KHttpResponse.html#65" title="Go to source code"><b>REQUEST_TIMEOUT</b></a>
+			</code></td>
+			<td class="value"><code><span class="php-num">408</span></code></td>
+			<td class="description"><div>
+				<a href="#REQUEST_TIMEOUT" class="anchor">#</a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="CONFLICT" id="CONFLICT">
+
+			<td class="attributes"><code>integer</code></td>
+			<td class="name"><code>
+					<a href="source-class-KHttpResponse.html#66" title="Go to source code"><b>CONFLICT</b></a>
+			</code></td>
+			<td class="value"><code><span class="php-num">409</span></code></td>
+			<td class="description"><div>
+				<a href="#CONFLICT" class="anchor">#</a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="GONE" id="GONE">
+
+			<td class="attributes"><code>integer</code></td>
+			<td class="name"><code>
+					<a href="source-class-KHttpResponse.html#67" title="Go to source code"><b>GONE</b></a>
+			</code></td>
+			<td class="value"><code><span class="php-num">410</span></code></td>
+			<td class="description"><div>
+				<a href="#GONE" class="anchor">#</a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="LENGTH_REQUIRED" id="LENGTH_REQUIRED">
+
+			<td class="attributes"><code>integer</code></td>
+			<td class="name"><code>
+					<a href="source-class-KHttpResponse.html#68" title="Go to source code"><b>LENGTH_REQUIRED</b></a>
+			</code></td>
+			<td class="value"><code><span class="php-num">411</span></code></td>
+			<td class="description"><div>
+				<a href="#LENGTH_REQUIRED" class="anchor">#</a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="PRECONDITION_FAILED" id="PRECONDITION_FAILED">
+
+			<td class="attributes"><code>integer</code></td>
+			<td class="name"><code>
+					<a href="source-class-KHttpResponse.html#69" title="Go to source code"><b>PRECONDITION_FAILED</b></a>
+			</code></td>
+			<td class="value"><code><span class="php-num">412</span></code></td>
+			<td class="description"><div>
+				<a href="#PRECONDITION_FAILED" class="anchor">#</a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="REQUEST_ENTITY_TOO_LARGE" id="REQUEST_ENTITY_TOO_LARGE">
+
+			<td class="attributes"><code>integer</code></td>
+			<td class="name"><code>
+					<a href="source-class-KHttpResponse.html#70" title="Go to source code"><b>REQUEST_ENTITY_TOO_LARGE</b></a>
+			</code></td>
+			<td class="value"><code><span class="php-num">413</span></code></td>
+			<td class="description"><div>
+				<a href="#REQUEST_ENTITY_TOO_LARGE" class="anchor">#</a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="REQUEST_URI_TOO_LONG" id="REQUEST_URI_TOO_LONG">
+
+			<td class="attributes"><code>integer</code></td>
+			<td class="name"><code>
+					<a href="source-class-KHttpResponse.html#71" title="Go to source code"><b>REQUEST_URI_TOO_LONG</b></a>
+			</code></td>
+			<td class="value"><code><span class="php-num">414</span></code></td>
+			<td class="description"><div>
+				<a href="#REQUEST_URI_TOO_LONG" class="anchor">#</a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="UNSUPPORTED_MEDIA_TYPE" id="UNSUPPORTED_MEDIA_TYPE">
+
+			<td class="attributes"><code>integer</code></td>
+			<td class="name"><code>
+					<a href="source-class-KHttpResponse.html#72" title="Go to source code"><b>UNSUPPORTED_MEDIA_TYPE</b></a>
+			</code></td>
+			<td class="value"><code><span class="php-num">415</span></code></td>
+			<td class="description"><div>
+				<a href="#UNSUPPORTED_MEDIA_TYPE" class="anchor">#</a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="REQUESTED_RANGE_NOT_SATISFIED" id="REQUESTED_RANGE_NOT_SATISFIED">
+
+			<td class="attributes"><code>integer</code></td>
+			<td class="name"><code>
+					<a href="source-class-KHttpResponse.html#73" title="Go to source code"><b>REQUESTED_RANGE_NOT_SATISFIED</b></a>
+			</code></td>
+			<td class="value"><code><span class="php-num">416</span></code></td>
+			<td class="description"><div>
+				<a href="#REQUESTED_RANGE_NOT_SATISFIED" class="anchor">#</a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="EXPECTATION_FAILED" id="EXPECTATION_FAILED">
+
+			<td class="attributes"><code>integer</code></td>
+			<td class="name"><code>
+					<a href="source-class-KHttpResponse.html#74" title="Go to source code"><b>EXPECTATION_FAILED</b></a>
+			</code></td>
+			<td class="value"><code><span class="php-num">417</span></code></td>
+			<td class="description"><div>
+				<a href="#EXPECTATION_FAILED" class="anchor">#</a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="INTERNAL_SERVER_ERROR" id="INTERNAL_SERVER_ERROR">
+
+			<td class="attributes"><code>integer</code></td>
+			<td class="name"><code>
+					<a href="source-class-KHttpResponse.html#77" title="Go to source code"><b>INTERNAL_SERVER_ERROR</b></a>
+			</code></td>
+			<td class="value"><code><span class="php-num">500</span></code></td>
+			<td class="description"><div>
+				<a href="#INTERNAL_SERVER_ERROR" class="anchor">#</a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="NOT_IMPLEMENTED" id="NOT_IMPLEMENTED">
+
+			<td class="attributes"><code>integer</code></td>
+			<td class="name"><code>
+					<a href="source-class-KHttpResponse.html#78" title="Go to source code"><b>NOT_IMPLEMENTED</b></a>
+			</code></td>
+			<td class="value"><code><span class="php-num">501</span></code></td>
+			<td class="description"><div>
+				<a href="#NOT_IMPLEMENTED" class="anchor">#</a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="BAD_GATEWAY" id="BAD_GATEWAY">
+
+			<td class="attributes"><code>integer</code></td>
+			<td class="name"><code>
+					<a href="source-class-KHttpResponse.html#79" title="Go to source code"><b>BAD_GATEWAY</b></a>
+			</code></td>
+			<td class="value"><code><span class="php-num">502</span></code></td>
+			<td class="description"><div>
+				<a href="#BAD_GATEWAY" class="anchor">#</a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="SERVICE_UNAVAILABLE" id="SERVICE_UNAVAILABLE">
+
+			<td class="attributes"><code>integer</code></td>
+			<td class="name"><code>
+					<a href="source-class-KHttpResponse.html#80" title="Go to source code"><b>SERVICE_UNAVAILABLE</b></a>
+			</code></td>
+			<td class="value"><code><span class="php-num">503</span></code></td>
+			<td class="description"><div>
+				<a href="#SERVICE_UNAVAILABLE" class="anchor">#</a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="GATEWAY_TIMEOUT" id="GATEWAY_TIMEOUT">
+
+			<td class="attributes"><code>integer</code></td>
+			<td class="name"><code>
+					<a href="source-class-KHttpResponse.html#81" title="Go to source code"><b>GATEWAY_TIMEOUT</b></a>
+			</code></td>
+			<td class="value"><code><span class="php-num">504</span></code></td>
+			<td class="description"><div>
+				<a href="#GATEWAY_TIMEOUT" class="anchor">#</a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="VERSION_NOT_SUPPORTED" id="VERSION_NOT_SUPPORTED">
+
+			<td class="attributes"><code>integer</code></td>
+			<td class="name"><code>
+					<a href="source-class-KHttpResponse.html#82" title="Go to source code"><b>VERSION_NOT_SUPPORTED</b></a>
+			</code></td>
+			<td class="value"><code><span class="php-num">505</span></code></td>
+			<td class="description"><div>
+				<a href="#VERSION_NOT_SUPPORTED" class="anchor">#</a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</div></td>
+		</tr>
+		</table>
+
+
+
+
+		<h2>Properties summary</h2>
+		<table class="summary table table-bordered table-striped" id="properties">
+		<tr data-order="_status_code" id="$_status_code">
+			<td class="attributes"><code>
+				protected  
+				integer
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-KHttpResponse.html#21-26" title="Go to source code"><var>$_status_code</var></a>
+			</td>
+			<td class="description"><div>
+				<a href="#$_status_code" class="anchor">#</a>
+
+				<div class="description short">
+					
+<p>The response status code</p>
+
+				</div>
+
+				<div class="description detailed hidden">
+					
+<p>The response status code</p>
+
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="_status_message" id="$_status_message">
+			<td class="attributes"><code>
+				protected  
+				integer
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-KHttpResponse.html#28-33" title="Go to source code"><var>$_status_message</var></a>
+			</td>
+			<td class="description"><div>
+				<a href="#$_status_message" class="anchor">#</a>
+
+				<div class="description short">
+					
+<p>The response status message</p>
+
+				</div>
+
+				<div class="description detailed hidden">
+					
+<p>The response status message</p>
+
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="_content_type" id="$_content_type">
+			<td class="attributes"><code>
+				protected  
+				integer
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-KHttpResponse.html#35-40" title="Go to source code"><var>$_content_type</var></a>
+			</td>
+			<td class="description"><div>
+				<a href="#$_content_type" class="anchor">#</a>
+
+				<div class="description short">
+					
+<p>The response content type</p>
+
+				</div>
+
+				<div class="description detailed hidden">
+					
+<p>The response content type</p>
+
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="status_messages" id="$status_messages">
+			<td class="attributes"><code>
+				public static 
+				array
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-KHttpResponse.html#84-139" title="Go to source code"><var>$status_messages</var></a>
+			</td>
+			<td class="description"><div>
+				<a href="#$status_messages" class="anchor">#</a>
+
+				<div class="description short">
+					
+<p>Status codes translation table.</p>
+
+				</div>
+
+				<div class="description detailed hidden">
+					
+<p>Status codes translation table.</p>
+
+<p>The list of codes is complete according to the <a href="http://www.iana.org/assignments/http-status-codes/">Hypertext Transfer Protocol (HTTP) Status Code Registry</a> (last updated
+2012-02-13).</p>
+
+<p>Unless otherwise noted, the status code is defined in RFC2616.</p>
+
+
+				</div>
+			</div></td>
+		</tr>
+		</table>
+
+		<h3>Properties inherited from <a href="class-KHttpMessage.html#properties">KHttpMessage</a></h3>
+		<p class="elementList">
+			<code><a href="class-KHttpMessage.html#$_content"><var>$_content</var></a></code>, 
+			<code><a href="class-KHttpMessage.html#$_headers"><var>$_headers</var></a></code>, 
+			<code><a href="class-KHttpMessage.html#$_version"><var>$_version</var></a></code>
+		</p>
+		<h3>Properties inherited from <a href="class-KObject.html#properties">KObject</a></h3>
+		<p class="elementList">
+			<code><a href="class-KObject.html#$_mixed_methods"><var>$_mixed_methods</var></a></code>
+		</p>
+
+
+
+
+
+</div>
+	</div>
+
+	<div id="footer">
+		Nooku Framework API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+
+<script>
+    responsivemenu.init({
+        wrapper: document.querySelector('.header'),
+        toggleclass: 'button--hamburger',
+        togglecontent: 'menu <span class="lines"></span>'
+    });
+</script>
+
+</body>
+</html>

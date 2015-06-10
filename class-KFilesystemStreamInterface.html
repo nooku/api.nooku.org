@@ -1,0 +1,2702 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<title>Interface KFilesystemStreamInterface | Nooku Framework</title>
+
+	<script type="text/javascript" src="resources/combined.js?2640657843"></script>
+	<script type="text/javascript" src="elementlist.js?527661356"></script>
+	<script type="text/javascript" src="http://www.nooku.org/js/scripts.js"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/bootstrap.min.css?390653004" />
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?150590327" />
+    <link rel="stylesheet" type="text/css" media="all" href="http://www.nooku.org/css/header.css" />
+
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,300italic,700,400italic' rel='stylesheet' type='text/css' />
+
+    <link rel="shortcut icon" href="http://www.nooku.org/images/favicon.ico" type="image/x-icon" />
+
+	<script>
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] ||
+            function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-214238-5', 'auto');
+        ga('send', 'pageview');
+    </script>
+</head>
+
+<body class="no-js">
+    <script type="text/javascript">
+    function hasClass(e, t) {
+        return e.className.match(new RegExp("(\\s|^)" + t + "(\\s|$)"))
+    }
+    var el = document.body;
+    var cl = "no-js";
+    if (hasClass(el, cl)) {
+        var reg = new RegExp("(\\s|^)" + cl + "(\\s|$)");
+        el.className = el.className.replace(reg, " js-enabled")
+    }
+    </script>
+	<div class="header">
+            <div class="container">
+                <div class="group">
+                    <div class="header__brand brand"><a href="http://www.nooku.org"><img src="http://www.nooku.org/images/layout/logo.png" alt="Nooku Logo" /></a></div>
+                    <div class="header__navigation">
+                        <div class="navigation_container" role="navigation">
+                            <ul class="navbar initiated">
+                                <li class="navbar__item" role="menuitem"><a href="http://www.nooku.org/features/">Features</a></li>
+                                <li class="navbar__item" role="menuitem"><a href="http://www.nooku.org/get-started/">Get Started</a></li>
+                                <li class="navbar__item" role="menuitem"><a href="http://www.nooku.org/services/">Services</a></li>
+                                <li class="navbar__item" role="menuitem"><a href="http://www.nooku.org/community/">Community</a></li>
+                                <li class="navbar__item active" role="menuitem"><a href="http://www.nooku.org/docs/">Docs</a></li>
+                                <li class="navbar__item" role="menuitem"><a href="http://www.nooku.org/blog">Blog</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+	<div id="left">
+	<div id="menu">
+		<form id="search" class="form-search">
+			<input type="hidden" name="cx" value="" />
+			<input type="hidden" name="ie" value="UTF-8" />
+			<input type="text" name="q" class="search-query" placeholder="Search" />
+		</form>
+
+
+		<div id="groups">
+			<h3>Packages</h3>
+			<ul>
+				<li class="active"><a href="package-Koowa.html">Koowa<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.html">Component<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.html">Koowa<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Class.html">Class<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Class.Locator.html">Locator</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Controller.html">Controller<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Controller.Behavior.html">Behavior</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Controller.Permission.html">Permission</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Controller.Toolbar.html">Toolbar</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Database.html">Database<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Database.Adapter.html">Adapter</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Database.Behavior.html">Behavior</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Database.Table.html">Table</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Date.html">Date</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Decorator.html">Decorator</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Dispatcher.html">Dispatcher<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Dispatcher.Authenticator.html">Authenticator</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Dispatcher.Permission.html">Permission</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Dispatcher.Request.html">Request</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Dispatcher.Response.html">Response<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Dispatcher.Response.Transport.html">Transport</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Dispatcher.Router.html">Router</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Event.html">Event<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Event.Publisher.html">Publisher</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Event.Subscriber.html">Subscriber</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Exception.html">Exception</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Filesystem.html">Filesystem<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Filesystem.Stream.html">Stream</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Filter.html">Filter</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Model.html">Model</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Object.html">Object<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Object.Locator.html">Locator</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Template.html">Template<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Template.Filter.html">Filter</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Template.Helper.html">Helper</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Template.Locator.html">Locator</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Translator.html">Translator<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Translator.Catalogue.html">Catalogue</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Translator.Locator.html">Locator</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.User.html">User</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.View.html">View<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.View.Error.html">Error</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.View.Page.html">Page</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.View.Users.html">Users</a>
+						</li>
+							</ul></li></ul></li></ul></li>
+				<li class="active"><a href="package-Koowa.Library.html">Library<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Behavior.html">Behavior<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Behavior.Exception.html">Exception</a>
+						</li>
+				<li><a href="package-Koowa.Library.Behavior.Mixin.html">Mixin</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Class.html">Class<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Class.Loader.html">Loader</a>
+						</li>
+				<li><a href="package-Koowa.Library.Class.Locator.html">Locator</a>
+						</li>
+				<li><a href="package-Koowa.Library.Class.Registry.html">Registry</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Command.html">Command<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Command.Callback.html">Callback</a>
+						</li>
+				<li><a href="package-Koowa.Library.Command.Chain.html">Chain</a>
+						</li>
+				<li><a href="package-Koowa.Library.Command.Exception.html">Exception</a>
+						</li>
+				<li><a href="package-Koowa.Library.Command.Handler.html">Handler</a>
+						</li>
+				<li><a href="package-Koowa.Library.Command.Mixin.html">Mixin</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Controller.html">Controller<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Controller.Behavior.html">Behavior</a>
+						</li>
+				<li><a href="package-Koowa.Library.Controller.Context.html">Context</a>
+						</li>
+				<li><a href="package-Koowa.Library.Controller.Exception.html">Exception</a>
+						</li>
+				<li><a href="package-Koowa.Library.Controller.Permission.html">Permission</a>
+						</li>
+				<li><a href="package-Koowa.Library.Controller.Request.html">Request</a>
+						</li>
+				<li><a href="package-Koowa.Library.Controller.Response.html">Response</a>
+						</li>
+				<li><a href="package-Koowa.Library.Controller.Toolbar.html">Toolbar<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Controller.Toolbar.Command.html">Command</a>
+						</li>
+				<li><a href="package-Koowa.Library.Controller.Toolbar.Mixin.html">Mixin</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-Koowa.Library.Database.html">Database<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Database.Adapter.html">Adapter</a>
+						</li>
+				<li><a href="package-Koowa.Library.Database.Behavior.html">Behavior</a>
+						</li>
+				<li><a href="package-Koowa.Library.Database.Context.html">Context</a>
+						</li>
+				<li><a href="package-Koowa.Library.Database.Query.html">Query</a>
+						</li>
+				<li><a href="package-Koowa.Library.Database.Row.html">Row</a>
+						</li>
+				<li><a href="package-Koowa.Library.Database.Rowset.html">Rowset</a>
+						</li>
+				<li><a href="package-Koowa.Library.Database.Schema.html">Schema</a>
+						</li>
+				<li><a href="package-Koowa.Library.Database.Table.html">Table</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Date.html">Date</a>
+						</li>
+				<li><a href="package-Koowa.Library.Dispatcher.html">Dispatcher<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Dispatcher.Authenticator.html">Authenticator</a>
+						</li>
+				<li><a href="package-Koowa.Library.Dispatcher.Behavior.html">Behavior</a>
+						</li>
+				<li><a href="package-Koowa.Library.Dispatcher.Context.html">Context</a>
+						</li>
+				<li><a href="package-Koowa.Library.Dispatcher.Exception.html">Exception</a>
+						</li>
+				<li><a href="package-Koowa.Library.Dispatcher.Permission.html">Permission</a>
+						</li>
+				<li><a href="package-Koowa.Library.Dispatcher.Request.html">Request</a>
+						</li>
+				<li><a href="package-Koowa.Library.Dispatcher.Response.html">Response<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Dispatcher.Response.Transport.html">Transport</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Dispatcher.Router.html">Router</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Event.html">Event<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Event.Mixin.html">Mixin</a>
+						</li>
+				<li><a href="package-Koowa.Library.Event.Publisher.html">Publisher</a>
+						</li>
+				<li><a href="package-Koowa.Library.Event.Subscriber.html">Subscriber</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Exception.html">Exception<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Exception.Handler.html">Handler</a>
+						</li>
+							</ul></li>
+				<li class="active"><a href="package-Koowa.Library.Filesystem.html">Filesystem<span></span></a>
+						<ul>
+				<li class="active"><a href="package-Koowa.Library.Filesystem.Stream.html">Stream<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Filesystem.Stream.Filter.html">Filter</a>
+						</li>
+				<li><a href="package-Koowa.Library.Filesystem.Stream.Iterator.html">Iterator</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-Koowa.Library.Filter.html">Filter</a>
+						</li>
+				<li><a href="package-Koowa.Library.Http.html">Http<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Http.Cookie.html">Cookie</a>
+						</li>
+				<li><a href="package-Koowa.Library.Http.Exception.html">Exception<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Http.Exception.Unsupported.html">Unsupported</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Http.Message.html">Message</a>
+						</li>
+				<li><a href="package-Koowa.Library.Http.Request.html">Request</a>
+						</li>
+				<li><a href="package-Koowa.Library.Http.Response.html">Response</a>
+						</li>
+				<li><a href="package-Koowa.Library.Http.Token.html">Token</a>
+						</li>
+				<li><a href="package-Koowa.Library.Http.Url.html">Url</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Model.html">Model<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Model.Behavior.html">Behavior</a>
+						</li>
+				<li><a href="package-Koowa.Library.Model.Context.html">Context</a>
+						</li>
+				<li><a href="package-Koowa.Library.Model.Entity.html">Entity</a>
+						</li>
+				<li><a href="package-Koowa.Library.Model.Paginator.html">Paginator</a>
+						</li>
+				<li><a href="package-Koowa.Library.Model.State.html">State</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Object.html">Object<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Object.Bootstrapper.html">Bootstrapper</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Config.html">Config</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Decorator.html">Decorator</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Exception.html">Exception</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Identifier.html">Identifier</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Locator.html">Locator</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Manager.html">Manager</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Mixin.html">Mixin</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Registry.html">Registry</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.String.html">String<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.String.Inflector.html">Inflector</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Template.html">Template<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Template.Engine.html">Engine</a>
+						</li>
+				<li><a href="package-Koowa.Library.Template.Exception.html">Exception</a>
+						</li>
+				<li><a href="package-Koowa.Library.Template.Filter.html">Filter</a>
+						</li>
+				<li><a href="package-Koowa.Library.Template.Helper.html">Helper</a>
+						</li>
+				<li><a href="package-Koowa.Library.Template.Locator.html">Locator</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Translator.html">Translator<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Translator.Catalogue.html">Catalogue</a>
+						</li>
+				<li><a href="package-Koowa.Library.Translator.Inflector.html">Inflector</a>
+						</li>
+				<li><a href="package-Koowa.Library.Translator.Locator.html">Locator</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.User.html">User<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.User.Provider.html">Provider</a>
+						</li>
+				<li><a href="package-Koowa.Library.User.Session.html">Session<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.User.Session.Container.html">Container</a>
+						</li>
+				<li><a href="package-Koowa.Library.User.Session.Handler.html">Handler</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-Koowa.Library.View.html">View<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.View.Behavior.html">Behavior</a>
+						</li>
+				<li><a href="package-Koowa.Library.View.Context.html">Context</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-Koowa.Module.html">Module<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Module.Koowa.html">Koowa<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Module.Koowa.Template.html">Template<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Module.Koowa.Template.Filter.html">Filter</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Module.Koowa.View.html">View</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-Koowa.Plugin.html">Plugin<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Plugin.Koowa.html">Koowa</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Wordpress.html">Wordpress<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Wordpress.Library.html">Library<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Wordpress.Library.Controller.html">Controller</a>
+						</li>
+							</ul></li></ul></li></ul></li>
+				<li><a href="package-Nooku.html">Nooku<span></span></a>
+						<ul>
+				<li><a href="package-Nooku.Library.html">Library<span></span></a>
+						<ul>
+				<li><a href="package-Nooku.Library.Template.html">Template<span></span></a>
+						<ul>
+				<li><a href="package-Nooku.Library.Template.Abstract.html">Abstract</a>
+						</li>
+							</ul></li></ul></li></ul></li>
+			</ul>
+		</div>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-KFilesystemStreamAbstract.html">KFilesystemStreamAbstract</a></li>
+				<li><a href="class-KFilesystemStreamAdapter.html">KFilesystemStreamAdapter</a></li>
+				<li><a href="class-KFilesystemStreamBuffer.html">KFilesystemStreamBuffer</a></li>
+				<li><a href="class-KFilesystemStreamDefault.html">KFilesystemStreamDefault</a></li>
+				<li><a href="class-KFilesystemStreamFactory.html">KFilesystemStreamFactory</a></li>
+				<li><a href="class-KFilesystemStreamIterator.html">KFilesystemStreamIterator</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li class="active"><a href="class-KFilesystemStreamInterface.html">KFilesystemStreamInterface</a></li>
+			</ul>
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+	<div id="rightInner">
+<div id="content" class="class">
+	<h1>Interface KFilesystemStreamInterface</h1>
+
+
+	<div class="description">
+	
+<p>FileSystem Stream Interface</p>
+
+<p>A stream interface. Modeled after the PHP streamWrapper class prototype. See
+<a href="http://php.net/streamwrapper">http://php.net/streamwrapper</a> for
+details on that.</p>
+
+<p>We divert from the PHP prototype in the following:<br />
+* better method names * methods that should not be implemented in the PHP
+prototype when not being supported (like rename) must throw a
+\BadMethodCallException instead.</p>
+
+	</div>
+
+	<dl class="tree well">
+		<dd style="padding-left:0px">
+<b><span>KFilesystemStreamInterface</span></b>			
+			 implements 
+				<a href="class-KObjectInterface.html"><span>KObjectInterface</span></a>
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+	<div>
+		<h3>Direct known implementers</h3>
+		<p class="elementList">
+			<code><a href="class-KFilesystemStreamAbstract.html">KFilesystemStreamAbstract</a></code>
+		</p>
+	</div>
+
+	<div>
+		<h3>Indirect known implementers</h3>
+		<p class="elementList">
+			<code><a href="class-ComKoowaFilesystemStreamBuffer.html">ComKoowaFilesystemStreamBuffer</a></code>, 
+			<code><a href="class-KFilesystemStreamBuffer.html">KFilesystemStreamBuffer</a></code>, 
+			<code><a href="class-KFilesystemStreamDefault.html">KFilesystemStreamDefault</a></code>
+		</p>
+	</div>
+
+
+
+	<div class="alert alert-info">
+		
+		
+		
+		<b>Package:</b> <a href="package-Koowa.html">Koowa</a>\<a href="package-Koowa.Library.html">Library</a>\<a href="package-Koowa.Library.Filesystem.html">Filesystem</a>\<a href="package-Koowa.Library.Filesystem.Stream.html">Stream</a><br />
+
+				<b>Copyright:</b>
+				Copyright (C) 2007 - 2014 Johan Janssens and Timble CVBA. (<a
+href="http://www.timble.net">http://www.timble.net</a>)<br />
+				<b>License:</b>
+				<a href="GNU">GPLv3 &lt;http://www.gnu.org/licenses/gpl.html&gt;</a><br />
+				<b>Author:</b>
+				Johan Janssens &lt;<a
+href="https://github.com/johanjanssens">https://github.com/johanjanssens</a>&gt;<br />
+		<b>Located at</b> <a href="source-class-KFilesystemStreamInterface.html#10-450" title="Go to source code">libraries/koowa/libraries/filesystem/stream/interface.php</a><br />
+	</div>
+
+
+
+		<h2>Methods summary</h2>
+		<table class="summary table table-bordered table-striped" id="methods">
+		<tr data-order="getName" id="_getName">
+
+			<td class="attributes"><code>
+				 public static
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getName">#</a>
+			<code><a href="source-class-KFilesystemStreamInterface.html#47-52" title="Go to source code">getName</a>( )</code>
+
+			<div class="description short">
+				
+<p>Get the stream name used to register the stream with</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Get the stream name used to register the stream with</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>string</code><br>The stream name<br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="open" id="_open">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-KFilesystemStreamAbstract.html">KFilesystemStreamAbstract</a></code>|false
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_open">#</a>
+			<code><a href="source-class-KFilesystemStreamInterface.html#54-61" title="Go to source code">open</a>( )</code>
+
+			<div class="description short">
+				
+<p>Opens the stream</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Opens the stream</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><code><a href="class-KFilesystemStreamAbstract.html">KFilesystemStreamAbstract</a></code>|false</code><br>Return a stream object or FALSE on failure.<br />
+					</div>
+
+					<h4>Throws</h4>
+					<div class="list">
+						<code>BadMethodCallException</code><br>If open is not supported.<br />
+						<code>RuntimeException</code><br>If the stream cannot be opened.<br />
+					</div>
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="read" id="_read">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_read">#</a>
+			<code><a href="source-class-KFilesystemStreamInterface.html#63-75" title="Go to source code">read</a>( <span>integer|null <var>$length</var> = -<span class="php-num">1</span></span> )</code>
+
+			<div class="description short">
+				
+<p>Reads the specified number of bytes from the current position</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Reads the specified number of bytes from the current position</p>
+
+<p>If the current position is the end-of-file, you must return an empty
+string.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$length</var></dt>
+						<dd><code>integer|null</code><br>$length How many bytes of data from the current position should be returned.
+Defaults to -1 (use the chunk size, default 8192 bytes).</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>string</code><br>If there are less than count bytes available, return as many as are available.
+If no more data is available, return either FALSE or an empty string.<br />
+					</div>
+
+					<h4>Throws</h4>
+					<div class="list">
+						<code>BadMethodCallException</code><br>If read is not supported.<br />
+						<code>LogicException</code><br>If read is not allowed.<br />
+					</div>
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="seek" id="_seek">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_seek">#</a>
+			<code><a href="source-class-KFilesystemStreamInterface.html#77-92" title="Go to source code">seek</a>( <span>integer <var>$offset</var></span>, <span>integer <var>$whence</var> = SEEK_SET</span> )</code>
+
+			<div class="description short">
+				
+<p>Seeks to specific location in a stream.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Seeks to specific location in a stream.</p>
+
+<p>The read/write position of the stream should be updated according to the
+offset and whence.</p>
+
+<p>$whence can one of:<br />
+SEEK_SET - Set position equal to offset bytes. SEEK_CUR - Set position to
+current location plus offset. SEEK_END - Set position to end-of-file plus
+offset.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$offset</var></dt>
+						<dd><code>integer</code><br>$offset The stream offset to seek to.</dd>
+						<dt><var>$whence</var></dt>
+						<dd><code>integer</code><br>$whence</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>boolean</code><br>TRUE on success or FALSE on failure.<br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="peek" id="_peek">
+
+			<td class="attributes"><code>
+				 public 
+				integer
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_peek">#</a>
+			<code><a href="source-class-KFilesystemStreamInterface.html#94-99" title="Go to source code">peek</a>( )</code>
+
+			<div class="description short">
+				
+<p>Returns the current position of the stream read/write pointer</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Returns the current position of the stream read/write pointer</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>integer</code><br>Should return the current position of the stream.<br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="lock" id="_lock">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_lock">#</a>
+			<code><a href="source-class-KFilesystemStreamInterface.html#101-114" title="Go to source code">lock</a>( <span>integer <var>$operation</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Lock the stream</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Lock the stream</p>
+
+<p>$operation is one of the following:<br />
+LOCK_SH to acquire a shared lock (reader). LOCK_EX to acquire an exclusive lock
+(writer). LOCK_NB if you don't want flock() to block while locking.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$operation</var></dt>
+						<dd><code>integer</code><br>$operation One of the LOCK_* constants</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>boolean</code><br>TRUE on success or FALSE on failure.<br />
+					</div>
+
+					<h4>Throws</h4>
+					<div class="list">
+						<code>BadMethodCallException</code><br>if lock is not supported.<br />
+					</div>
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="unlock" id="_unlock">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_unlock">#</a>
+			<code><a href="source-class-KFilesystemStreamInterface.html#116-124" title="Go to source code">unlock</a>( )</code>
+
+			<div class="description short">
+				
+<p>Unlock the stream</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Unlock the stream</p>
+
+<p>This method is called when closing the stream (LOCK_UN).</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>boolean</code><br>TRUE on success or FALSE on failure.<br />
+					</div>
+
+					<h4>Throws</h4>
+					<div class="list">
+						<code>BadMethodCallException</code><br>if unlock is not supported.<br />
+					</div>
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="write" id="_write">
+
+			<td class="attributes"><code>
+				 public 
+				integer
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_write">#</a>
+			<code><a href="source-class-KFilesystemStreamInterface.html#126-138" title="Go to source code">write</a>( <span>string <var>$data</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Write to stream.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Write to stream.</p>
+
+<p>If there is not enough room in the underlying stream, store as much as
+possible.</p>
+
+<p>Note : Don't forget to update the current position of the stream by number of
+bytes that were successfully written.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$data</var></dt>
+						<dd><code>string</code><br>$data Should be stored into the underlying stream.</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>integer</code><br>Should return the number of bytes that were successfully stored, or 0 if none
+could be stored.<br />
+					</div>
+
+					<h4>Throws</h4>
+					<div class="list">
+						<code>BadMethodCallException</code><br>if write is not supported.<br />
+						<code>LogicException</code><br>If write is not allowed.<br />
+					</div>
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="copy" id="_copy">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_copy">#</a>
+			<code><a href="source-class-KFilesystemStreamInterface.html#140-146" title="Go to source code">copy</a>( <span>resource|<code><a href="class-KFilesystemStreamInterface.html">KFilesystemStreamInterface</a></code> <var>$stream</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Read data from the stream to another stream</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Read data from the stream to another stream</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$stream</var></dt>
+						<dd><code>resource|<code><a href="class-KFilesystemStreamInterface.html">KFilesystemStreamInterface</a></code></code><br>$stream The stream resource to copy the data too</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>boolean</code><br>Returns TRUE on success, FALSE on failure<br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="rename" id="_rename">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_rename">#</a>
+			<code><a href="source-class-KFilesystemStreamInterface.html#148-155" title="Go to source code">rename</a>( <span>string <var>$path</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Rename a stream</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Rename a stream</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$path</var></dt>
+						<dd><code>string</code><br>$path The URL which the stream should be renamed to.</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>boolean</code><br>TRUE on success or FALSE on failure.<br />
+					</div>
+
+					<h4>Throws</h4>
+					<div class="list">
+						<code>BadMethodCallException</code><br>if rename is not supported.<br />
+					</div>
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="unlink" id="_unlink">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_unlink">#</a>
+			<code><a href="source-class-KFilesystemStreamInterface.html#157-163" title="Go to source code">unlink</a>( )</code>
+
+			<div class="description short">
+				
+<p>Delete a file</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Delete a file</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>boolean</code><br>TRUE on success or FALSE on failure.<br />
+					</div>
+
+					<h4>Throws</h4>
+					<div class="list">
+						<code>BadMethodCallException</code><br>if unlink is not supported.<br />
+					</div>
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="eof" id="_eof">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_eof">#</a>
+			<code><a href="source-class-KFilesystemStreamInterface.html#165-171" title="Go to source code">eof</a>( )</code>
+
+			<div class="description short">
+				
+<p>Indicates whether the current position is the end-of-stream</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Indicates whether the current position is the end-of-stream</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>boolean</code><br>Should return TRUE if the read/write position is at the end of the stream and if
+no more data is available to be read, or FALSE otherwise.<br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="flush" id="_flush">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_flush">#</a>
+			<code><a href="source-class-KFilesystemStreamInterface.html#173-185" title="Go to source code">flush</a>( <span>resource|<code><a href="class-KFilesystemStreamInterface.html">KFilesystemStreamInterface</a></code>|null <var>$stream</var> = <span class="php-keyword1">null</span></span>, <span>integer <var>$length</var> = -<span class="php-num">1</span></span> )</code>
+
+			<div class="description short">
+				
+<p>Flush the data from the stream to another stream</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Flush the data from the stream to another stream</p>
+
+<p>If no target stream is being passed and you have cached data that is not yet
+stored into the underlying storage, you should do so now</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$stream</var></dt>
+						<dd><code>resource|<code><a href="class-KFilesystemStreamInterface.html">KFilesystemStreamInterface</a></code>|null</code><br>$stream The stream resource to flush the data too</dd>
+						<dt><var>$length</var></dt>
+						<dd><code>integer</code><br>$length The total bytes to flush, if -1 the stream will be flushed until eof.
+The limit should lie within the total size of the stream.</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>boolean</code><br>Should return TRUE if the cached data was successfully stored (or if there was
+no data to store), or FALSE if the data could not be stored.<br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="truncate" id="_truncate">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_truncate">#</a>
+			<code><a href="source-class-KFilesystemStreamInterface.html#187-193" title="Go to source code">truncate</a>( <span>integer <var>$size</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Truncate to given size</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Truncate to given size</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$size</var></dt>
+						<dd><code>integer</code><br>$size The new size</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>boolean</code><br>Returns TRUE on success or FALSE on failure.<br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="close" id="_close">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_close">#</a>
+			<code><a href="source-class-KFilesystemStreamInterface.html#195-202" title="Go to source code">close</a>( )</code>
+
+			<div class="description short">
+				
+<p>Closes the stream</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Closes the stream</p>
+
+<p>It must free all the resources. If there is any data to flush, you should do
+so</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>boolean</code><br>Returns TRUE on success or FALSE on failure.<br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="cast" id="_cast">
+
+			<td class="attributes"><code>
+				 public 
+				mixed
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_cast">#</a>
+			<code><a href="source-class-KFilesystemStreamInterface.html#204-211" title="Go to source code">cast</a>( <span>integer <var>$cast_as</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Retrieve the underlying resource</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Retrieve the underlying resource</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$cast_as</var></dt>
+						<dd><code>integer</code><br>$cast_ass Can be STREAM_CAST_FOR_SELECT when stream_select() is calling
+stream_cast() or STREAM_CAST_AS_STREAM when stream_cast() is called for other
+uses.</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>mixed</code><br>using resource or false<br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getType" id="_getType">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getType">#</a>
+			<code><a href="source-class-KFilesystemStreamInterface.html#213-218" title="Go to source code">getType</a>( )</code>
+
+			<div class="description short">
+				
+<p>Get the stream type</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Get the stream type</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>string</code><br>The stream type<br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getPath" id="_getPath">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getPath">#</a>
+			<code><a href="source-class-KFilesystemStreamInterface.html#220-225" title="Go to source code">getPath</a>( )</code>
+
+			<div class="description short">
+				
+<p>Get the stream path</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Get the stream path</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>string</code><br>The stream path<br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getMode" id="_getMode">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getMode">#</a>
+			<code><a href="source-class-KFilesystemStreamInterface.html#227-232" title="Go to source code">getMode</a>( )</code>
+
+			<div class="description short">
+				
+<p>Get the stream mode</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Get the stream mode</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>string</code><br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getInfo" id="_getInfo">
+
+			<td class="attributes"><code>
+				 public 
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getInfo">#</a>
+			<code><a href="source-class-KFilesystemStreamInterface.html#234-244" title="Go to source code">getInfo</a>( <span>boolean <var>$link</var> = <span class="php-keyword1">false</span></span> )</code>
+
+			<div class="description short">
+				
+<p>Retrieve information about the resource pointed to by the stream</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Retrieve information about the resource pointed to by the stream</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$link</var></dt>
+						<dd><code>boolean</code><br>$link For resources with the ability to link to other resource (such as an HTTP
+Location: forward, or a filesystem symlink). This flag specified that only
+information about the link itself should be returned, not the resource pointed
+to by the link. This flag is set in response to calls to lstat(), is_link(), or
+filetype().</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>array</code><br>See <a href="http://php.net/stat">http://php.net/stat</a><br />
+					</div>
+
+					<h4>Throws</h4>
+					<div class="list">
+						<code>BadMethodCallException</code><br>if info is not supported.<br />
+					</div>
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getSize" id="_getSize">
+
+			<td class="attributes"><code>
+				 public 
+				integer|boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getSize">#</a>
+			<code><a href="source-class-KFilesystemStreamInterface.html#246-251" title="Go to source code">getSize</a>( )</code>
+
+			<div class="description short">
+				
+<p>Get the size of the stream</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Get the size of the stream</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>integer|boolean</code><br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getOptions" id="_getOptions">
+
+			<td class="attributes"><code>
+				 public 
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getOptions">#</a>
+			<code><a href="source-class-KFilesystemStreamInterface.html#253-258" title="Go to source code">getOptions</a>( )</code>
+
+			<div class="description short">
+				
+<p>Get the stream options</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Get the stream options</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>array</code><br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getHash" id="_getHash">
+
+			<td class="attributes"><code>
+				 public 
+				boolean|string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getHash">#</a>
+			<code><a href="source-class-KFilesystemStreamInterface.html#260-267" title="Go to source code">getHash</a>( <span>string <var>$algo</var> = <span class="php-quote">'sha1'</span></span>, <span>boolean <var>$raw</var> = <span class="php-keyword1">false</span></span> )</code>
+
+			<div class="description short">
+				
+<p>Calculate a hash of a Stream</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Calculate a hash of a Stream</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$algo</var></dt>
+						<dd><code>string</code><br>$algo Hash algorithm (e.g. md5, crc32, etc)</dd>
+						<dt><var>$raw</var></dt>
+						<dd><code>boolean</code><br>$raw Whether or not to use raw output</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>boolean|string</code><br>Returns false on failure or a hash string on success<br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getTime" id="_getTime">
+
+			<td class="attributes"><code>
+				 public 
+				DateTime|false
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getTime">#</a>
+			<code><a href="source-class-KFilesystemStreamInterface.html#269-275" title="Go to source code">getTime</a>( <span>string <var>$time</var> = <code><a href="class-KFilesystemStreamInterface.html#TIME_MODIFIED">KFilesystemStreamInterface::<b>TIME_MODIFIED</b></a></code></span> )</code>
+
+			<div class="description short">
+				
+<p>Get the streams last modified, last accessed or created time.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Get the streams last modified, last accessed or created time.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$time</var></dt>
+						<dd><code>string</code><br>$time One of the TIME_* constants</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>DateTime|false</code><br>A DateTime object or FALSE if the time could not be found<br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getResource" id="_getResource">
+
+			<td class="attributes"><code>
+				 public 
+				resource
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getResource">#</a>
+			<code><a href="source-class-KFilesystemStreamInterface.html#277-282" title="Go to source code">getResource</a>( )</code>
+
+			<div class="description short">
+				
+<p>Get the stream resource</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Get the stream resource</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>resource</code><br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="setResource" id="_setResource">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-KFilesystemStreamInterface.html">KFilesystemStreamInterface</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_setResource">#</a>
+			<code><a href="source-class-KFilesystemStreamInterface.html#284-291" title="Go to source code">setResource</a>( <span>resource <var>$resource</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Set the stream resource</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Set the stream resource</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$resource</var></dt>
+						<dd><code>resource</code><br>$resource Stream resource</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><code><a href="class-KFilesystemStreamInterface.html">KFilesystemStreamInterface</a></code></code><br />
+					</div>
+
+					<h4>Throws</h4>
+					<div class="list">
+						<code>RuntimeException</code><br>If the resource is not a valid 'stream' resource.<br />
+					</div>
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getChunkSize" id="_getChunkSize">
+
+			<td class="attributes"><code>
+				 public 
+				integer
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getChunkSize">#</a>
+			<code><a href="source-class-KFilesystemStreamInterface.html#293-298" title="Go to source code">getChunkSize</a>( )</code>
+
+			<div class="description short">
+				
+<p>Get the chunk size using during read operations</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Get the chunk size using during read operations</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>integer</code><br>The chunk size in bytes<br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="setChunkSize" id="_setChunkSize">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-KFilesystemStreamInterface.html">KFilesystemStreamInterface</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_setChunkSize">#</a>
+			<code><a href="source-class-KFilesystemStreamInterface.html#300-306" title="Go to source code">setChunkSize</a>( <span>integer <var>$size</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Set the chunk size using during read operation</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Set the chunk size using during read operation</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$size</var></dt>
+						<dd><code>integer</code><br>$size The chunk size in bytes</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><code><a href="class-KFilesystemStreamInterface.html">KFilesystemStreamInterface</a></code></code><br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="setBlocking" id="_setBlocking">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_setBlocking">#</a>
+			<code><a href="source-class-KFilesystemStreamInterface.html#308-319" title="Go to source code">setBlocking</a>( <span>integer <var>$mode</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Set blocking/non-blocking mode on a stream</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Set blocking/non-blocking mode on a stream</p>
+
+<p>This function works for any stream that supports non-blocking mode
+(currently, regular files and socket streams)</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$mode</var></dt>
+						<dd><code>integer</code><br>$mode If mode is 0, the given stream will be switched to non-blocking mode, and
+if 1, it will be switched to blocking mode. This affects calls like fgets() and
+fread() that read from the stream. In non-blocking mode an fgets() call will
+always return right away while in blocking mode it will wait for data to become
+available on the stream.</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>boolean</code><br>Returns TRUE on success or FALSE on failure.<br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="setTimeout" id="_setTimeout">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_setTimeout">#</a>
+			<code><a href="source-class-KFilesystemStreamInterface.html#321-328" title="Go to source code">setTimeout</a>( <span>integer <var>$seconds</var></span>, <span>integer <var>$microseconds</var> = <span class="php-num">0</span></span> )</code>
+
+			<div class="description short">
+				
+<p>Set timeout period on a stream</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Set timeout period on a stream</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$seconds</var></dt>
+						<dd><code>integer</code><br>$seconds The seconds part of the timeout to be set.</dd>
+						<dt><var>$microseconds</var></dt>
+						<dd><code>integer</code><br>$microseconds The microseconds part of the timeout to be set.</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>boolean</code><br>Returns TRUE on success or FALSE on failure.<br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="setBuffer" id="_setBuffer">
+
+			<td class="attributes"><code>
+				 public 
+				integer|false
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_setBuffer">#</a>
+			<code><a href="source-class-KFilesystemStreamInterface.html#330-339" title="Go to source code">setBuffer</a>( <span>integer <var>$mode</var></span>, <span>integer <var>$size</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Sets write file buffering on the given stream</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Sets write file buffering on the given stream</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$mode</var></dt>
+						<dd><code>integer</code><br>$mode STREAM_BUFFER_NONE or STREAM_BUFFER_FULL</dd>
+						<dt><var>$size</var></dt>
+						<dd><code>integer</code><br>$size The number of bytes to buffer. If buffer is 0 then write operations are
+unbuffered. This ensures that all writes with fwrite() are completed before
+other processes are allowed to write to the stream</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>integer|false</code><br>Returns 0 on success, or FALSE on failure<br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="addFilter" id="_addFilter">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_addFilter">#</a>
+			<code><a href="source-class-KFilesystemStreamInterface.html#341-349" title="Go to source code">addFilter</a>( <span>mixed <var>$filter</var></span>, <span>array <var>$config</var> = <span class="php-keyword1">array</span>()</span> )</code>
+
+			<div class="description short">
+				
+<p>Attach a filter in FIFO order</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Attach a filter in FIFO order</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$filter</var></dt>
+						<dd><code>mixed</code><br>$filter An object that implements ObjectInterface, ObjectIdentifier object or
+valid identifier string</dd>
+						<dt><var>$config</var></dt>
+						<dd><code>array</code><br>$config An optional array of filter config options</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>boolean</code><br>Returns TRUE if the filter was attached, FALSE otherwise<br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="removeFilter" id="_removeFilter">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_removeFilter">#</a>
+			<code><a href="source-class-KFilesystemStreamInterface.html#351-357" title="Go to source code">removeFilter</a>( <span>string <var>$filter</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Detach a filter</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Detach a filter</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$filter</var></dt>
+						<dd><code>string</code><br>$filter The name of the filter</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>boolean</code><br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="hasFilter" id="_hasFilter">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_hasFilter">#</a>
+			<code><a href="source-class-KFilesystemStreamInterface.html#359-365" title="Go to source code">hasFilter</a>( <span>string <var>$name</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Check if a filter is attached to the stream</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Check if a filter is attached to the stream</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$name</var></dt>
+						<dd><code>string</code><br>$name The name of the filter</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>boolean</code><br>Returns TRUE if the filter is attached, FALSE otherwise.<br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getFilter" id="_getFilter">
+
+			<td class="attributes"><code>
+				 public 
+				resource
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getFilter">#</a>
+			<code><a href="source-class-KFilesystemStreamInterface.html#367-373" title="Go to source code">getFilter</a>( <span>string <var>$name</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Get a filter</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Get a filter</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$name</var></dt>
+						<dd><code>string</code><br>$name The name of the filter</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>resource</code><br>The filter resource<br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getFilters" id="_getFilters">
+
+			<td class="attributes"><code>
+				 public 
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getFilters">#</a>
+			<code><a href="source-class-KFilesystemStreamInterface.html#375-380" title="Go to source code">getFilters</a>( )</code>
+
+			<div class="description short">
+				
+<p>Get the attached filters</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Get the attached filters</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>array</code><br>The named list of attached filters<br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="isReadable" id="_isReadable">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_isReadable">#</a>
+			<code><a href="source-class-KFilesystemStreamInterface.html#382-387" title="Go to source code">isReadable</a>( )</code>
+
+			<div class="description short">
+				
+<p>Check if the stream is readable</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Check if the stream is readable</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>boolean</code><br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="isWritable" id="_isWritable">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_isWritable">#</a>
+			<code><a href="source-class-KFilesystemStreamInterface.html#389-394" title="Go to source code">isWritable</a>( )</code>
+
+			<div class="description short">
+				
+<p>Check if the stream is writable</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Check if the stream is writable</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>boolean</code><br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="isSeekable" id="_isSeekable">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_isSeekable">#</a>
+			<code><a href="source-class-KFilesystemStreamInterface.html#396-401" title="Go to source code">isSeekable</a>( )</code>
+
+			<div class="description short">
+				
+<p>Check if the stream is seekable</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Check if the stream is seekable</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>boolean</code><br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="isBinary" id="_isBinary">
+
+			<td class="attributes"><code>
+				 public 
+				Boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_isBinary">#</a>
+			<code><a href="source-class-KFilesystemStreamInterface.html#403-408" title="Go to source code">isBinary</a>( )</code>
+
+			<div class="description short">
+				
+<p>Indicates whether the stream is in binary mode</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Indicates whether the stream is in binary mode</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>Boolean</code><br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="isText" id="_isText">
+
+			<td class="attributes"><code>
+				 public 
+				Boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_isText">#</a>
+			<code><a href="source-class-KFilesystemStreamInterface.html#410-415" title="Go to source code">isText</a>( )</code>
+
+			<div class="description short">
+				
+<p>Indicates whether the stream is in text mode</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Indicates whether the stream is in text mode</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>Boolean</code><br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="isLocal" id="_isLocal">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_isLocal">#</a>
+			<code><a href="source-class-KFilesystemStreamInterface.html#417-422" title="Go to source code">isLocal</a>( )</code>
+
+			<div class="description short">
+				
+<p>Check if the stream is a local stream vs a remote stream</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Check if the stream is a local stream vs a remote stream</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>boolean</code><br>TRUE on success or FALSE on failure.<br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="isBlocked" id="_isBlocked">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_isBlocked">#</a>
+			<code><a href="source-class-KFilesystemStreamInterface.html#424-429" title="Go to source code">isBlocked</a>( )</code>
+
+			<div class="description short">
+				
+<p>Indicates whether the stream is blocked</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Indicates whether the stream is blocked</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>boolean</code><br>TRUE when the stream is in blocking IO mode<br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="isTimeout" id="_isTimeout">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_isTimeout">#</a>
+			<code><a href="source-class-KFilesystemStreamInterface.html#431-436" title="Go to source code">isTimeout</a>( )</code>
+
+			<div class="description short">
+				
+<p>Indicates whether the stream is blocked</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Indicates whether the stream is blocked</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>boolean</code><br>TRUE if the stream timed out while waiting for data on the last call to fread()
+or fgets().<br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="toString" id="_toString">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_toString">#</a>
+			<code><a href="source-class-KFilesystemStreamInterface.html#438-448" title="Go to source code">toString</a>( )</code>
+
+			<div class="description short">
+				
+<p>Reads all data from the stream into a string, from the beginning to end.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Reads all data from the stream into a string, from the beginning to end.</p>
+
+<p>This method MUST attempt to seek to the beginning of the stream before
+reading data and read the stream until the end is reached. The file pointer
+should stay at it's original position.</p>
+
+<p>Warning: This could attempt to load a large amount of data into memory.</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>string</code><br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		</table>
+
+		<h3>Methods inherited from <a href="class-KObjectInterface.html#methods">KObjectInterface</a></h3>
+		<p class="elementList">
+			<code><a href="class-KObjectInterface.html#_getConfig">getConfig()</a></code>, 
+			<code><a href="class-KObjectInterface.html#_getIdentifier">getIdentifier()</a></code>, 
+			<code><a href="class-KObjectInterface.html#_getObject">getObject()</a></code>
+		</p>
+
+
+		<h3>Magic methods summary</h3>
+
+
+
+
+
+		<h2>Constants summary</h2>
+		<table class="summary table table-bordered table-striped" id="constants">
+		<tr data-order="TIME_CREATED" id="TIME_CREATED">
+
+			<td class="attributes"><code>string</code></td>
+			<td class="name"><code>
+					<a href="source-class-KFilesystemStreamInterface.html#27-30" title="Go to source code"><b>TIME_CREATED</b></a>
+			</code></td>
+			<td class="value"><code><span class="php-quote">'ctime'</span></code></td>
+			<td class="description"><div>
+				<a href="#TIME_CREATED" class="anchor">#</a>
+
+				<div class="description short">
+					
+<p>Time Constants</p>
+
+				</div>
+
+				<div class="description detailed hidden">
+					
+<p>Time Constants</p>
+
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="TIME_ACCESSED" id="TIME_ACCESSED">
+
+			<td class="attributes"><code>string</code></td>
+			<td class="name"><code>
+					<a href="source-class-KFilesystemStreamInterface.html#31" title="Go to source code"><b>TIME_ACCESSED</b></a>
+			</code></td>
+			<td class="value"><code><span class="php-quote">'atime'</span></code></td>
+			<td class="description"><div>
+				<a href="#TIME_ACCESSED" class="anchor">#</a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="TIME_MODIFIED" id="TIME_MODIFIED">
+
+			<td class="attributes"><code>string</code></td>
+			<td class="name"><code>
+					<a href="source-class-KFilesystemStreamInterface.html#32" title="Go to source code"><b>TIME_MODIFIED</b></a>
+			</code></td>
+			<td class="value"><code><span class="php-quote">'mtime'</span></code></td>
+			<td class="description"><div>
+				<a href="#TIME_MODIFIED" class="anchor">#</a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="TYPE_FILE" id="TYPE_FILE">
+
+			<td class="attributes"><code>string</code></td>
+			<td class="name"><code>
+					<a href="source-class-KFilesystemStreamInterface.html#34-37" title="Go to source code"><b>TYPE_FILE</b></a>
+			</code></td>
+			<td class="value"><code><span class="php-quote">'file'</span></code></td>
+			<td class="description"><div>
+				<a href="#TYPE_FILE" class="anchor">#</a>
+
+				<div class="description short">
+					
+<p>Type Constants</p>
+
+				</div>
+
+				<div class="description detailed hidden">
+					
+<p>Type Constants</p>
+
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="TYPE_TEMP" id="TYPE_TEMP">
+
+			<td class="attributes"><code>string</code></td>
+			<td class="name"><code>
+					<a href="source-class-KFilesystemStreamInterface.html#38" title="Go to source code"><b>TYPE_TEMP</b></a>
+			</code></td>
+			<td class="value"><code><span class="php-quote">'temp'</span></code></td>
+			<td class="description"><div>
+				<a href="#TYPE_TEMP" class="anchor">#</a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="TYPE_LINK" id="TYPE_LINK">
+
+			<td class="attributes"><code>string</code></td>
+			<td class="name"><code>
+					<a href="source-class-KFilesystemStreamInterface.html#39" title="Go to source code"><b>TYPE_LINK</b></a>
+			</code></td>
+			<td class="value"><code><span class="php-quote">'link'</span></code></td>
+			<td class="description"><div>
+				<a href="#TYPE_LINK" class="anchor">#</a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="TYPE_DIRECTORY" id="TYPE_DIRECTORY">
+
+			<td class="attributes"><code>string</code></td>
+			<td class="name"><code>
+					<a href="source-class-KFilesystemStreamInterface.html#40" title="Go to source code"><b>TYPE_DIRECTORY</b></a>
+			</code></td>
+			<td class="value"><code><span class="php-quote">'dir'</span></code></td>
+			<td class="description"><div>
+				<a href="#TYPE_DIRECTORY" class="anchor">#</a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="TYPE_FIFO" id="TYPE_FIFO">
+
+			<td class="attributes"><code>string</code></td>
+			<td class="name"><code>
+					<a href="source-class-KFilesystemStreamInterface.html#41" title="Go to source code"><b>TYPE_FIFO</b></a>
+			</code></td>
+			<td class="value"><code><span class="php-quote">'fifo'</span></code></td>
+			<td class="description"><div>
+				<a href="#TYPE_FIFO" class="anchor">#</a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="TYPE_MEMORY" id="TYPE_MEMORY">
+
+			<td class="attributes"><code>string</code></td>
+			<td class="name"><code>
+					<a href="source-class-KFilesystemStreamInterface.html#42" title="Go to source code"><b>TYPE_MEMORY</b></a>
+			</code></td>
+			<td class="value"><code><span class="php-quote">'memory'</span></code></td>
+			<td class="description"><div>
+				<a href="#TYPE_MEMORY" class="anchor">#</a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="TYPE_BLOCK" id="TYPE_BLOCK">
+
+			<td class="attributes"><code>string</code></td>
+			<td class="name"><code>
+					<a href="source-class-KFilesystemStreamInterface.html#43" title="Go to source code"><b>TYPE_BLOCK</b></a>
+			</code></td>
+			<td class="value"><code><span class="php-quote">'block'</span></code></td>
+			<td class="description"><div>
+				<a href="#TYPE_BLOCK" class="anchor">#</a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="TYPE_SOCKET" id="TYPE_SOCKET">
+
+			<td class="attributes"><code>string</code></td>
+			<td class="name"><code>
+					<a href="source-class-KFilesystemStreamInterface.html#44" title="Go to source code"><b>TYPE_SOCKET</b></a>
+			</code></td>
+			<td class="value"><code><span class="php-quote">'socket'</span></code></td>
+			<td class="description"><div>
+				<a href="#TYPE_SOCKET" class="anchor">#</a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="TYPE_UNKNOWN" id="TYPE_UNKNOWN">
+
+			<td class="attributes"><code>boolean</code></td>
+			<td class="name"><code>
+					<a href="source-class-KFilesystemStreamInterface.html#45" title="Go to source code"><b>TYPE_UNKNOWN</b></a>
+			</code></td>
+			<td class="value"><code><span class="php-keyword1">false</span></code></td>
+			<td class="description"><div>
+				<a href="#TYPE_UNKNOWN" class="anchor">#</a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</div></td>
+		</tr>
+		</table>
+
+
+
+
+</div>
+	</div>
+
+	<div id="footer">
+		Nooku Framework API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+
+<script>
+    responsivemenu.init({
+        wrapper: document.querySelector('.header'),
+        toggleclass: 'button--hamburger',
+        togglecontent: 'menu <span class="lines"></span>'
+    });
+</script>
+
+</body>
+</html>

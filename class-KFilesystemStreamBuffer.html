@@ -1,0 +1,1544 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<title>Class KFilesystemStreamBuffer | Nooku Framework</title>
+
+	<script type="text/javascript" src="resources/combined.js?2640657843"></script>
+	<script type="text/javascript" src="elementlist.js?527661356"></script>
+	<script type="text/javascript" src="http://www.nooku.org/js/scripts.js"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/bootstrap.min.css?390653004" />
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?150590327" />
+    <link rel="stylesheet" type="text/css" media="all" href="http://www.nooku.org/css/header.css" />
+
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,300italic,700,400italic' rel='stylesheet' type='text/css' />
+
+    <link rel="shortcut icon" href="http://www.nooku.org/images/favicon.ico" type="image/x-icon" />
+
+	<script>
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] ||
+            function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-214238-5', 'auto');
+        ga('send', 'pageview');
+    </script>
+</head>
+
+<body class="no-js">
+    <script type="text/javascript">
+    function hasClass(e, t) {
+        return e.className.match(new RegExp("(\\s|^)" + t + "(\\s|$)"))
+    }
+    var el = document.body;
+    var cl = "no-js";
+    if (hasClass(el, cl)) {
+        var reg = new RegExp("(\\s|^)" + cl + "(\\s|$)");
+        el.className = el.className.replace(reg, " js-enabled")
+    }
+    </script>
+	<div class="header">
+            <div class="container">
+                <div class="group">
+                    <div class="header__brand brand"><a href="http://www.nooku.org"><img src="http://www.nooku.org/images/layout/logo.png" alt="Nooku Logo" /></a></div>
+                    <div class="header__navigation">
+                        <div class="navigation_container" role="navigation">
+                            <ul class="navbar initiated">
+                                <li class="navbar__item" role="menuitem"><a href="http://www.nooku.org/features/">Features</a></li>
+                                <li class="navbar__item" role="menuitem"><a href="http://www.nooku.org/get-started/">Get Started</a></li>
+                                <li class="navbar__item" role="menuitem"><a href="http://www.nooku.org/services/">Services</a></li>
+                                <li class="navbar__item" role="menuitem"><a href="http://www.nooku.org/community/">Community</a></li>
+                                <li class="navbar__item active" role="menuitem"><a href="http://www.nooku.org/docs/">Docs</a></li>
+                                <li class="navbar__item" role="menuitem"><a href="http://www.nooku.org/blog">Blog</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+	<div id="left">
+	<div id="menu">
+		<form id="search" class="form-search">
+			<input type="hidden" name="cx" value="" />
+			<input type="hidden" name="ie" value="UTF-8" />
+			<input type="text" name="q" class="search-query" placeholder="Search" />
+		</form>
+
+
+		<div id="groups">
+			<h3>Packages</h3>
+			<ul>
+				<li class="active"><a href="package-Koowa.html">Koowa<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.html">Component<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.html">Koowa<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Class.html">Class<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Class.Locator.html">Locator</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Controller.html">Controller<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Controller.Behavior.html">Behavior</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Controller.Permission.html">Permission</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Controller.Toolbar.html">Toolbar</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Database.html">Database<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Database.Adapter.html">Adapter</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Database.Behavior.html">Behavior</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Database.Table.html">Table</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Date.html">Date</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Decorator.html">Decorator</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Dispatcher.html">Dispatcher<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Dispatcher.Authenticator.html">Authenticator</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Dispatcher.Permission.html">Permission</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Dispatcher.Request.html">Request</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Dispatcher.Response.html">Response<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Dispatcher.Response.Transport.html">Transport</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Dispatcher.Router.html">Router</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Event.html">Event<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Event.Publisher.html">Publisher</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Event.Subscriber.html">Subscriber</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Exception.html">Exception</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Filesystem.html">Filesystem<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Filesystem.Stream.html">Stream</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Filter.html">Filter</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Model.html">Model</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Object.html">Object<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Object.Locator.html">Locator</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Template.html">Template<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Template.Filter.html">Filter</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Template.Helper.html">Helper</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Template.Locator.html">Locator</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Translator.html">Translator<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Translator.Catalogue.html">Catalogue</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Translator.Locator.html">Locator</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.User.html">User</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.View.html">View<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.View.Error.html">Error</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.View.Page.html">Page</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.View.Users.html">Users</a>
+						</li>
+							</ul></li></ul></li></ul></li>
+				<li class="active"><a href="package-Koowa.Library.html">Library<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Behavior.html">Behavior<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Behavior.Exception.html">Exception</a>
+						</li>
+				<li><a href="package-Koowa.Library.Behavior.Mixin.html">Mixin</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Class.html">Class<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Class.Loader.html">Loader</a>
+						</li>
+				<li><a href="package-Koowa.Library.Class.Locator.html">Locator</a>
+						</li>
+				<li><a href="package-Koowa.Library.Class.Registry.html">Registry</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Command.html">Command<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Command.Callback.html">Callback</a>
+						</li>
+				<li><a href="package-Koowa.Library.Command.Chain.html">Chain</a>
+						</li>
+				<li><a href="package-Koowa.Library.Command.Exception.html">Exception</a>
+						</li>
+				<li><a href="package-Koowa.Library.Command.Handler.html">Handler</a>
+						</li>
+				<li><a href="package-Koowa.Library.Command.Mixin.html">Mixin</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Controller.html">Controller<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Controller.Behavior.html">Behavior</a>
+						</li>
+				<li><a href="package-Koowa.Library.Controller.Context.html">Context</a>
+						</li>
+				<li><a href="package-Koowa.Library.Controller.Exception.html">Exception</a>
+						</li>
+				<li><a href="package-Koowa.Library.Controller.Permission.html">Permission</a>
+						</li>
+				<li><a href="package-Koowa.Library.Controller.Request.html">Request</a>
+						</li>
+				<li><a href="package-Koowa.Library.Controller.Response.html">Response</a>
+						</li>
+				<li><a href="package-Koowa.Library.Controller.Toolbar.html">Toolbar<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Controller.Toolbar.Command.html">Command</a>
+						</li>
+				<li><a href="package-Koowa.Library.Controller.Toolbar.Mixin.html">Mixin</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-Koowa.Library.Database.html">Database<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Database.Adapter.html">Adapter</a>
+						</li>
+				<li><a href="package-Koowa.Library.Database.Behavior.html">Behavior</a>
+						</li>
+				<li><a href="package-Koowa.Library.Database.Context.html">Context</a>
+						</li>
+				<li><a href="package-Koowa.Library.Database.Query.html">Query</a>
+						</li>
+				<li><a href="package-Koowa.Library.Database.Row.html">Row</a>
+						</li>
+				<li><a href="package-Koowa.Library.Database.Rowset.html">Rowset</a>
+						</li>
+				<li><a href="package-Koowa.Library.Database.Schema.html">Schema</a>
+						</li>
+				<li><a href="package-Koowa.Library.Database.Table.html">Table</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Date.html">Date</a>
+						</li>
+				<li><a href="package-Koowa.Library.Dispatcher.html">Dispatcher<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Dispatcher.Authenticator.html">Authenticator</a>
+						</li>
+				<li><a href="package-Koowa.Library.Dispatcher.Behavior.html">Behavior</a>
+						</li>
+				<li><a href="package-Koowa.Library.Dispatcher.Context.html">Context</a>
+						</li>
+				<li><a href="package-Koowa.Library.Dispatcher.Exception.html">Exception</a>
+						</li>
+				<li><a href="package-Koowa.Library.Dispatcher.Permission.html">Permission</a>
+						</li>
+				<li><a href="package-Koowa.Library.Dispatcher.Request.html">Request</a>
+						</li>
+				<li><a href="package-Koowa.Library.Dispatcher.Response.html">Response<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Dispatcher.Response.Transport.html">Transport</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Dispatcher.Router.html">Router</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Event.html">Event<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Event.Mixin.html">Mixin</a>
+						</li>
+				<li><a href="package-Koowa.Library.Event.Publisher.html">Publisher</a>
+						</li>
+				<li><a href="package-Koowa.Library.Event.Subscriber.html">Subscriber</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Exception.html">Exception<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Exception.Handler.html">Handler</a>
+						</li>
+							</ul></li>
+				<li class="active"><a href="package-Koowa.Library.Filesystem.html">Filesystem<span></span></a>
+						<ul>
+				<li class="active"><a href="package-Koowa.Library.Filesystem.Stream.html">Stream<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Filesystem.Stream.Filter.html">Filter</a>
+						</li>
+				<li><a href="package-Koowa.Library.Filesystem.Stream.Iterator.html">Iterator</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-Koowa.Library.Filter.html">Filter</a>
+						</li>
+				<li><a href="package-Koowa.Library.Http.html">Http<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Http.Cookie.html">Cookie</a>
+						</li>
+				<li><a href="package-Koowa.Library.Http.Exception.html">Exception<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Http.Exception.Unsupported.html">Unsupported</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Http.Message.html">Message</a>
+						</li>
+				<li><a href="package-Koowa.Library.Http.Request.html">Request</a>
+						</li>
+				<li><a href="package-Koowa.Library.Http.Response.html">Response</a>
+						</li>
+				<li><a href="package-Koowa.Library.Http.Token.html">Token</a>
+						</li>
+				<li><a href="package-Koowa.Library.Http.Url.html">Url</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Model.html">Model<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Model.Behavior.html">Behavior</a>
+						</li>
+				<li><a href="package-Koowa.Library.Model.Context.html">Context</a>
+						</li>
+				<li><a href="package-Koowa.Library.Model.Entity.html">Entity</a>
+						</li>
+				<li><a href="package-Koowa.Library.Model.Paginator.html">Paginator</a>
+						</li>
+				<li><a href="package-Koowa.Library.Model.State.html">State</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Object.html">Object<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Object.Bootstrapper.html">Bootstrapper</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Config.html">Config</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Decorator.html">Decorator</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Exception.html">Exception</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Identifier.html">Identifier</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Locator.html">Locator</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Manager.html">Manager</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Mixin.html">Mixin</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Registry.html">Registry</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.String.html">String<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.String.Inflector.html">Inflector</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Template.html">Template<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Template.Engine.html">Engine</a>
+						</li>
+				<li><a href="package-Koowa.Library.Template.Exception.html">Exception</a>
+						</li>
+				<li><a href="package-Koowa.Library.Template.Filter.html">Filter</a>
+						</li>
+				<li><a href="package-Koowa.Library.Template.Helper.html">Helper</a>
+						</li>
+				<li><a href="package-Koowa.Library.Template.Locator.html">Locator</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Translator.html">Translator<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Translator.Catalogue.html">Catalogue</a>
+						</li>
+				<li><a href="package-Koowa.Library.Translator.Inflector.html">Inflector</a>
+						</li>
+				<li><a href="package-Koowa.Library.Translator.Locator.html">Locator</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.User.html">User<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.User.Provider.html">Provider</a>
+						</li>
+				<li><a href="package-Koowa.Library.User.Session.html">Session<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.User.Session.Container.html">Container</a>
+						</li>
+				<li><a href="package-Koowa.Library.User.Session.Handler.html">Handler</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-Koowa.Library.View.html">View<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.View.Behavior.html">Behavior</a>
+						</li>
+				<li><a href="package-Koowa.Library.View.Context.html">Context</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-Koowa.Module.html">Module<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Module.Koowa.html">Koowa<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Module.Koowa.Template.html">Template<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Module.Koowa.Template.Filter.html">Filter</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Module.Koowa.View.html">View</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-Koowa.Plugin.html">Plugin<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Plugin.Koowa.html">Koowa</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Wordpress.html">Wordpress<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Wordpress.Library.html">Library<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Wordpress.Library.Controller.html">Controller</a>
+						</li>
+							</ul></li></ul></li></ul></li>
+				<li><a href="package-Nooku.html">Nooku<span></span></a>
+						<ul>
+				<li><a href="package-Nooku.Library.html">Library<span></span></a>
+						<ul>
+				<li><a href="package-Nooku.Library.Template.html">Template<span></span></a>
+						<ul>
+				<li><a href="package-Nooku.Library.Template.Abstract.html">Abstract</a>
+						</li>
+							</ul></li></ul></li></ul></li>
+			</ul>
+		</div>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-KFilesystemStreamAbstract.html">KFilesystemStreamAbstract</a></li>
+				<li><a href="class-KFilesystemStreamAdapter.html">KFilesystemStreamAdapter</a></li>
+				<li class="active"><a href="class-KFilesystemStreamBuffer.html">KFilesystemStreamBuffer</a></li>
+				<li><a href="class-KFilesystemStreamDefault.html">KFilesystemStreamDefault</a></li>
+				<li><a href="class-KFilesystemStreamFactory.html">KFilesystemStreamFactory</a></li>
+				<li><a href="class-KFilesystemStreamIterator.html">KFilesystemStreamIterator</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="class-KFilesystemStreamInterface.html">KFilesystemStreamInterface</a></li>
+			</ul>
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+	<div id="rightInner">
+<div id="content" class="class">
+	<h1>Class KFilesystemStreamBuffer</h1>
+
+
+	<div class="description">
+	
+<p>Buffer FileSystem Stream</p>
+
+<p>The buffer:// stream is a read-write stream that allow temporary data to be
+stored in a file-like. Two types of buffers are supported :</p>
+
+<ul>
+	<li>buffer://temp</li>
+</ul>
+
+<p>A temporary file buffer that will opens a unique temp file. The location of
+this temporary file is determined in the same way as the sys_get_temp_dir()
+function. If the stream is closed the file is removed.</p>
+
+<ul>
+	<li>buffer://memory[/path]</li>
+</ul>
+
+<p>A memory buffer that is capable of loading data from the path into the
+buffer, if a path is specified. If a path is specified and the buffer is opened
+in writing mode, the data in memory will be flushed back into the file when the
+stream is closed.</p>
+
+	</div>
+
+	<dl class="tree well">
+		<dd style="padding-left:0px">
+			<a href="class-KObject.html"><span>KObject</span></a>
+			
+			 implements 
+				<a href="class-KObjectInterface.html"><span>KObjectInterface</span></a>, 
+			
+				<a href="class-KObjectMixable.html"><span>KObjectMixable</span></a>, 
+			
+				<a href="class-KObjectHandlable.html"><span>KObjectHandlable</span></a>, 
+			
+				<a href="class-KObjectDecoratable.html"><span>KObjectDecoratable</span></a>
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by" />
+			<a href="class-KFilesystemStreamAbstract.html"><span>KFilesystemStreamAbstract</span></a>
+			
+			 implements 
+				<a href="class-KFilesystemStreamInterface.html"><span>KFilesystemStreamInterface</span></a>
+			
+			
+		</dd>
+		<dd style="padding-left:60px">
+			<img src="resources/inherit.png" alt="Extended by" />
+<b><span>KFilesystemStreamBuffer</span></b>			
+			
+			
+		</dd>
+	</dl>
+
+
+	<div>
+		<h3>Direct known subclasses</h3>
+		<p class="elementList">
+			<code><a href="class-ComKoowaFilesystemStreamBuffer.html">ComKoowaFilesystemStreamBuffer</a></code>
+		</p>
+	</div>
+
+
+
+
+
+
+	<div class="alert alert-info">
+		
+		
+		
+		<b>Package:</b> <a href="package-Koowa.html">Koowa</a>\<a href="package-Koowa.Library.html">Library</a>\<a href="package-Koowa.Library.Filesystem.html">Filesystem</a>\<a href="package-Koowa.Library.Filesystem.Stream.html">Stream</a><br />
+
+				<b>Copyright:</b>
+				Copyright (C) 2007 - 2014 Johan Janssens and Timble CVBA. (<a
+href="http://www.timble.net">http://www.timble.net</a>)<br />
+				<b>License:</b>
+				<a href="GNU">GPLv3 &lt;http://www.gnu.org/licenses/gpl.html&gt;</a><br />
+				<b>Author:</b>
+				Johan Janssens &lt;<a
+href="https://github.com/johanjanssens">https://github.com/johanjanssens</a>&gt;<br />
+		<b>Located at</b> <a href="source-class-KFilesystemStreamBuffer.html#10-495" title="Go to source code">libraries/koowa/libraries/filesystem/stream/buffer.php</a><br />
+	</div>
+
+
+
+		<h2>Methods summary</h2>
+		<table class="summary table table-bordered table-striped" id="methods">
+		<tr data-order="open" id="_open">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_open">#</a>
+			<code><a href="source-class-KFilesystemStreamBuffer.html#60-102" title="Go to source code">open</a>( )</code>
+
+			<div class="description short">
+				
+<p>Opens the stream</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Opens the stream</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>boolean</code><br>TRUE on success or FALSE on failure.<br />
+					</div>
+
+					<h4>Throws</h4>
+					<div class="list">
+						<code>RuntimeException</code><br>If the stream cannot be opened.<br />
+					</div>
+
+
+					<h4>Overrides</h4>
+					<div class="list"><code><a href="class-KFilesystemStreamAbstract.html#_open">KFilesystemStreamAbstract::open</a></code></div>
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="read" id="_read">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_read">#</a>
+			<code><a href="source-class-KFilesystemStreamBuffer.html#104-132" title="Go to source code">read</a>( <span>integer|null <var>$bytes</var> = <span class="php-keyword1">null</span></span> )</code>
+
+			<div class="description short">
+				
+<p>Reads the specified number of bytes from the current position</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Reads the specified number of bytes from the current position</p>
+
+<p>If the current position is the end-of-file, you must return an empty
+string.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$bytes</var></dt>
+						<dd><code>integer|null</code><br>$bytes How many bytes of data from the current position should be returned. If
+NULL use the chunk size, default 8192</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>string</code><br>If there are less than count bytes available, return as many as are available.
+If no more data is available, return either FALSE or an empty string.<br />
+					</div>
+
+					<h4>Throws</h4>
+					<div class="list">
+						<code>BadMethodCallException</code><br>If read is not supported.<br />
+						<code>LogicException</code><br>If read is not allowed.<br />
+					</div>
+
+
+					<h4>Overrides</h4>
+					<div class="list"><code><a href="class-KFilesystemStreamAbstract.html#_read">KFilesystemStreamAbstract::read</a></code></div>
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="seek" id="_seek">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_seek">#</a>
+			<code><a href="source-class-KFilesystemStreamBuffer.html#134-176" title="Go to source code">seek</a>( <span>integer <var>$offset</var></span>, <span>integer <var>$whence</var> = SEEK_SET</span> )</code>
+
+			<div class="description short">
+				
+<p>Seeks to specific location in a stream.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Seeks to specific location in a stream.</p>
+
+<p>The read/write position of the stream should be updated according to the
+offset and whence.</p>
+
+<p>$whence can one of:<br />
+SEEK_SET - Set position equal to offset bytes. SEEK_CUR - Set position to
+current location plus offset. SEEK_END - Set position to end-of-file plus
+offset.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$offset</var></dt>
+						<dd><code>integer</code><br>$offset The stream offset to seek to.</dd>
+						<dt><var>$whence</var></dt>
+						<dd><code>integer</code><br>$whence</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>boolean</code><br>TRUE on success or FALSE on failure.<br />
+					</div>
+
+
+
+					<h4>Overrides</h4>
+					<div class="list"><code><a href="class-KFilesystemStreamAbstract.html#_seek">KFilesystemStreamAbstract::seek</a></code></div>
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="peek" id="_peek">
+
+			<td class="attributes"><code>
+				 public 
+				integer
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_peek">#</a>
+			<code><a href="source-class-KFilesystemStreamBuffer.html#178-192" title="Go to source code">peek</a>( )</code>
+
+			<div class="description short">
+				
+<p>Returns the current position of the stream read/write pointer</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Returns the current position of the stream read/write pointer</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>integer</code><br>Should return the current position of the stream.<br />
+					</div>
+
+
+
+					<h4>Overrides</h4>
+					<div class="list"><code><a href="class-KFilesystemStreamAbstract.html#_peek">KFilesystemStreamAbstract::peek</a></code></div>
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="write" id="_write">
+
+			<td class="attributes"><code>
+				 public 
+				integer
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_write">#</a>
+			<code><a href="source-class-KFilesystemStreamBuffer.html#194-228" title="Go to source code">write</a>( <span>string <var>$data</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Write to stream.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Write to stream.</p>
+
+<p>If there is not enough room in the underlying stream, store as much as
+possible.</p>
+
+<p>Note : Don't forget to update the current position of the stream by number of
+bytes that were successfully written.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$data</var></dt>
+						<dd><code>string</code><br>$data Should be stored into the underlying stream.</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>integer</code><br>Should return the number of bytes that were successfully stored, or 0 if none
+could be stored.<br />
+					</div>
+
+					<h4>Throws</h4>
+					<div class="list">
+						<code>LogicException</code><br>If write is not allowed.<br />
+					</div>
+
+
+					<h4>Overrides</h4>
+					<div class="list"><code><a href="class-KFilesystemStreamAbstract.html#_write">KFilesystemStreamAbstract::write</a></code></div>
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="eof" id="_eof">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_eof">#</a>
+			<code><a href="source-class-KFilesystemStreamBuffer.html#230-245" title="Go to source code">eof</a>( )</code>
+
+			<div class="description short">
+				
+<p>Indicates whether the current position is the end-of-stream</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Indicates whether the current position is the end-of-stream</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>boolean</code><br>Should return TRUE if the read/write position is at the end of the stream and if
+no more data is available to be read, or FALSE otherwise.<br />
+					</div>
+
+
+
+					<h4>Overrides</h4>
+					<div class="list"><code><a href="class-KFilesystemStreamAbstract.html#_eof">KFilesystemStreamAbstract::eof</a></code></div>
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="close" id="_close">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_close">#</a>
+			<code><a href="source-class-KFilesystemStreamBuffer.html#247-274" title="Go to source code">close</a>( )</code>
+
+			<div class="description short">
+				
+<p>Closes the stream</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Closes the stream</p>
+
+<p>It must free all the resources. If there is any data to flush, you should do
+so</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>boolean</code><br>Returns TRUE on success or FALSE on failure.<br />
+					</div>
+
+
+
+					<h4>Overrides</h4>
+					<div class="list"><code><a href="class-KFilesystemStreamAbstract.html#_close">KFilesystemStreamAbstract::close</a></code></div>
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="flush" id="_flush">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_flush">#</a>
+			<code><a href="source-class-KFilesystemStreamBuffer.html#276-320" title="Go to source code">flush</a>( <span>resource|null <var>$stream</var> = <span class="php-keyword1">null</span></span>, <span>integer <var>$length</var> = -<span class="php-num">1</span></span> )</code>
+
+			<div class="description short">
+				
+<p>Flush the data from the stream to another stream</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Flush the data from the stream to another stream</p>
+
+<p>If no target stream is being passed and you have cached data that is not yet
+stored into the underlying storage, you should do so now</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$stream</var></dt>
+						<dd><code>resource|null</code><br>$stream The stream resource to flush the data too</dd>
+						<dt><var>$length</var></dt>
+						<dd><code>integer</code><br>$length The total bytes to flush, if -1 the stream will be flushed until eof.
+The limit should lie within the total size of the stream.</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>boolean</code><br>Should return TRUE if the cached data was successfully stored (or if there was
+no data to store), or FALSE if the data could not be stored.<br />
+					</div>
+
+
+
+					<h4>Overrides</h4>
+					<div class="list"><code><a href="class-KFilesystemStreamAbstract.html#_flush">KFilesystemStreamAbstract::flush</a></code></div>
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="truncate" id="_truncate">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_truncate">#</a>
+			<code><a href="source-class-KFilesystemStreamBuffer.html#322-346" title="Go to source code">truncate</a>( <span>integer <var>$size</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Truncate to given size</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Truncate to given size</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$size</var></dt>
+						<dd><code>integer</code><br>$size The new size</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>boolean</code><br>Returns TRUE on success or FALSE on failure.<br />
+					</div>
+
+
+
+					<h4>Overrides</h4>
+					<div class="list"><code><a href="class-KFilesystemStreamAbstract.html#_truncate">KFilesystemStreamAbstract::truncate</a></code></div>
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getType" id="_getType">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getType">#</a>
+			<code><a href="source-class-KFilesystemStreamBuffer.html#348-360" title="Go to source code">getType</a>( )</code>
+
+			<div class="description short">
+				
+<p>Get the stream type</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Get the stream type</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>string</code><br>The stream type<br />
+					</div>
+
+
+
+					<h4>Overrides</h4>
+					<div class="list"><code><a href="class-KFilesystemStreamAbstract.html#_getType">KFilesystemStreamAbstract::getType</a></code></div>
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getPath" id="_getPath">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getPath">#</a>
+			<code><a href="source-class-KFilesystemStreamBuffer.html#362-381" title="Go to source code">getPath</a>( )</code>
+
+			<div class="description short">
+				
+<p>Get the stream path</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Get the stream path</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>string</code><br>he URI/filename associated with this stream<br />
+					</div>
+
+
+
+					<h4>Overrides</h4>
+					<div class="list"><code><a href="class-KFilesystemStreamAbstract.html#_getPath">KFilesystemStreamAbstract::getPath</a></code></div>
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getMode" id="_getMode">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getMode">#</a>
+			<code><a href="source-class-KFilesystemStreamBuffer.html#383-397" title="Go to source code">getMode</a>( <span>boolean <var>$include_flags</var> = <span class="php-keyword1">true</span></span> )</code>
+
+			<div class="description short">
+				
+<p>Get the stream mode</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Get the stream mode</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$include_flags</var></dt>
+						<dd><code>boolean</code><br>$include_flags If false strip binary/text flags from mode. Default TRUE.</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>string</code><br />
+					</div>
+
+
+
+					<h4>Overrides</h4>
+					<div class="list"><code><a href="class-KFilesystemStreamAbstract.html#_getMode">KFilesystemStreamAbstract::getMode</a></code></div>
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getInfo" id="_getInfo">
+
+			<td class="attributes"><code>
+				 public 
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getInfo">#</a>
+			<code><a href="source-class-KFilesystemStreamBuffer.html#399-430" title="Go to source code">getInfo</a>( <span>boolean <var>$link</var> = <span class="php-keyword1">false</span></span> )</code>
+
+			<div class="description short">
+				
+<p>Retrieve information about the resource pointed to by the stream</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Retrieve information about the resource pointed to by the stream</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$link</var></dt>
+						<dd><code>boolean</code><br>$link For resources with the ability to link to other resource (such as an HTTP
+Location: forward, or a filesystem symlink). This flag specified that only
+information about the link itself should be returned, not the resource pointed
+to by the link. This flag is set in response to calls to lstat(), is_link(), or
+filetype().</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>array</code><br>See <a href="http://php.net/stat">http://php.net/stat</a><br />
+					</div>
+
+					<h4>Throws</h4>
+					<div class="list">
+						<code>BadMethodCallException</code><br>if info is not supported.<br />
+					</div>
+
+
+					<h4>Overrides</h4>
+					<div class="list"><code><a href="class-KFilesystemStreamAbstract.html#_getInfo">KFilesystemStreamAbstract::getInfo</a></code></div>
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getTemporaryFile" id="_getTemporaryFile">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getTemporaryFile">#</a>
+			<code><a href="source-class-KFilesystemStreamBuffer.html#432-450" title="Go to source code">getTemporaryFile</a>( <span>string|null <var>$directory</var> = <span class="php-keyword1">null</span></span> )</code>
+
+			<div class="description short">
+				
+<p>Creates a file with a unique file name</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Creates a file with a unique file name</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$directory</var></dt>
+						<dd><code>string|null</code><br>$directory Uses the result of getTemporaryDirectory() by default</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>string</code><br>File path<br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getTemporaryDirectory" id="_getTemporaryDirectory">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getTemporaryDirectory">#</a>
+			<code><a href="source-class-KFilesystemStreamBuffer.html#452-460" title="Go to source code">getTemporaryDirectory</a>( )</code>
+
+			<div class="description short">
+				
+<p>Returns a directory path for temporary files</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Returns a directory path for temporary files</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>string</code><br>Folder path<br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="isSeekable" id="_isSeekable">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_isSeekable">#</a>
+			<code><a href="source-class-KFilesystemStreamBuffer.html#462-475" title="Go to source code">isSeekable</a>( )</code>
+
+			<div class="description short">
+				
+<p>Check if the stream is seekable</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Check if the stream is seekable</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>boolean</code><br>Returns TRUE on success or FALSE on failure.<br />
+					</div>
+
+
+
+					<h4>Overrides</h4>
+					<div class="list"><code><a href="class-KFilesystemStreamAbstract.html#_isSeekable">KFilesystemStreamAbstract::isSeekable</a></code></div>
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="toString" id="_toString">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_toString">#</a>
+			<code><a href="source-class-KFilesystemStreamBuffer.html#477-494" title="Go to source code">toString</a>( )</code>
+
+			<div class="description short">
+				
+<p>Reads all data from the stream into a string, from the beginning to end.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Reads all data from the stream into a string, from the beginning to end.</p>
+
+<p>This method MUST attempt to seek to the beginning of the stream before
+reading data and read the stream until the end is reached. The file pointer
+should stay at it's original position.</p>
+
+<p>Warning: This could attempt to load a large amount of data into memory.</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>string</code><br />
+					</div>
+
+
+
+					<h4>Overrides</h4>
+					<div class="list"><code><a href="class-KFilesystemStreamAbstract.html#_toString">KFilesystemStreamAbstract::toString</a></code></div>
+
+			</div>
+			</div></td>
+		</tr>
+		</table>
+
+		<h3>Methods inherited from <a href="class-KFilesystemStreamAbstract.html#methods">KFilesystemStreamAbstract</a></h3>
+		<p class="elementList">
+			<code><a href="class-KFilesystemStreamAbstract.html#___construct">__construct()</a></code>, 
+			<code><a href="class-KFilesystemStreamAbstract.html#___toString">__toString()</a></code>, 
+			<code><a href="class-KFilesystemStreamAbstract.html#__initialize">_initialize()</a></code>, 
+			<code><a href="class-KFilesystemStreamAbstract.html#_addFilter">addFilter()</a></code>, 
+			<code><a href="class-KFilesystemStreamAbstract.html#_cast">cast()</a></code>, 
+			<code><a href="class-KFilesystemStreamAbstract.html#_copy">copy()</a></code>, 
+			<code><a href="class-KFilesystemStreamAbstract.html#_getChunkSize">getChunkSize()</a></code>, 
+			<code><a href="class-KFilesystemStreamAbstract.html#_getFilter">getFilter()</a></code>, 
+			<code><a href="class-KFilesystemStreamAbstract.html#_getFilters">getFilters()</a></code>, 
+			<code><a href="class-KFilesystemStreamAbstract.html#_getHash">getHash()</a></code>, 
+			<code><a href="class-KFilesystemStreamAbstract.html#_getName">getName()</a></code>, 
+			<code><a href="class-KFilesystemStreamAbstract.html#_getOptions">getOptions()</a></code>, 
+			<code><a href="class-KFilesystemStreamAbstract.html#_getResource">getResource()</a></code>, 
+			<code><a href="class-KFilesystemStreamAbstract.html#_getSize">getSize()</a></code>, 
+			<code><a href="class-KFilesystemStreamAbstract.html#_getTime">getTime()</a></code>, 
+			<code><a href="class-KFilesystemStreamAbstract.html#_hasFilter">hasFilter()</a></code>, 
+			<code><a href="class-KFilesystemStreamAbstract.html#_isBinary">isBinary()</a></code>, 
+			<code><a href="class-KFilesystemStreamAbstract.html#_isBlocked">isBlocked()</a></code>, 
+			<code><a href="class-KFilesystemStreamAbstract.html#_isLocal">isLocal()</a></code>, 
+			<code><a href="class-KFilesystemStreamAbstract.html#_isReadable">isReadable()</a></code>, 
+			<code><a href="class-KFilesystemStreamAbstract.html#_isText">isText()</a></code>, 
+			<code><a href="class-KFilesystemStreamAbstract.html#_isTimeout">isTimeout()</a></code>, 
+			<code><a href="class-KFilesystemStreamAbstract.html#_isWritable">isWritable()</a></code>, 
+			<code><a href="class-KFilesystemStreamAbstract.html#_lock">lock()</a></code>, 
+			<code><a href="class-KFilesystemStreamAbstract.html#_removeFilter">removeFilter()</a></code>, 
+			<code><a href="class-KFilesystemStreamAbstract.html#_rename">rename()</a></code>, 
+			<code><a href="class-KFilesystemStreamAbstract.html#_rewind">rewind()</a></code>, 
+			<code><a href="class-KFilesystemStreamAbstract.html#_setBlocking">setBlocking()</a></code>, 
+			<code><a href="class-KFilesystemStreamAbstract.html#_setBuffer">setBuffer()</a></code>, 
+			<code><a href="class-KFilesystemStreamAbstract.html#_setChunkSize">setChunkSize()</a></code>, 
+			<code><a href="class-KFilesystemStreamAbstract.html#_setResource">setResource()</a></code>, 
+			<code><a href="class-KFilesystemStreamAbstract.html#_setTimeout">setTimeout()</a></code>, 
+			<code><a href="class-KFilesystemStreamAbstract.html#_unlink">unlink()</a></code>, 
+			<code><a href="class-KFilesystemStreamAbstract.html#_unlock">unlock()</a></code>
+		</p>
+		<h3>Methods inherited from <a href="class-KObject.html#methods">KObject</a></h3>
+		<p class="elementList">
+			<code><a href="class-KObject.html#___call">__call()</a></code>, 
+			<code><a href="class-KObject.html#___clone">__clone()</a></code>, 
+			<code><a href="class-KObject.html#_decorate">decorate()</a></code>, 
+			<code><a href="class-KObject.html#_getConfig">getConfig()</a></code>, 
+			<code><a href="class-KObject.html#_getHandle">getHandle()</a></code>, 
+			<code><a href="class-KObject.html#_getIdentifier">getIdentifier()</a></code>, 
+			<code><a href="class-KObject.html#_getMethods">getMethods()</a></code>, 
+			<code><a href="class-KObject.html#_getObject">getObject()</a></code>, 
+			<code><a href="class-KObject.html#_inherits">inherits()</a></code>, 
+			<code><a href="class-KObject.html#_mixin">mixin()</a></code>
+		</p>
+
+
+		<h3>Magic methods summary</h3>
+
+
+
+
+
+		<h2>Constants summary</h2>
+
+		<h3>Constants inherited from <a href="class-KFilesystemStreamInterface.html#constants">KFilesystemStreamInterface</a></h3>
+		<p class="elementList">
+			<code><a href="class-KFilesystemStreamInterface.html#TIME_ACCESSED"><b>TIME_ACCESSED</b></a></code>, 
+			<code><a href="class-KFilesystemStreamInterface.html#TIME_CREATED"><b>TIME_CREATED</b></a></code>, 
+			<code><a href="class-KFilesystemStreamInterface.html#TIME_MODIFIED"><b>TIME_MODIFIED</b></a></code>, 
+			<code><a href="class-KFilesystemStreamInterface.html#TYPE_BLOCK"><b>TYPE_BLOCK</b></a></code>, 
+			<code><a href="class-KFilesystemStreamInterface.html#TYPE_DIRECTORY"><b>TYPE_DIRECTORY</b></a></code>, 
+			<code><a href="class-KFilesystemStreamInterface.html#TYPE_FIFO"><b>TYPE_FIFO</b></a></code>, 
+			<code><a href="class-KFilesystemStreamInterface.html#TYPE_FILE"><b>TYPE_FILE</b></a></code>, 
+			<code><a href="class-KFilesystemStreamInterface.html#TYPE_LINK"><b>TYPE_LINK</b></a></code>, 
+			<code><a href="class-KFilesystemStreamInterface.html#TYPE_MEMORY"><b>TYPE_MEMORY</b></a></code>, 
+			<code><a href="class-KFilesystemStreamInterface.html#TYPE_SOCKET"><b>TYPE_SOCKET</b></a></code>, 
+			<code><a href="class-KFilesystemStreamInterface.html#TYPE_TEMP"><b>TYPE_TEMP</b></a></code>, 
+			<code><a href="class-KFilesystemStreamInterface.html#TYPE_UNKNOWN"><b>TYPE_UNKNOWN</b></a></code>
+		</p>
+
+
+
+		<h2>Properties summary</h2>
+		<table class="summary table table-bordered table-striped" id="properties">
+		<tr data-order="_name" id="$_name">
+			<td class="attributes"><code>
+				protected static 
+				string
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-KFilesystemStreamBuffer.html#32-37" title="Go to source code"><var>$_name</var></a>
+			</td>
+			<td class="description"><div>
+				<a href="#$_name" class="anchor">#</a>
+
+				<div class="description short">
+					
+<p>The stream name</p>
+
+				</div>
+
+				<div class="description detailed hidden">
+					
+<p>The stream name</p>
+
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="_length" id="$_length">
+			<td class="attributes"><code>
+				protected  
+				integer
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-KFilesystemStreamBuffer.html#39-44" title="Go to source code"><var>$_length</var></a>
+			</td>
+			<td class="description"><div>
+				<a href="#$_length" class="anchor">#</a>
+
+				<div class="description short">
+					
+<p>The stream length</p>
+
+				</div>
+
+				<div class="description detailed hidden">
+					
+<p>The stream length</p>
+
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="_position" id="$_position">
+			<td class="attributes"><code>
+				protected  
+				integer
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-KFilesystemStreamBuffer.html#46-51" title="Go to source code"><var>$_position</var></a>
+			</td>
+			<td class="description"><div>
+				<a href="#$_position" class="anchor">#</a>
+
+				<div class="description short">
+					
+<p>Current stream position</p>
+
+				</div>
+
+				<div class="description detailed hidden">
+					
+<p>Current stream position</p>
+
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="_synchronised" id="$_synchronised">
+			<td class="attributes"><code>
+				protected  
+				boolean
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-KFilesystemStreamBuffer.html#53-58" title="Go to source code"><var>$_synchronised</var></a>
+			</td>
+			<td class="description"><div>
+				<a href="#$_synchronised" class="anchor">#</a>
+
+				<div class="description short">
+					
+<p>Use to check if the memory stream is synced with the physical stream</p>
+
+				</div>
+
+				<div class="description detailed hidden">
+					
+<p>Use to check if the memory stream is synced with the physical stream</p>
+
+
+				</div>
+			</div></td>
+		</tr>
+		</table>
+
+		<h3>Properties inherited from <a href="class-KFilesystemStreamAbstract.html#properties">KFilesystemStreamAbstract</a></h3>
+		<p class="elementList">
+			<code><a href="class-KFilesystemStreamAbstract.html#$_chunk_size"><var>$_chunk_size</var></a></code>, 
+			<code><a href="class-KFilesystemStreamAbstract.html#$_filters"><var>$_filters</var></a></code>, 
+			<code><a href="class-KFilesystemStreamAbstract.html#$_mode"><var>$_mode</var></a></code>, 
+			<code><a href="class-KFilesystemStreamAbstract.html#$_options"><var>$_options</var></a></code>, 
+			<code><a href="class-KFilesystemStreamAbstract.html#$_path"><var>$_path</var></a></code>, 
+			<code><a href="class-KFilesystemStreamAbstract.html#$_resource"><var>$_resource</var></a></code>, 
+			<code><a href="class-KFilesystemStreamAbstract.html#$_type"><var>$_type</var></a></code>, 
+			<code><a href="class-KFilesystemStreamAbstract.html#$modes"><var>$modes</var></a></code>
+		</p>
+		<h3>Properties inherited from <a href="class-KObject.html#properties">KObject</a></h3>
+		<p class="elementList">
+			<code><a href="class-KObject.html#$_mixed_methods"><var>$_mixed_methods</var></a></code>
+		</p>
+
+
+
+
+
+</div>
+	</div>
+
+	<div id="footer">
+		Nooku Framework API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+
+<script>
+    responsivemenu.init({
+        wrapper: document.querySelector('.header'),
+        toggleclass: 'button--hamburger',
+        togglecontent: 'menu <span class="lines"></span>'
+    });
+</script>
+
+</body>
+</html>

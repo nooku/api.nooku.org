@@ -1,0 +1,2494 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<title>Class KHttpUrl | Nooku Framework</title>
+
+	<script type="text/javascript" src="resources/combined.js?2640657843"></script>
+	<script type="text/javascript" src="elementlist.js?527661356"></script>
+	<script type="text/javascript" src="http://www.nooku.org/js/scripts.js"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/bootstrap.min.css?390653004" />
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?150590327" />
+    <link rel="stylesheet" type="text/css" media="all" href="http://www.nooku.org/css/header.css" />
+
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,300italic,700,400italic' rel='stylesheet' type='text/css' />
+
+    <link rel="shortcut icon" href="http://www.nooku.org/images/favicon.ico" type="image/x-icon" />
+
+	<script>
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] ||
+            function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-214238-5', 'auto');
+        ga('send', 'pageview');
+    </script>
+</head>
+
+<body class="no-js">
+    <script type="text/javascript">
+    function hasClass(e, t) {
+        return e.className.match(new RegExp("(\\s|^)" + t + "(\\s|$)"))
+    }
+    var el = document.body;
+    var cl = "no-js";
+    if (hasClass(el, cl)) {
+        var reg = new RegExp("(\\s|^)" + cl + "(\\s|$)");
+        el.className = el.className.replace(reg, " js-enabled")
+    }
+    </script>
+	<div class="header">
+            <div class="container">
+                <div class="group">
+                    <div class="header__brand brand"><a href="http://www.nooku.org"><img src="http://www.nooku.org/images/layout/logo.png" alt="Nooku Logo" /></a></div>
+                    <div class="header__navigation">
+                        <div class="navigation_container" role="navigation">
+                            <ul class="navbar initiated">
+                                <li class="navbar__item" role="menuitem"><a href="http://www.nooku.org/features/">Features</a></li>
+                                <li class="navbar__item" role="menuitem"><a href="http://www.nooku.org/get-started/">Get Started</a></li>
+                                <li class="navbar__item" role="menuitem"><a href="http://www.nooku.org/services/">Services</a></li>
+                                <li class="navbar__item" role="menuitem"><a href="http://www.nooku.org/community/">Community</a></li>
+                                <li class="navbar__item active" role="menuitem"><a href="http://www.nooku.org/docs/">Docs</a></li>
+                                <li class="navbar__item" role="menuitem"><a href="http://www.nooku.org/blog">Blog</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+	<div id="left">
+	<div id="menu">
+		<form id="search" class="form-search">
+			<input type="hidden" name="cx" value="" />
+			<input type="hidden" name="ie" value="UTF-8" />
+			<input type="text" name="q" class="search-query" placeholder="Search" />
+		</form>
+
+
+		<div id="groups">
+			<h3>Packages</h3>
+			<ul>
+				<li class="active"><a href="package-Koowa.html">Koowa<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.html">Component<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.html">Koowa<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Class.html">Class<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Class.Locator.html">Locator</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Controller.html">Controller<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Controller.Behavior.html">Behavior</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Controller.Permission.html">Permission</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Controller.Toolbar.html">Toolbar</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Database.html">Database<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Database.Adapter.html">Adapter</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Database.Behavior.html">Behavior</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Database.Table.html">Table</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Date.html">Date</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Decorator.html">Decorator</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Dispatcher.html">Dispatcher<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Dispatcher.Authenticator.html">Authenticator</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Dispatcher.Permission.html">Permission</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Dispatcher.Request.html">Request</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Dispatcher.Response.html">Response<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Dispatcher.Response.Transport.html">Transport</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Dispatcher.Router.html">Router</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Event.html">Event<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Event.Publisher.html">Publisher</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Event.Subscriber.html">Subscriber</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Exception.html">Exception</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Filesystem.html">Filesystem<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Filesystem.Stream.html">Stream</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Filter.html">Filter</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Model.html">Model</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Object.html">Object<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Object.Locator.html">Locator</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Template.html">Template<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Template.Filter.html">Filter</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Template.Helper.html">Helper</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Template.Locator.html">Locator</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Translator.html">Translator<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Translator.Catalogue.html">Catalogue</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Translator.Locator.html">Locator</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.User.html">User</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.View.html">View<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.View.Error.html">Error</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.View.Page.html">Page</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.View.Users.html">Users</a>
+						</li>
+							</ul></li></ul></li></ul></li>
+				<li class="active"><a href="package-Koowa.Library.html">Library<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Behavior.html">Behavior<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Behavior.Exception.html">Exception</a>
+						</li>
+				<li><a href="package-Koowa.Library.Behavior.Mixin.html">Mixin</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Class.html">Class<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Class.Loader.html">Loader</a>
+						</li>
+				<li><a href="package-Koowa.Library.Class.Locator.html">Locator</a>
+						</li>
+				<li><a href="package-Koowa.Library.Class.Registry.html">Registry</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Command.html">Command<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Command.Callback.html">Callback</a>
+						</li>
+				<li><a href="package-Koowa.Library.Command.Chain.html">Chain</a>
+						</li>
+				<li><a href="package-Koowa.Library.Command.Exception.html">Exception</a>
+						</li>
+				<li><a href="package-Koowa.Library.Command.Handler.html">Handler</a>
+						</li>
+				<li><a href="package-Koowa.Library.Command.Mixin.html">Mixin</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Controller.html">Controller<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Controller.Behavior.html">Behavior</a>
+						</li>
+				<li><a href="package-Koowa.Library.Controller.Context.html">Context</a>
+						</li>
+				<li><a href="package-Koowa.Library.Controller.Exception.html">Exception</a>
+						</li>
+				<li><a href="package-Koowa.Library.Controller.Permission.html">Permission</a>
+						</li>
+				<li><a href="package-Koowa.Library.Controller.Request.html">Request</a>
+						</li>
+				<li><a href="package-Koowa.Library.Controller.Response.html">Response</a>
+						</li>
+				<li><a href="package-Koowa.Library.Controller.Toolbar.html">Toolbar<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Controller.Toolbar.Command.html">Command</a>
+						</li>
+				<li><a href="package-Koowa.Library.Controller.Toolbar.Mixin.html">Mixin</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-Koowa.Library.Database.html">Database<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Database.Adapter.html">Adapter</a>
+						</li>
+				<li><a href="package-Koowa.Library.Database.Behavior.html">Behavior</a>
+						</li>
+				<li><a href="package-Koowa.Library.Database.Context.html">Context</a>
+						</li>
+				<li><a href="package-Koowa.Library.Database.Query.html">Query</a>
+						</li>
+				<li><a href="package-Koowa.Library.Database.Row.html">Row</a>
+						</li>
+				<li><a href="package-Koowa.Library.Database.Rowset.html">Rowset</a>
+						</li>
+				<li><a href="package-Koowa.Library.Database.Schema.html">Schema</a>
+						</li>
+				<li><a href="package-Koowa.Library.Database.Table.html">Table</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Date.html">Date</a>
+						</li>
+				<li><a href="package-Koowa.Library.Dispatcher.html">Dispatcher<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Dispatcher.Authenticator.html">Authenticator</a>
+						</li>
+				<li><a href="package-Koowa.Library.Dispatcher.Behavior.html">Behavior</a>
+						</li>
+				<li><a href="package-Koowa.Library.Dispatcher.Context.html">Context</a>
+						</li>
+				<li><a href="package-Koowa.Library.Dispatcher.Exception.html">Exception</a>
+						</li>
+				<li><a href="package-Koowa.Library.Dispatcher.Permission.html">Permission</a>
+						</li>
+				<li><a href="package-Koowa.Library.Dispatcher.Request.html">Request</a>
+						</li>
+				<li><a href="package-Koowa.Library.Dispatcher.Response.html">Response<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Dispatcher.Response.Transport.html">Transport</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Dispatcher.Router.html">Router</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Event.html">Event<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Event.Mixin.html">Mixin</a>
+						</li>
+				<li><a href="package-Koowa.Library.Event.Publisher.html">Publisher</a>
+						</li>
+				<li><a href="package-Koowa.Library.Event.Subscriber.html">Subscriber</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Exception.html">Exception<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Exception.Handler.html">Handler</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Filesystem.html">Filesystem<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Filesystem.Stream.html">Stream<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Filesystem.Stream.Filter.html">Filter</a>
+						</li>
+				<li><a href="package-Koowa.Library.Filesystem.Stream.Iterator.html">Iterator</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-Koowa.Library.Filter.html">Filter</a>
+						</li>
+				<li class="active"><a href="package-Koowa.Library.Http.html">Http<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Http.Cookie.html">Cookie</a>
+						</li>
+				<li><a href="package-Koowa.Library.Http.Exception.html">Exception<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Http.Exception.Unsupported.html">Unsupported</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Http.Message.html">Message</a>
+						</li>
+				<li><a href="package-Koowa.Library.Http.Request.html">Request</a>
+						</li>
+				<li><a href="package-Koowa.Library.Http.Response.html">Response</a>
+						</li>
+				<li><a href="package-Koowa.Library.Http.Token.html">Token</a>
+						</li>
+				<li class="active"><a href="package-Koowa.Library.Http.Url.html">Url</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Model.html">Model<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Model.Behavior.html">Behavior</a>
+						</li>
+				<li><a href="package-Koowa.Library.Model.Context.html">Context</a>
+						</li>
+				<li><a href="package-Koowa.Library.Model.Entity.html">Entity</a>
+						</li>
+				<li><a href="package-Koowa.Library.Model.Paginator.html">Paginator</a>
+						</li>
+				<li><a href="package-Koowa.Library.Model.State.html">State</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Object.html">Object<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Object.Bootstrapper.html">Bootstrapper</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Config.html">Config</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Decorator.html">Decorator</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Exception.html">Exception</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Identifier.html">Identifier</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Locator.html">Locator</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Manager.html">Manager</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Mixin.html">Mixin</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Registry.html">Registry</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.String.html">String<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.String.Inflector.html">Inflector</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Template.html">Template<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Template.Engine.html">Engine</a>
+						</li>
+				<li><a href="package-Koowa.Library.Template.Exception.html">Exception</a>
+						</li>
+				<li><a href="package-Koowa.Library.Template.Filter.html">Filter</a>
+						</li>
+				<li><a href="package-Koowa.Library.Template.Helper.html">Helper</a>
+						</li>
+				<li><a href="package-Koowa.Library.Template.Locator.html">Locator</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Translator.html">Translator<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Translator.Catalogue.html">Catalogue</a>
+						</li>
+				<li><a href="package-Koowa.Library.Translator.Inflector.html">Inflector</a>
+						</li>
+				<li><a href="package-Koowa.Library.Translator.Locator.html">Locator</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.User.html">User<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.User.Provider.html">Provider</a>
+						</li>
+				<li><a href="package-Koowa.Library.User.Session.html">Session<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.User.Session.Container.html">Container</a>
+						</li>
+				<li><a href="package-Koowa.Library.User.Session.Handler.html">Handler</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-Koowa.Library.View.html">View<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.View.Behavior.html">Behavior</a>
+						</li>
+				<li><a href="package-Koowa.Library.View.Context.html">Context</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-Koowa.Module.html">Module<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Module.Koowa.html">Koowa<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Module.Koowa.Template.html">Template<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Module.Koowa.Template.Filter.html">Filter</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Module.Koowa.View.html">View</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-Koowa.Plugin.html">Plugin<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Plugin.Koowa.html">Koowa</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Wordpress.html">Wordpress<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Wordpress.Library.html">Library<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Wordpress.Library.Controller.html">Controller</a>
+						</li>
+							</ul></li></ul></li></ul></li>
+				<li><a href="package-Nooku.html">Nooku<span></span></a>
+						<ul>
+				<li><a href="package-Nooku.Library.html">Library<span></span></a>
+						<ul>
+				<li><a href="package-Nooku.Library.Template.html">Template<span></span></a>
+						<ul>
+				<li><a href="package-Nooku.Library.Template.Abstract.html">Abstract</a>
+						</li>
+							</ul></li></ul></li></ul></li>
+			</ul>
+		</div>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li class="active"><a href="class-KHttpUrl.html">KHttpUrl</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="class-KHttpUrlInterface.html">KHttpUrlInterface</a></li>
+			</ul>
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+	<div id="rightInner">
+<div id="content" class="class">
+	<h1>Class KHttpUrl</h1>
+
+
+	<div class="description">
+	
+<p>Http Url</p>
+
+<p>This class helps you to create and manipulate urls, including query strings
+and path elements. It does so by splitting up the pieces of the url and allowing
+you modify them individually; you can then then fetch them as a single url
+string.</p>
+
+<p>The following is a simple example. Say that the page address is currently
+<code>http://anonymous::guest@example.com/path/to/index.php/foo/bar?baz=dib#anchor</code>.</p>
+
+<p>You can use KHttpUrl to parse this complex string very easily:</p>
+
+<pre>
+<span class="xlang">&lt;?php</span>
+    <span
+class="php-comment">// Create a url object;</span>
+
+    <span
+class="php-var">$url</span> = <span
+class="php-quote">'http://anonymous:guest@example.com/path/to/index.php/foo/bar.xml?baz=dib#anchor'</span>
+    <span
+class="php-var">$url</span> = KObjectManager::getInstance()-&gt;getObject(<span
+class="php-quote">'http.url'</span>, <span
+class="php-keyword1">array</span>(<span
+class="php-quote">'url'</span> =&gt; <span
+class="php-var">$url</span>) );
+
+    <span
+class="php-comment">// the $url properties are ...</span>
+    <span
+class="php-comment">//</span>
+    <span
+class="php-comment">// $url-&gt;scheme   =&gt; 'http'</span>
+    <span
+class="php-comment">// $url-&gt;host     =&gt; 'example.com'</span>
+    <span
+class="php-comment">// $url-&gt;user     =&gt; 'anonymous'</span>
+    <span
+class="php-comment">// $url-&gt;pass     =&gt; 'guest'</span>
+    <span
+class="php-comment">// $url-&gt;path     =&gt; array('path', 'to', 'index.php', 'foo', 'bar.xml')</span>
+    <span
+class="php-comment">// $url-&gt;query    =&gt; array('baz' =&gt; 'dib')</span>
+    <span
+class="php-comment">// $url-&gt;fragment =&gt; 'anchor'</span>
+<span
+class="xlang">?&gt;</span>
+</pre>
+
+<p>Now that we have imported the url and had it parsed automatically, we can
+modify the component parts, then fetch a new url string.</p>
+
+<pre>
+<span class="xlang">&lt;?php</span>
+    <span
+class="php-comment">// change to 'https://'</span>
+    <span
+class="php-var">$url</span>-&gt;scheme = <span
+class="php-quote">'https'</span>;
+
+    <span
+class="php-comment">// remove the username and password</span>
+    <span
+class="php-var">$url</span>-&gt;user = <span
+class="php-quote">''</span>;
+    <span
+class="php-var">$url</span>-&gt;pass = <span
+class="php-quote">''</span>;
+
+    <span
+class="php-comment">// change the value of 'baz' to 'zab'</span>
+    <span
+class="php-var">$url</span>-&gt;setQuery(<span
+class="php-keyword1">array</span>(<span
+class="php-quote">'baz'</span> =&gt; <span
+class="php-quote">'zab'</span>));
+
+    <span
+class="php-comment">// add a new query element called 'zim' with a value of 'gir'</span>
+    <span
+class="php-var">$url</span>-&gt;query[<span
+class="php-quote">'zim'</span>] = <span
+class="php-quote">'gir'</span>;
+
+    <span
+class="php-comment">// reset the path to something else entirely.</span>
+    <span
+class="php-var">$url</span>-&gt;setPath(<span
+class="php-quote">'/something/else/entirely.php'</span>);
+
+    <span
+class="php-comment">// Get the full URL to get the scheme and host</span>
+    <span
+class="php-var">$full_url</span> = <span
+class="php-var">$url</span>-&gt;toString(<span
+class="php-keyword1">true</span>);
+
+    <span
+class="php-comment">// the $full_url string is:</span>
+    <span
+class="php-comment">// https://example.com/something/else/entirely.php?baz=zab&amp;zim=gir#anchor</span>
+<span
+class="xlang">?&gt;</span>
+</pre>
+
+	</div>
+
+	<dl class="tree well">
+		<dd style="padding-left:0px">
+			<a href="class-KObject.html"><span>KObject</span></a>
+			
+			 implements 
+				<a href="class-KObjectInterface.html"><span>KObjectInterface</span></a>, 
+			
+				<a href="class-KObjectMixable.html"><span>KObjectMixable</span></a>, 
+			
+				<a href="class-KObjectHandlable.html"><span>KObjectHandlable</span></a>, 
+			
+				<a href="class-KObjectDecoratable.html"><span>KObjectDecoratable</span></a>
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by" />
+<b><span>KHttpUrl</span></b>			
+			 implements 
+				<a href="class-KHttpUrlInterface.html"><span>KHttpUrlInterface</span></a>
+			
+			
+		</dd>
+	</dl>
+
+
+	<div>
+		<h3>Direct known subclasses</h3>
+		<p class="elementList">
+			<code><a href="class-KDispatcherRouterRoute.html">KDispatcherRouterRoute</a></code>
+		</p>
+	</div>
+
+	<div>
+		<h3>Indirect known subclasses</h3>
+		<p class="elementList">
+			<code><a href="class-ComKoowaDispatcherRouterRoute.html">ComKoowaDispatcherRouterRoute</a></code>
+		</p>
+	</div>
+
+
+
+
+
+	<div class="alert alert-info">
+		
+		
+		
+		<b>Package:</b> <a href="package-Koowa.html">Koowa</a>\<a href="package-Koowa.Library.html">Library</a>\<a href="package-Koowa.Library.Http.html">Http</a>\<a href="package-Koowa.Library.Http.Url.html">Url</a><br />
+
+				<b>Copyright:</b>
+				Copyright (C) 2007 - 2014 Johan Janssens and Timble CVBA. (<a
+href="http://www.timble.net">http://www.timble.net</a>)<br />
+				<b>License:</b>
+				<a href="GNU">GPLv3 &lt;http://www.gnu.org/licenses/gpl.html&gt;</a><br />
+				<b>Author:</b>
+				Johan Janssens &lt;<a
+href="https://github.com/johanjanssens">https://github.com/johanjanssens</a>&gt;<br />
+		<b>Located at</b> <a href="source-class-KHttpUrl.html#10-687" title="Go to source code">libraries/koowa/libraries/http/url/url.php</a><br />
+	</div>
+
+
+
+		<h2>Methods summary</h2>
+		<table class="summary table table-bordered table-striped" id="methods">
+		<tr data-order="__construct" id="___construct">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#___construct">#</a>
+			<code><a href="source-class-KHttpUrl.html#183-197" title="Go to source code">__construct</a>( <span><code><a href="class-KObjectConfig.html">KObjectConfig</a></code> <var>$config</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Constructor</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Constructor</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$config</var></dt>
+						<dd><code><code><a href="class-KObjectConfig.html">KObjectConfig</a></code></code><br>$config An optional KObjectConfig object with configuration options</dd>
+					</dl></div>
+
+
+
+
+					<h4>Overrides</h4>
+					<div class="list"><code><a href="class-KObject.html#___construct">KObject::__construct</a></code></div>
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="_initialize" id="__initialize">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#__initialize">#</a>
+			<code><a href="source-class-KHttpUrl.html#199-215" title="Go to source code">_initialize</a>( <span><code><a href="class-KObjectConfig.html">KObjectConfig</a></code> <var>$config</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Initializes the options for the object</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Initializes the options for the object</p>
+
+<p>Called from <code><a href="class-KHttpUrl.html#___construct">KHttpUrl::__construct()</a></code> as a first step of object instantiation</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$config</var></dt>
+						<dd><code><code><a href="class-KObjectConfig.html">KObjectConfig</a></code></code><br>$config An optional KObjectConfig object with configuration options</dd>
+					</dl></div>
+
+
+
+
+					<h4>Overrides</h4>
+					<div class="list"><code><a href="class-KObject.html#__initialize">KObject::_initialize</a></code></div>
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="setUrl" id="_setUrl">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-KHttpUrl.html">KHttpUrl</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_setUrl">#</a>
+			<code><a href="source-class-KHttpUrl.html#217-248" title="Go to source code">setUrl</a>( <span>string|array <var>$url</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Parse the url from a string</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Parse the url from a string</p>
+
+<p>Partial URLs are also accepted. setUrl() tries its best to parse them
+correctly. Function also accepts an associative array like parse_url
+returns.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$url</var></dt>
+						<dd><code>string|array</code><br>$url Part(s) of an URL in form of a string or associative array like parse_url()
+returns</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><code><a href="class-KHttpUrl.html">KHttpUrl</a></code></code><br />
+					</div>
+
+					<h4>Throws</h4>
+					<div class="list">
+						<code>UnexpectedValueException</code><br>If the url is not an array a string or cannot be casted to one.<br />
+					</div>
+
+					<h4>See</h4>
+					<div class="list">
+							parse_url()<br />
+					</div>
+
+
+					<h4>Implementation of</h4>
+					<div class="list"><code><a href="class-KHttpUrlInterface.html#_setUrl">KHttpUrlInterface::setUrl()</a></code></div>
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getScheme" id="_getScheme">
+
+			<td class="attributes"><code>
+				 public 
+				string|null
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getScheme">#</a>
+			<code><a href="source-class-KHttpUrl.html#250-258" title="Go to source code">getScheme</a>( )</code>
+
+			<div class="description short">
+				
+<p>Get the scheme part of the URL</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Get the scheme part of the URL</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>string|null</code><br />
+					</div>
+
+
+
+
+					<h4>Implementation of</h4>
+					<div class="list"><code><a href="class-KHttpUrlInterface.html#_getScheme">KHttpUrlInterface::getScheme()</a></code></div>
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="setScheme" id="_setScheme">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-KHttpUrl.html">KHttpUrl</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_setScheme">#</a>
+			<code><a href="source-class-KHttpUrl.html#260-270" title="Go to source code">setScheme</a>( <span>string <var>$scheme</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Set the URL scheme</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Set the URL scheme</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$scheme</var></dt>
+						<dd><code>string</code><br>$scheme</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><code><a href="class-KHttpUrl.html">KHttpUrl</a></code></code><br />
+					</div>
+
+
+
+
+					<h4>Implementation of</h4>
+					<div class="list"><code><a href="class-KHttpUrlInterface.html#_setScheme">KHttpUrlInterface::setScheme()</a></code></div>
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getUser" id="_getUser">
+
+			<td class="attributes"><code>
+				 public 
+				string|null
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getUser">#</a>
+			<code><a href="source-class-KHttpUrl.html#272-280" title="Go to source code">getUser</a>( )</code>
+
+			<div class="description short">
+				
+<p>Get the URL user</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Get the URL user</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>string|null</code><br />
+					</div>
+
+
+
+
+					<h4>Implementation of</h4>
+					<div class="list"><code><a href="class-KHttpUrlInterface.html#_getUser">KHttpUrlInterface::getUser()</a></code></div>
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="setUser" id="_setUser">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-KHttpUrl.html">KHttpUrl</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_setUser">#</a>
+			<code><a href="source-class-KHttpUrl.html#282-292" title="Go to source code">setUser</a>( <span>string <var>$user</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Set the URL user</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Set the URL user</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$user</var></dt>
+						<dd><code>string</code><br>$user</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><code><a href="class-KHttpUrl.html">KHttpUrl</a></code></code><br />
+					</div>
+
+
+
+
+					<h4>Implementation of</h4>
+					<div class="list"><code><a href="class-KHttpUrlInterface.html#_setUser">KHttpUrlInterface::setUser()</a></code></div>
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getPass" id="_getPass">
+
+			<td class="attributes"><code>
+				 public 
+				string|null
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getPass">#</a>
+			<code><a href="source-class-KHttpUrl.html#294-302" title="Go to source code">getPass</a>( )</code>
+
+			<div class="description short">
+				
+<p>Get the URL password</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Get the URL password</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>string|null</code><br />
+					</div>
+
+
+
+
+					<h4>Implementation of</h4>
+					<div class="list"><code><a href="class-KHttpUrlInterface.html#_getPass">KHttpUrlInterface::getPass()</a></code></div>
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="setPass" id="_setPass">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-KHttpUrl.html">KHttpUrl</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_setPass">#</a>
+			<code><a href="source-class-KHttpUrl.html#304-314" title="Go to source code">setPass</a>( <span>string <var>$pass</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Set the URL password</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Set the URL password</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$pass</var></dt>
+						<dd><code>string</code><br>$pass</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><code><a href="class-KHttpUrl.html">KHttpUrl</a></code></code><br />
+					</div>
+
+
+
+
+					<h4>Implementation of</h4>
+					<div class="list"><code><a href="class-KHttpUrlInterface.html#_setPass">KHttpUrlInterface::setPass()</a></code></div>
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getHost" id="_getHost">
+
+			<td class="attributes"><code>
+				 public 
+				string|null
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getHost">#</a>
+			<code><a href="source-class-KHttpUrl.html#316-324" title="Go to source code">getHost</a>( )</code>
+
+			<div class="description short">
+				
+<p>Get the URL host</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Get the URL host</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>string|null</code><br />
+					</div>
+
+
+
+
+					<h4>Implementation of</h4>
+					<div class="list"><code><a href="class-KHttpUrlInterface.html#_getHost">KHttpUrlInterface::getHost()</a></code></div>
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="setHost" id="_setHost">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-KHttpUrl.html">KHttpUrl</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_setHost">#</a>
+			<code><a href="source-class-KHttpUrl.html#326-336" title="Go to source code">setHost</a>( <span>string <var>$host</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Set the URL Host</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Set the URL Host</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$host</var></dt>
+						<dd><code>string</code><br>$host</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><code><a href="class-KHttpUrl.html">KHttpUrl</a></code></code><br />
+					</div>
+
+
+
+
+					<h4>Implementation of</h4>
+					<div class="list"><code><a href="class-KHttpUrlInterface.html#_setHost">KHttpUrlInterface::setHost()</a></code></div>
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getPort" id="_getPort">
+
+			<td class="attributes"><code>
+				 public 
+				integer|null
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getPort">#</a>
+			<code><a href="source-class-KHttpUrl.html#338-346" title="Go to source code">getPort</a>( )</code>
+
+			<div class="description short">
+				
+<p>Get the URL port</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Get the URL port</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>integer|null</code><br />
+					</div>
+
+
+
+
+					<h4>Implementation of</h4>
+					<div class="list"><code><a href="class-KHttpUrlInterface.html#_getPort">KHttpUrlInterface::getPort()</a></code></div>
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="setPort" id="_setPort">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-KHttpUrl.html">KHttpUrl</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_setPort">#</a>
+			<code><a href="source-class-KHttpUrl.html#348-358" title="Go to source code">setPort</a>( <span>integer <var>$port</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Set the port part of the URL</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Set the port part of the URL</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$port</var></dt>
+						<dd><code>integer</code><br>$port</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><code><a href="class-KHttpUrl.html">KHttpUrl</a></code></code><br />
+					</div>
+
+
+
+
+					<h4>Implementation of</h4>
+					<div class="list"><code><a href="class-KHttpUrlInterface.html#_setPort">KHttpUrlInterface::setPort()</a></code></div>
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getPath" id="_getPath">
+
+			<td class="attributes"><code>
+				 public 
+				string|array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getPath">#</a>
+			<code><a href="source-class-KHttpUrl.html#360-370" title="Go to source code">getPath</a>( <span>boolean <var>$toArray</var> = <span class="php-keyword1">false</span></span> )</code>
+
+			<div class="description short">
+				
+<p>Returns the path portion as a string or array</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Returns the path portion as a string or array</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$toArray</var></dt>
+						<dd><code>boolean</code><br>$toArray If TRUE return an array. Default FALSE</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>string|array</code><br>The path string; e.g., <code>path/to/site</code>.<br />
+					</div>
+
+
+
+
+					<h4>Implementation of</h4>
+					<div class="list"><code><a href="class-KHttpUrlInterface.html#_getPath">KHttpUrlInterface::getPath()</a></code></div>
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="setPath" id="_setPath">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-KHttpUrl.html">KHttpUrl</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_setPath">#</a>
+			<code><a href="source-class-KHttpUrl.html#372-399" title="Go to source code">setPath</a>( <span>string|array <var>$path</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Sets the HttpUrl::$path array</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Sets the HttpUrl::$path array</p>
+
+<p>This will overwrite any previous values.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$path</var></dt>
+						<dd><code>string|array</code><br>$path The path string or array of elements to use; for
+example,"/foo/bar/baz/dib". A leading slash will <em>not</em> create an empty
+first element; if the string has a leading slash, it is ignored.</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><code><a href="class-KHttpUrl.html">KHttpUrl</a></code></code><br />
+					</div>
+
+
+
+
+					<h4>Implementation of</h4>
+					<div class="list"><code><a href="class-KHttpUrlInterface.html#_setPath">KHttpUrlInterface::setPath()</a></code></div>
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getQuery" id="_getQuery">
+
+			<td class="attributes"><code>
+				 public 
+				string|array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getQuery">#</a>
+			<code><a href="source-class-KHttpUrl.html#401-422" title="Go to source code">getQuery</a>( <span>boolean <var>$toArray</var> = <span class="php-keyword1">false</span></span>, <span>boolean|null <var>$escape</var> = <span class="php-keyword1">null</span></span> )</code>
+
+			<div class="description short">
+				
+<p>Returns the query portion as a string or array</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Returns the query portion as a string or array</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$toArray</var></dt>
+						<dd><code>boolean</code><br>$toArray If TRUE return an array. Default FALSE</dd>
+						<dt><var>$escape</var></dt>
+						<dd><code>boolean|null</code><br>$escape If TRUE escapes '&amp;' to '&amp;' for xml compliance. If NULL use the
+default.</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>string|array</code><br>The query string; e.g., <code>foo=bar&amp;baz=dib</code>.<br />
+					</div>
+
+
+
+
+					<h4>Implementation of</h4>
+					<div class="list"><code><a href="class-KHttpUrlInterface.html#_getQuery">KHttpUrlInterface::getQuery()</a></code></div>
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="setQuery" id="_setQuery">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-KHttpUrl.html">KHttpUrl</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_setQuery">#</a>
+			<code><a href="source-class-KHttpUrl.html#424-454" title="Go to source code">setQuery</a>( <span>string|array <var>$query</var></span>, <span>boolean <var>$merge</var> = <span class="php-keyword1">false</span></span> )</code>
+
+			<div class="description short">
+				
+<p>Sets the query string</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Sets the query string</p>
+
+<p>If an string is provided, will decode the string to an array of parameters.
+Array values will be represented in the query string using PHP's common square
+bracket notation.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$query</var></dt>
+						<dd><code>string|array</code><br>$query The query string to use; for example <code>foo=bar&amp;baz=dib</code>.</dd>
+						<dt><var>$merge</var></dt>
+						<dd><code>boolean</code><br>$merge If TRUE the data in $query will be merged instead of replaced. Default
+FALSE.</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><code><a href="class-KHttpUrl.html">KHttpUrl</a></code></code><br />
+					</div>
+
+
+
+
+					<h4>Implementation of</h4>
+					<div class="list"><code><a href="class-KHttpUrlInterface.html#_setQuery">KHttpUrlInterface::setQuery()</a></code></div>
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getFragment" id="_getFragment">
+
+			<td class="attributes"><code>
+				 public 
+				string|null
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getFragment">#</a>
+			<code><a href="source-class-KHttpUrl.html#456-464" title="Go to source code">getFragment</a>( )</code>
+
+			<div class="description short">
+				
+<p>Get the URL fragment</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Get the URL fragment</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>string|null</code><br />
+					</div>
+
+
+
+
+					<h4>Implementation of</h4>
+					<div class="list"><code><a href="class-KHttpUrlInterface.html#_getFragment">KHttpUrlInterface::getFragment()</a></code></div>
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="setFragment" id="_setFragment">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-KHttpUrl.html">KHttpUrl</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_setFragment">#</a>
+			<code><a href="source-class-KHttpUrl.html#466-476" title="Go to source code">setFragment</a>( <span>string <var>$fragment</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Set the URL fragment part</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Set the URL fragment part</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$fragment</var></dt>
+						<dd><code>string</code><br>$fragment</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><code><a href="class-KHttpUrl.html">KHttpUrl</a></code></code><br />
+					</div>
+
+
+
+
+					<h4>Implementation of</h4>
+					<div class="list"><code><a href="class-KHttpUrlInterface.html#_setFragment">KHttpUrlInterface::setFragment()</a></code></div>
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="setEscape" id="_setEscape">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-KHttpUrl.html">KHttpUrl</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_setEscape">#</a>
+			<code><a href="source-class-KHttpUrl.html#478-488" title="Go to source code">setEscape</a>( <span>boolean <var>$escape</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Enable/disable URL escaping</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Enable/disable URL escaping</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$escape</var></dt>
+						<dd><code>boolean</code><br>$escape</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><code><a href="class-KHttpUrl.html">KHttpUrl</a></code></code><br />
+					</div>
+
+
+
+
+					<h4>Implementation of</h4>
+					<div class="list"><code><a href="class-KHttpUrlInterface.html#_setEscape">KHttpUrlInterface::setEscape()</a></code></div>
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getEscape" id="_getEscape">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getEscape">#</a>
+			<code><a href="source-class-KHttpUrl.html#490-498" title="Go to source code">getEscape</a>( )</code>
+
+			<div class="description short">
+				
+<p>Get the escape setting</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Get the escape setting</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>boolean</code><br />
+					</div>
+
+
+
+
+					<h4>Implementation of</h4>
+					<div class="list"><code><a href="class-KHttpUrlInterface.html#_getEscape">KHttpUrlInterface::getEscape()</a></code></div>
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="fromArray" id="_fromArray">
+
+			<td class="attributes"><code>
+				 public static
+				<code><a href="class-KHttpUrl.html">KHttpUrl</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_fromArray">#</a>
+			<code><a href="source-class-KHttpUrl.html#500-511" title="Go to source code">fromArray</a>( <span>array <var>$parts</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Build the url from an array</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Build the url from an array</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$parts</var></dt>
+						<dd><code>array</code><br>$parts Associative array like parse_url() returns.</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><code><a href="class-KHttpUrl.html">KHttpUrl</a></code></code><br />
+					</div>
+
+
+					<h4>See</h4>
+					<div class="list">
+							parse_url()<br />
+					</div>
+
+
+					<h4>Implementation of</h4>
+					<div class="list"><code><a href="class-KHttpUrlInterface.html#_fromArray">KHttpUrlInterface::fromArray()</a></code></div>
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="fromString" id="_fromString">
+
+			<td class="attributes"><code>
+				 public static
+				<code><a href="class-KHttpUrl.html">KHttpUrl</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_fromString">#</a>
+			<code><a href="source-class-KHttpUrl.html#513-534" title="Go to source code">fromString</a>( <span>string <var>$url</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Build the url from a string</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Build the url from a string</p>
+
+<p>Partial URLs are also accepted. fromString tries its best to parse them
+correctly.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$url</var></dt>
+						<dd><code>string</code><br>$url</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><code><a href="class-KHttpUrl.html">KHttpUrl</a></code></code><br />
+					</div>
+
+					<h4>Throws</h4>
+					<div class="list">
+						<code>UnexpectedValueException</code><br>If the url is not a string or cannot be casted to one.<br />
+					</div>
+
+					<h4>See</h4>
+					<div class="list">
+							parse_url()<br />
+					</div>
+
+
+					<h4>Implementation of</h4>
+					<div class="list"><code><a href="class-KHttpUrlInterface.html#_fromString">KHttpUrlInterface::fromString()</a></code></div>
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="toString" id="_toString">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_toString">#</a>
+			<code><a href="source-class-KHttpUrl.html#536-595" title="Go to source code">toString</a>( <span>integer <var>$parts</var> = <code><a href="class-KHttpUrl.html#FULL">KHttpUrl::<b>FULL</b></a></code></span>, <span>boolean|null <var>$escape</var> = <span class="php-keyword1">null</span></span> )</code>
+
+			<div class="description short">
+				
+<p>Get the full url, of the format
+scheme://user:pass@host/path?query#fragment';</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Get the full url, of the format
+scheme://user:pass@host/path?query#fragment';</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$parts</var></dt>
+						<dd><code>integer</code><br>$parts A bitmask of binary or'ed HTTP_URL constants; FULL is the default</dd>
+						<dt><var>$escape</var></dt>
+						<dd><code>boolean|null</code><br>$escape If TRUE escapes '&amp;' to '&amp;' for xml compliance. If NULL use the
+default.</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>string</code><br />
+					</div>
+
+
+
+
+					<h4>Implementation of</h4>
+					<div class="list"><code><a href="class-KHttpUrlInterface.html#_toString">KHttpUrlInterface::toString()</a></code></div>
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="equals" id="_equals">
+
+			<td class="attributes"><code>
+				 public 
+				Boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_equals">#</a>
+			<code><a href="source-class-KHttpUrl.html#597-615" title="Go to source code">equals</a>( <span><code><a href="class-KHttpUrlInterface.html">KHttpUrlInterface</a></code> <var>$url</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Check if two url's are equal</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Check if two url's are equal</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$url</var></dt>
+						<dd><code><code><a href="class-KHttpUrlInterface.html">KHttpUrlInterface</a></code></code><br>$url</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>Boolean</code><br />
+					</div>
+
+
+
+
+					<h4>Implementation of</h4>
+					<div class="list"><code><a href="class-KHttpUrlInterface.html#_equals">KHttpUrlInterface::equals()</a></code></div>
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="_pathEncode" id="__pathEncode">
+
+			<td class="attributes"><code>
+				 protected 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#__pathEncode">#</a>
+			<code><a href="source-class-KHttpUrl.html#617-640" title="Go to source code">_pathEncode</a>( <span>array <var>$spec</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Converts an array of path elements into a string.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Converts an array of path elements into a string.</p>
+
+<p>Does not use urlencode(); instead, only converts characters found in
+HttpUrl::$_encode_path.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$spec</var></dt>
+						<dd><code>array</code><br>$spec The path elements.</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>string</code><br>A url path string.<br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="__set" id="___set">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#___set">#</a>
+			<code><a href="source-class-KHttpUrl.html#642-657" title="Go to source code">__set</a>( <span>string <var>$key</var></span>, <span>string <var>$value</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Set the virtual properties.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Set the virtual properties.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$key</var></dt>
+						<dd><code>string</code><br>$key The virtual property to set.</dd>
+						<dt><var>$value</var></dt>
+						<dd><code>string</code><br>$value Set the virtual property to this value.</dd>
+					</dl></div>
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="__get" id="___get">
+
+			<td class="attributes"><code>
+				 public 
+				mixed
+				&amp;
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#___get">#</a>
+			<code><a href="source-class-KHttpUrl.html#659-676" title="Go to source code">__get</a>( <span>string <var>$key</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Get the virtual properties by reference so that they appears to be public</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Get the virtual properties by reference so that they appears to be public</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$key</var></dt>
+						<dd><code>string</code><br>$key The virtual property to return.</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>mixed</code><br>The value of the virtual property.<br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="__toString" id="___toString">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#___toString">#</a>
+			<code><a href="source-class-KHttpUrl.html#678-686" title="Go to source code">__toString</a>( )</code>
+
+			<div class="description short">
+				
+<p>Allow PHP casting of this object</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Allow PHP casting of this object</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>string</code><br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		</table>
+
+		<h3>Methods inherited from <a href="class-KObject.html#methods">KObject</a></h3>
+		<p class="elementList">
+			<code><a href="class-KObject.html#___call">__call()</a></code>, 
+			<code><a href="class-KObject.html#___clone">__clone()</a></code>, 
+			<code><a href="class-KObject.html#_decorate">decorate()</a></code>, 
+			<code><a href="class-KObject.html#_getConfig">getConfig()</a></code>, 
+			<code><a href="class-KObject.html#_getHandle">getHandle()</a></code>, 
+			<code><a href="class-KObject.html#_getIdentifier">getIdentifier()</a></code>, 
+			<code><a href="class-KObject.html#_getMethods">getMethods()</a></code>, 
+			<code><a href="class-KObject.html#_getObject">getObject()</a></code>, 
+			<code><a href="class-KObject.html#_inherits">inherits()</a></code>, 
+			<code><a href="class-KObject.html#_mixin">mixin()</a></code>
+		</p>
+
+
+		<h3>Magic methods summary</h3>
+
+
+
+
+
+		<h2>Constants summary</h2>
+		<table class="summary table table-bordered table-striped" id="constants">
+		<tr data-order="SCHEME" id="SCHEME">
+
+			<td class="attributes"><code>integer</code></td>
+			<td class="name"><code>
+					<a href="source-class-KHttpUrl.html#75-80" title="Go to source code"><b>SCHEME</b></a>
+			</code></td>
+			<td class="value"><code><span class="php-num">1</span></code></td>
+			<td class="description"><div>
+				<a href="#SCHEME" class="anchor">#</a>
+
+				<div class="description short">
+					
+<p>The url parts</p>
+
+				</div>
+
+				<div class="description detailed hidden">
+					
+<p>The url parts</p>
+
+
+						<h4>See</h4>
+						<div class="list">
+								<code><code><a href="class-KHttpUrl.html#_toString">KHttpUrl::toString()</a></code></code><br />
+						</div>
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="USER" id="USER">
+
+			<td class="attributes"><code>integer</code></td>
+			<td class="name"><code>
+					<a href="source-class-KHttpUrl.html#81" title="Go to source code"><b>USER</b></a>
+			</code></td>
+			<td class="value"><code><span class="php-num">2</span></code></td>
+			<td class="description"><div>
+				<a href="#USER" class="anchor">#</a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="PASS" id="PASS">
+
+			<td class="attributes"><code>integer</code></td>
+			<td class="name"><code>
+					<a href="source-class-KHttpUrl.html#82" title="Go to source code"><b>PASS</b></a>
+			</code></td>
+			<td class="value"><code><span class="php-num">4</span></code></td>
+			<td class="description"><div>
+				<a href="#PASS" class="anchor">#</a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="HOST" id="HOST">
+
+			<td class="attributes"><code>integer</code></td>
+			<td class="name"><code>
+					<a href="source-class-KHttpUrl.html#83" title="Go to source code"><b>HOST</b></a>
+			</code></td>
+			<td class="value"><code><span class="php-num">8</span></code></td>
+			<td class="description"><div>
+				<a href="#HOST" class="anchor">#</a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="PORT" id="PORT">
+
+			<td class="attributes"><code>integer</code></td>
+			<td class="name"><code>
+					<a href="source-class-KHttpUrl.html#84" title="Go to source code"><b>PORT</b></a>
+			</code></td>
+			<td class="value"><code><span class="php-num">16</span></code></td>
+			<td class="description"><div>
+				<a href="#PORT" class="anchor">#</a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="PATH" id="PATH">
+
+			<td class="attributes"><code>integer</code></td>
+			<td class="name"><code>
+					<a href="source-class-KHttpUrl.html#85" title="Go to source code"><b>PATH</b></a>
+			</code></td>
+			<td class="value"><code><span class="php-num">32</span></code></td>
+			<td class="description"><div>
+				<a href="#PATH" class="anchor">#</a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="QUERY" id="QUERY">
+
+			<td class="attributes"><code>integer</code></td>
+			<td class="name"><code>
+					<a href="source-class-KHttpUrl.html#86" title="Go to source code"><b>QUERY</b></a>
+			</code></td>
+			<td class="value"><code><span class="php-num">64</span></code></td>
+			<td class="description"><div>
+				<a href="#QUERY" class="anchor">#</a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="FRAGMENT" id="FRAGMENT">
+
+			<td class="attributes"><code>integer</code></td>
+			<td class="name"><code>
+					<a href="source-class-KHttpUrl.html#87" title="Go to source code"><b>FRAGMENT</b></a>
+			</code></td>
+			<td class="value"><code><span class="php-num">128</span></code></td>
+			<td class="description"><div>
+				<a href="#FRAGMENT" class="anchor">#</a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="USERINFO" id="USERINFO">
+
+			<td class="attributes"><code>integer</code></td>
+			<td class="name"><code>
+					<a href="source-class-KHttpUrl.html#89" title="Go to source code"><b>USERINFO</b></a>
+			</code></td>
+			<td class="value"><code><span class="php-num">6</span></code></td>
+			<td class="description"><div>
+				<a href="#USERINFO" class="anchor">#</a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="AUTHORITY" id="AUTHORITY">
+
+			<td class="attributes"><code>integer</code></td>
+			<td class="name"><code>
+					<a href="source-class-KHttpUrl.html#90" title="Go to source code"><b>AUTHORITY</b></a>
+			</code></td>
+			<td class="value"><code><span class="php-num">31</span></code></td>
+			<td class="description"><div>
+				<a href="#AUTHORITY" class="anchor">#</a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="BASE" id="BASE">
+
+			<td class="attributes"><code>integer</code></td>
+			<td class="name"><code>
+					<a href="source-class-KHttpUrl.html#91" title="Go to source code"><b>BASE</b></a>
+			</code></td>
+			<td class="value"><code><span class="php-num">63</span></code></td>
+			<td class="description"><div>
+				<a href="#BASE" class="anchor">#</a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="FULL" id="FULL">
+
+			<td class="attributes"><code>integer</code></td>
+			<td class="name"><code>
+					<a href="source-class-KHttpUrl.html#92" title="Go to source code"><b>FULL</b></a>
+			</code></td>
+			<td class="value"><code><span class="php-num">255</span></code></td>
+			<td class="description"><div>
+				<a href="#FULL" class="anchor">#</a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</div></td>
+		</tr>
+		</table>
+
+
+
+
+		<h2>Properties summary</h2>
+		<table class="summary table table-bordered table-striped" id="properties">
+		<tr data-order="scheme" id="$scheme">
+			<td class="attributes"><code>
+				public  
+				string
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-KHttpUrl.html#94-99" title="Go to source code"><var>$scheme</var></a>
+			</td>
+			<td class="description"><div>
+				<a href="#$scheme" class="anchor">#</a>
+
+				<div class="description short">
+					
+<p>The scheme [http|https|ftp|mailto|...]</p>
+
+				</div>
+
+				<div class="description detailed hidden">
+					
+<p>The scheme [http|https|ftp|mailto|...]</p>
+
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="host" id="$host">
+			<td class="attributes"><code>
+				public  
+				string
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-KHttpUrl.html#101-106" title="Go to source code"><var>$host</var></a>
+			</td>
+			<td class="description"><div>
+				<a href="#$host" class="anchor">#</a>
+
+				<div class="description short">
+					
+<p>The host specification (for example, 'example.com').</p>
+
+				</div>
+
+				<div class="description detailed hidden">
+					
+<p>The host specification (for example, 'example.com').</p>
+
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="port" id="$port">
+			<td class="attributes"><code>
+				public  
+				string
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-KHttpUrl.html#108-113" title="Go to source code"><var>$port</var></a>
+			</td>
+			<td class="description"><div>
+				<a href="#$port" class="anchor">#</a>
+
+				<div class="description short">
+					
+<p>The port number (for example, '80').</p>
+
+				</div>
+
+				<div class="description detailed hidden">
+					
+<p>The port number (for example, '80').</p>
+
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="user" id="$user">
+			<td class="attributes"><code>
+				public  
+				string
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-KHttpUrl.html#115-120" title="Go to source code"><var>$user</var></a>
+			</td>
+			<td class="description"><div>
+				<a href="#$user" class="anchor">#</a>
+
+				<div class="description short">
+					
+<p>The username, if any.</p>
+
+				</div>
+
+				<div class="description detailed hidden">
+					
+<p>The username, if any.</p>
+
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="pass" id="$pass">
+			<td class="attributes"><code>
+				public  
+				string
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-KHttpUrl.html#122-127" title="Go to source code"><var>$pass</var></a>
+			</td>
+			<td class="description"><div>
+				<a href="#$pass" class="anchor">#</a>
+
+				<div class="description short">
+					
+<p>The password, if any.</p>
+
+				</div>
+
+				<div class="description detailed hidden">
+					
+<p>The password, if any.</p>
+
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="fragment" id="$fragment">
+			<td class="attributes"><code>
+				public  
+				string
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-KHttpUrl.html#129-134" title="Go to source code"><var>$fragment</var></a>
+			</td>
+			<td class="description"><div>
+				<a href="#$fragment" class="anchor">#</a>
+
+				<div class="description short">
+					
+<p>The fragment aka anchor portion (for example, the "foo" in "#foo").</p>
+
+				</div>
+
+				<div class="description detailed hidden">
+					
+<p>The fragment aka anchor portion (for example, the "foo" in "#foo").</p>
+
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="_query" id="$_query">
+			<td class="attributes"><code>
+				protected  
+				array
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-KHttpUrl.html#136-146" title="Go to source code"><var>$_query</var></a>
+			</td>
+			<td class="description"><div>
+				<a href="#$_query" class="anchor">#</a>
+
+				<div class="description short">
+					
+<p>The query portion (for example baz=dib)</p>
+
+				</div>
+
+				<div class="description detailed hidden">
+					
+<p>The query portion (for example baz=dib)</p>
+
+<p>Public access is allowed via __get() with $query.</p>
+
+
+						<h4>See</h4>
+						<div class="list">
+								<code><code><a href="class-KHttpUrl.html#_setQuery">KHttpUrl::setQuery()</a></code></code><br />
+								<code><code><a href="class-KHttpUrl.html#_getQuery">KHttpUrl::getQuery()</a></code></code><br />
+						</div>
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="_path" id="$_path">
+			<td class="attributes"><code>
+				protected  
+				array
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-KHttpUrl.html#148-156" title="Go to source code"><var>$_path</var></a>
+			</td>
+			<td class="description"><div>
+				<a href="#$_path" class="anchor">#</a>
+
+				<div class="description short">
+					
+<p>The path portion (for example, 'path/to/index.php').</p>
+
+				</div>
+
+				<div class="description detailed hidden">
+					
+<p>The path portion (for example, 'path/to/index.php').</p>
+
+
+						<h4>See</h4>
+						<div class="list">
+								<code><code><a href="class-KHttpUrl.html#_setPath">KHttpUrl::setPath()</a></code></code><br />
+								<code><code><a href="class-KHttpUrl.html#_getPath">KHttpUrl::getPath()</a></code></code><br />
+						</div>
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="_encode_path" id="$_encode_path">
+			<td class="attributes"><code>
+				protected  
+				array
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-KHttpUrl.html#158-171" title="Go to source code"><var>$_encode_path</var></a>
+			</td>
+			<td class="description"><div>
+				<a href="#$_encode_path" class="anchor">#</a>
+
+				<div class="description short">
+					
+<p>Url-encode only these characters in path elements.</p>
+
+				</div>
+
+				<div class="description detailed hidden">
+					
+<p>Url-encode only these characters in path elements.</p>
+
+<p>Characters are ' ' (space), '/', '?', '&amp;', and '#'.</p>
+
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="_escape" id="$_escape">
+			<td class="attributes"><code>
+				protected  
+				boolean
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-KHttpUrl.html#173-181" title="Go to source code"><var>$_escape</var></a>
+			</td>
+			<td class="description"><div>
+				<a href="#$_escape" class="anchor">#</a>
+
+				<div class="description short">
+					
+<p>Escape '&amp;' to '&amp;'</p>
+
+				</div>
+
+				<div class="description detailed hidden">
+					
+<p>Escape '&amp;' to '&amp;'</p>
+
+
+						<h4>See</h4>
+						<div class="list">
+								<code><code><a href="class-KHttpUrl.html#_getQuery">KHttpUrl::getQuery()</a></code></code><br />
+								getUrl()<br />
+						</div>
+				</div>
+			</div></td>
+		</tr>
+		</table>
+
+		<h3>Properties inherited from <a href="class-KObject.html#properties">KObject</a></h3>
+		<p class="elementList">
+			<code><a href="class-KObject.html#$_mixed_methods"><var>$_mixed_methods</var></a></code>
+		</p>
+
+
+
+
+
+</div>
+	</div>
+
+	<div id="footer">
+		Nooku Framework API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+
+<script>
+    responsivemenu.init({
+        wrapper: document.querySelector('.header'),
+        toggleclass: 'button--hamburger',
+        togglecontent: 'menu <span class="lines"></span>'
+    });
+</script>
+
+</body>
+</html>

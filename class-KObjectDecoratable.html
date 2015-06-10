@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<title>Interface KObjectDecoratable | Nooku Framework</title>
+
+	<script type="text/javascript" src="resources/combined.js?2640657843"></script>
+	<script type="text/javascript" src="elementlist.js?527661356"></script>
+	<script type="text/javascript" src="http://www.nooku.org/js/scripts.js"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/bootstrap.min.css?390653004" />
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?150590327" />
+    <link rel="stylesheet" type="text/css" media="all" href="http://www.nooku.org/css/header.css" />
+
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,300italic,700,400italic' rel='stylesheet' type='text/css' />
+
+    <link rel="shortcut icon" href="http://www.nooku.org/images/favicon.ico" type="image/x-icon" />
+
+	<script>
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] ||
+            function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-214238-5', 'auto');
+        ga('send', 'pageview');
+    </script>
+</head>
+
+<body class="no-js">
+    <script type="text/javascript">
+    function hasClass(e, t) {
+        return e.className.match(new RegExp("(\\s|^)" + t + "(\\s|$)"))
+    }
+    var el = document.body;
+    var cl = "no-js";
+    if (hasClass(el, cl)) {
+        var reg = new RegExp("(\\s|^)" + cl + "(\\s|$)");
+        el.className = el.className.replace(reg, " js-enabled")
+    }
+    </script>
+	<div class="header">
+            <div class="container">
+                <div class="group">
+                    <div class="header__brand brand"><a href="http://www.nooku.org"><img src="http://www.nooku.org/images/layout/logo.png" alt="Nooku Logo" /></a></div>
+                    <div class="header__navigation">
+                        <div class="navigation_container" role="navigation">
+                            <ul class="navbar initiated">
+                                <li class="navbar__item" role="menuitem"><a href="http://www.nooku.org/features/">Features</a></li>
+                                <li class="navbar__item" role="menuitem"><a href="http://www.nooku.org/get-started/">Get Started</a></li>
+                                <li class="navbar__item" role="menuitem"><a href="http://www.nooku.org/services/">Services</a></li>
+                                <li class="navbar__item" role="menuitem"><a href="http://www.nooku.org/community/">Community</a></li>
+                                <li class="navbar__item active" role="menuitem"><a href="http://www.nooku.org/docs/">Docs</a></li>
+                                <li class="navbar__item" role="menuitem"><a href="http://www.nooku.org/blog">Blog</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+	<div id="left">
+	<div id="menu">
+		<form id="search" class="form-search">
+			<input type="hidden" name="cx" value="" />
+			<input type="hidden" name="ie" value="UTF-8" />
+			<input type="text" name="q" class="search-query" placeholder="Search" />
+		</form>
+
+
+		<div id="groups">
+			<h3>Packages</h3>
+			<ul>
+				<li class="active"><a href="package-Koowa.html">Koowa<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.html">Component<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.html">Koowa<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Class.html">Class<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Class.Locator.html">Locator</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Controller.html">Controller<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Controller.Behavior.html">Behavior</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Controller.Permission.html">Permission</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Controller.Toolbar.html">Toolbar</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Database.html">Database<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Database.Adapter.html">Adapter</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Database.Behavior.html">Behavior</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Database.Table.html">Table</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Date.html">Date</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Decorator.html">Decorator</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Dispatcher.html">Dispatcher<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Dispatcher.Authenticator.html">Authenticator</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Dispatcher.Permission.html">Permission</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Dispatcher.Request.html">Request</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Dispatcher.Response.html">Response<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Dispatcher.Response.Transport.html">Transport</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Dispatcher.Router.html">Router</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Event.html">Event<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Event.Publisher.html">Publisher</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Event.Subscriber.html">Subscriber</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Exception.html">Exception</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Filesystem.html">Filesystem<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Filesystem.Stream.html">Stream</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Filter.html">Filter</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Model.html">Model</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Object.html">Object<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Object.Locator.html">Locator</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Template.html">Template<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Template.Filter.html">Filter</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Template.Helper.html">Helper</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Template.Locator.html">Locator</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Translator.html">Translator<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Translator.Catalogue.html">Catalogue</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Translator.Locator.html">Locator</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.User.html">User</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.View.html">View<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.View.Error.html">Error</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.View.Page.html">Page</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.View.Users.html">Users</a>
+						</li>
+							</ul></li></ul></li></ul></li>
+				<li class="active"><a href="package-Koowa.Library.html">Library<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Behavior.html">Behavior<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Behavior.Exception.html">Exception</a>
+						</li>
+				<li><a href="package-Koowa.Library.Behavior.Mixin.html">Mixin</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Class.html">Class<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Class.Loader.html">Loader</a>
+						</li>
+				<li><a href="package-Koowa.Library.Class.Locator.html">Locator</a>
+						</li>
+				<li><a href="package-Koowa.Library.Class.Registry.html">Registry</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Command.html">Command<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Command.Callback.html">Callback</a>
+						</li>
+				<li><a href="package-Koowa.Library.Command.Chain.html">Chain</a>
+						</li>
+				<li><a href="package-Koowa.Library.Command.Exception.html">Exception</a>
+						</li>
+				<li><a href="package-Koowa.Library.Command.Handler.html">Handler</a>
+						</li>
+				<li><a href="package-Koowa.Library.Command.Mixin.html">Mixin</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Controller.html">Controller<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Controller.Behavior.html">Behavior</a>
+						</li>
+				<li><a href="package-Koowa.Library.Controller.Context.html">Context</a>
+						</li>
+				<li><a href="package-Koowa.Library.Controller.Exception.html">Exception</a>
+						</li>
+				<li><a href="package-Koowa.Library.Controller.Permission.html">Permission</a>
+						</li>
+				<li><a href="package-Koowa.Library.Controller.Request.html">Request</a>
+						</li>
+				<li><a href="package-Koowa.Library.Controller.Response.html">Response</a>
+						</li>
+				<li><a href="package-Koowa.Library.Controller.Toolbar.html">Toolbar<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Controller.Toolbar.Command.html">Command</a>
+						</li>
+				<li><a href="package-Koowa.Library.Controller.Toolbar.Mixin.html">Mixin</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-Koowa.Library.Database.html">Database<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Database.Adapter.html">Adapter</a>
+						</li>
+				<li><a href="package-Koowa.Library.Database.Behavior.html">Behavior</a>
+						</li>
+				<li><a href="package-Koowa.Library.Database.Context.html">Context</a>
+						</li>
+				<li><a href="package-Koowa.Library.Database.Query.html">Query</a>
+						</li>
+				<li><a href="package-Koowa.Library.Database.Row.html">Row</a>
+						</li>
+				<li><a href="package-Koowa.Library.Database.Rowset.html">Rowset</a>
+						</li>
+				<li><a href="package-Koowa.Library.Database.Schema.html">Schema</a>
+						</li>
+				<li><a href="package-Koowa.Library.Database.Table.html">Table</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Date.html">Date</a>
+						</li>
+				<li><a href="package-Koowa.Library.Dispatcher.html">Dispatcher<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Dispatcher.Authenticator.html">Authenticator</a>
+						</li>
+				<li><a href="package-Koowa.Library.Dispatcher.Behavior.html">Behavior</a>
+						</li>
+				<li><a href="package-Koowa.Library.Dispatcher.Context.html">Context</a>
+						</li>
+				<li><a href="package-Koowa.Library.Dispatcher.Exception.html">Exception</a>
+						</li>
+				<li><a href="package-Koowa.Library.Dispatcher.Permission.html">Permission</a>
+						</li>
+				<li><a href="package-Koowa.Library.Dispatcher.Request.html">Request</a>
+						</li>
+				<li><a href="package-Koowa.Library.Dispatcher.Response.html">Response<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Dispatcher.Response.Transport.html">Transport</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Dispatcher.Router.html">Router</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Event.html">Event<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Event.Mixin.html">Mixin</a>
+						</li>
+				<li><a href="package-Koowa.Library.Event.Publisher.html">Publisher</a>
+						</li>
+				<li><a href="package-Koowa.Library.Event.Subscriber.html">Subscriber</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Exception.html">Exception<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Exception.Handler.html">Handler</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Filesystem.html">Filesystem<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Filesystem.Stream.html">Stream<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Filesystem.Stream.Filter.html">Filter</a>
+						</li>
+				<li><a href="package-Koowa.Library.Filesystem.Stream.Iterator.html">Iterator</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-Koowa.Library.Filter.html">Filter</a>
+						</li>
+				<li><a href="package-Koowa.Library.Http.html">Http<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Http.Cookie.html">Cookie</a>
+						</li>
+				<li><a href="package-Koowa.Library.Http.Exception.html">Exception<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Http.Exception.Unsupported.html">Unsupported</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Http.Message.html">Message</a>
+						</li>
+				<li><a href="package-Koowa.Library.Http.Request.html">Request</a>
+						</li>
+				<li><a href="package-Koowa.Library.Http.Response.html">Response</a>
+						</li>
+				<li><a href="package-Koowa.Library.Http.Token.html">Token</a>
+						</li>
+				<li><a href="package-Koowa.Library.Http.Url.html">Url</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Model.html">Model<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Model.Behavior.html">Behavior</a>
+						</li>
+				<li><a href="package-Koowa.Library.Model.Context.html">Context</a>
+						</li>
+				<li><a href="package-Koowa.Library.Model.Entity.html">Entity</a>
+						</li>
+				<li><a href="package-Koowa.Library.Model.Paginator.html">Paginator</a>
+						</li>
+				<li><a href="package-Koowa.Library.Model.State.html">State</a>
+						</li>
+							</ul></li>
+				<li class="active"><a href="package-Koowa.Library.Object.html">Object<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Object.Bootstrapper.html">Bootstrapper</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Config.html">Config</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Decorator.html">Decorator</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Exception.html">Exception</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Identifier.html">Identifier</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Locator.html">Locator</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Manager.html">Manager</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Mixin.html">Mixin</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Registry.html">Registry</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.String.html">String<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.String.Inflector.html">Inflector</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Template.html">Template<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Template.Engine.html">Engine</a>
+						</li>
+				<li><a href="package-Koowa.Library.Template.Exception.html">Exception</a>
+						</li>
+				<li><a href="package-Koowa.Library.Template.Filter.html">Filter</a>
+						</li>
+				<li><a href="package-Koowa.Library.Template.Helper.html">Helper</a>
+						</li>
+				<li><a href="package-Koowa.Library.Template.Locator.html">Locator</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Translator.html">Translator<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Translator.Catalogue.html">Catalogue</a>
+						</li>
+				<li><a href="package-Koowa.Library.Translator.Inflector.html">Inflector</a>
+						</li>
+				<li><a href="package-Koowa.Library.Translator.Locator.html">Locator</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.User.html">User<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.User.Provider.html">Provider</a>
+						</li>
+				<li><a href="package-Koowa.Library.User.Session.html">Session<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.User.Session.Container.html">Container</a>
+						</li>
+				<li><a href="package-Koowa.Library.User.Session.Handler.html">Handler</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-Koowa.Library.View.html">View<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.View.Behavior.html">Behavior</a>
+						</li>
+				<li><a href="package-Koowa.Library.View.Context.html">Context</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-Koowa.Module.html">Module<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Module.Koowa.html">Koowa<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Module.Koowa.Template.html">Template<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Module.Koowa.Template.Filter.html">Filter</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Module.Koowa.View.html">View</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-Koowa.Plugin.html">Plugin<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Plugin.Koowa.html">Koowa</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Wordpress.html">Wordpress<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Wordpress.Library.html">Library<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Wordpress.Library.Controller.html">Controller</a>
+						</li>
+							</ul></li></ul></li></ul></li>
+				<li><a href="package-Nooku.html">Nooku<span></span></a>
+						<ul>
+				<li><a href="package-Nooku.Library.html">Library<span></span></a>
+						<ul>
+				<li><a href="package-Nooku.Library.Template.html">Template<span></span></a>
+						<ul>
+				<li><a href="package-Nooku.Library.Template.Abstract.html">Abstract</a>
+						</li>
+							</ul></li></ul></li></ul></li>
+			</ul>
+		</div>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-KObject.html">KObject</a></li>
+				<li><a href="class-KObjectArray.html">KObjectArray</a></li>
+				<li><a href="class-KObjectQueue.html">KObjectQueue</a></li>
+				<li><a href="class-KObjectSet.html">KObjectSet</a></li>
+				<li><a href="class-KObjectStack.html">KObjectStack</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li class="active"><a href="class-KObjectDecoratable.html">KObjectDecoratable</a></li>
+				<li><a href="class-KObjectEquatable.html">KObjectEquatable</a></li>
+				<li><a href="class-KObjectHandlable.html">KObjectHandlable</a></li>
+				<li><a href="class-KObjectInstantiable.html">KObjectInstantiable</a></li>
+				<li><a href="class-KObjectInterface.html">KObjectInterface</a></li>
+				<li><a href="class-KObjectMixable.html">KObjectMixable</a></li>
+				<li><a href="class-KObjectMultiton.html">KObjectMultiton</a></li>
+				<li><a href="class-KObjectSingleton.html">KObjectSingleton</a></li>
+			</ul>
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+	<div id="rightInner">
+<div id="content" class="class">
+	<h1>Interface KObjectDecoratable</h1>
+
+
+	<div class="description">
+	
+<p>Object Decoratable Interface</p>
+
+	</div>
+
+
+
+
+
+	<div>
+		<h3>Direct known implementers</h3>
+		<p class="elementList">
+			<code><a href="class-KObject.html">KObject</a></code>, 
+			<code><a href="class-KObjectDecorator.html">KObjectDecorator</a></code>
+		</p>
+	</div>
+
+	<div>
+		<h3>Indirect known implementers</h3>
+		<p class="elementList">
+			<code><a href="class-ComKoowaControllerDefault.html">ComKoowaControllerDefault</a></code>, 
+			<code><a href="class-ComKoowaControllerError.html">ComKoowaControllerError</a></code>, 
+			<code><a href="class-ComKoowaDatabaseTableUsers.html">ComKoowaDatabaseTableUsers</a></code>, 
+			<code><a href="class-KDispatcherHttp.html">KDispatcherHttp</a></code>, 
+			<code><a href="class-KDispatcherRequest.html">KDispatcherRequest</a></code>, 
+			<code><a href="class-KDispatcherRequestAbstract.html">KDispatcherRequestAbstract</a></code>, 
+			<code><a href="class-KDispatcherResponse.html">KDispatcherResponse</a></code>, 
+			<code><a href="class-KDispatcherResponseAbstract.html">KDispatcherResponseAbstract</a></code>, 
+			<code><a href="class-KDispatcherResponseTransportAbstract.html">KDispatcherResponseTransportAbstract</a></code>, 
+			<code><a href="class-KDispatcherResponseTransportHttp.html">KDispatcherResponseTransportHttp</a></code>, 
+			<code><a href="class-KDispatcherResponseTransportJson.html">KDispatcherResponseTransportJson</a></code>, 
+			<code><a href="class-KDispatcherResponseTransportRedirect.html">KDispatcherResponseTransportRedirect</a></code>, 
+			<code><a href="class-KDispatcherResponseTransportSendfile.html">KDispatcherResponseTransportSendfile</a></code>, 
+			<code><a href="class-ComKoowaDate.html">ComKoowaDate</a></code>, 
+			<code><a href="class-KDispatcherResponseTransportStream.html">KDispatcherResponseTransportStream</a></code>, 
+			<code><a href="class-KDispatcherRouter.html">KDispatcherRouter</a></code>, 
+			<code><a href="class-KDispatcherRouterRoute.html">KDispatcherRouterRoute</a></code>, 
+			<code><a href="class-KEventPublisher.html">KEventPublisher</a></code>, 
+			<code><a href="class-KEventPublisherAbstract.html">KEventPublisherAbstract</a></code>, 
+			<code><a href="class-KEventPublisherException.html">KEventPublisherException</a></code>, 
+			<code><a href="class-KEventPublisherProfiler.html">KEventPublisherProfiler</a></code>, 
+			<code><a href="class-KEventSubscriberAbstract.html">KEventSubscriberAbstract</a></code>, 
+			<code><a href="class-KExceptionHandler.html">KExceptionHandler</a></code>, 
+			<code><a href="class-KExceptionHandlerAbstract.html">KExceptionHandlerAbstract</a></code>, 
+			<code><a href="class-ComKoowaDispatcherHttp.html">ComKoowaDispatcherHttp</a></code>, 
+			<code><a href="class-KFilesystemStreamAbstract.html">KFilesystemStreamAbstract</a></code>, 
+			<code><a href="class-KFilesystemStreamBuffer.html">KFilesystemStreamBuffer</a></code>, 
+			<code><a href="class-KFilesystemStreamDefault.html">KFilesystemStreamDefault</a></code>, 
+			<code><a href="class-KFilesystemStreamFactory.html">KFilesystemStreamFactory</a></code>, 
+			<code><a href="class-KFilterAbstract.html">KFilterAbstract</a></code>, 
+			<code><a href="class-KFilterAlnum.html">KFilterAlnum</a></code>, 
+			<code><a href="class-KFilterAlpha.html">KFilterAlpha</a></code>, 
+			<code><a href="class-KFilterAscii.html">KFilterAscii</a></code>, 
+			<code><a href="class-KFilterBase64.html">KFilterBase64</a></code>, 
+			<code><a href="class-KFilterBoolean.html">KFilterBoolean</a></code>, 
+			<code><a href="class-ComKoowaDispatcherRequest.html">ComKoowaDispatcherRequest</a></code>, 
+			<code><a href="class-KFilterChain.html">KFilterChain</a></code>, 
+			<code><a href="class-KFilterCmd.html">KFilterCmd</a></code>, 
+			<code><a href="class-KFilterDate.html">KFilterDate</a></code>, 
+			<code><a href="class-KFilterDigit.html">KFilterDigit</a></code>, 
+			<code><a href="class-KFilterDirname.html">KFilterDirname</a></code>, 
+			<code><a href="class-KFilterEmail.html">KFilterEmail</a></code>, 
+			<code><a href="class-KFilterFactory.html">KFilterFactory</a></code>, 
+			<code><a href="class-KFilterFilename.html">KFilterFilename</a></code>, 
+			<code><a href="class-KFilterFloat.html">KFilterFloat</a></code>, 
+			<code><a href="class-KFilterHtml.html">KFilterHtml</a></code>, 
+			<code><a href="class-ComKoowaDispatcherResponse.html">ComKoowaDispatcherResponse</a></code>, 
+			<code><a href="class-KFilterIdentifier.html">KFilterIdentifier</a></code>, 
+			<code><a href="class-KFilterIni.html">KFilterIni</a></code>, 
+			<code><a href="class-KFilterInt.html">KFilterInt</a></code>, 
+			<code><a href="class-KFilterInternalurl.html">KFilterInternalurl</a></code>, 
+			<code><a href="class-KFilterIp.html">KFilterIp</a></code>, 
+			<code><a href="class-KFilterIterator.html">KFilterIterator</a></code>, 
+			<code><a href="class-KFilterJson.html">KFilterJson</a></code>, 
+			<code><a href="class-KFilterLang.html">KFilterLang</a></code>, 
+			<code><a href="class-KFilterMd5.html">KFilterMd5</a></code>, 
+			<code><a href="class-KFilterNumeric.html">KFilterNumeric</a></code>, 
+			<code><a href="class-ComKoowaDispatcherResponseTransportHttp.html">ComKoowaDispatcherResponseTransportHttp</a></code>, 
+			<code><a href="class-KFilterPath.html">KFilterPath</a></code>, 
+			<code><a href="class-KFilterRaw.html">KFilterRaw</a></code>, 
+			<code><a href="class-KFilterSha1.html">KFilterSha1</a></code>, 
+			<code><a href="class-KFilterSlug.html">KFilterSlug</a></code>, 
+			<code><a href="class-KFilterString.html">KFilterString</a></code>, 
+			<code><a href="class-KFilterTime.html">KFilterTime</a></code>, 
+			<code><a href="class-KFilterTimestamp.html">KFilterTimestamp</a></code>, 
+			<code><a href="class-KFilterTrim.html">KFilterTrim</a></code>, 
+			<code><a href="class-KFilterUrl.html">KFilterUrl</a></code>, 
+			<code><a href="class-KFilterWord.html">KFilterWord</a></code>, 
+			<code><a href="class-ComKoowaDispatcherRouterRoute.html">ComKoowaDispatcherRouterRoute</a></code>, 
+			<code><a href="class-KFilterXml.html">KFilterXml</a></code>, 
+			<code><a href="class-KFilterYaml.html">KFilterYaml</a></code>, 
+			<code><a href="class-KHttpCookie.html">KHttpCookie</a></code>, 
+			<code><a href="class-KHttpMessage.html">KHttpMessage</a></code>, 
+			<code><a href="class-KHttpMessageHeaders.html">KHttpMessageHeaders</a></code>, 
+			<code><a href="class-KHttpMessageParameters.html">KHttpMessageParameters</a></code>, 
+			<code><a href="class-KHttpRequest.html">KHttpRequest</a></code>, 
+			<code><a href="class-KHttpRequestHeaders.html">KHttpRequestHeaders</a></code>, 
+			<code><a href="class-KHttpResponse.html">KHttpResponse</a></code>, 
+			<code><a href="class-KHttpResponseHeaders.html">KHttpResponseHeaders</a></code>, 
+			<code><a href="class-ComKoowaEventPublisher.html">ComKoowaEventPublisher</a></code>, 
+			<code><a href="class-KHttpToken.html">KHttpToken</a></code>, 
+			<code><a href="class-KHttpUrl.html">KHttpUrl</a></code>, 
+			<code><a href="class-KModelAbstract.html">KModelAbstract</a></code>, 
+			<code><a href="class-KModelDatabase.html">KModelDatabase</a></code>, 
+			<code><a href="class-KModelDefault.html">KModelDefault</a></code>, 
+			<code><a href="class-KModelEmpty.html">KModelEmpty</a></code>, 
+			<code><a href="class-KModelEntityAbstract.html">KModelEntityAbstract</a></code>, 
+			<code><a href="class-KModelEntityComposite.html">KModelEntityComposite</a></code>, 
+			<code><a href="class-KModelEntityDefault.html">KModelEntityDefault</a></code>, 
+			<code><a href="class-KModelEntityImmutable.html">KModelEntityImmutable</a></code>, 
+			<code><a href="class-ComKoowaEventSubscriberUnauthorized.html">ComKoowaEventSubscriberUnauthorized</a></code>, 
+			<code><a href="class-KModelEntityRow.html">KModelEntityRow</a></code>, 
+			<code><a href="class-KModelEntityRowset.html">KModelEntityRowset</a></code>, 
+			<code><a href="class-KModelState.html">KModelState</a></code>, 
+			<code><a href="class-KObjectArray.html">KObjectArray</a></code>, 
+			<code><a href="class-KObjectBootstrapper.html">KObjectBootstrapper</a></code>, 
+			<code><a href="class-KObjectConfigFactory.html">KObjectConfigFactory</a></code>, 
+			<code><a href="class-KObjectLocatorAbstract.html">KObjectLocatorAbstract</a></code>, 
+			<code><a href="class-KObjectLocatorComponent.html">KObjectLocatorComponent</a></code>, 
+			<code><a href="class-KObjectLocatorLibrary.html">KObjectLocatorLibrary</a></code>, 
+			<code><a href="class-KObjectQueue.html">KObjectQueue</a></code>, 
+			<code><a href="class-ComKoowaExceptionHandler.html">ComKoowaExceptionHandler</a></code>, 
+			<code><a href="class-KObjectSet.html">KObjectSet</a></code>, 
+			<code><a href="class-KObjectStack.html">KObjectStack</a></code>, 
+			<code><a href="class-KTemplate.html">KTemplate</a></code>, 
+			<code><a href="class-KTemplateAbstract.html">KTemplateAbstract</a></code>, 
+			<code><a href="class-KTemplateCache.html">KTemplateCache</a></code>, 
+			<code><a href="class-KTemplateDefault.html">KTemplateDefault</a></code>, 
+			<code><a href="class-KTemplateEngineAbstract.html">KTemplateEngineAbstract</a></code>, 
+			<code><a href="class-KTemplateEngineFactory.html">KTemplateEngineFactory</a></code>, 
+			<code><a href="class-KTemplateEngineKoowa.html">KTemplateEngineKoowa</a></code>, 
+			<code><a href="class-KTemplateEngineMarkdown.html">KTemplateEngineMarkdown</a></code>, 
+			<code><a href="class-ComKoowaControllerModel.html">ComKoowaControllerModel</a></code>, 
+			<code><a href="class-ComKoowaFilesystemStreamBuffer.html">ComKoowaFilesystemStreamBuffer</a></code>, 
+			<code><a href="class-KTemplateEngineMustache.html">KTemplateEngineMustache</a></code>, 
+			<code><a href="class-KTemplateEngineTwig.html">KTemplateEngineTwig</a></code>, 
+			<code><a href="class-KTemplateFilterAbstract.html">KTemplateFilterAbstract</a></code>, 
+			<code><a href="class-KTemplateFilterAsset.html">KTemplateFilterAsset</a></code>, 
+			<code><a href="class-KTemplateFilterDecorator.html">KTemplateFilterDecorator</a></code>, 
+			<code><a href="class-KTemplateFilterForm.html">KTemplateFilterForm</a></code>, 
+			<code><a href="class-KTemplateFilterLink.html">KTemplateFilterLink</a></code>, 
+			<code><a href="class-KTemplateFilterMarkdown.html">KTemplateFilterMarkdown</a></code>, 
+			<code><a href="class-KTemplateFilterMeta.html">KTemplateFilterMeta</a></code>, 
+			<code><a href="class-KTemplateFilterScript.html">KTemplateFilterScript</a></code>, 
+			<code><a href="class-ComKoowaFilterAlias.html">ComKoowaFilterAlias</a></code>, 
+			<code><a href="class-KTemplateFilterStyle.html">KTemplateFilterStyle</a></code>, 
+			<code><a href="class-KTemplateFilterTag.html">KTemplateFilterTag</a></code>, 
+			<code><a href="class-KTemplateFilterTitle.html">KTemplateFilterTitle</a></code>, 
+			<code><a href="class-KTemplateFilterWhitespace.html">KTemplateFilterWhitespace</a></code>, 
+			<code><a href="class-KTemplateHelperAbstract.html">KTemplateHelperAbstract</a></code>, 
+			<code><a href="class-KTemplateHelperActionbar.html">KTemplateHelperActionbar</a></code>, 
+			<code><a href="class-KTemplateHelperBehavior.html">KTemplateHelperBehavior</a></code>, 
+			<code><a href="class-KTemplateHelperDate.html">KTemplateHelperDate</a></code>, 
+			<code><a href="class-KTemplateHelperDebug.html">KTemplateHelperDebug</a></code>, 
+			<code><a href="class-KTemplateHelperGrid.html">KTemplateHelperGrid</a></code>, 
+			<code><a href="class-ComKoowaFilterFactory.html">ComKoowaFilterFactory</a></code>, 
+			<code><a href="class-KTemplateHelperListbox.html">KTemplateHelperListbox</a></code>, 
+			<code><a href="class-KTemplateHelperPaginator.html">KTemplateHelperPaginator</a></code>, 
+			<code><a href="class-KTemplateHelperSelect.html">KTemplateHelperSelect</a></code>, 
+			<code><a href="class-KTemplateHelperTranslator.html">KTemplateHelperTranslator</a></code>, 
+			<code><a href="class-KTemplateLocatorAbstract.html">KTemplateLocatorAbstract</a></code>, 
+			<code><a href="class-KTemplateLocatorComponent.html">KTemplateLocatorComponent</a></code>, 
+			<code><a href="class-KTemplateLocatorFactory.html">KTemplateLocatorFactory</a></code>, 
+			<code><a href="class-KTemplateLocatorFile.html">KTemplateLocatorFile</a></code>, 
+			<code><a href="class-KTemplateLocatorIdentifier.html">KTemplateLocatorIdentifier</a></code>, 
+			<code><a href="class-KTranslator.html">KTranslator</a></code>, 
+			<code><a href="class-ComKoowaFilterHtml.html">ComKoowaFilterHtml</a></code>, 
+			<code><a href="class-KTranslatorAbstract.html">KTranslatorAbstract</a></code>, 
+			<code><a href="class-KTranslatorCache.html">KTranslatorCache</a></code>, 
+			<code><a href="class-KTranslatorCatalogueAbstract.html">KTranslatorCatalogueAbstract</a></code>, 
+			<code><a href="class-KTranslatorCatalogueDefault.html">KTranslatorCatalogueDefault</a></code>, 
+			<code><a href="class-KTranslatorLocatorAbstract.html">KTranslatorLocatorAbstract</a></code>, 
+			<code><a href="class-KTranslatorLocatorComponent.html">KTranslatorLocatorComponent</a></code>, 
+			<code><a href="class-KTranslatorLocatorFactory.html">KTranslatorLocatorFactory</a></code>, 
+			<code><a href="class-KTranslatorLocatorFile.html">KTranslatorLocatorFile</a></code>, 
+			<code><a href="class-KTranslatorLocatorIdentifier.html">KTranslatorLocatorIdentifier</a></code>, 
+			<code><a href="class-KUser.html">KUser</a></code>, 
+			<code><a href="class-ComKoowaModelEntityUser.html">ComKoowaModelEntityUser</a></code>, 
+			<code><a href="class-KUserAbstract.html">KUserAbstract</a></code>, 
+			<code><a href="class-KUserDefault.html">KUserDefault</a></code>, 
+			<code><a href="class-KUserProvider.html">KUserProvider</a></code>, 
+			<code><a href="class-KUserProviderAbstract.html">KUserProviderAbstract</a></code>, 
+			<code><a href="class-KUserSession.html">KUserSession</a></code>, 
+			<code><a href="class-KUserSessionAbstract.html">KUserSessionAbstract</a></code>, 
+			<code><a href="class-KUserSessionContainerAbstract.html">KUserSessionContainerAbstract</a></code>, 
+			<code><a href="class-KUserSessionContainerAttribute.html">KUserSessionContainerAttribute</a></code>, 
+			<code><a href="class-KUserSessionContainerDefault.html">KUserSessionContainerDefault</a></code>, 
+			<code><a href="class-KUserSessionContainerMessage.html">KUserSessionContainerMessage</a></code>, 
+			<code><a href="class-ComKoowaModelUsers.html">ComKoowaModelUsers</a></code>, 
+			<code><a href="class-KUserSessionContainerMetadata.html">KUserSessionContainerMetadata</a></code>, 
+			<code><a href="class-KUserSessionHandlerAbstract.html">KUserSessionHandlerAbstract</a></code>, 
+			<code><a href="class-KUserSessionHandlerDatabase.html">KUserSessionHandlerDatabase</a></code>, 
+			<code><a href="class-KUserSessionHandlerFile.html">KUserSessionHandlerFile</a></code>, 
+			<code><a href="class-KUserSessionHandlerNull.html">KUserSessionHandlerNull</a></code>, 
+			<code><a href="class-KViewAbstract.html">KViewAbstract</a></code>, 
+			<code><a href="class-KViewCsv.html">KViewCsv</a></code>, 
+			<code><a href="class-KViewDefault.html">KViewDefault</a></code>, 
+			<code><a href="class-KViewHtml.html">KViewHtml</a></code>, 
+			<code><a href="class-KViewJson.html">KViewJson</a></code>, 
+			<code><a href="class-ComKoowaObjectLocatorModule.html">ComKoowaObjectLocatorModule</a></code>, 
+			<code><a href="class-KViewRss.html">KViewRss</a></code>, 
+			<code><a href="class-KViewTemplate.html">KViewTemplate</a></code>, 
+			<code><a href="class-KViewVcard.html">KViewVcard</a></code>, 
+			<code><a href="class-ModKoowaHtml.html">ModKoowaHtml</a></code>, 
+			<code><a href="class-ModKoowaTemplateFilterChrome.html">ModKoowaTemplateFilterChrome</a></code>, 
+			<code><a href="class-ComKoowaObjectLocatorPlugin.html">ComKoowaObjectLocatorPlugin</a></code>, 
+			<code><a href="class-ComKoowaTemplateFilterAsset.html">ComKoowaTemplateFilterAsset</a></code>, 
+			<code><a href="class-ComKoowaTemplateFilterChrome.html">ComKoowaTemplateFilterChrome</a></code>, 
+			<code><a href="class-ComKoowaControllerPage.html">ComKoowaControllerPage</a></code>, 
+			<code><a href="class-ComKoowaTemplateFilterDocument.html">ComKoowaTemplateFilterDocument</a></code>, 
+			<code><a href="class-ComKoowaTemplateFilterLink.html">ComKoowaTemplateFilterLink</a></code>, 
+			<code><a href="class-ComKoowaTemplateFilterMessage.html">ComKoowaTemplateFilterMessage</a></code>, 
+			<code><a href="class-ComKoowaTemplateFilterMeta.html">ComKoowaTemplateFilterMeta</a></code>, 
+			<code><a href="class-ComKoowaTemplateFilterModule.html">ComKoowaTemplateFilterModule</a></code>, 
+			<code><a href="class-ComKoowaTemplateFilterScript.html">ComKoowaTemplateFilterScript</a></code>, 
+			<code><a href="class-ComKoowaTemplateFilterStyle.html">ComKoowaTemplateFilterStyle</a></code>, 
+			<code><a href="class-ComKoowaTemplateFilterTitle.html">ComKoowaTemplateFilterTitle</a></code>, 
+			<code><a href="class-ComKoowaTemplateFilterToolbar.html">ComKoowaTemplateFilterToolbar</a></code>, 
+			<code><a href="class-ComKoowaTemplateFilterVersion.html">ComKoowaTemplateFilterVersion</a></code>, 
+			<code><a href="class-ComKoowaControllerToolbarActionbar.html">ComKoowaControllerToolbarActionbar</a></code>, 
+			<code><a href="class-ComKoowaTemplateFilterWrapper.html">ComKoowaTemplateFilterWrapper</a></code>, 
+			<code><a href="class-ComKoowaTemplateHelperAccordion.html">ComKoowaTemplateHelperAccordion</a></code>, 
+			<code><a href="class-ComKoowaTemplateHelperActionbar.html">ComKoowaTemplateHelperActionbar</a></code>, 
+			<code><a href="class-ComKoowaTemplateHelperBehavior.html">ComKoowaTemplateHelperBehavior</a></code>, 
+			<code><a href="class-ComKoowaTemplateHelperBootstrap.html">ComKoowaTemplateHelperBootstrap</a></code>, 
+			<code><a href="class-ComKoowaTemplateHelperDate.html">ComKoowaTemplateHelperDate</a></code>, 
+			<code><a href="class-ComKoowaTemplateHelperDebug.html">ComKoowaTemplateHelperDebug</a></code>, 
+			<code><a href="class-ComKoowaTemplateHelperEditor.html">ComKoowaTemplateHelperEditor</a></code>, 
+			<code><a href="class-ComKoowaTemplateHelperEvent.html">ComKoowaTemplateHelperEvent</a></code>, 
+			<code><a href="class-ComKoowaTemplateHelperGrid.html">ComKoowaTemplateHelperGrid</a></code>, 
+			<code><a href="class-ComKoowaControllerToolbarDefault.html">ComKoowaControllerToolbarDefault</a></code>, 
+			<code><a href="class-ComKoowaTemplateHelperListbox.html">ComKoowaTemplateHelperListbox</a></code>, 
+			<code><a href="class-ComKoowaTemplateHelperMenubar.html">ComKoowaTemplateHelperMenubar</a></code>, 
+			<code><a href="class-ComKoowaTemplateHelperPaginator.html">ComKoowaTemplateHelperPaginator</a></code>, 
+			<code><a href="class-ComKoowaTemplateHelperTabs.html">ComKoowaTemplateHelperTabs</a></code>, 
+			<code><a href="class-ComKoowaTemplateLocatorComponent.html">ComKoowaTemplateLocatorComponent</a></code>, 
+			<code><a href="class-ComKoowaTemplateLocatorFile.html">ComKoowaTemplateLocatorFile</a></code>, 
+			<code><a href="class-ComKoowaTemplateLocatorModule.html">ComKoowaTemplateLocatorModule</a></code>, 
+			<code><a href="class-ComKoowaTranslator.html">ComKoowaTranslator</a></code>, 
+			<code><a href="class-ComKoowaTranslatorCatalogueAbstract.html">ComKoowaTranslatorCatalogueAbstract</a></code>, 
+			<code><a href="class-ComKoowaTranslatorCatalogueDefault.html">ComKoowaTranslatorCatalogueDefault</a></code>, 
+			<code><a href="class-ComKoowaControllerToolbarMenubar.html">ComKoowaControllerToolbarMenubar</a></code>, 
+			<code><a href="class-ComKoowaTranslatorLocatorComponent.html">ComKoowaTranslatorLocatorComponent</a></code>, 
+			<code><a href="class-ComKoowaTranslatorLocatorModule.html">ComKoowaTranslatorLocatorModule</a></code>, 
+			<code><a href="class-ComKoowaTranslatorLocatorPlugin.html">ComKoowaTranslatorLocatorPlugin</a></code>, 
+			<code><a href="class-ComKoowaUser.html">ComKoowaUser</a></code>, 
+			<code><a href="class-ComKoowaUserProvider.html">ComKoowaUserProvider</a></code>, 
+			<code><a href="class-ComKoowaViewErrorJson.html">ComKoowaViewErrorJson</a></code>, 
+			<code><a href="class-ComKoowaViewHtml.html">ComKoowaViewHtml</a></code>, 
+			<code><a href="class-ComKoowaViewPageHtml.html">ComKoowaViewPageHtml</a></code>, 
+			<code><a href="class-ComKoowaViewUsersJson.html">ComKoowaViewUsersJson</a></code>, 
+			<code><a href="class-KCommandChain.html">KCommandChain</a></code>, 
+			<code><a href="class-ComKoowaControllerUser.html">ComKoowaControllerUser</a></code>, 
+			<code><a href="class-KCommandHandlerAbstract.html">KCommandHandlerAbstract</a></code>, 
+			<code><a href="class-KCommandHandlerEvent.html">KCommandHandlerEvent</a></code>, 
+			<code><a href="class-KControllerAbstract.html">KControllerAbstract</a></code>, 
+			<code><a href="class-KControllerDefault.html">KControllerDefault</a></code>, 
+			<code><a href="class-KControllerModel.html">KControllerModel</a></code>, 
+			<code><a href="class-KControllerRequest.html">KControllerRequest</a></code>, 
+			<code><a href="class-KControllerResponse.html">KControllerResponse</a></code>, 
+			<code><a href="class-KControllerToolbarAbstract.html">KControllerToolbarAbstract</a></code>, 
+			<code><a href="class-KControllerToolbarActionbar.html">KControllerToolbarActionbar</a></code>, 
+			<code><a href="class-KControllerToolbarDecorator.html">KControllerToolbarDecorator</a></code>, 
+			<code><a href="class-ComKoowaControllerView.html">ComKoowaControllerView</a></code>, 
+			<code><a href="class-KControllerToolbarDefault.html">KControllerToolbarDefault</a></code>, 
+			<code><a href="class-KControllerView.html">KControllerView</a></code>, 
+			<code><a href="class-KDatabaseAdapterAbstract.html">KDatabaseAdapterAbstract</a></code>, 
+			<code><a href="class-KDatabaseAdapterMysqli.html">KDatabaseAdapterMysqli</a></code>, 
+			<code><a href="class-KDatabaseQueryAbstract.html">KDatabaseQueryAbstract</a></code>, 
+			<code><a href="class-KDatabaseQueryDelete.html">KDatabaseQueryDelete</a></code>, 
+			<code><a href="class-KDatabaseQueryInsert.html">KDatabaseQueryInsert</a></code>, 
+			<code><a href="class-KDatabaseQueryParameters.html">KDatabaseQueryParameters</a></code>, 
+			<code><a href="class-KDatabaseQuerySelect.html">KDatabaseQuerySelect</a></code>, 
+			<code><a href="class-KDatabaseQueryShow.html">KDatabaseQueryShow</a></code>, 
+			<code><a href="class-ComKoowaDatabaseAdapterMysqli.html">ComKoowaDatabaseAdapterMysqli</a></code>, 
+			<code><a href="class-KDatabaseQueryUpdate.html">KDatabaseQueryUpdate</a></code>, 
+			<code><a href="class-KDatabaseRowAbstract.html">KDatabaseRowAbstract</a></code>, 
+			<code><a href="class-KDatabaseRowDefault.html">KDatabaseRowDefault</a></code>, 
+			<code><a href="class-KDatabaseRowsetAbstract.html">KDatabaseRowsetAbstract</a></code>, 
+			<code><a href="class-KDatabaseRowsetDefault.html">KDatabaseRowsetDefault</a></code>, 
+			<code><a href="class-KDatabaseTableAbstract.html">KDatabaseTableAbstract</a></code>, 
+			<code><a href="class-KDatabaseTableDefault.html">KDatabaseTableDefault</a></code>, 
+			<code><a href="class-KDate.html">KDate</a></code>, 
+			<code><a href="class-KDispatcherAbstract.html">KDispatcherAbstract</a></code>, 
+			<code><a href="class-KDispatcherDefault.html">KDispatcherDefault</a></code>
+		</p>
+	</div>
+
+
+
+	<div class="alert alert-info">
+		
+		
+		
+		<b>Package:</b> <a href="package-Koowa.html">Koowa</a>\<a href="package-Koowa.Library.html">Library</a>\<a href="package-Koowa.Library.Object.html">Object</a><br />
+
+				<b>Copyright:</b>
+				Copyright (C) 2007 - 2014 Johan Janssens and Timble CVBA. (<a
+href="http://www.timble.net">http://www.timble.net</a>)<br />
+				<b>License:</b>
+				<a href="GNU">GPLv3 &lt;http://www.gnu.org/licenses/gpl.html&gt;</a><br />
+				<b>Author:</b>
+				Johan Janssens &lt;<a
+href="https://github.com/johanjanssens">https://github.com/johanjanssens</a>&gt;<br />
+		<b>Located at</b> <a href="source-class-KObjectDecoratable.html#10-31" title="Go to source code">libraries/koowa/libraries/object/decoratable.php</a><br />
+	</div>
+
+
+
+		<h2>Methods summary</h2>
+		<table class="summary table table-bordered table-striped" id="methods">
+		<tr data-order="decorate" id="_decorate">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-KObjectDecorator.html">KObjectDecorator</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_decorate">#</a>
+			<code><a href="source-class-KObjectDecoratable.html#18-30" title="Go to source code">decorate</a>( <span>mixed <var>$decorator</var></span>, <span>array <var>$config</var> = <span class="php-keyword1">array</span>()</span> )</code>
+
+			<div class="description short">
+				
+<p>Decorate the object</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Decorate the object</p>
+
+<p>When using decorate(), the object will be decorated by the decorator. The
+decorator needs to extend from ObjectDecorator.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$decorator</var></dt>
+						<dd><code>mixed</code><br>$decorator An KObjectIdentifier, identifier string or object implementing
+KObjectDecorator</dd>
+						<dt><var>$config</var></dt>
+						<dd><code>array</code><br>$config An optional associative array of configuration options</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><code><a href="class-KObjectDecorator.html">KObjectDecorator</a></code></code><br />
+					</div>
+
+					<h4>Throws</h4>
+					<div class="list">
+						<code><code><a href="class-KObjectExceptionInvalidIdentifier.html">KObjectExceptionInvalidIdentifier</a></code></code><br>If the identifier is not valid<br />
+						<code>UnexpectedValueException</code><br>If the decorator does not extend from KObjectDecorator<br />
+					</div>
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		</table>
+
+
+
+		<h3>Magic methods summary</h3>
+
+
+
+
+
+
+
+
+</div>
+	</div>
+
+	<div id="footer">
+		Nooku Framework API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+
+<script>
+    responsivemenu.init({
+        wrapper: document.querySelector('.header'),
+        toggleclass: 'button--hamburger',
+        togglecontent: 'menu <span class="lines"></span>'
+    });
+</script>
+
+</body>
+</html>

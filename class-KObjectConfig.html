@@ -1,0 +1,1610 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<title>Class KObjectConfig | Nooku Framework</title>
+
+	<script type="text/javascript" src="resources/combined.js?2640657843"></script>
+	<script type="text/javascript" src="elementlist.js?527661356"></script>
+	<script type="text/javascript" src="http://www.nooku.org/js/scripts.js"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/bootstrap.min.css?390653004" />
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?150590327" />
+    <link rel="stylesheet" type="text/css" media="all" href="http://www.nooku.org/css/header.css" />
+
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,300italic,700,400italic' rel='stylesheet' type='text/css' />
+
+    <link rel="shortcut icon" href="http://www.nooku.org/images/favicon.ico" type="image/x-icon" />
+
+	<script>
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] ||
+            function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-214238-5', 'auto');
+        ga('send', 'pageview');
+    </script>
+</head>
+
+<body class="no-js">
+    <script type="text/javascript">
+    function hasClass(e, t) {
+        return e.className.match(new RegExp("(\\s|^)" + t + "(\\s|$)"))
+    }
+    var el = document.body;
+    var cl = "no-js";
+    if (hasClass(el, cl)) {
+        var reg = new RegExp("(\\s|^)" + cl + "(\\s|$)");
+        el.className = el.className.replace(reg, " js-enabled")
+    }
+    </script>
+	<div class="header">
+            <div class="container">
+                <div class="group">
+                    <div class="header__brand brand"><a href="http://www.nooku.org"><img src="http://www.nooku.org/images/layout/logo.png" alt="Nooku Logo" /></a></div>
+                    <div class="header__navigation">
+                        <div class="navigation_container" role="navigation">
+                            <ul class="navbar initiated">
+                                <li class="navbar__item" role="menuitem"><a href="http://www.nooku.org/features/">Features</a></li>
+                                <li class="navbar__item" role="menuitem"><a href="http://www.nooku.org/get-started/">Get Started</a></li>
+                                <li class="navbar__item" role="menuitem"><a href="http://www.nooku.org/services/">Services</a></li>
+                                <li class="navbar__item" role="menuitem"><a href="http://www.nooku.org/community/">Community</a></li>
+                                <li class="navbar__item active" role="menuitem"><a href="http://www.nooku.org/docs/">Docs</a></li>
+                                <li class="navbar__item" role="menuitem"><a href="http://www.nooku.org/blog">Blog</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+	<div id="left">
+	<div id="menu">
+		<form id="search" class="form-search">
+			<input type="hidden" name="cx" value="" />
+			<input type="hidden" name="ie" value="UTF-8" />
+			<input type="text" name="q" class="search-query" placeholder="Search" />
+		</form>
+
+
+		<div id="groups">
+			<h3>Packages</h3>
+			<ul>
+				<li class="active"><a href="package-Koowa.html">Koowa<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.html">Component<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.html">Koowa<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Class.html">Class<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Class.Locator.html">Locator</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Controller.html">Controller<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Controller.Behavior.html">Behavior</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Controller.Permission.html">Permission</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Controller.Toolbar.html">Toolbar</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Database.html">Database<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Database.Adapter.html">Adapter</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Database.Behavior.html">Behavior</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Database.Table.html">Table</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Date.html">Date</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Decorator.html">Decorator</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Dispatcher.html">Dispatcher<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Dispatcher.Authenticator.html">Authenticator</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Dispatcher.Permission.html">Permission</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Dispatcher.Request.html">Request</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Dispatcher.Response.html">Response<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Dispatcher.Response.Transport.html">Transport</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Dispatcher.Router.html">Router</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Event.html">Event<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Event.Publisher.html">Publisher</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Event.Subscriber.html">Subscriber</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Exception.html">Exception</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Filesystem.html">Filesystem<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Filesystem.Stream.html">Stream</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Filter.html">Filter</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Model.html">Model</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Object.html">Object<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Object.Locator.html">Locator</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Template.html">Template<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Template.Filter.html">Filter</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Template.Helper.html">Helper</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Template.Locator.html">Locator</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.Translator.html">Translator<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.Translator.Catalogue.html">Catalogue</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.Translator.Locator.html">Locator</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Component.Koowa.User.html">User</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.View.html">View<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Component.Koowa.View.Error.html">Error</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.View.Page.html">Page</a>
+						</li>
+				<li><a href="package-Koowa.Component.Koowa.View.Users.html">Users</a>
+						</li>
+							</ul></li></ul></li></ul></li>
+				<li class="active"><a href="package-Koowa.Library.html">Library<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Behavior.html">Behavior<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Behavior.Exception.html">Exception</a>
+						</li>
+				<li><a href="package-Koowa.Library.Behavior.Mixin.html">Mixin</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Class.html">Class<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Class.Loader.html">Loader</a>
+						</li>
+				<li><a href="package-Koowa.Library.Class.Locator.html">Locator</a>
+						</li>
+				<li><a href="package-Koowa.Library.Class.Registry.html">Registry</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Command.html">Command<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Command.Callback.html">Callback</a>
+						</li>
+				<li><a href="package-Koowa.Library.Command.Chain.html">Chain</a>
+						</li>
+				<li><a href="package-Koowa.Library.Command.Exception.html">Exception</a>
+						</li>
+				<li><a href="package-Koowa.Library.Command.Handler.html">Handler</a>
+						</li>
+				<li><a href="package-Koowa.Library.Command.Mixin.html">Mixin</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Controller.html">Controller<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Controller.Behavior.html">Behavior</a>
+						</li>
+				<li><a href="package-Koowa.Library.Controller.Context.html">Context</a>
+						</li>
+				<li><a href="package-Koowa.Library.Controller.Exception.html">Exception</a>
+						</li>
+				<li><a href="package-Koowa.Library.Controller.Permission.html">Permission</a>
+						</li>
+				<li><a href="package-Koowa.Library.Controller.Request.html">Request</a>
+						</li>
+				<li><a href="package-Koowa.Library.Controller.Response.html">Response</a>
+						</li>
+				<li><a href="package-Koowa.Library.Controller.Toolbar.html">Toolbar<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Controller.Toolbar.Command.html">Command</a>
+						</li>
+				<li><a href="package-Koowa.Library.Controller.Toolbar.Mixin.html">Mixin</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-Koowa.Library.Database.html">Database<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Database.Adapter.html">Adapter</a>
+						</li>
+				<li><a href="package-Koowa.Library.Database.Behavior.html">Behavior</a>
+						</li>
+				<li><a href="package-Koowa.Library.Database.Context.html">Context</a>
+						</li>
+				<li><a href="package-Koowa.Library.Database.Query.html">Query</a>
+						</li>
+				<li><a href="package-Koowa.Library.Database.Row.html">Row</a>
+						</li>
+				<li><a href="package-Koowa.Library.Database.Rowset.html">Rowset</a>
+						</li>
+				<li><a href="package-Koowa.Library.Database.Schema.html">Schema</a>
+						</li>
+				<li><a href="package-Koowa.Library.Database.Table.html">Table</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Date.html">Date</a>
+						</li>
+				<li><a href="package-Koowa.Library.Dispatcher.html">Dispatcher<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Dispatcher.Authenticator.html">Authenticator</a>
+						</li>
+				<li><a href="package-Koowa.Library.Dispatcher.Behavior.html">Behavior</a>
+						</li>
+				<li><a href="package-Koowa.Library.Dispatcher.Context.html">Context</a>
+						</li>
+				<li><a href="package-Koowa.Library.Dispatcher.Exception.html">Exception</a>
+						</li>
+				<li><a href="package-Koowa.Library.Dispatcher.Permission.html">Permission</a>
+						</li>
+				<li><a href="package-Koowa.Library.Dispatcher.Request.html">Request</a>
+						</li>
+				<li><a href="package-Koowa.Library.Dispatcher.Response.html">Response<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Dispatcher.Response.Transport.html">Transport</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Dispatcher.Router.html">Router</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Event.html">Event<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Event.Mixin.html">Mixin</a>
+						</li>
+				<li><a href="package-Koowa.Library.Event.Publisher.html">Publisher</a>
+						</li>
+				<li><a href="package-Koowa.Library.Event.Subscriber.html">Subscriber</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Exception.html">Exception<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Exception.Handler.html">Handler</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Filesystem.html">Filesystem<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Filesystem.Stream.html">Stream<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Filesystem.Stream.Filter.html">Filter</a>
+						</li>
+				<li><a href="package-Koowa.Library.Filesystem.Stream.Iterator.html">Iterator</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-Koowa.Library.Filter.html">Filter</a>
+						</li>
+				<li><a href="package-Koowa.Library.Http.html">Http<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Http.Cookie.html">Cookie</a>
+						</li>
+				<li><a href="package-Koowa.Library.Http.Exception.html">Exception<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Http.Exception.Unsupported.html">Unsupported</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Http.Message.html">Message</a>
+						</li>
+				<li><a href="package-Koowa.Library.Http.Request.html">Request</a>
+						</li>
+				<li><a href="package-Koowa.Library.Http.Response.html">Response</a>
+						</li>
+				<li><a href="package-Koowa.Library.Http.Token.html">Token</a>
+						</li>
+				<li><a href="package-Koowa.Library.Http.Url.html">Url</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Model.html">Model<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Model.Behavior.html">Behavior</a>
+						</li>
+				<li><a href="package-Koowa.Library.Model.Context.html">Context</a>
+						</li>
+				<li><a href="package-Koowa.Library.Model.Entity.html">Entity</a>
+						</li>
+				<li><a href="package-Koowa.Library.Model.Paginator.html">Paginator</a>
+						</li>
+				<li><a href="package-Koowa.Library.Model.State.html">State</a>
+						</li>
+							</ul></li>
+				<li class="active"><a href="package-Koowa.Library.Object.html">Object<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Object.Bootstrapper.html">Bootstrapper</a>
+						</li>
+				<li class="active"><a href="package-Koowa.Library.Object.Config.html">Config</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Decorator.html">Decorator</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Exception.html">Exception</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Identifier.html">Identifier</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Locator.html">Locator</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Manager.html">Manager</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Mixin.html">Mixin</a>
+						</li>
+				<li><a href="package-Koowa.Library.Object.Registry.html">Registry</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.String.html">String<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.String.Inflector.html">Inflector</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Template.html">Template<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Template.Engine.html">Engine</a>
+						</li>
+				<li><a href="package-Koowa.Library.Template.Exception.html">Exception</a>
+						</li>
+				<li><a href="package-Koowa.Library.Template.Filter.html">Filter</a>
+						</li>
+				<li><a href="package-Koowa.Library.Template.Helper.html">Helper</a>
+						</li>
+				<li><a href="package-Koowa.Library.Template.Locator.html">Locator</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.Translator.html">Translator<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.Translator.Catalogue.html">Catalogue</a>
+						</li>
+				<li><a href="package-Koowa.Library.Translator.Inflector.html">Inflector</a>
+						</li>
+				<li><a href="package-Koowa.Library.Translator.Locator.html">Locator</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Library.User.html">User<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.User.Provider.html">Provider</a>
+						</li>
+				<li><a href="package-Koowa.Library.User.Session.html">Session<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.User.Session.Container.html">Container</a>
+						</li>
+				<li><a href="package-Koowa.Library.User.Session.Handler.html">Handler</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-Koowa.Library.View.html">View<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Library.View.Behavior.html">Behavior</a>
+						</li>
+				<li><a href="package-Koowa.Library.View.Context.html">Context</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-Koowa.Module.html">Module<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Module.Koowa.html">Koowa<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Module.Koowa.Template.html">Template<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Module.Koowa.Template.Filter.html">Filter</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Module.Koowa.View.html">View</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-Koowa.Plugin.html">Plugin<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Plugin.Koowa.html">Koowa</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Koowa.Wordpress.html">Wordpress<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Wordpress.Library.html">Library<span></span></a>
+						<ul>
+				<li><a href="package-Koowa.Wordpress.Library.Controller.html">Controller</a>
+						</li>
+							</ul></li></ul></li></ul></li>
+				<li><a href="package-Nooku.html">Nooku<span></span></a>
+						<ul>
+				<li><a href="package-Nooku.Library.html">Library<span></span></a>
+						<ul>
+				<li><a href="package-Nooku.Library.Template.html">Template<span></span></a>
+						<ul>
+				<li><a href="package-Nooku.Library.Template.Abstract.html">Abstract</a>
+						</li>
+							</ul></li></ul></li></ul></li>
+			</ul>
+		</div>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li class="active"><a href="class-KObjectConfig.html">KObjectConfig</a></li>
+				<li><a href="class-KObjectConfigFactory.html">KObjectConfigFactory</a></li>
+				<li><a href="class-KObjectConfigFormat.html">KObjectConfigFormat</a></li>
+				<li><a href="class-KObjectConfigIni.html">KObjectConfigIni</a></li>
+				<li><a href="class-KObjectConfigJson.html">KObjectConfigJson</a></li>
+				<li><a href="class-KObjectConfigPhp.html">KObjectConfigPhp</a></li>
+				<li><a href="class-KObjectConfigXml.html">KObjectConfigXml</a></li>
+				<li><a href="class-KObjectConfigYaml.html">KObjectConfigYaml</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="class-KObjectConfigInterface.html">KObjectConfigInterface</a></li>
+				<li><a href="class-KObjectConfigSerializable.html">KObjectConfigSerializable</a></li>
+			</ul>
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+	<div id="rightInner">
+<div id="content" class="class">
+	<h1>Class KObjectConfig</h1>
+
+
+	<div class="description">
+	
+<p>KObjectConfig</p>
+
+<p>KObjectConfig provides a property based interface to an array. Data is can be
+modified unless the object is marked as readonly.</p>
+
+	</div>
+
+	<dl class="tree well">
+		<dd style="padding-left:0px">
+<b><span>KObjectConfig</span></b>			
+			 implements 
+				<a href="class-KObjectConfigInterface.html"><span>KObjectConfigInterface</span></a>
+			
+			
+		</dd>
+	</dl>
+
+
+	<div>
+		<h3>Direct known subclasses</h3>
+		<p class="elementList">
+			<code><a href="class-KCommand.html">KCommand</a></code>, 
+			<code><a href="class-KControllerToolbarCommand.html">KControllerToolbarCommand</a></code>, 
+			<code><a href="class-KEvent.html">KEvent</a></code>, 
+			<code><a href="class-KModelPaginator.html">KModelPaginator</a></code>, 
+			<code><a href="class-KObjectConfigFormat.html">KObjectConfigFormat</a></code>
+		</p>
+	</div>
+
+	<div>
+		<h3>Indirect known subclasses</h3>
+		<p class="elementList">
+			<code><a href="class-KControllerContext.html">KControllerContext</a></code>, 
+			<code><a href="class-KDatabaseContext.html">KDatabaseContext</a></code>, 
+			<code><a href="class-KViewContext.html">KViewContext</a></code>, 
+			<code><a href="class-KViewContextTemplate.html">KViewContextTemplate</a></code>, 
+			<code><a href="class-KDispatcherContext.html">KDispatcherContext</a></code>, 
+			<code><a href="class-KEventException.html">KEventException</a></code>, 
+			<code><a href="class-KModelContext.html">KModelContext</a></code>, 
+			<code><a href="class-KObjectConfigIni.html">KObjectConfigIni</a></code>, 
+			<code><a href="class-KObjectConfigJson.html">KObjectConfigJson</a></code>, 
+			<code><a href="class-KObjectConfigPhp.html">KObjectConfigPhp</a></code>, 
+			<code><a href="class-KObjectConfigXml.html">KObjectConfigXml</a></code>, 
+			<code><a href="class-KObjectConfigYaml.html">KObjectConfigYaml</a></code>
+		</p>
+	</div>
+
+
+
+
+
+	<div class="alert alert-info">
+		
+		
+		
+		<b>Package:</b> <a href="package-Koowa.html">Koowa</a>\<a href="package-Koowa.Library.html">Library</a>\<a href="package-Koowa.Library.Object.html">Object</a>\<a href="package-Koowa.Library.Object.Config.html">Config</a><br />
+
+				<b>Copyright:</b>
+				Copyright (C) 2007 - 2014 Johan Janssens and Timble CVBA. (<a
+href="http://www.timble.net">http://www.timble.net</a>)<br />
+				<b>License:</b>
+				<a href="GNU">GPLv3 &lt;http://www.gnu.org/licenses/gpl.html&gt;</a><br />
+				<b>Author:</b>
+				Johan Janssens &lt;<a
+href="https://github.com/johanjanssens">https://github.com/johanjanssens</a>&gt;<br />
+		<b>Located at</b> <a href="source-class-KObjectConfig.html#10-438" title="Go to source code">libraries/koowa/libraries/object/config/config.php</a><br />
+	</div>
+
+
+
+		<h2>Methods summary</h2>
+		<table class="summary table table-bordered table-striped" id="methods">
+		<tr data-order="__construct" id="___construct">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#___construct">#</a>
+			<code><a href="source-class-KObjectConfig.html#35-46" title="Go to source code">__construct</a>( <span>array|<code><a href="class-KObjectConfig.html">KObjectConfig</a></code> <var>$options</var> = <span class="php-keyword1">array</span>()</span>, <span>boolean <var>$readonly</var> = <span class="php-keyword1">false</span></span> )</code>
+
+			<div class="description short">
+				
+<p>Constructor.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Constructor.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$options</var></dt>
+						<dd><code>array|<code><a href="class-KObjectConfig.html">KObjectConfig</a></code></code><br>$options An associative array of configuration options or a ObjectConfig
+instance.</dd>
+						<dt><var>$readonly</var></dt>
+						<dd><code>boolean</code><br>$readonly TRUE to not allow modifications of the config data. Default FALSE.</dd>
+					</dl></div>
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="get" id="_get">
+
+			<td class="attributes"><code>
+				 public 
+				mixed
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_get">#</a>
+			<code><a href="source-class-KObjectConfig.html#48-65" title="Go to source code">get</a>( <span>string <var>$name</var></span>, <span>mixed <var>$default</var> = <span class="php-keyword1">null</span></span> )</code>
+
+			<div class="description short">
+				
+<p>Retrieve a configuration option</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Retrieve a configuration option</p>
+
+<p>If the option does not exist return the default.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$name</var></dt>
+						<dd><code>string</code><br>$name</dd>
+						<dt><var>$default</var></dt>
+						<dd><code>mixed</code><br>$default</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>mixed</code><br />
+					</div>
+
+
+
+
+					<h4>Implementation of</h4>
+					<div class="list"><code><a href="class-KObjectConfigInterface.html#_get">KObjectConfigInterface::get()</a></code></div>
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="set" id="_set">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-KObjectConfig.html">KObjectConfig</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_set">#</a>
+			<code><a href="source-class-KObjectConfig.html#67-88" title="Go to source code">set</a>( <span>string <var>$name</var></span>, <span>mixed <var>$value</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Set a configuration option</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Set a configuration option</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$name</var></dt>
+						<dd><code>string</code><br>$name</dd>
+						<dt><var>$value</var></dt>
+						<dd><code>mixed</code><br>$value</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><code><a href="class-KObjectConfig.html">KObjectConfig</a></code></code><br />
+					</div>
+
+					<h4>Throws</h4>
+					<div class="list">
+						<code>RuntimeException</code><br>If the config is read only<br />
+					</div>
+
+
+
+					<h4>Implementation of</h4>
+					<div class="list"><code><a href="class-KObjectConfigInterface.html#_set">KObjectConfigInterface::set()</a></code></div>
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="has" id="_has">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_has">#</a>
+			<code><a href="source-class-KObjectConfig.html#90-99" title="Go to source code">has</a>( <span>string <var>$name</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Check if a configuration option exists</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Check if a configuration option exists</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$name</var></dt>
+						<dd><code>string</code><br>$name The configuration option name.</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>boolean</code><br />
+					</div>
+
+
+
+
+					<h4>Implementation of</h4>
+					<div class="list"><code><a href="class-KObjectConfigInterface.html#_has">KObjectConfigInterface::has()</a></code></div>
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="remove" id="_remove">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-KObjectConfig.html">KObjectConfig</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_remove">#</a>
+			<code><a href="source-class-KObjectConfig.html#101-117" title="Go to source code">remove</a>( <span>string <var>$name</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Remove a configuration option</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Remove a configuration option</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$name</var></dt>
+						<dd><code>string</code><br>$name The configuration option name.</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><code><a href="class-KObjectConfig.html">KObjectConfig</a></code></code><br />
+					</div>
+
+					<h4>Throws</h4>
+					<div class="list">
+						<code>RuntimeException</code><br>If the config is read only<br />
+					</div>
+
+
+
+					<h4>Implementation of</h4>
+					<div class="list"><code><a href="class-KObjectConfigInterface.html#_remove">KObjectConfigInterface::remove()</a></code></div>
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="merge" id="_merge">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-KObjectConfig.html">KObjectConfig</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_merge">#</a>
+			<code><a href="source-class-KObjectConfig.html#119-150" title="Go to source code">merge</a>( <span>array|Traversable|<code><a href="class-KObjectConfig.html">KObjectConfig</a></code> <var>$options</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Merge options</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Merge options</p>
+
+<p>This method will overwrite keys that already exist, keys that don't exist yet
+will be added.</p>
+
+<p>For duplicate keys, the following will be performed:</p>
+
+<ul>
+	<li>Nested configs will be recursively merged.</li>
+
+	<li>Items in $options with INTEGER keys will be appended.</li>
+
+	<li>Items in $options with STRING keys will overwrite current values.</li>
+</ul>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$options</var></dt>
+						<dd><code>array|Traversable|<code><a href="class-KObjectConfig.html">KObjectConfig</a></code></code><br>$options A KObjectConfig object an or array of options to be appended</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><code><a href="class-KObjectConfig.html">KObjectConfig</a></code></code><br />
+					</div>
+
+					<h4>Throws</h4>
+					<div class="list">
+						<code>RuntimeException</code><br>If the config is read only<br />
+					</div>
+
+
+
+					<h4>Implementation of</h4>
+					<div class="list"><code><a href="class-KObjectConfigInterface.html#_merge">KObjectConfigInterface::merge()</a></code></div>
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="append" id="_append">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-KObjectConfig.html">KObjectConfig</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_append">#</a>
+			<code><a href="source-class-KObjectConfig.html#152-196" title="Go to source code">append</a>( <span>array|<code><a href="class-KObjectConfig.html">KObjectConfig</a></code>|Traversable <var>$options</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Append values</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Append values</p>
+
+<p>This method only adds keys that don't exist and it filters out any duplicate
+values</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$options</var></dt>
+						<dd><code>array|<code><a href="class-KObjectConfig.html">KObjectConfig</a></code>|Traversable</code><br>$config A ObjectConfig object an or array of options to be appended</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><code><a href="class-KObjectConfig.html">KObjectConfig</a></code></code><br />
+					</div>
+
+					<h4>Throws</h4>
+					<div class="list">
+						<code>RuntimeException</code><br>If the config is read only<br />
+					</div>
+
+
+
+					<h4>Implementation of</h4>
+					<div class="list"><code><a href="class-KObjectConfigInterface.html#_append">KObjectConfigInterface::append()</a></code></div>
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="count" id="_count">
+
+			<td class="attributes"><code>
+				 public 
+				integer
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_count">#</a>
+			<code><a href="source-class-KObjectConfig.html#198-227" title="Go to source code">count</a>( <span>integer <var>$mode</var> = COUNT_NORMAL</span> )</code>
+
+			<div class="description short">
+				
+<p>Returns the number of elements in the collection.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Returns the number of elements in the collection.</p>
+
+<p>Required by the Countable interface</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$mode</var></dt>
+						<dd><code>integer</code><br>$mode Either COUNT_NORMAL or COUNT_RECURSIVE. Default is COUNT_NORMAL</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>integer</code><br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="unbox" id="_unbox">
+
+			<td class="attributes"><code>
+				 public static
+				mixed|array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_unbox">#</a>
+			<code><a href="source-class-KObjectConfig.html#229-240" title="Go to source code">unbox</a>( <span>mixed|<code><a href="class-KObjectConfig.html">KObjectConfig</a></code> <var>$data</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Return the data</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Return the data</p>
+
+<p>If the data being passed is an instance of KObjectConfig the data will be
+transformed to an associative array.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$data</var></dt>
+						<dd><code>mixed|<code><a href="class-KObjectConfig.html">KObjectConfig</a></code></code><br>$data</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>mixed|array</code><br />
+					</div>
+
+
+
+
+					<h4>Implementation of</h4>
+					<div class="list"><code><a href="class-KObjectConfigInterface.html#_unbox">KObjectConfigInterface::unbox()</a></code></div>
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getInstance" id="_getInstance">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-KObjectConfigInterface.html">KObjectConfigInterface</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getInstance">#</a>
+			<code><a href="source-class-KObjectConfig.html#243-254" title="Go to source code">getInstance</a>( )</code>
+
+			<div class="description short">
+				
+<p>Get a new instance</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Get a new instance</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><code><a href="class-KObjectConfigInterface.html">KObjectConfigInterface</a></code></code><br />
+					</div>
+
+
+
+
+					<h4>Implementation of</h4>
+					<div class="list"><code><a href="class-KObjectConfigInterface.html#_getInstance">KObjectConfigInterface::getInstance()</a></code></div>
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getIterator" id="_getIterator">
+
+			<td class="attributes"><code>
+				 public 
+				ArrayIterator
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getIterator">#</a>
+			<code><a href="source-class-KObjectConfig.html#256-264" title="Go to source code">getIterator</a>( )</code>
+
+			<div class="description short">
+				
+<p>Get a new iterator</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Get a new iterator</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>ArrayIterator</code><br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="offsetExists" id="_offsetExists">
+
+			<td class="attributes"><code>
+				final public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_offsetExists">#</a>
+			<code><a href="source-class-KObjectConfig.html#266-277" title="Go to source code">offsetExists</a>( <span>integer <var>$offset</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Check if the offset exists</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Check if the offset exists</p>
+
+<p>Required by interface ArrayAccess</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$offset</var></dt>
+						<dd><code>integer</code><br>$offset The offset</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>boolean</code><br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="offsetGet" id="_offsetGet">
+
+			<td class="attributes"><code>
+				final public 
+				mixed
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_offsetGet">#</a>
+			<code><a href="source-class-KObjectConfig.html#279-290" title="Go to source code">offsetGet</a>( <span>integer <var>$offset</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Get an item from the array by offset</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Get an item from the array by offset</p>
+
+<p>Required by interface ArrayAccess</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$offset</var></dt>
+						<dd><code>integer</code><br>$offset The offset</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>mixed</code><br>The item from the array<br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="offsetSet" id="_offsetSet">
+
+			<td class="attributes"><code>
+				final public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_offsetSet">#</a>
+			<code><a href="source-class-KObjectConfig.html#292-304" title="Go to source code">offsetSet</a>( <span>integer <var>$offset</var></span>, <span>mixed <var>$value</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Set an item in the array</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Set an item in the array</p>
+
+<p>Required by interface ArrayAccess</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$offset</var></dt>
+						<dd><code>integer</code><br>$offset The offset</dd>
+						<dt><var>$value</var></dt>
+						<dd><code>mixed</code><br>$value The item's value</dd>
+					</dl></div>
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="offsetUnset" id="_offsetUnset">
+
+			<td class="attributes"><code>
+				final public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_offsetUnset">#</a>
+			<code><a href="source-class-KObjectConfig.html#306-319" title="Go to source code">offsetUnset</a>( <span>integer <var>$offset</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Unset an item in the array</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Unset an item in the array</p>
+
+<p>All numerical array keys will be modified to start counting from zero while
+literal keys won't be touched.</p>
+
+<p>Required by interface ArrayAccess</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$offset</var></dt>
+						<dd><code>integer</code><br>$offset The offset of the item</dd>
+					</dl></div>
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="toArray" id="_toArray">
+
+			<td class="attributes"><code>
+				 public 
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_toArray">#</a>
+			<code><a href="source-class-KObjectConfig.html#321-340" title="Go to source code">toArray</a>( )</code>
+
+			<div class="description short">
+				
+<p>Return an associative array of the config data.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Return an associative array of the config data.</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>array</code><br />
+					</div>
+
+
+
+
+					<h4>Implementation of</h4>
+					<div class="list"><code><a href="class-KObjectConfigInterface.html#_toArray">KObjectConfigInterface::toArray()</a></code></div>
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="setReadOnly" id="_setReadOnly">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-KObjectConfigInterface.html">KObjectConfigInterface</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_setReadOnly">#</a>
+			<code><a href="source-class-KObjectConfig.html#342-362" title="Go to source code">setReadOnly</a>( )</code>
+
+			<div class="description short">
+				
+<p>Prevent any more modifications being made to this instance.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Prevent any more modifications being made to this instance.</p>
+
+<p>Useful after merge() has been used to merge multiple Config objects into one
+object which should then not be modified again.</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><code><a href="class-KObjectConfigInterface.html">KObjectConfigInterface</a></code></code><br />
+					</div>
+
+
+
+
+					<h4>Implementation of</h4>
+					<div class="list"><code><a href="class-KObjectConfigInterface.html#_setReadOnly">KObjectConfigInterface::setReadOnly()</a></code></div>
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="isReadOnly" id="_isReadOnly">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_isReadOnly">#</a>
+			<code><a href="source-class-KObjectConfig.html#364-372" title="Go to source code">isReadOnly</a>( )</code>
+
+			<div class="description short">
+				
+<p>Returns whether this Config object is read only or not.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Returns whether this Config object is read only or not.</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>boolean</code><br />
+					</div>
+
+
+
+
+					<h4>Implementation of</h4>
+					<div class="list"><code><a href="class-KObjectConfigInterface.html#_isReadOnly">KObjectConfigInterface::isReadOnly()</a></code></div>
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="__get" id="___get">
+
+			<td class="attributes"><code>
+				final public 
+				mixed
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#___get">#</a>
+			<code><a href="source-class-KObjectConfig.html#374-383" title="Go to source code">__get</a>( <span>string <var>$name</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Retrieve a configuration element</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Retrieve a configuration element</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$name</var></dt>
+						<dd><code>string</code><br>$name</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>mixed</code><br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="__set" id="___set">
+
+			<td class="attributes"><code>
+				final public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#___set">#</a>
+			<code><a href="source-class-KObjectConfig.html#385-395" title="Go to source code">__set</a>( <span>string <var>$name</var></span>, <span>mixed <var>$value</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Set a configuration element</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Set a configuration element</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$name</var></dt>
+						<dd><code>string</code><br>$name</dd>
+						<dt><var>$value</var></dt>
+						<dd><code>mixed</code><br>$value</dd>
+					</dl></div>
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="__isset" id="___isset">
+
+			<td class="attributes"><code>
+				final public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#___isset">#</a>
+			<code><a href="source-class-KObjectConfig.html#397-406" title="Go to source code">__isset</a>( <span>string <var>$name</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Test existence of a configuration element</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Test existence of a configuration element</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$name</var></dt>
+						<dd><code>string</code><br>$name</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>boolean</code><br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="__unset" id="___unset">
+
+			<td class="attributes"><code>
+				final public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#___unset">#</a>
+			<code><a href="source-class-KObjectConfig.html#408-417" title="Go to source code">__unset</a>( <span>string <var>$name</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Unset a configuration element</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Unset a configuration element</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$name</var></dt>
+						<dd><code>string</code><br>$name</dd>
+					</dl></div>
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="__clone" id="___clone">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#___clone">#</a>
+			<code><a href="source-class-KObjectConfig.html#419-437" title="Go to source code">__clone</a>( )</code>
+
+			<div class="description short">
+				
+<p>Deep clone of this instance to ensure that nested KObjectConfigs are also
+cloned.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Deep clone of this instance to ensure that nested KObjectConfigs are also
+cloned.</p>
+
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		</table>
+
+
+
+		<h3>Magic methods summary</h3>
+
+
+
+
+
+
+
+
+		<h2>Properties summary</h2>
+		<table class="summary table table-bordered table-striped" id="properties">
+		<tr data-order="_readonly" id="$_readonly">
+			<td class="attributes"><code>
+				protected  
+				boolean
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-KObjectConfig.html#28-33" title="Go to source code"><var>$_readonly</var></a>
+			</td>
+			<td class="description"><div>
+				<a href="#$_readonly" class="anchor">#</a>
+
+				<div class="description short">
+					
+<p>Is the config data readonly</p>
+
+				</div>
+
+				<div class="description detailed hidden">
+					
+<p>Is the config data readonly</p>
+
+
+				</div>
+			</div></td>
+		</tr>
+		</table>
+
+
+
+
+
+
+</div>
+	</div>
+
+	<div id="footer">
+		Nooku Framework API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+
+<script>
+    responsivemenu.init({
+        wrapper: document.querySelector('.header'),
+        toggleclass: 'button--hamburger',
+        togglecontent: 'menu <span class="lines"></span>'
+    });
+</script>
+
+</body>
+</html>
